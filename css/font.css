@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'twayair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Typo Round Regular Demo";
+    src: url("https://db.onlinewebfonts.com/t/094f68a425490c7686f53f097fc7657d.eot");
+    src: url("https://db.onlinewebfonts.com/t/094f68a425490c7686f53f097fc7657d.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/094f68a425490c7686f53f097fc7657d.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/094f68a425490c7686f53f097fc7657d.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/094f68a425490c7686f53f097fc7657d.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/094f68a425490c7686f53f097fc7657d.svg#Typo Round Regular Demo")format("svg");
+}
+@font-face {
+    font-family: 'DalseoHealing';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.ttf') format("truetype");
+    font-display: swap;
+  }  
+.ko {
+    font-family: twayair; font-size: 18px; margin-left: 15px;
+}
+.en {
+    font-family: Poppins-Regular; font-size: 17px;
+}
+.en::before { 
+    content: "•";   margin-right: 7px;
+}
+.ex {
+    font-family: DalseoHealing;
+    font-size: 15px;
+    margin-left: 11px ;
+}
+

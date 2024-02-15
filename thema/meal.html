@@ -1,0 +1,155 @@
+<style>
+    .hanggi{
+        background: url('../img/photo/mealBack.jpeg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .meat{
+        background: url('../img/icon/pork.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .meatR {
+        width: 2.2vw;
+        height: 4.7vh;
+        position: absolute;
+        top: 4.9vh;
+        right: 3.7vw;
+        opacity: 0.5;
+    }
+    .cheese1{
+        background: url('../img/icon/cheese1.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .cheese2{
+        background: url('../img/icon/cheese2.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .cheese1R {
+        width: 2vw;
+        height: 3.4vh;
+        position: absolute;
+        top: 6vh;
+        right: 3vw;
+        opacity: 0.5;
+    }
+    .cheese2R {
+        width: 2.1vw;
+        height: 4vh;
+        position: absolute;
+        top: 5.5vh;
+        right: 4.5vw;
+        opacity: 0.5;
+    }
+    .sweetPotato{
+        background: url('../img/icon/sweet-potato.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .sweetPotato {
+        width: 2.1vw;
+        height: 4vh;
+        position: absolute;
+        top: 5.5vh;
+        right: 3.2vw;
+        opacity: 0.5;
+    }
+    .arugula {
+        background: url('../img/icon/arugula.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .arugulaR {
+        width: 2.9vw;
+        height: 4.4vh;
+        position: absolute;
+        top: 5vh;
+        right: 1.5vw;
+        opacity: 0.6;
+    }
+    .posiAo { position: absolute;}
+    /* layout 설정 */
+    .mealBox .zone:nth-child(odd) { width: 30%; }
+    .mealBox .zone:nth-child(even) { width: 25%; }
+    .mealBox .img {
+        width: 100%;
+        height: 20vh;
+    }
+    .mealBox .img .border {
+        width: 100%;
+        height: 20vh;
+    }
+    /*  */
+    .mealBox .zone:first-child .disRight  .ko { 
+        padding-bottom: 13px; height: 24px; }
+
+    .mealBox .zone:first-child .disRight ,
+    .mealBox .zone:last-child  .tl ,
+    .mealBox .zone div div:nth-child(3) { margin-top: -7px;  }
+
+    .mealBox img { width: 2.5vw;  height: 5vh;}
+   
+</style>
+
+
+<div class="mealBox " >
+    <div class="disJcBet">
+        <div class="zone layoutBottom">
+            <div class="posNa">
+                <div class="en enColor"> No.1 Meat  </div>
+                <div class="ko koColor line ">  No.1 고기파 </div>
+                <div class="ex exColor"> 통삼겹살 </div>
+                <div class="ex exColor"> 감자 </div>
+                <div class="ex exColor "> 라페 </div>
+                <div class="meat meatR"> </div>
+            
+            </div>
+            <div class="disRight">
+                <div div class="tr posNa">
+                    <div class="en enColor"> No.2 Vegan  </div>
+                    <div class="ko koColor  ">  No.2 비건파 </div>
+                    <div class="ex exColor"> 통곡물 식빵 </div>
+                    <div class="ex exColor"> 치즈 </div>
+                    <div class="ex exColor"> 야채 </div>
+                    <div class="cheese1 cheese1R"> </div>
+                    <div class="cheese2 cheese2R"> </div>
+                </div>
+            </div>
+        </div>
+        <div class="img  zone" >
+            <div class="border posiCen hanggi"> 
+                <div class="posiCen">
+                    <div class="en enColor tc"> Cafe SEO's HanGGI </div>
+                    <div class="ko koColor line tc"> cafe SEO의 한끼 </div>
+                    <div class="ko koColor">  한끼 잘 먹었다  </div>
+                </div>
+            </div>
+        </div>
+        <div class="zone">
+            <div class="disRight">
+                <div div class="tr posNa">
+                    <div class="en enColor"> No.3 Diet  </div>
+                    <div class="ko koColor line ">  No.3 식단파 </div>
+                    <div class="ex exColor"> 소금구이 닭 </div>
+                    <div class="ex exColor"> 곤약샐러드 </div>
+                    <div class="ex exColor"> 고구마 </div>
+                    <div class="sweetPotato sweetPotatoR"> </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="tl posNa">
+                    <div class="en enColor"> No.4 Arugula  </div>
+                    <div class="ko koColor line ">  No.4 유학파 </div>
+                    <div class="ex exColor"> 통곡물 난 </div>
+                    <div class="ex exColor"> 루꼴라 </div>
+                    <div class="ex exColor"> 생모짜렐라 치즈 </div>
+                    <div class="arugula cheese1R"> </div>
+                    <div class="arugula arugulaR"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div> </div>
+</div>

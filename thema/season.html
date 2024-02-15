@@ -1,0 +1,73 @@
+<style>
+    /* flower border size 맞추기 위해서 */
+    .seasonBox .border:nth-child(even) { width: 30%; }
+    .seasonBox .border:nth-child(odd) { 
+        width: 29%;   
+        box-shadow: none;
+        padding: 0;
+        margin-bottom: 0;
+    }
+    .seasonBox .straw  { margin-top: 12px; }
+    .seasonBox .straw > div:nth-child(2) { padding: 0 5px 0 60px; }
+    /* 가격 위치 조정 */
+    .seasonBox .priceColor {margin-top: 10px;}
+    /* icon 삽입 */
+    .strawberry { background: url('../img/icon/strawberry.png'); background-size: 100% 100%;}
+    .imgs {
+        width: 3.5vw;
+        height: 5.7vh;
+        position: absolute;
+        bottom: -2.5vh;
+        left: 3vw;
+        /* top: 19vh;
+        right: 20.7vw; */
+        opacity: 0.7;
+    }
+</style>
+<div class="seasonBox  disJcBet">
+    <div class=" border">
+        <div class="tc">
+            <div class="en enColor line"> Fresh Strawberry Latte </div>
+            <div class="ko koColor "> 생딸기 퐁당 라떼 </div>
+            <!-- <div class="ex exColor"> 생딸기 듬뿍 담은 라떼 </div> -->
+            <div class="disCen line">
+                <div class="price100 priceColor  ">  </div>
+            </div>
+        </div>
+        <div class="tc">
+            <div class="en enColor line"> Fresh Strawberry Smoothie </div>
+            <div class="ko koColor "> 생딸기 퐁당 스무디 </div>
+            <!-- <div class="ex exColor"> 생딸기 듬뿍 담은 스무디 </div> -->
+            <div class="disCen line">
+                <div class="price100 priceColor  ">  </div>
+            </div>
+        </div>
+    </div>
+    <div class="noBorder border ">
+        <div class="">
+            <div class="en enColor tc"> 
+                <div> Spring is season of </div> 
+                <div> Fresh Strawberry </div> 
+            </div>
+            <div class="disCen posNa">
+                <div class="ko koColor line dis straw "> 
+                    <div class=""> 봄은 </div>
+                    <div> 생딸기 </div>
+                    <div> 시즌 </div>
+                    <div class="strawberry imgs" ></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="disCen border" >
+        <div class="tc">
+            <div class="en enColor line"> Fresh Strawberry Juice</div>
+            <div class="ko koColor "> 생딸기 퐁당 쥬스 </div>
+            <!-- <div class="ex exColor"> 생딸기 듬뿍 담은 쥬스 </div> -->
+            <div class="disCen line">
+                <div class="price150 priceColor  ">  </div>
+            </div>
+        </div>
+    </div>
+</div>
+
