@@ -2,12 +2,12 @@
 
 /* @media screen and (min-width : 1200px)  { */
     .mainBox { 
-        width: 85.5vw;  height: 87vh;  
+        width: 88.5vw;  height: 87.2vh;  
         display: flex;  justify-content: space-between;
     }
     .grid:first-child { width: 24vw;  height:inherit;  }
-    .grid:nth-child(2) { width: 30vw;  height:inherit; }
-    .grid:last-child { width: 30vw;  height:inherit;  }
+    .grid:nth-child(2) { width: 31vw;  height:inherit; }
+    .grid:last-child { width: 31vw;  height:inherit;  }
 /* } */
 /* @media screen and (max-width : 1199px) {
     .container { 
