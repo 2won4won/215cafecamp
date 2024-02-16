@@ -1,22 +1,18 @@
 /* html { font-size: 62.5%; } */
 
-@media screen and (min-width : 1200px)  {
-    .container {  
-        display: flex;  justify-content: center; align-items: center; 
-        width: 100vw; height: 100vh;
-    }
+/* @media screen and (min-width : 1200px)  { */
     .mainBox { 
-        width: 89.5vw;  height: 89vh;  
-        display: flex;  justify-content: space-between; align-items: center;
+        width: 85.5vw;  height: 87vh;  
+        display: flex;  justify-content: space-between;
     }
     .grid:first-child { width: 24vw;  height:inherit;  }
-    .grid:nth-child(2) { width: 33vw;  height:inherit; }
+    .grid:nth-child(2) { width: 30vw;  height:inherit; }
     .grid:last-child { width: 30vw;  height:inherit;  }
-}
-@media screen and (max-width : 1199px) {
+/* } */
+/* @media screen and (max-width : 1199px) {
     .container { 
         width: 97vw;
     } 
     .grid { width: 95%; }
-}
+} */
 
