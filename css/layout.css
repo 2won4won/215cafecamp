@@ -1,6 +1,6 @@
-/* html { font-size: 62.5%; } */
 
-/* @media screen and (min-width : 1200px)  { */
+
+@media screen and (min-width : 1200px)  { 
     .mainBox { 
         width: 88.5vw;  height: 87.2vh;  
         display: flex;  justify-content: space-between;
@@ -8,11 +8,12 @@
     .grid:first-child { width: 24vw;  height:inherit;  }
     .grid:nth-child(2) { width: 31vw;  height:inherit; }
     .grid:last-child { width: 31vw;  height:inherit;  }
-/* } */
-/* @media screen and (max-width : 1199px) {
-    .container { 
-        width: 97vw;
+ } 
+@media screen and (max-width : 1199px) {
+    html { font-size: 62.5%; }
+    .mainBox { 
+        width: 98vw; border: 0.2rem red solid;
     } 
     .grid { width: 95%; }
-} */
+}
 
