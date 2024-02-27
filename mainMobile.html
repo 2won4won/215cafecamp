@@ -85,11 +85,7 @@
         .item .price {  
             color: #A4A4A4 !important;
         }
-        .item:first-child > div:nth-child(2) > .disJcBet:nth-child(2) {
-            /* width: 35%;  */
-            /* background-color: aquamarine; */
-            /* color: red; */
-        }
+    
         .item:first-child > div:last-child { 
             /* width: 60%; */
             text-align: right; 
@@ -118,6 +114,37 @@
         .btn .ko {margin-left: 0 !important; text-align: center;}
         .btn .ko div:nth-child(2),
         .btn .ko div:nth-child(5) { margin-bottom: 1vh;}
+
+        .strawberry { background: url('./img/icon/strawberry.png'); background-size: 100% 100%;}
+        .no1 { background: url('./img/photo/no1.jpg'); background-size: 100% 100%;}
+        .no2 { background: url('./img/photo/no2.jpg'); background-size: 100% 100%;}
+        .imgs {
+            width: 8.9vw;
+            height: 6vh;
+            position: absolute;
+            bottom: 1.5vh;
+            right: 6vw;
+            /* top: 19vh;
+            right: 20.7vw; */
+            /* opacity: 0.7; */
+        }
+        /* modal */
+        .modal {
+            display: none;
+            width: 75vw;
+            height: 80vh;
+            background-color: rgba(0, 0, 0, 0.6)
+        }
+        .modal .img {
+            width: inherit;
+            height: inherit;
+        }
+        /* .modal .img::before {
+            width: inherit;
+            height: inherit;
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            opacity: 0.5; background-color: #000;
+        } */
     </style>
 </head>
 <body>
@@ -383,9 +410,10 @@
                     </div>
                 </div> 
                 <div class="navBox">
-                    <div class="navTi dis">
+                    <div class="navTi dis posNa">
                         <div class="en"> Fresh Strawberry  </div>
-                        <div class="ko"> 생딸기 시즌 </div>
+                        <div class="ko "> 생딸기 시즌 </div>
+                        <div class="strawberry imgs" ></div>
                     </div>
                     <div class="menu">
                         <div class="item disJcBet "> 
@@ -428,27 +456,29 @@
                                 <div class="en">Greek Yogurt Smoothie  </div>
                                 <div class="ko"> 그릭요거트 스무디 </div>
                             </div>  
-                            <div class="price100 price"></div>
                         </div>
-                        <div class="item  modal">
+                        <div class="item disJcBet  modal">
                             <div class="dis">
                                 <div class="en"> Plain </div>
                                 <div class="ko">요거만갈아 </div>
                             </div>
+                            <div class="price100 price"></div>
                         </div>
-                        <div class="item  modal">
+                        <div class="item disJcBet modal">
                             <div class="dis">
                                 <div class="en">Strawberry </div>
                                 <div class="ko">딸기갈아 </div>
                             </div>
+                            <div class="price100 price"></div>
                         </div>
-                        <div class="item  modal">
+                        <div class="item disJcBet modal">
                             <div class="dis">
                                 <div class="en">Blueberry </div>
                                 <div class="ko">블루베리갈아 </div>
                             </div>
+                            <div class="price100 price"></div>
                         </div>
-                        <div class="item disJcBet noDot mt12"> 
+                        <div class="item disJcBet noDot "> 
                             <div class="dis">
                                 <div class="en"> Yourt + Fruit</div>
                                 <div class="ko"> 수제 요거트랑 과일이랑 </div>
@@ -541,30 +571,30 @@
                         <div class="ko"> Cafe SEO's 한끼 </div>
                     </div>
                     <div class="menu">
-                        <div class="item disJcBet modal">
+                        <div class="item disJcBet modalBtn">
                             <div class="dis">
-                                <div class="en"> NO.1 Meat</div>
+                                <div class="en">NO.1 Meat</div>
                                 <div class="ko">NO.1 고기파 </div>
                             </div>
                             <div class="price260 price"></div>
                         </div>
-                        <div class="item disJcBet modal">
+                        <div class="item disJcBet modalBtn">
                             <div class="dis">
-                                <div class="en"> NO.2 Vegan</div>
+                                <div class="en">NO.2 Vegan</div>
                                 <div class="ko">NO.2 비건파 </div>
                             </div>
                             <div class="price190 price"></div>
                         </div>
-                        <div class="item disJcBet modal">
+                        <div class="item disJcBet modalBtn">
                             <div class="dis">
-                                <div class="en"> NO.3 Diet</div>
+                                <div class="en">NO.3 Diet</div>
                                 <div class="ko">NO.3 식단파 </div>
                             </div>
                             <div class="price190 price"></div>
                         </div>
-                        <div class="item disJcBet modal">
+                        <div class="item disJcBet modalBtn">
                             <div class="dis">
-                                <div class="en"> NO.4 Arugula</div>
+                                <div class="en">NO.4 Arugula</div>
                                 <div class="ko">NO.4 유학파 </div>
                             </div>
                             <div class="price230 price"></div>
@@ -577,35 +607,35 @@
                         <div class="ko"> Cafe SEO's 디저트</div>
                     </div>
                     <div class="menu">
-                        <div class="item disJcBet modal">
+                        <div class="item disJcBet ">
                             <div class="dis">
                                 <div class="en"> YogurtBaRa </div>
                                 <div class="ko">요거바라 </div>
                             </div>
                             <div class="price120 price"></div>
                         </div>
-                        <div class="item disJcBet modal">
+                        <div class="item disJcBet ">
                             <div class="dis">
                                 <div class="en"> Sweet-Salty Bowl </div>
                                 <div class="ko">단짠볼 </div>
                             </div>
                             <div class="price90 price"></div>
                         </div>
-                        <div class="item disJcBet modal">
+                        <div class="item disJcBet ">
                             <div class="dis">
                                 <div class="en"> Cookies Bowl </div>
                                 <div class="ko">쿠키볼 </div>
                             </div>
                             <div class="price85 price"></div>
                         </div>
-                        <div class="item disJcBet modal">
+                        <div class="item disJcBet ">
                             <div class="dis">
                                 <div class="en"> Sweet Potato Bowl </div>
                                 <div class="ko"> 구마볼 </div>
                             </div>
                             <div class="price100 price"></div>
                         </div>
-                        <div class="item disJcBet modal">
+                        <div class="item disJcBet ">
                             <div class="dis">
                                 <div class="en"> Today's Fruit Bowl</div>
                                 <div class="ko"> 오늘의 과일볼 </div>
@@ -615,17 +645,6 @@
                     </div>    
                 </div>    
             </div>
-            <!-- <div class="logo">
-                <div class="ko"> 
-                    <div > 쉼</div>
-                    <div> 이 </div>
-                    <div> 물</div>
-                    <div> 드</div>
-                    <div> 는</div>
-                    <div> 그</div>
-                    <div> 곳</div>
-                </div>
-            </div> -->
         </div>
         <div class="btn " >
             <div class="ko  "> 
@@ -639,21 +658,20 @@
             </div>
             <img src="./img/icon/upbtn.png"  href="#">
         </div>
-    </div>    
+    </div>   
+    <div class="modal posiCen"> 
+        <div class="img no1 modalImg" data-type="NO.1 Meat"></div>
+        <div class="img no2 modalImg" data-type="NO.2 Vegan"></div>
+        <div class="img no3 modalImg" data-type="NO.3 Diet"></div>
+        <div class="img no4 modalImg" data-type="NO.4 Arugula"></div>
+    </div>  
 </body>
 <script>
+    // 메뉴 리스트
     $(".navTi").on("click", function (){
         $(this).next(".menu").slideToggle(100);
     });
-	// $(document).ready(function(){
-    //     $("#we").load("thema/we.html");
-    // });		
-    // $("#scroll-top").on("click",function(){
-    //     $('html, body').animate({
-    //         scrollTop : 0
-    //     },400)
-    //     return false;
-    // });
+	// top button
     $(function () {
         $(window).scroll(function(){
             if($(this).scrollTop() > 50) {
@@ -666,6 +684,46 @@
             $('html, body').animate( {scrollTop : 0}, 400 );
             return false;
         });
+    });
+
+    // modal open
+    var list = $('.modal  .modalImg').html();
+    var arr = [];
+
+    $('.modal .modalImg').each(function(i, e){
+        console.log('list'+list);
+        arr.push(e);
+        console.log('arr'+arr.push(e));
+    });
+
+    $('.modalBtn').on('click', function(){
+        $('.modal').fadeIn();
+        $('.con').css("-webkit-filter", "blur(65px)");
+
+        const type = $(this).children('.dis').children('.en').text();
+        console.log('type'+type);
+        $('.con').removeClass('active');
+        $(this).addClass('active');
+        $('.modal ').empty();
+
+        $(arr).each(function (i, e) {
+          var exist = $(e).attr('data-type').indexOf(type);
+          console.log("exist" + exist)
+
+            if(exist >= 0) {
+                $('.modal').append(e);
+
+            }
+        })
+    });
+    // modal close
+    $('.close').click(function(){
+        $('.modal').css('display', 'none');
+        $('.con').css("-webkit-filter", "none");
+    });
+    $('.modal').click(function(){
+        $('.modal').fadeOut();
+        $('.con').css("-webkit-filter", "none");
     });
 </script>
 </html>
