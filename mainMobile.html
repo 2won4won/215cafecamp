@@ -27,7 +27,7 @@
       
         .content {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             width: 100%;
         }
         .nav {
@@ -68,6 +68,7 @@
         .menu {
             display: none;
             padding: 20px;
+            background-color: #fafafa;
         }
         .item {
             line-height: 3rem;
@@ -100,15 +101,23 @@
             margin: 0.5rem 0;
             color: #808080;
         }
-        .cafe div { margin-top: 1vh;}
+        .con .noDot { margin-top: 2vh;}
+        /* top button */
         .btn { 
             position: fixed;
             right: 2vw;
             bottom: 10vh;
             display: none;
             z-index: 9;
-            width: 10vw; height: 6vh;
+            height: 30vh;
         }
+        .btn img {
+            width: 9vw; height: 5vh;
+
+        }
+        .btn .ko {margin-left: 0 !important; text-align: center;}
+        .btn .ko div:nth-child(2),
+        .btn .ko div:nth-child(5) { margin-bottom: 1vh;}
     </style>
 </head>
 <body>
@@ -169,7 +178,7 @@
                             </div>  
                             <div class="price65 price"> </div> 
                         </div>
-                        <div class="item disJcBet noDot mt12"> 
+                        <div class="item disJcBet noDot"> 
                             <div class="dis">
                                 <div class="en"> Espresso Variation </div>
                                 <div class="ko">에스프레소 베리에이션 </div>
@@ -606,7 +615,7 @@
                     </div>    
                 </div>    
             </div>
-            <div class="logo">
+            <!-- <div class="logo">
                 <div class="ko"> 
                     <div > 쉼</div>
                     <div> 이 </div>
@@ -616,12 +625,20 @@
                     <div> 그</div>
                     <div> 곳</div>
                 </div>
-            </div>
+            </div> -->
         </div>
-        <!-- <div class="btn" >
-            <a href="#"  ><img src="./img/icon/upbtn.png"> </a>
-        </div> -->
-        <img src="./img/icon/upbtn.png" class="btn" href="#">
+        <div class="btn " >
+            <div class="ko  "> 
+                <div > 쉼</div>
+                <div> 이 </div>
+                <div> 물</div>
+                <div> 드</div>
+                <div> 는</div>
+                <div> 그</div>
+                <div> 곳</div>
+            </div>
+            <img src="./img/icon/upbtn.png"  href="#">
+        </div>
     </div>    
 </body>
 <script>
