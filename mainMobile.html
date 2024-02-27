@@ -118,6 +118,10 @@
         .strawberry { background: url('./img/icon/strawberry.png'); background-size: 100% 100%;}
         .no1 { background: url('./img/photo/no1.jpg'); background-size: 100% 100%;}
         .no2 { background: url('./img/photo/no2.jpg'); background-size: 100% 100%;}
+        .no3 { background: url('./img/photo/no3.jpg'); background-size: 100% 100%;}
+        .no4 { background: url('./img/photo/no4.jpg'); background-size: 100% 100%;}
+        .salad { background: url('./img/photo/salad.jpg'); background-size: 100% 100%;}
+        .yogurtBaRa { background: url('./img/photo/yogurtBaRa.jpg'); background-size: 100% 100%;}
         .imgs {
             width: 8.9vw;
             height: 6vh;
@@ -133,7 +137,7 @@
             display: none;
             width: 75vw;
             height: 80vh;
-            background-color: rgba(0, 0, 0, 0.6)
+            background-color: rgba(0, 0, 0, 0.6);
         }
         .modal .img {
             width: inherit;
@@ -484,14 +488,14 @@
                                 <div class="ko"> 수제 요거트랑 과일이랑 </div>
                             </div>  
                         </div>
-                        <div class="item disJcBet "> 
+                        <div class="item disJcBet modalBtn"> 
                             <div class="dis ">
                                 <div class="en">Yogurt Bowl </div>
                                 <div class="ko"> 요거트볼 </div>
                             </div>  
                             <div class="price120 price"></div>
                         </div>
-                        <div class="item disJcBet "> 
+                        <div class="item disJcBet modalBtn"> 
                             <div class="dis ">
                                 <div class="en">Greek Yogurt Bowl </div>
                                 <div class="ko"> 그릭요거트볼 </div>
@@ -599,6 +603,13 @@
                             </div>
                             <div class="price230 price"></div>
                         </div>
+                        <div class="item disJcBet modalBtn">
+                            <div class="dis">
+                                <div class="en">Salad feat Arugula</div>
+                                <div class="ko">샐러드 feat 루꼴라 </div>
+                            </div>
+                            <div class="price190 price"></div>
+                        </div>
                     </div>
                 </div> 
                 <div class="navBox">
@@ -607,37 +618,37 @@
                         <div class="ko"> Cafe SEO's 디저트</div>
                     </div>
                     <div class="menu">
-                        <div class="item disJcBet ">
+                        <div class="item disJcBet modalBtn">
                             <div class="dis">
-                                <div class="en"> YogurtBaRa </div>
+                                <div class="en">YogurtBaRa</div>
                                 <div class="ko">요거바라 </div>
                             </div>
                             <div class="price120 price"></div>
                         </div>
-                        <div class="item disJcBet ">
+                        <div class="item disJcBet modalBtn">
                             <div class="dis">
-                                <div class="en"> Sweet-Salty Bowl </div>
+                                <div class="en">Sweet-Salty Bowl</div>
                                 <div class="ko">단짠볼 </div>
                             </div>
                             <div class="price90 price"></div>
                         </div>
-                        <div class="item disJcBet ">
+                        <div class="item disJcBet modalBtn">
                             <div class="dis">
-                                <div class="en"> Cookies Bowl </div>
+                                <div class="en">Cookies Bowl</div>
                                 <div class="ko">쿠키볼 </div>
                             </div>
                             <div class="price85 price"></div>
                         </div>
-                        <div class="item disJcBet ">
+                        <div class="item disJcBet modalBtn">
                             <div class="dis">
-                                <div class="en"> Sweet Potato Bowl </div>
+                                <div class="en">Sweet Potato Bowl</div>
                                 <div class="ko"> 구마볼 </div>
                             </div>
                             <div class="price100 price"></div>
                         </div>
-                        <div class="item disJcBet ">
+                        <div class="item disJcBet modalBtn">
                             <div class="dis">
-                                <div class="en"> Today's Fruit Bowl</div>
+                                <div class="en">Today's Fruit Bowl</div>
                                 <div class="ko"> 오늘의 과일볼 </div>
                             </div>
                             <div class="price30 price"></div>
@@ -659,11 +670,19 @@
             <img src="./img/icon/upbtn.png"  href="#">
         </div>
     </div>   
-    <div class="modal posiCen"> 
+    <div class="modal "> 
         <div class="img no1 modalImg" data-type="NO.1 Meat"></div>
         <div class="img no2 modalImg" data-type="NO.2 Vegan"></div>
         <div class="img no3 modalImg" data-type="NO.3 Diet"></div>
         <div class="img no4 modalImg" data-type="NO.4 Arugula"></div>
+        <div class="img salad modalImg" data-type="Salad feat Arugula"></div>
+        <div class="img yogurtBaRa modalImg" data-type="YogurtBaRa"></div>
+        <div class="img sweetSalty modalImg" data-type="Sweet-Salty Bowl"></div>
+        <div class="img sweetPotato modalImg" data-type="Sweet Potato Bowl"></div>
+        <div class="img cookies  modalImg" data-type="Cookies Bowl"></div>
+        <div class="img fruitBowl modalImg" data-type="Today's Fruit Bowl"></div>
+        <div class="img yogurt modalImg" data-type="Yogurt Bowl"></div>
+        <div class="img greekYogurt modalImg" data-type="Greek Yogurt Bowl"></div>
     </div>  
 </body>
 <script>
@@ -686,6 +705,12 @@
         });
     });
 
+    $(".modalBtn ").hover(function() {
+        $(".modalBtn ").css({"background-color":"aqua"});
+    }, function() {
+        $(".modalBtn ").css({"background":"none"});
+    });
+
     // modal open
     var list = $('.modal  .modalImg').html();
     var arr = [];
@@ -696,12 +721,20 @@
         console.log('arr'+arr.push(e));
     });
 
+
     $('.modalBtn').on('click', function(){
-        $('.modal').fadeIn();
+        // modal 현위치에서 중앙정렬
+        var modalBox = $('.modal');
+        modalBox.css("position", "absolute");
+        modalBox.css("top", Math.max(0, (($(window).height() - modalBox.outerHeight()) / 2) + $(window).scrollTop()) + "px");
+        modalBox.css("left", Math.max(0, (($(window).width() - modalBox.outerWidth()) / 2) + $(window).scrollLeft()) + "px");
+        // modal = show & back = blur
+        $('.modal').fadeIn(500);  
         $('.con').css("-webkit-filter", "blur(65px)");
 
         const type = $(this).children('.dis').children('.en').text();
         console.log('type'+type);
+
         $('.con').removeClass('active');
         $(this).addClass('active');
         $('.modal ').empty();
