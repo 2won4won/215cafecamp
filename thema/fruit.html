@@ -38,20 +38,55 @@
         background-size: 100% 100%;
         background-repeat: no-repeat;
     }
+    .pineapple {
+        background: url('./img/icon/pineapple.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .pineapple {
+        background: url('./img/icon/pineapple.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .pear {
+        background: url('./img/icon/pear.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .beet {
+        background: url('./img/icon/beet.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .kiwi {
+        background: url('./img/icon/kiwi.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .banana {
+        background: url('./img/icon/banana.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .grapefruit {
+        background: url('./img/icon/grapefruit.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
     .fruitL {
-        width: 2.2vw;
+        width: 2vw;
         height: 4.7vh;
         position: absolute;
-        top: 7.5vh;
-        left: 1vw;
+        top: 8.0vh;
+        left: 0.4vw;
         opacity: 0.5;
     }
     .fruitR {
-        width: 2.2vw;
+        width: 2vw;
         height: 4.7vh;
         position: absolute;
-        top: 7.9vh;
-        right: 0.6vw;
+        top: 8.0vh;
+        right: 0.2vw;
         opacity: 0.5;
     }
 </style>
@@ -139,43 +174,56 @@
         </div>
     </div>
     <div class="">
-        <div class="disJcBet line noBorder"> 
+        <div class="disJcBet line noBorder "> 
             <div class="dis">
-                <div class="en enColor">Hot Fruit Juice </div>
-                <div class="ko koColor"> 착즙과일 그대로  
-                    <span class="point"> 따</span>
+                <div class="en enColor"> Fresh Fruit Juice </div>
+                <div class="ko koColor"> 싱싱한 생과일 그대로  
+                    <!-- <span class="point"> 따</span>
                     <span class="point"> 뜻</span>
                     <span class="point">한 </span>
                     <span class="point"> 쥬</span>
-                    <span class="point">스 </span>
+                    <span class="point">스 </span> -->
                 </div>
             </div>
-            <div class="price100 priceColor"> </div>
-        </div>
+            <div class="price110 priceColor"> </div>
+        </div> 
         <!-- swiper -->
         <div class="swiper">
             <div class="swiper-wrapper">
                 <!-- slides -->
                 <div class="swiper-slide border tc posNa"> 
-                    <div class="en enColor">Apple + cinnamon </div>
-                    <div class="ko koColor"> 사과 + 시나몬  </div>
-                    <div class="ex exColor"> 소화촉진<br> 갑상선 건강 유지<br> 뼈 건강 증진 </div>
-                    <div class="cinnamon fruitR"></div>
+                    <div class="en enColor">Apple + Pineapple </div>
+                    <div class="ko koColor"> 사과 + 파인애플  </div>
+                    <div class="ex exColor"> 갑상선 건강 유지<br> 소화촉진<br> 뼈 건강 증진 </div>
                     <div class="apple fruitL"></div>
+                    <div class="pineapple fruitR"></div>
                 </div>
-                <div class="swiper-slide border tc"> 
+                <!-- <div class="swiper-slide border tc "> 
                     <div class="en enColor"> Tomato </div>
-                    <div class="ko koColor"> 토마토 </div>
+                    <div class="ko koColor"> 방울 토마토 </div>
                     <div class="ex exColor"> 콜레스테롤 억제 <br>시력 회복<br> 노화 지연 </div>
                     <div class="tomato1 fruitL"></div>
                     <div class="tomato2 fruitR"></div>
+                </div> -->
+                <div class="swiper-slide border tc"> 
+                    <div class="en enColor"> Grapefruit </div>
+                    <div class="ko koColor"> 자몽 </div>
+                    <div class="ex exColor"> 혈압 조절 <br>숙취 해소<br> 위장질환 예방</div>
+                    <div class="grapefruit fruitL"></div>
                 </div>
                 <div class="swiper-slide border tc"> 
-                    <div class="en enColor">Grape + Apple + Orange </div>
-                    <div class="ko koColor"> 포도 + 사과 + 오렌지 </div>
-                    <div class="ex exColor"> 암에 대한 대항성 <br>피부 건강 증진<br> 심혈관 개선 </div>
-                    <div class="grape fruitL"></div>
-                    <div class="orange fruitR"></div>
+                    <div class="en enColor">Pear + Beet  </div>
+                    <div class="ko koColor"> 배 + 비트  </div>
+                    <div class="ex exColor"> 해열 작용 <br>담 제거 <br> 간 독소 제거</div>
+                    <div class="pear fruitL"></div>
+                    <div class="beet fruitR"></div>
+                </div>
+                <div class="swiper-slide border tc"> 
+                    <div class="en enColor">Kiwi + Banana  </div>
+                    <div class="ko koColor"> 키위 + 바나나  </div>
+                    <div class="ex exColor"> 변비 완화 <br>면역력 강화 <br> 소화기능 향상</div>
+                    <div class="kiwi fruitL"></div>
+                    <div class="banana fruitR"></div>
                 </div>
                 <div class="swiper-pagination"> </div>
             </div>
@@ -185,7 +233,7 @@
 
 <script>
     const swiper = new Swiper('.swiper', {
-        slidesPerView : 3,
+        slidesPerView : 4,
         spaceBetween : 15,
         loop : true,
         loopAdditionalSlides : 1,

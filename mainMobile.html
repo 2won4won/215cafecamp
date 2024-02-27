@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- jquery -->
      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -15,29 +15,25 @@
     <link rel="stylesheet" href="css/font.css">
     <title>Document</title>
     <style>
+
+        /* main 화면이 좌우상하로 움직이는 것을 방지 */
         .con {
-            overflow: hidden;
+            /* overflow: hidden; */
             width: 100%;
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
         }
-        #we { 
-            height: 10vh;
-            background-color: aquamarine;
-        }
+      
         .content {
-            /* font-family: "Montserrat", sans-serif; */
             display: flex;
-            /* align-items: center; */
-            justify-content: center;
-            width: 100vw;
-            height: 100vh;
+            justify-content: space-between;
+            width: 100%;
         }
         .nav {
-            width: 70vw;
             /* max-width: 45vw; */
-            max-width: inherit; 
+            width: 76vw;
+            /* max-width: inherit;  */
         }
         .navTi {
             /* font-family: twayair; font-size: 1.2rem;  */
@@ -65,11 +61,13 @@
         }
         .navTi .ko,
         .navTi .en {font-size: 1.3rem;}
+
+        .noDot .en::before,
         .navTi .en::before { content: "";}
+        
         .menu {
             display: none;
             padding: 20px;
-            background-color: #fafafa;
         }
         .item {
             line-height: 3rem;
@@ -86,21 +84,70 @@
         .item .price {  
             color: #A4A4A4 !important;
         }
+        .item:first-child > div:nth-child(2) > .disJcBet:nth-child(2) {
+            /* width: 35%;  */
+            /* background-color: aquamarine; */
+            /* color: red; */
+        }
+        .item:first-child > div:last-child { 
+            /* width: 60%; */
+            text-align: right; 
+            /* background-color: blue; */
+        }
+        .item:first-child > div:last-child .ex {
+            font-size: 1rem;
+            line-height: 1.4em;
+            margin: 0.5rem 0;
+            color: #808080;
+        }
+        .cafe div { margin-top: 1vh;}
+        .btn { 
+            position: fixed;
+            right: 2vw;
+            bottom: 10vh;
+            display: none;
+            z-index: 9;
+            width: 10vw; height: 6vh;
+        }
     </style>
 </head>
 <body>
     <div class="con">
-        <div class="header">
-            <div id="we"></div>
-        </div>
-        <div class="content">
-            <div class="nav">
+        <div class="content"> 
+            <div class="nav" >
+            <!-- <div class="nav"> -->
                 <div class="navBox">
                     <div class="navTi dis">
                         <div class="en"> Espresso</div>
                         <div class="ko"> 에스프레소</div>
                     </div>
                     <div class="menu">
+                        <div class="item  "> 
+                            <div> 원두 선택 하세요 </div>
+                            <div>
+                                <div class="disJcBet">
+                                    <div class="dis noDot">
+                                        <div class="en"> BlackSugar</div>
+                                        <div class="ko"> 블랙슈거</div>
+                                    </div>  
+                                    <div class="ex"> 흑설탕같은 진한 단맛, <br> 혀끝을 감도는 기분좋은 산미 </div>
+                                </div>
+                                <div class="disJcBet"> 
+                                    <div class="dis noDot">
+                                        <div class="en"> Cacao</div>
+                                        <div class="ko"> 카카오</div>
+                                    </div>  
+                                    <div class="ex"> 카카오닙스 같은 쌉쌀한 여운 , <br> 호도의 고소한 향미 </div>
+                                </div>
+                                <div class="disJcBet">   
+                                    <div class="dis noDot">
+                                        <div class="en"> Dcaf</div>
+                                        <div class="ko"> 디카페인</div>
+                                    </div>  
+                                    <div class="ex"> 매콤쌉쌀한 향미 , <br> 선택시 1,000원 추가</div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="item disJcBet"> 
                             <div class="dis">
                                 <div class="en"> Espresso</div>
@@ -122,12 +169,58 @@
                             </div>  
                             <div class="price65 price"> </div> 
                         </div>
+                        <div class="item disJcBet noDot mt12"> 
+                            <div class="dis">
+                                <div class="en"> Espresso Variation </div>
+                                <div class="ko">에스프레소 베리에이션 </div>
+                            </div>  
+                        </div>
+
+                        <div class="item disJcBet"> 
+                            <div class="dis">
+                                <div class="en"> Cafe Latte </div>
+                                <div class="ko">카페라떼 </div>
+                            </div>  
+                            <div class="price70 price"> </div> 
+                        </div>
+                        <div class="item disJcBet"> 
+                            <div class="dis">
+                                <div class="en">Cappuccino </div>
+                                <div class="ko"> 카푸치노 </div>
+                            </div>  
+                            <div class="price70 price"> </div> 
+                        </div>
+                        <div class="item disJcBet"> 
+                            <div class="dis">
+                                <div class="en">Vanilla Latte </div>
+                                <div class="ko"> 바닐라라떼 </div>
+                            </div>  
+                            <div class="price75 price"> </div> 
+                        </div>
+                        <div class="item disJcBet"> 
+                            <div class="dis">
+                                <div class="en"> Einspanner </div>
+                                <div class="ko"> 아인스패너 </div>
+                            </div>  
+                            <div class="price75 price"> </div> 
+                        </div>
+                        <div class="item disJcBet"> 
+                            <div class="dis">
+                                <div class="en"> Affogato </div>
+                                <div class="ko"> 아포갸또 </div>
+                            </div>  
+                            <div class="price100 price"> </div> 
+                        </div>
+
+
+
                     </div>
+                    
                 </div> 
-                <div class="navBox">
+                <div class="navBox none">
                     <div class="navTi dis">
-                        <div class="en"> Espresso Veriation</div>
-                        <div class="ko"> </div>
+                        <div class="en"> Espresso Variation</div>
+                        <div class="ko"> 에스프레소 + 우유</div>
                     </div>
                     <div class="menu">
                         <div class="item disJcBet"> 
@@ -158,6 +251,41 @@
                             </div>  
                             <div class="price75 price"> </div> 
                         </div>
+                        <div class="item disJcBet"> 
+                            <div class="dis">
+                                <div class="en"> Affogato </div>
+                                <div class="ko"> 아포갸또 </div>
+                            </div>  
+                            <div class="price100 price"> </div> 
+                        </div>
+                    </div>
+                </div> 
+                <div class="navBox">
+                    <div class="navTi dis">
+                        <div class="en"> Cold Brew</div>
+                        <div class="ko"> 콜드부르</div>
+                    </div>
+                    <div class="menu">
+                        <div class="item disJcBet"> 
+                            <div class="dis noDot">
+                                <div class="en"> Only Ice </div>
+                                <div class="ko"> 아이스만 가능합니다. </div>
+                            </div>  
+                        </div>
+                        <div class="item disJcBet"> 
+                            <div class="dis">
+                                <div class="en"> Ethiopia Guji G1 Geisha</div>
+                                <div class="ko"> 게이샤 </div>
+                            </div>  
+                            <div class="price75 price"> </div> 
+                        </div>
+                        <div class="item disJcBet"> 
+                            <div class="dis">
+                                <div class="en"> Papua New Guinea </div>
+                                <div class="ko">블루마운틴 </div>
+                            </div>  
+                            <div class="price75 price"> </div> 
+                        </div>
                     </div>
                 </div> 
                 <div class="navBox">
@@ -167,16 +295,51 @@
                     </div>
                     <div class="menu">
                         <div class="item disJcBet"> 
-                            <div class="dis">
-                                <div class="en"> tomato </div>
-                                <div class="ko"> 방울토마토 </div>
+                            <div class="dis noDot">
+                                <div class="en"> Hand-Made Fruit Syrub </div>
+                                <div class="ko"> 생과일 수제청  Tea & Ade </div>
                             </div>  
-                            <div class="price110 price"> </div> 
+                            <!-- <div class=""> Tea & Ade </div>  -->
                         </div>
                         <div class="item disJcBet"> 
                             <div class="dis">
-                                <div class="en"> Pear + Beet </div>
-                                <div class="ko">배 + 비트 </div>
+                                <div class="en"> Lemon </div>
+                                <div class="ko"> 레몬 </div>
+                            </div>  
+                            <div class="price75 price"> </div> 
+                        </div>
+                        <div class="item disJcBet"> 
+                            <div class="dis">
+                                <div class="en"> Omija </div>
+                                <div class="ko"> 문경 오미자 </div>
+                            </div>  
+                            <div class="price75 price"> </div> 
+                        </div>
+                        <div class="item disJcBet"> 
+                            <div class="dis">
+                                <div class="en"> Grapefruit </div>
+                                <div class="ko"> 자몽 </div>
+                            </div>  
+                            <div class="price80 price"> </div> 
+                        </div>
+                        <div class="item disJcBet"> 
+                            <div class="dis">
+                                <div class="en"> Citron  </div>
+                                <div class="ko"> 고흥 유자 </div>
+                            </div>  
+                            <div class="price90 price"> </div> 
+                        </div>
+                        <div class="item disJcBet mt12"> 
+                            <div class="dis noDot">
+                                <div class="en"> Fresh Fruit Juice </div>
+                                <div class="ko"> 싱싱한 생과일 그대로 쥬스 </div>
+                            </div>  
+                            <!-- <div class=""> Tea & Ade </div>  -->
+                        </div>
+                        <div class="item disJcBet none"> 
+                            <div class="dis">
+                                <div class="en"> tomato </div>
+                                <div class="ko"> 방울토마토 </div>
                             </div>  
                             <div class="price110 price"> </div> 
                         </div>
@@ -187,12 +350,121 @@
                             </div>  
                             <div class="price110  price"> </div> 
                         </div>
+                        <div class="item disJcBet"> 
+                            <div class="dis">
+                                <div class="en"> Pear + Beet </div>
+                                <div class="ko">배 + 비트 </div>
+                            </div>  
+                            <div class="price110 price"> </div> 
+                        </div>
+                        <div class="item disJcBet"> 
+                            <div class="dis">
+                                <div class="en">Kiwi + Banana </div>
+                                <div class="ko"> 키위 + 바나나 </div>
+                            </div>  
+                            <div class="price110  price"> </div> 
+                        </div>
+                        <div class="item disJcBet"> 
+                            <div class="dis">
+                                <div class="en">Grapefruit</div>
+                                <div class="ko"> 자몽 </div>
+                            </div>  
+                            <div class="price110  price"> </div> 
+                        </div>
                     </div>
                 </div> 
                 <div class="navBox">
                     <div class="navTi dis">
-                        <div class="en"> Milk Veriation </div>
-                        <div class="ko"> </div>
+                        <div class="en"> Fresh Strawberry  </div>
+                        <div class="ko"> 생딸기 시즌 </div>
+                    </div>
+                    <div class="menu">
+                        <div class="item disJcBet "> 
+                            <div class="dis noDot">
+                                <div class="en"> Spring is Season of Fresh Strawberry  </div>
+                                <div class="ko"> 봄 = 생딸기 </div>
+                            </div>  
+                        </div>
+                        <div class="item disJcBet "> 
+                            <div class="dis ">
+                                <div class="en">Fresh Strawberry Latte </div>
+                                <div class="ko"> 생딸기라떼 </div>
+                            </div>  
+                            <div class="price100 price"></div>
+                        </div>
+                        <div class="item disJcBet "> 
+                            <div class="dis ">
+                                <div class="en">Fresh Strawberry Smoothie </div>
+                                <div class="ko"> 생딸기스무디 </div>
+                            </div>  
+                            <div class="price100 price"></div>
+                        </div>
+                        <div class="item disJcBet "> 
+                            <div class="dis ">
+                                <div class="en">Fresh Strawberry Juice </div>
+                                <div class="ko"> 생딸기쥬스 </div>
+                            </div>  
+                            <div class="price150 price"></div>
+                        </div>
+                    </div>
+                </div>        
+                <div class="navBox">
+                    <div class="navTi dis">
+                        <div class="en"> Hand_Made Greek Yourt </div>
+                        <div class="ko"> 그릭요거트 </div>
+                    </div>
+                    <div class="menu">
+                        <div class="item disJcBet "> 
+                            <div class="dis noDot">
+                                <div class="en">Greek Yogurt Smoothie  </div>
+                                <div class="ko"> 그릭요거트 스무디 </div>
+                            </div>  
+                            <div class="price100 price"></div>
+                        </div>
+                        <div class="item  modal">
+                            <div class="dis">
+                                <div class="en"> Plain </div>
+                                <div class="ko">요거만갈아 </div>
+                            </div>
+                        </div>
+                        <div class="item  modal">
+                            <div class="dis">
+                                <div class="en">Strawberry </div>
+                                <div class="ko">딸기갈아 </div>
+                            </div>
+                        </div>
+                        <div class="item  modal">
+                            <div class="dis">
+                                <div class="en">Blueberry </div>
+                                <div class="ko">블루베리갈아 </div>
+                            </div>
+                        </div>
+                        <div class="item disJcBet noDot mt12"> 
+                            <div class="dis">
+                                <div class="en"> Yourt + Fruit</div>
+                                <div class="ko"> 수제 요거트랑 과일이랑 </div>
+                            </div>  
+                        </div>
+                        <div class="item disJcBet "> 
+                            <div class="dis ">
+                                <div class="en">Yogurt Bowl </div>
+                                <div class="ko"> 요거트볼 </div>
+                            </div>  
+                            <div class="price120 price"></div>
+                        </div>
+                        <div class="item disJcBet "> 
+                            <div class="dis ">
+                                <div class="en">Greek Yogurt Bowl </div>
+                                <div class="ko"> 그릭요거트볼 </div>
+                            </div>  
+                            <div class="price120 price"></div>
+                        </div>
+                    </div>
+                </div>         
+                <div class="navBox">
+                    <div class="navTi dis">
+                        <div class="en"> Milk Variation </div>
+                        <div class="ko"> 우유 </div>
                     </div>
                     <div class="menu">
                         <div class="item disJcBet"> 
@@ -219,7 +491,7 @@
                         <div class="item disJcBet"> 
                             <div class="dis">
                                 <div class="en">BlackBean Latte </div>
-                                <div class="ko"> 서리태라떼 </div>
+                                <div class="ko"> 국산 서리태라떼 </div>
                             </div>  
                             <div class="price90 price"> </div> 
                         </div>
@@ -260,23 +532,123 @@
                         <div class="ko"> Cafe SEO's 한끼 </div>
                     </div>
                     <div class="menu">
-                        <div class="item"></div>
-                        <div class="item"></div>
-                        <div class="item"></div>
-                        <div class="item"></div>
+                        <div class="item disJcBet modal">
+                            <div class="dis">
+                                <div class="en"> NO.1 Meat</div>
+                                <div class="ko">NO.1 고기파 </div>
+                            </div>
+                            <div class="price260 price"></div>
+                        </div>
+                        <div class="item disJcBet modal">
+                            <div class="dis">
+                                <div class="en"> NO.2 Vegan</div>
+                                <div class="ko">NO.2 비건파 </div>
+                            </div>
+                            <div class="price190 price"></div>
+                        </div>
+                        <div class="item disJcBet modal">
+                            <div class="dis">
+                                <div class="en"> NO.3 Diet</div>
+                                <div class="ko">NO.3 식단파 </div>
+                            </div>
+                            <div class="price190 price"></div>
+                        </div>
+                        <div class="item disJcBet modal">
+                            <div class="dis">
+                                <div class="en"> NO.4 Arugula</div>
+                                <div class="ko">NO.4 유학파 </div>
+                            </div>
+                            <div class="price230 price"></div>
+                        </div>
                     </div>
                 </div> 
-            </div>    
+                <div class="navBox">
+                    <div class="navTi dis">
+                        <div class="en"> Desert </div>
+                        <div class="ko"> Cafe SEO's 디저트</div>
+                    </div>
+                    <div class="menu">
+                        <div class="item disJcBet modal">
+                            <div class="dis">
+                                <div class="en"> YogurtBaRa </div>
+                                <div class="ko">요거바라 </div>
+                            </div>
+                            <div class="price120 price"></div>
+                        </div>
+                        <div class="item disJcBet modal">
+                            <div class="dis">
+                                <div class="en"> Sweet-Salty Bowl </div>
+                                <div class="ko">단짠볼 </div>
+                            </div>
+                            <div class="price90 price"></div>
+                        </div>
+                        <div class="item disJcBet modal">
+                            <div class="dis">
+                                <div class="en"> Cookies Bowl </div>
+                                <div class="ko">쿠키볼 </div>
+                            </div>
+                            <div class="price85 price"></div>
+                        </div>
+                        <div class="item disJcBet modal">
+                            <div class="dis">
+                                <div class="en"> Sweet Potato Bowl </div>
+                                <div class="ko"> 구마볼 </div>
+                            </div>
+                            <div class="price100 price"></div>
+                        </div>
+                        <div class="item disJcBet modal">
+                            <div class="dis">
+                                <div class="en"> Today's Fruit Bowl</div>
+                                <div class="ko"> 오늘의 과일볼 </div>
+                            </div>
+                            <div class="price30 price"></div>
+                        </div>
+                    </div>    
+                </div>    
+            </div>
+            <div class="logo">
+                <div class="ko"> 
+                    <div > 쉼</div>
+                    <div> 이 </div>
+                    <div> 물</div>
+                    <div> 드</div>
+                    <div> 는</div>
+                    <div> 그</div>
+                    <div> 곳</div>
+                </div>
+            </div>
         </div>
-        <div class="footer"></div>
+        <!-- <div class="btn" >
+            <a href="#"  ><img src="./img/icon/upbtn.png"> </a>
+        </div> -->
+        <img src="./img/icon/upbtn.png" class="btn" href="#">
     </div>    
 </body>
 <script>
     $(".navTi").on("click", function (){
         $(this).next(".menu").slideToggle(100);
     });
-	$(document).ready(function(){
-        $("#we").load("thema/we.html");
-    });		
+	// $(document).ready(function(){
+    //     $("#we").load("thema/we.html");
+    // });		
+    // $("#scroll-top").on("click",function(){
+    //     $('html, body').animate({
+    //         scrollTop : 0
+    //     },400)
+    //     return false;
+    // });
+    $(function () {
+        $(window).scroll(function(){
+            if($(this).scrollTop() > 50) {
+                $(".btn"). fadeIn();
+            } else {
+                $(".btn"). fadeOut();
+            }
+        })
+        $(".btn").click( function(){
+            $('html, body').animate( {scrollTop : 0}, 400 );
+            return false;
+        });
+    });
 </script>
 </html>

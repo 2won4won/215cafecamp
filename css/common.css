@@ -98,6 +98,7 @@
 
  /* price */
 .price0::before { content: '•'; }
+.price30::before { content: '3.0'; }
 .price65::before { content: '6.5';}
 .price70::before { content: '7.0';}
 .price75::before { content: '7.5'; }
@@ -115,4 +116,6 @@
 
 /* margin & padding */
 .pb10 { padding-bottom: 10px; }
+.mt12 { margin-top: 12px; }
 .layoutBottom { padding-bottom: 22px; }
+.none { display: none;}
