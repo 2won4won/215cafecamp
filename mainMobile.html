@@ -116,6 +116,7 @@
         .btn .ko div:nth-child(5) { margin-bottom: 1vh;}
 
         .strawberry { background: url('./img/icon/strawberry.png'); background-size: 100% 100%;}
+        .plus{ background: url('./img/icon/plus.png'); background-size: 100% 100%;}
         .no1 { background: url('./img/photo/no1.jpg'); background-size: 100% 100%;}
         .no2 { background: url('./img/photo/no2.jpg'); background-size: 100% 100%;}
         .no3 { background: url('./img/photo/no3.jpg'); background-size: 100% 100%;}
@@ -132,11 +133,21 @@
             right: 20.7vw; */
             /* opacity: 0.7; */
         }
+        .imgP {
+            width: 7vw;
+            height: 4vh;
+            position: absolute;
+            bottom: 1vh;
+            right: 3vw;
+            /* top: 19vh;
+            right: 20.7vw; */
+            /* opacity: 0.7; */
+        }
         /* modal */
         .modal {
             display: none;
             width: 75vw;
-            height: 80vh;
+            height: 65vh;
             background-color: rgba(0, 0, 0, 0.6);
         }
         .modal .img {
@@ -461,21 +472,21 @@
                                 <div class="ko"> 그릭요거트 스무디 </div>
                             </div>  
                         </div>
-                        <div class="item disJcBet  modal">
+                        <div class="item disJcBet  ">
                             <div class="dis">
                                 <div class="en"> Plain </div>
                                 <div class="ko">요거만갈아 </div>
                             </div>
                             <div class="price100 price"></div>
                         </div>
-                        <div class="item disJcBet modal">
+                        <div class="item disJcBet ">
                             <div class="dis">
                                 <div class="en">Strawberry </div>
                                 <div class="ko">딸기갈아 </div>
                             </div>
                             <div class="price100 price"></div>
                         </div>
-                        <div class="item disJcBet modal">
+                        <div class="item disJcBet ">
                             <div class="dis">
                                 <div class="en">Blueberry </div>
                                 <div class="ko">블루베리갈아 </div>
@@ -575,7 +586,14 @@
                         <div class="ko"> Cafe SEO's 한끼 </div>
                     </div>
                     <div class="menu">
-                        <div class="item disJcBet modalBtn">
+                        <div class="item  noDot posNa">
+                            <div class="dis">
+                                <div class="en">Image</div>
+                                <div class="ko">클릭하시면 이미지를  </div>
+                            </div>
+                            <div class="plus imgP" ></div>
+                        </div>
+                        <div class="item disJcBet modalBtn posNa">
                             <div class="dis">
                                 <div class="en">NO.1 Meat</div>
                                 <div class="ko">NO.1 고기파 </div>
@@ -703,12 +721,6 @@
             $('html, body').animate( {scrollTop : 0}, 400 );
             return false;
         });
-    });
-
-    $(".modalBtn ").hover(function() {
-        $(".modalBtn ").css({"background-color":"aqua"});
-    }, function() {
-        $(".modalBtn ").css({"background":"none"});
     });
 
     // modal open
