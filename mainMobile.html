@@ -123,6 +123,7 @@
         .no4 { background: url('./img/photo/no4.jpg'); background-size: 100% 100%;}
         .salad { background: url('./img/photo/salad.jpg'); background-size: 100% 100%;}
         .yogurtBaRa { background: url('./img/photo/yogurtBaRa.jpg'); background-size: 100% 100%;}
+        .sweetSalty { background: url('./img/photo/sweetSalty.jpg'); background-size: 100% 100%;}
         .imgs {
             width: 8.9vw;
             height: 6vh;
@@ -136,13 +137,15 @@
         .imgP {
             width: 7vw;
             height: 4vh;
-            position: absolute;
+            /* position: absolute;
             bottom: 1vh;
-            right: 3vw;
+            right: 3vw; */
             /* top: 19vh;
             right: 20.7vw; */
             /* opacity: 0.7; */
         }
+        .desert .noDot .ko,
+        .meal .noDot .ko { margin-top: -1rem !important;}
         /* modal */
         .modal {
             display: none;
@@ -174,7 +177,7 @@
                     </div>
                     <div class="menu">
                         <div class="item  "> 
-                            <div> 원두 선택 하세요 </div>
+                            <div class="disRight"> 3 종류의 원두 중 1개를 선택 하세요 </div>
                             <div>
                                 <div class="disJcBet">
                                     <div class="dis noDot">
@@ -220,7 +223,7 @@
                             </div>  
                             <div class="price65 price"> </div> 
                         </div>
-                        <div class="item disJcBet noDot"> 
+                        <div class="item disRight noDot"> 
                             <div class="dis">
                                 <div class="en"> Espresso Variation </div>
                                 <div class="ko">에스프레소 베리에이션 </div>
@@ -317,7 +320,7 @@
                         <div class="ko"> 콜드부르</div>
                     </div>
                     <div class="menu">
-                        <div class="item disJcBet"> 
+                        <div class="item disRight"> 
                             <div class="dis noDot">
                                 <div class="en"> Only Ice </div>
                                 <div class="ko"> 아이스만 가능합니다. </div>
@@ -345,7 +348,7 @@
                         <div class="ko"> 과일 </div>
                     </div>
                     <div class="menu">
-                        <div class="item disJcBet"> 
+                        <div class="item disRight"> 
                             <div class="dis noDot">
                                 <div class="en"> Hand-Made Fruit Syrub </div>
                                 <div class="ko"> 생과일 수제청  Tea & Ade </div>
@@ -380,7 +383,7 @@
                             </div>  
                             <div class="price90 price"> </div> 
                         </div>
-                        <div class="item disJcBet mt12"> 
+                        <div class="item disRight mt12"> 
                             <div class="dis noDot">
                                 <div class="en"> Fresh Fruit Juice </div>
                                 <div class="ko"> 싱싱한 생과일 그대로 쥬스 </div>
@@ -431,7 +434,7 @@
                         <div class="strawberry imgs" ></div>
                     </div>
                     <div class="menu">
-                        <div class="item disJcBet "> 
+                        <div class="item disRight "> 
                             <div class="dis noDot">
                                 <div class="en"> Spring is Season of Fresh Strawberry  </div>
                                 <div class="ko"> 봄 = 생딸기 </div>
@@ -466,10 +469,10 @@
                         <div class="ko"> 그릭요거트 </div>
                     </div>
                     <div class="menu">
-                        <div class="item disJcBet "> 
+                        <div class="item disRight "> 
                             <div class="dis noDot">
                                 <div class="en">Greek Yogurt Smoothie  </div>
-                                <div class="ko"> 그릭요거트 스무디 </div>
+                                <div class="ko"> 수제 그릭요거트 스무디 </div>
                             </div>  
                         </div>
                         <div class="item disJcBet  ">
@@ -493,7 +496,7 @@
                             </div>
                             <div class="price100 price"></div>
                         </div>
-                        <div class="item disJcBet noDot "> 
+                        <div class="item disRight noDot "> 
                             <div class="dis">
                                 <div class="en"> Yourt + Fruit</div>
                                 <div class="ko"> 수제 요거트랑 과일이랑 </div>
@@ -580,18 +583,18 @@
                         </div>
                     </div>
                 </div> 
-                <div class="navBox">
+                <div class="navBox meal">
                     <div class="navTi dis">
                         <div class="en"> Meal </div>
                         <div class="ko"> Cafe SEO's 한끼 </div>
                     </div>
                     <div class="menu">
-                        <div class="item  noDot posNa">
-                            <div class="dis">
-                                <div class="en">Image</div>
-                                <div class="ko">클릭하시면 이미지를  </div>
+                        <div class="item  noDot  ">
+                            <div class="disRight ">
+                                <div class="en">Attach Image</div>
+                                <div class="plus imgP " ></div>
                             </div>
-                            <div class="plus imgP" ></div>
+                            <div class="ko">클릭하시면 상세 이미지를 보실 수 있어요.  </div>
                         </div>
                         <div class="item disJcBet modalBtn posNa">
                             <div class="dis">
@@ -630,12 +633,19 @@
                         </div>
                     </div>
                 </div> 
-                <div class="navBox">
+                <div class="navBox desert">
                     <div class="navTi dis">
                         <div class="en"> Desert </div>
                         <div class="ko"> Cafe SEO's 디저트</div>
                     </div>
                     <div class="menu">
+                        <div class="item  noDot  ">
+                            <div class="disRight ">
+                                <div class="en">Attach Image</div>
+                                <div class="plus imgP " ></div>
+                            </div>
+                            <div class="ko">클릭하시면 상세 이미지를 보실 수 있어요.  </div>
+                        </div>
                         <div class="item disJcBet modalBtn">
                             <div class="dis">
                                 <div class="en">YogurtBaRa</div>
