@@ -64,6 +64,7 @@
 
         .noDot .en::before,
         .navTi .en::before { content: "";}
+        .noDot .ko { color: #616161; } 
         
         .menu {
             display: none;
@@ -108,7 +109,7 @@
             height: 30vh;
         }
         .btn img {
-            width: 9vw; height: 5vh;
+            width: 8vw; height: 5vh;
 
         }
         .btn .ko {margin-left: 0 !important; text-align: center;}
@@ -116,7 +117,7 @@
         .btn .ko div:nth-child(5) { margin-bottom: 1vh;}
 
         .strawberry { background: url('./img/icon/strawberry.png'); background-size: 100% 100%;}
-        .plus{ background: url('./img/icon/plus.png'); background-size: 100% 100%;}
+        .photo{ background: url('./img/icon/photo.png'); background-size: 100% 100%;}
         .no1 { background: url('./img/photo/no1.jpg'); background-size: 100% 100%;}
         .no2 { background: url('./img/photo/no2.jpg'); background-size: 100% 100%;}
         .no3 { background: url('./img/photo/no3.jpg'); background-size: 100% 100%;}
@@ -127,6 +128,7 @@
         .salad { background: url('./img/photo/salad.jpg'); background-size: 100% 100%;}
         .yogurtBaRa { background: url('./img/photo/yogurtBaRa.jpg'); background-size: 100% 100%;}
         .sweetSalty { background: url('./img/photo/sweetSalty.jpg'); background-size: 100% 100%;}
+        .sweetPotato { background: url('./img/photo/sweetPotato.jpg'); background-size: 100% 100%;}
         .imgs {
             width: 8.9vw;
             height: 6vh;
@@ -138,14 +140,16 @@
             /* opacity: 0.7; */
         }
         .imgP {
-            width: 7vw;
-            height: 4vh;
+            width: 6.4vw;
+            height: 3.9vh;
+            margin-top: 0.3rem;
+            margin-left: 0.4rem;
             /* position: absolute;
             bottom: 1vh;
             right: 3vw; */
             /* top: 19vh;
             right: 20.7vw; */
-            /* opacity: 0.7; */
+            opacity: 0.7;
         }
         .desert .noDot .ko,
         .meal .noDot .ko { margin-top: -1rem !important;}
@@ -180,7 +184,7 @@
                     </div>
                     <div class="menu">
                         <div class="item  "> 
-                            <div class="disRight"> 3 종류의 원두 중 1개를 선택 하세요 </div>
+                            <div class="disRight ko"> 3 종류의 원두 중 1개를 선택 하세요 </div>
                             <div>
                                 <div class="disJcBet">
                                     <div class="dis noDot">
@@ -433,7 +437,7 @@
                     <div class="navTi dis posNa">
                         <div class="en"> Fresh Strawberry  </div>
                         <div class="ko "> 생딸기 시즌 </div>
-                        <div class="strawberry imgs" ></div>
+                        <!-- <div class="strawberry imgs" ></div> -->
                     </div>
                     <div class="menu">
                         <div class="item disRight "> 
@@ -503,19 +507,12 @@
                                 <div class="en"> Yourt + Fruit</div>
                                 <div class="ko"> 수제 요거트랑 과일이랑 </div>
                             </div>  
-                            <div class="     ">
-                                <div class="dis disRight">
-                                    <div class="en">Attach Image</div>
-                                    <div class="plus imgP " ></div>
-                                </div>
-                                <!-- <div class="ko disRight">클릭하시면 상세 이미지를 보실 수 있어요.  </div>  -->
-                            </div>
                         </div>
-                        
                         <div class="item disJcBet modalBtn"> 
                             <div class="dis ">
                                 <div class="en">Yogurt Bowl</div>
                                 <div class="ko"> 요거트볼 </div>
+                                <div class="photo imgP " ></div>
                             </div>  
                             <div class="price120 price"></div>
                         </div>
@@ -523,6 +520,7 @@
                             <div class="dis ">
                                 <div class="en">GreekYogurt Bowl</div>
                                 <div class="ko">그릭요거트볼</div>
+                                <div class="photo imgP " ></div>
                             </div>  
                             <div class="price120 price"></div>
                         </div>
@@ -602,7 +600,7 @@
                         <div class="item  noDot  ">
                             <div class="disRight ">
                                 <div class="en">Attach Image</div>
-                                <div class="plus imgP " ></div>
+                                <div class="photo imgP " ></div>
                             </div>
                             <div class="ko">클릭하시면 상세 이미지를 보실 수 있어요.  </div>
                         </div>
@@ -652,7 +650,7 @@
                         <div class="item  noDot  ">
                             <div class="disRight ">
                                 <div class="en">Attach Image</div>
-                                <div class="plus imgP " ></div>
+                                <div class="photo imgP " ></div>
                             </div>
                             <div class="ko">클릭하시면 상세 이미지를 보실 수 있어요.  </div>
                         </div>
@@ -669,13 +667,6 @@
                                 <div class="ko">단짠볼 </div>
                             </div>
                             <div class="price90 price"></div>
-                        </div>
-                        <div class="item disJcBet modalBtn">
-                            <div class="dis">
-                                <div class="en">Cookies Bowl</div>
-                                <div class="ko">쿠키볼 </div>
-                            </div>
-                            <div class="price85 price"></div>
                         </div>
                         <div class="item disJcBet modalBtn">
                             <div class="dis">
@@ -719,7 +710,7 @@
         <div class="img yogurtBaRa modalImg" data-type="YogurtBaRa"></div>
         <div class="img sweetSalty modalImg" data-type="Sweet-Salty Bowl"></div>
         <div class="img sweetPotato modalImg" data-type="Sweet Potato Bowl"></div>
-        <div class="img cookies  modalImg" data-type="Cookies Bowl"></div>
+        <!-- <div class="img cookies  modalImg" data-type="Cookies Bowl"></div> -->
         <div class="img fruitBowl modalImg" data-type="Today's Fruit Bowl"></div>
         <!-- <div class="img yogurt modalImg" data-type="Yogurt Bowl"></div> -->
     </div>  
