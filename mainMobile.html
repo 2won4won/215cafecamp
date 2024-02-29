@@ -121,6 +121,9 @@
         .no2 { background: url('./img/photo/no2.jpg'); background-size: 100% 100%;}
         .no3 { background: url('./img/photo/no3.jpg'); background-size: 100% 100%;}
         .no4 { background: url('./img/photo/no4.jpg'); background-size: 100% 100%;}
+        .mGreekYogurt { background: url('./img/photo/mGreekYogurt.jpg'); background-size: 100% 100%;}
+        .mYogurt { background: url('./img/photo/mYogurt.jpg'); background-size: 100% 100%;}
+        .fruitBowl { background: url('./img/photo/fruitBowl.jpg'); background-size: 100% 100%;}
         .salad { background: url('./img/photo/salad.jpg'); background-size: 100% 100%;}
         .yogurtBaRa { background: url('./img/photo/yogurtBaRa.jpg'); background-size: 100% 100%;}
         .sweetSalty { background: url('./img/photo/sweetSalty.jpg'); background-size: 100% 100%;}
@@ -353,7 +356,6 @@
                                 <div class="en"> Hand-Made Fruit Syrub </div>
                                 <div class="ko"> 생과일 수제청  Tea & Ade </div>
                             </div>  
-                            <!-- <div class=""> Tea & Ade </div>  -->
                         </div>
                         <div class="item disJcBet"> 
                             <div class="dis">
@@ -496,23 +498,31 @@
                             </div>
                             <div class="price100 price"></div>
                         </div>
-                        <div class="item disRight noDot "> 
-                            <div class="dis">
+                        <div class="item  noDot "> 
+                            <div class="dis disRight">
                                 <div class="en"> Yourt + Fruit</div>
                                 <div class="ko"> 수제 요거트랑 과일이랑 </div>
                             </div>  
+                            <div class="     ">
+                                <div class="dis disRight">
+                                    <div class="en">Attach Image</div>
+                                    <div class="plus imgP " ></div>
+                                </div>
+                                <!-- <div class="ko disRight">클릭하시면 상세 이미지를 보실 수 있어요.  </div>  -->
+                            </div>
                         </div>
+                        
                         <div class="item disJcBet modalBtn"> 
                             <div class="dis ">
-                                <div class="en">Yogurt Bowl </div>
+                                <div class="en">Yogurt Bowl</div>
                                 <div class="ko"> 요거트볼 </div>
                             </div>  
                             <div class="price120 price"></div>
                         </div>
                         <div class="item disJcBet modalBtn"> 
                             <div class="dis ">
-                                <div class="en">Greek Yogurt Bowl </div>
-                                <div class="ko"> 그릭요거트볼 </div>
+                                <div class="en">GreekYogurt Bowl</div>
+                                <div class="ko">그릭요거트볼</div>
                             </div>  
                             <div class="price120 price"></div>
                         </div>
@@ -703,14 +713,15 @@
         <div class="img no2 modalImg" data-type="NO.2 Vegan"></div>
         <div class="img no3 modalImg" data-type="NO.3 Diet"></div>
         <div class="img no4 modalImg" data-type="NO.4 Arugula"></div>
+        <div class="img mGreekYogurt modalImg" data-type="GreekYogurt Bowl"></div>
+        <div class="img mYogurt modalImg" data-type="Yogurt Bowl"></div>
         <div class="img salad modalImg" data-type="Salad feat Arugula"></div>
         <div class="img yogurtBaRa modalImg" data-type="YogurtBaRa"></div>
         <div class="img sweetSalty modalImg" data-type="Sweet-Salty Bowl"></div>
         <div class="img sweetPotato modalImg" data-type="Sweet Potato Bowl"></div>
         <div class="img cookies  modalImg" data-type="Cookies Bowl"></div>
         <div class="img fruitBowl modalImg" data-type="Today's Fruit Bowl"></div>
-        <div class="img yogurt modalImg" data-type="Yogurt Bowl"></div>
-        <div class="img greekYogurt modalImg" data-type="Greek Yogurt Bowl"></div>
+        <!-- <div class="img yogurt modalImg" data-type="Yogurt Bowl"></div> -->
     </div>  
 </body>
 <script>
@@ -728,7 +739,7 @@
             }
         })
         $(".btn").click( function(){
-            $('html, body').animate( {scrollTop : 0}, 400 );
+            $('html, body').animate( {scrollTop : 0}, 300 );
             return false;
         });
     });

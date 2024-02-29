@@ -68,9 +68,9 @@
     @keyframes reveal {
         0% {opacity:0;width:0px;}
         20% {opacity:1;width:0px;}
-        30% {width:320px;}   /* 넓이조정 */
+        30% {width:330px;}   /* 넓이조정 */
         80% {opacity:1;}
-        100% {opacity:0;width:320px;}
+        100% {opacity:0;width:330px;}
     } 
     .we div, .hi div {
         display:inline-block;
@@ -96,23 +96,39 @@
         height: 35px;
         position: relative;
     }
-    .we img { width: 20px; height: 25px; margin-left: -6px; margin-top: -3px;}
+    .we img { width: 3rem; height: 2.5rem;  background-color: bisque;}
+    /* .we img { width: 20px; height: 25px; margin-left: -6px; margin-top: -3px;} */
+    /* .flag {
+        background: url('./img/icon/flag.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    } */
 </style>
 
 
 <div class="we">
+    <div class="ko koColor"> 그 날의 함성, </div>
+    <div >
+        <span class="atseo"> at SEO</span>
+        <span class="here  koColor "> 
+            잊지 않겠습니다.
+            <img src="./img/icon/flag.png" >
+        </span>    
+    </div>
+</div>
+<div class="we none">
     <div >
         <span class="w1"> 봄, </span>
         <span class="w2"> 시작, </span>
-        <span class="w1">  출발, </span>
+        <span class="w1">  출발 </span>
     </div>
     <div>
         <span class="atseo"> at SEO</span>
         <span class="here  koColor"> 
             당신을 응원합니다. 
             <!-- <div class="heart"> </div> -->
-            <img src="./img/icon/love.png" >
         </span>    
+        <img src="./img/icon/love.png" >
     </div>
 </div>
 <div class="hi none">
