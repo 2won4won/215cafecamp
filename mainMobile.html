@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/effect.css">
+
     <title>Document</title>
     <style>
 
@@ -153,6 +155,7 @@
         }
         .desert .noDot .ko,
         .meal .noDot .ko { margin-top: -1rem !important;}
+    
         /* modal */
         .modal {
             display: none;
@@ -170,6 +173,35 @@
             position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
             opacity: 0.5; background-color: #000;
         } */
+     /* neon */
+    .neon { 
+        animation: neon 3s ease infinite;
+        -moz-animation: neon 3s ease infinite;
+        -webkit-animation: neon 3s ease infinite;
+        -o-animation:  neon 3s linear infinite;
+    }
+    @keyframes neon {
+        0%,
+        100% {
+            text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+            color: #28D7FE;
+        }
+        50% {
+            text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+            color: #146C80;
+        }
+    }
+    /* @keyframes neon {
+        0%,
+        100% {
+            text-shadow: 0 0 1vw , 0 0 3vw #960018, 0 0 10vw #960018, 0 0 10vw #960018, 0 0 .4vw #960018, .5vw .5vw .1vw #F0768B;
+            color: #FFF;
+        }
+        50% {
+            text-shadow: 0 0 .5vw #960018, 0 0 1.5vw #960018, 0 0 5vw #960018, 0 0 5vw #960018, 0 0 .2vw #960018, .5vw .5vw .1vw #F0768B;
+            color: #FFF;
+        }
+    } */
     </style>
 </head>
 <body>
@@ -324,7 +356,7 @@
                 <div class="navBox">
                     <div class="navTi dis">
                         <div class="en"> Cold Brew</div>
-                        <div class="ko"> 콜드부르</div>
+                        <div class="ko"> 콜드브루</div>
                     </div>
                     <div class="menu">
                         <div class="item disRight"> 
@@ -436,7 +468,7 @@
                 <div class="navBox">
                     <div class="navTi dis posNa">
                         <div class="en"> Fresh Strawberry  </div>
-                        <div class="ko "> 생딸기 시즌 </div>
+                        <div class="ko neon"> 생딸기 시즌 </div>
                         <!-- <div class="strawberry imgs" ></div> -->
                     </div>
                     <div class="menu">
@@ -719,9 +751,7 @@
         <div class="img yogurtBaRa modalImg" data-type="YogurtBaRa"></div>
         <div class="img sweetSalty modalImg" data-type="Sweet-Salty Bowl"></div>
         <div class="img sweetPotato modalImg" data-type="Sweet Potato Bowl"></div>
-        <!-- <div class="img cookies  modalImg" data-type="Cookies Bowl"></div> -->
         <div class="img fruitBowl modalImg" data-type="Today's Fruit Bowl"></div>
-        <!-- <div class="img yogurt modalImg" data-type="Yogurt Bowl"></div> -->
     </div>  
 </body>
 <script>
