@@ -174,13 +174,14 @@
             opacity: 0.5; background-color: #000;
         } */
      /* neon */
-    .neon { 
-        animation: neon 3s ease infinite;
-        -moz-animation: neon 3s ease infinite;
-        -webkit-animation: neon 3s ease infinite;
+    /* .neon { 
+        font-size: 1.4rem !important;
+        animation: neon 3s linear infinite;
+        -moz-animation: neon 3s linear infinite;
+        -webkit-animation: neon 3s linear infinite;
         -o-animation:  neon 3s linear infinite;
-    }
-    @keyframes neon {
+    } */
+    /* @keyframes neon {
         0%,
         100% {
             text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
@@ -190,8 +191,41 @@
             text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
             color: #146C80;
         }
+    }  */
+    .flicker {
+        /* animation: flicker 2s infinite alternate; */
+        font-size: 1.35rem !important;
+        text-shadow: /* White glow */ 
+                    0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+                     /* Green glow */ 
+                     0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+         color: #fff;
+
     }
-    /* @keyframes neon {
+    @keyframes flicker {
+        0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+            text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px #0fa,
+            0 0 80px #0fa,
+            0 0 90px #0fa,
+            0 0 100px #0fa,
+            0 0 150px #0fa;
+
+        }
+
+        20%, 24%, 55% {        
+            text-shadow: none;
+        }    
+    }
+    
+    .neon {
+        animation: neon 2s infinite ; 
+    }
+    @keyframes neon {
         0%,
         100% {
             text-shadow: 0 0 1vw , 0 0 3vw #960018, 0 0 10vw #960018, 0 0 10vw #960018, 0 0 .4vw #960018, .5vw .5vw .1vw #F0768B;
@@ -201,7 +235,8 @@
             text-shadow: 0 0 .5vw #960018, 0 0 1.5vw #960018, 0 0 5vw #960018, 0 0 5vw #960018, 0 0 .2vw #960018, .5vw .5vw .1vw #F0768B;
             color: #FFF;
         }
-    } */
+    }
+    
     </style>
 </head>
 <body>
@@ -467,7 +502,7 @@
                 </div> 
                 <div class="navBox">
                     <div class="navTi dis posNa">
-                        <div class="en"> Fresh Strawberry  </div>
+                        <div class="en flicker "> Fresh Strawberry  </div>
                         <div class="ko neon"> 생딸기 시즌 </div>
                         <!-- <div class="strawberry imgs" ></div> -->
                     </div>
