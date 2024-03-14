@@ -1,0 +1,99 @@
+<style>
+    /* flower border size 맞추기 위해서 */
+    .seasonBox .border:nth-child(even) { width: 30%; }
+    .seasonBox .border:nth-child(odd) { 
+        width: 29%;   
+        box-shadow: none;
+        padding: 0;
+        margin-bottom: 0;
+    }
+    .seasonBox .straw  { margin-top: 12px; }
+    .seasonBox .straw > div:nth-child(2) { padding: 0 5px 0 60px; }
+    /* 가격 위치 조정 */
+    .seasonBox .priceColor {margin-top: 10px;}
+    /* icon 삽입 */
+    .strawberry { background: url('./img/icon/strawberry.png'); background-size: 100% 100%;}
+    .imgs2 {
+        width: 3.2vw;
+        height: 5.6vh;
+        position: absolute;
+        bottom: -4.5vh;
+        left: 1.8vw;
+        /* top: 19vh;
+        right: 20.7vw; */
+        opacity: 0.7;
+    }
+
+    .seasonBox2 .border:first-child {  width: 32%;}
+    .seasonBox2 .border:nth-child(even) {  width: 20%;}
+    .seasonBox2 .border:last-child{  width: 25%;}
+    .seasonBox2 .border,
+    .seasonBox2 .border:last-child .img::before { 
+        border-radius: 10%;
+        height: 12.5vh;
+    }
+    .seasonBox2 .border:nth-child(even) .en::before,
+    .seasonBox2 .border:last-child .en::before { content: "";}
+    .strawLatte { 
+        background: url('./img/photo/strawLatte.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .imgL {
+        width: 4.5vw;
+        height: 10.1vh;
+        position: absolute;
+        top: 2.5vh;
+        left: 0.8vw;
+        /* top: 19vh;
+        right: 20.7vw; */
+        opacity: 0.7;
+    }
+    .strawSm { 
+        background: url('./img/photo/strawSm.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .strawShaved { 
+        background: url('./img/photo/strawShaved.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+</style>
+<div class="seasonBox2  disJcBet">
+    <div class=" border">
+        <div class="posNa">
+            <div class="en enColor "> Latte </div>
+            <div class="ko koColor "> 생딸기 퐁당 라떼 </div>
+            <div class="price100 priceColor  ">  </div>
+            <div class="strawLatte imgL"> </div>
+        </div>
+        <div class="posNa">
+            <div class="strawSm imgS"> </div>
+            
+        </div>
+        <div class="">
+            <div class="strawJuice imgJ"> </div>
+            
+        </div>
+    </div>
+    <div class=" border  ">
+        <div class="">
+            <div class="en enColor ">Spring is <br>  Fresh Strawberry </div>
+            <div class="posNa line">
+                <div class="ko koColor straw "> 봄은 생딸기와 함께 </div>
+                <div class="strawberry imgs2" ></div>
+            </div>
+        </div>
+    </div>
+    <div class=" border img strawShaved">
+        <div class="">
+            <div class="en enColor "> Fresh Strawberry Shaved Ice </div>
+            <div class="disJcBet line">
+                <div class="ko koColor line "> 생딸기 퐁당 빙수 </div>
+                <div class="price190 priceColor  ">  </div>
+            </div>
+        </div>
+    </div>    
+</div>
+

@@ -131,6 +131,7 @@
         .yogurtBaRa { background: url('./img/photo/yogurtBaRa.jpg'); background-size: 100% 100%;}
         .sweetSalty { background: url('./img/photo/sweetSalty.jpg'); background-size: 100% 100%;}
         .sweetPotato { background: url('./img/photo/sweetPotato.jpg'); background-size: 100% 100%;}
+        .mStrawshavedIce { background: url('./img/photo/mStrawshavedIce.jpg'); background-size: 100% 100%;}
         .imgs {
             width: 8.9vw;
             height: 6vh;
@@ -142,9 +143,9 @@
             /* opacity: 0.7; */
         }
         .imgP {
-            width: 6.4vw;
-            height: 3.9vh;
-            margin-top: 0.3rem;
+            width: 5.6vw;
+            height: 3.4vh;
+            margin-top: 0.4rem;
             margin-left: 0.4rem;
             /* position: absolute;
             bottom: 1vh;
@@ -218,7 +219,76 @@
             color: #FFF;
         }
     }
-    
+    .wrapper {
+        /* position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%); */
+        width: inherit;
+        height: inherit;
+        white-space: nowrap;
+    }
+
+    .focus {
+        /* position: absolute;
+        top: 50%;
+        transform: translateY(-50%); */
+        /* font-family: Arial;
+        text-transform: uppercase; */
+        letter-spacing: 1px;
+        filter: blur(2px);
+        /* font-size: 1.5rem; */
+        opacity: 0.6;
+        color: #fff;
+    }
+
+    .mask {
+        /* position: absolute;
+        top: 50%;
+        transform: translateX(-50%); */
+        /* font-size: 1.5rem; */
+        position: absolute;
+        transform: translateX(100);
+        width: 1.8rem;  /* 글자 보이는 글자 사이즈 */
+        /* font-family: Arial; */
+        /* font-weight: bold; */
+        /* text-transform: uppercase; */
+        letter-spacing: 2px;
+        /* font-size: 65px; */
+        clip: rect(0px,70px,75px,0px);
+        background: linear-gradient(#fff, #fff 0) no-repeat,
+            linear-gradient(to right, #fff, #fff 0) no-repeat,
+            linear-gradient(to right, #fff, #fff 0) bottom left no-repeat,
+            linear-gradient(to right, #fff, #fff 0) bottom left no-repeat,
+            linear-gradient( #fff, #fff 0) bottom right no-repeat,
+            linear-gradient( #fff, #fff 0) bottom right no-repeat,
+            linear-gradient( #fff, #fff 0) top right no-repeat,
+            linear-gradient( #fff, #fff 0) top right no-repeat;
+        background-size: 10px 2px, 2px 10px, 2px 10px, 10px 2px, 2px 10px, 10px 2px, 10px 2px, 2px 10px, 10px 2px;
+        color: #fff;
+        padding:0.2rem;
+        transform: translateX(0);
+        box-sizing: border-box;
+        animation: mask 2.5s ease infinite alternate;
+    }
+
+    .text {
+        transform: translateX(0);
+        animation: text 2.5s ease infinite alternate;
+    }
+    /* 글자 보이는 박스 사이즈 */
+    @keyframes mask {
+        to {
+            transform: translateX(6.5rem);
+        }
+        }
+
+        @keyframes text {
+        to {
+            transform: translateX(-6.5rem);
+        }
+    }
+
     </style>
 </head>
 <body>
@@ -483,10 +553,17 @@
                     </div>
                 </div> 
                 <div class="navBox">
-                    <div class="navTi dis posNa">
+                    <div class="navTi dis ">
                         <div class="en flicker "> Fresh Strawberry  </div>
-                        <div class="ko neon"> 생딸기 시즌 </div>
-                        <!-- <div class="strawberry imgs" ></div> -->
+                        <!-- <div class="ko neon"> 생딸기 시즌 </div> -->
+                        <div class="wrapper ko line">
+                            <div class="focus  ">
+                                생딸기 시즌
+                            </div>
+                            <div class="mask ">
+                              <div class="text ">생딸기 시즌</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="menu">
                         <div class="item disRight "> 
@@ -498,23 +575,31 @@
                         <div class="item disJcBet "> 
                             <div class="dis ">
                                 <div class="en">Fresh Strawberry Latte </div>
-                                <div class="ko"> 생딸기라떼 </div>
+                                <div class="ko"> 생딸기 퐁당 라떼 </div>
                             </div>  
                             <div class="price100 price"></div>
                         </div>
                         <div class="item disJcBet "> 
                             <div class="dis ">
                                 <div class="en">Fresh Strawberry Smoothie </div>
-                                <div class="ko"> 생딸기스무디 </div>
+                                <div class="ko"> 생딸기 퐁당 스무디 </div>
                             </div>  
                             <div class="price100 price"></div>
                         </div>
                         <div class="item disJcBet "> 
                             <div class="dis ">
                                 <div class="en">Fresh Strawberry Juice </div>
-                                <div class="ko"> 생딸기쥬스 </div>
+                                <div class="ko"> 생딸기 퐁당 쥬스 </div>
                             </div>  
                             <div class="price150 price"></div>
+                        </div>
+                        <div class="item disJcBet modalBtn "> 
+                            <div class="dis ">
+                                <div class="en">Fresh Strawberry Shaved Ice</div>
+                                <div class="ko"> 생딸기 퐁당 빙수 </div>
+                            </div>  
+                            <!-- <div class="price190 price"></div> -->
+                            <div class="photo imgP " ></div>
                         </div>
                     </div>
                 </div>        
@@ -769,6 +854,7 @@
         <div class="img sweetSalty modalImg" data-type="Sweet-Salty Bowl"></div>
         <div class="img sweetPotato modalImg" data-type="Sweet Potato Bowl"></div>
         <div class="img fruitBowl modalImg" data-type="Today's Fruit Bowl"></div>
+        <div class="img mStrawshavedIce modalImg" data-type="Fresh Strawberry Shaved Ice"></div>
     </div>  
 </body>
 <script>
