@@ -14,24 +14,27 @@
     /* icon 삽입 */
     .strawberry { background: url('./img/icon/strawberry.png'); background-size: 100% 100%;}
     .imgs2 {
-        width: 3.2vw;
-        height: 5.6vh;
+        width: 2.4vw;
+        height: 4.9vh;
         position: absolute;
-        bottom: -4.5vh;
-        left: 1.8vw;
+        bottom: -3.7vh;
+        left: 2.4vw;
         /* top: 19vh;
         right: 20.7vw; */
         opacity: 0.7;
     }
 
-    .seasonBox2 .border:first-child {  width: 32%;}
-    .seasonBox2 .border:nth-child(even) {  width: 20%;}
-    .seasonBox2 .border:last-child{  width: 25%;}
+    .seasonBox2 .border:first-child {  width: 58%;}
+    /* .seasonBox2 .border:nth-child(even) {  width: 18%;} */
+    .seasonBox2 .border:last-child{  width: 27%;}
+    .seasonBox2 .border:first-child .ko { line-height: 1.4rem;}
+    .seasonBox2 .border:first-child .priceColor {margin-top: 0.3rem;}
     .seasonBox2 .border,
     .seasonBox2 .border:last-child .img::before { 
         border-radius: 10%;
         height: 12.5vh;
     }
+    .seasonBox2 .border:nth-child(even) .ko {  margin-left: 0;}
     .seasonBox2 .border:nth-child(even) .en::before,
     .seasonBox2 .border:last-child .en::before { content: "";}
     .strawLatte { 
@@ -44,7 +47,7 @@
         height: 10.1vh;
         position: absolute;
         top: 2.5vh;
-        left: 0.8vw;
+        left: 2.8vw;
         /* top: 19vh;
         right: 20.7vw; */
         opacity: 0.7;
@@ -59,25 +62,41 @@
         background-size: 100% 100%;
         background-repeat: no-repeat;
     }
+    .imgSm {
+        width: 3.5vw;
+        height: 8.1vh;
+        position: absolute;
+        top: 2.5vh;
+        left: 3.0vw;
+        /* top: 19vh;
+        right: 20.7vw; */
+        opacity: 0.7;
+    }
 </style>
 <div class="seasonBox2  disJcBet">
-    <div class=" border">
-        <div class="posNa">
+    <div class=" border disJcBet tc">
+        <div class="posNa ">
             <div class="en enColor "> Latte </div>
-            <div class="ko koColor "> 생딸기 퐁당 라떼 </div>
-            <div class="price100 priceColor  ">  </div>
+            <div class="ko koColor "> 생딸기 <br> 퐁당 라떼 </div>
+            <div class="price100 priceColor tc ">  </div>
             <div class="strawLatte imgL"> </div>
         </div>
         <div class="posNa">
-            <div class="strawSm imgS"> </div>
+            <div class="en enColor "> Smoothie </div>
+            <div class="ko koColor "> 생딸기 <br>퐁당 스무디 </div>
+            <div class="price100 priceColor tc ">  </div>
+            <div class="strawSm imgSm"> </div>
             
         </div>
-        <div class="">
-            <div class="strawJuice imgJ"> </div>
+        <div class="posNa">
+            <div class="en enColor "> Juice </div>
+            <div class="ko koColor "> 생딸기 <br>퐁당 쥬스 </div>
+            <div class="price150 priceColor tc ">  </div>
+            <!-- <div class="strawJuice imgJ"> </div> -->
             
         </div>
     </div>
-    <div class=" border  ">
+    <div class=" border  none">
         <div class="">
             <div class="en enColor ">Spring is <br>  Fresh Strawberry </div>
             <div class="posNa line">
