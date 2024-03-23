@@ -1,16 +1,5 @@
 <style>
-    /* flower border size 맞추기 위해서 */
-    .seasonBox .border:nth-child(even) { width: 30%; }
-    .seasonBox .border:nth-child(odd) { 
-        width: 29%;   
-        box-shadow: none;
-        padding: 0;
-        margin-bottom: 0;
-    }
-    .seasonBox .straw  { margin-top: 12px; }
-    .seasonBox .straw > div:nth-child(2) { padding: 0 5px 0 60px; }
-    /* 가격 위치 조정 */
-    .seasonBox .priceColor {margin-top: 10px;}
+    
     /* icon 삽입 */
     .strawberry { background: url('./img/icon/strawberry.png'); background-size: 100% 100%;}
     .imgs2 {
@@ -23,23 +12,23 @@
         right: 20.7vw; */
         opacity: 0.6;
     }
-    /* .seasonBox2  .border{ border-radius: 5rem ;} */
-    .seasonBox2 .disJcBet .border:first-child {  width: 58%;}
+    /* .seasonBox2 .disJcBet .border:first-child {  width: 58%;} */
     /* .seasonBox2 .border:nth-child(even) {  width: 18%;} */
     /* .seasonBox2 .border:last-child{  width: 25%;} */
-    .seasonBox2  .disJcBet .border:last-child{  width: 27%;}
-    .seasonBox2  .disJcBet .border:first-child .ko { line-height: 1.4rem;}
-    .seasonBox2  .disJcBet .border:first-child .priceColor {margin-top: 0.3rem;}
+    .seasonBox2  .disJcBet .border:nth-child(-n+3) { width: 16%; text-align: center;  border-radius: 50% }
+    .seasonBox2  .disJcBet .border:nth-child(-n+3) .ko { line-height: 1.4rem;}
+    .seasonBox2  .disJcBet .border:nth-child(-n+3) .priceColor {margin-top: 0.3rem;}
+    .seasonBox2  .disJcBet .border:last-child{  width: 24%;}
     .seasonBox2  .disJcBet .border,
     .seasonBox2  .disJcBet .border:last-child .img::before { 
-        border-radius: 5rem;
-        height: 9vh;
+        border-radius: 4rem;
+        height: 9.5vh;
     }
-    .seasonBox2  .disJcBet .border:nth-child(even) .ko {  margin-left: 0;}
-    .seasonBox2  .disJcBet .border:nth-child(even) .en::before,
+    .seasonBox2  .disJcBet .border:last-child .ko {  margin-left: 0;}
+    .seasonBox2  .disJcBet .border:last-child .en::before,
     .seasonBox2  .disJcBet .border:last-child .en::before { content: "";}
     .strawLatte { 
-        background: url('./img/photo/strawLatte.png');
+        background: url('./img/photo/strawLatte.jpeg');
         background-size: 100% 100%;
         background-repeat: no-repeat;
     }
@@ -101,48 +90,47 @@
         </div>
     </div>
     <div class="disJcBet">
-
-
-    <div class=" border disJcBet tc">
-        <div class="posNa ">
-            <div class="en enColor "> Latte </div>
-            <div class="ko koColor "> 생딸기 <br> 퐁당 라떼 </div>
-            <div class="price100 priceColor tc ">  </div>
-            <!-- <div class="strawLatte imgL"> </div> -->
-        </div>
-        <div class="posNa">
-            <div class="en enColor "> Smoothie </div>
-            <div class="ko koColor "> 생딸기 <br>퐁당 스무디 </div>
-            <div class="price100 priceColor tc ">  </div>
-            <!-- <div class="strawSm imgSm"> </div> -->
-            
-        </div>
-        <div class="posNa">
-            <div class="en enColor "> Juice </div>
-            <div class="ko koColor "> 생딸기 <br>퐁당 쥬스 </div>
-            <div class="price150 priceColor tc ">  </div>
-            <!-- <div class="strawJuice imgJ"> </div> -->
-            
-        </div>
-    </div>
-    <div class=" border  none">
-        <div class="">
-            <!-- <div class="en enColor ">Spring is <br>  Fresh Strawberry </div> -->
-            <div class="posNa line">
-                <div class="ko koColor straw "> 봄은 생딸기와 함께 </div>
-                <div class="strawberry imgs2" ></div>
+        <!-- <div class="  disJcBet tc "> -->
+            <div class="posNa border">
+                <div class="en enColor "> Latte </div>
+                <div class="ko koColor "> 생딸기 <br> 퐁당 라떼 </div>
+                <div class="price100 priceColor tc ">  </div>
+                <div class="strawLatte imgL"> </div>
+                <!-- <div class="strawLatte imgL"> </div> -->
+            </div>
+            <div class="posNa border">
+                <div class="en enColor "> Smoothie </div>
+                <div class="ko koColor "> 생딸기 <br>퐁당 스무디 </div>
+                <div class="price100 priceColor tc ">  </div>
+                <!-- <div class="strawSm imgSm"> </div> -->
+                
+            </div>
+            <div class="posNa border">
+                <div class="en enColor "> Juice </div>
+                <div class="ko koColor "> 생딸기 <br>퐁당 쥬스 </div>
+                <div class="price150 priceColor tc ">  </div>
+                <!-- <div class="strawJuice imgJ"> </div> -->
+                
+            </div>
+        <!-- </div> -->
+        <div class=" border  none">
+            <div class="">
+                <!-- <div class="en enColor ">Spring is <br>  Fresh Strawberry </div> -->
+                <div class="posNa line">
+                    <div class="ko koColor straw "> 봄은 생딸기와 함께 </div>
+                    <div class="strawberry imgs2" ></div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class=" border img strawShaved">
-        <div class="">
-            <div class="en enColor "> Fresh Strawberry Shaved Ice </div>
-            <div class="disJcBet line">
-                <div class="ko koColor line "> 생딸기 퐁당 빙수 </div>
-                <div class="price170 priceColor  ">  </div>
+        <div class=" border img strawShaved">
+            <div class="">
+                <div class="en enColor "> Fresh Strawberry Shaved Ice </div>
+                <div class="disJcBet line">
+                    <div class="ko koColor line "> 생딸기 퐁당 빙수 </div>
+                    <div class="price170 priceColor  ">  </div>
+                </div>
             </div>
-        </div>
+        </div>  
     </div>  
-</div>  
 </div>
 
