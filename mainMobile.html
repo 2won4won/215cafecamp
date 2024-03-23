@@ -17,7 +17,7 @@
 
     <title>Document</title>
     <style>
-
+        
         /* main 화면이 좌우상하로 움직이는 것을 방지 */
         .con {
             /* overflow: hidden; */
@@ -858,6 +858,8 @@
     </div>  
 </body>
 <script>
+    // fade in 
+    $('body').fadeIn(3000);
     // 메뉴 리스트
     $(".navTi").on("click", function (){
         $(this).next(".menu").slideToggle(100);

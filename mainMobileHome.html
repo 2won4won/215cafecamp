@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="page-enter" content="blendTrans(duration=0.3)">
+    <meta http-equiv="page-exit" content="blendTrans(duration=0.5)">
     <title>Document</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
@@ -21,7 +23,24 @@
 }
         html, body {
             height: 100%;
-            background: #122121;
+            animation: color 5s ease;
+            /* background: #658C5E; */
+            /* background: #122121; */
+        }
+        @keyframes color {
+           10% {
+              background-color: #91A287;
+                
+            }
+            40% {
+                background-color: #658C5E;
+            }
+            70% {
+              background-color: #6F5840;
+            }
+           100% {
+              background-color: #122121;
+            }
         }
         .logo {
             width: 13rem;
@@ -37,6 +56,7 @@
         @keyframes logo {
             from {
                 transform: translateY(18rem) scale(1.7);
+                
             }
             40% {
                 transform: translateY(6rem)  scale(1.3);
@@ -181,16 +201,28 @@
       transform: translateX(4rem);
     }
   } */
+
     </style>
 </head>
-<body>
+<body >
+  <div class="box">
     <div class="logo">
-        <span>WELCOME TO</span>
-        <span>쉼이 물드는 그 곳, </span>
-        <!-- <span>그 </span>
+      <span>WELCOME TO</span>
+      <span>쉼이 물드는 그 곳, </span>
+      <!-- <span>그 </span>
         <span>곳</span>
         <span>,</span> -->
         <span>cafe SEO</span>
-      </div>
+    </div>
+  </div>
 </body>
+<script>
+  // fade out
+  // $('.box').fadeOut(2000);
+
+   setTimeout('movePage()', 5000);
+    function movePage (){
+        location.href="mainMobile.html";
+    }
+</script>
 </html>
