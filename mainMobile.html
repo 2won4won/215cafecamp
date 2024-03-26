@@ -37,6 +37,8 @@
             width: 76vw;
             /* max-width: inherit;  */
         }
+        .navBox:first-child .navTi,
+        .navBox:last-child .navTi { background-color: #424242; }
         .navTi {
             /* font-family: twayair; font-size: 1.2rem;  */
             position: relative;
@@ -120,6 +122,12 @@
 
         .strawberry { background: url('./img/icon/strawberry.png'); background-size: 100% 100%;}
         .photo{ background: url('./img/icon/photo.png'); background-size: 100% 100%;}
+        .phone{ background: url('./img/icon/phone.png'); background-size: 100% 100%;
+            width: 5.6vw;
+            height: 3.4vh;
+            margin-left: 1rem;
+            /* background-color: #fff; */
+    }
         .no1 { background: url('./img/photo/no1.jpg'); background-size: 100% 100%;}
         .no2 { background: url('./img/photo/no2.jpg'); background-size: 100% 100%;}
         .no3 { background: url('./img/photo/no3.jpg'); background-size: 100% 100%;}
@@ -296,6 +304,28 @@
         <div class="content"> 
             <div class="nav" >
             <!-- <div class="nav"> -->
+                <div class="navBox">
+                    <div class="navTi dis">
+                        <div class="en">Cafe Hours</div>
+                        <div class="ko"> 운영 시간 </div>
+                    </div>
+                    <div class="menu">
+                        <div class="item disJcBet"> 
+                            <div class="dis">
+                                <div class="en"> Weekdays</div>
+                                <div class="ko"> 월 ~ 금 </div>
+                            </div>  
+                            <div class="price"> 11:00 ~ 20:00 </div>  
+                        </div>   
+                        <div class="item disJcBet"> 
+                            <div class="dis">
+                                <div class="en"> Weekend, Holiday</div>
+                                <div class="ko"> 토, 일, 공휴일 </div>
+                            </div>  
+                            <div class="price"> 11:00 ~ 21:00 </div>  
+                        </div>   
+                    </div>
+                </div>
                 <div class="navBox">
                     <div class="navTi dis">
                         <div class="en"> Espresso</div>
@@ -599,7 +629,7 @@
                                 <div class="ko"> 생딸기 퐁당 빙수 </div>
                             </div>  
                             <!-- <div class="price190 price"></div> -->
-                            <div class="photo imgP " ></div>
+                            <div class="photo " ></div>
                         </div>
                     </div>
                 </div>        
@@ -826,7 +856,17 @@
                             <div class="price30 price"></div>
                         </div>
                     </div>    
-                </div>    
+                </div> 
+                <div class="navBox">
+                    <div onclick="document.location.href = 'tel:031-941-9494' ">
+                        <div class="navTi dis">
+                            <div class="en"> Contact </div>
+                            <div class="ko" > 031- 941 - 7474 </div>
+                            <div class="phone" ></div>
+
+                        </div>
+                    </div>
+                </div>   
             </div>
         </div>
         <div class="btn " >
