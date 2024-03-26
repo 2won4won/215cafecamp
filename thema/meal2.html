@@ -1,0 +1,104 @@
+<style>
+   .mealBox2 .meal:nth-child(odd) {
+        /* background-color: aqua; */
+        width: 35%;
+        height: 17.6rem;;
+        color: #FFF;
+   }
+   .mealBox2 .meal:nth-child(odd) .border {
+        width: 81%;
+        height: 7rem;
+        opacity: 0.9; 
+        border-radius: 0.9rem;
+   }
+   .mealBox2 .meal:nth-child(even) .border {
+        width: 66%;
+        height: calc(17rem - 10px );
+        margin: auto;
+   }
+    .mealBox2  .meal:first-child .border:first-child {
+        background: url('./img/photo/no1.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .mealBox2 .meal:nth-child(3) .border:first-child {
+        background: url('./img/photo/no2.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .mealBox2  .meal:first-child  .border:last-child  {
+        background: url('./img/photo/no3.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .mealBox2  .meal:nth-child(3) .border:last-child {
+        background: url('./img/photo/no41.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    } 
+     /* 이미지 box  */
+    .hanggi  div:first-child  {
+        text-align: right !important; 
+        font-size: 1.6rem !important;  
+        margin-top: 9.5rem;
+        margin-bottom: 1rem ;
+    }
+    .hanggi{
+        background: url('./img/photo/mealBack.jpeg');
+        background-size: 60% 55%;
+        background-repeat: no-repeat;
+    }
+</style>
+
+
+<div class="mealBox2 disJcBet" >
+    <div class="meal">
+        <div class="border img  " >
+            <div class=" posiCen tc" > 
+                <div class="en "> No.1 Meat  </div>
+                <div class="ko  line ">  No.1 고기파 </div>
+                <div class="ex "> 통삼겹살 </div>
+                <div class="ex "> 감자 </div>
+                <div class="ex  "> 라페 </div>
+            </div>
+        </div>    
+        <div class="border img  " >
+            <div class=" posiCen tc" > 
+                <div class="en "> No.3 Diet  </div>
+                <div class="ko  line ">  No.3 식단파 </div>
+                <div class="ex "> 소금구이 닭 </div>
+                <div class="ex "> 곤약샐러드 </div>
+                <div class="ex "> 고구마 </div>
+            </div>
+        </div>    
+    </div>
+    <div class="meal">
+        <div class="border hanggi"> 
+            <div class=""> 
+                 <!-- <div class="en enColor "> Cafe SEO's HanGGI </div> -->
+                <div class="ko koColor "> Cafe SEO의 한끼 </div>
+                <div class="ko enColor">  한끼 '잘' 먹기 </div>
+            </div>
+        </div>
+    </div>
+    <div class="meal">
+        <div class="border img  " >
+            <div class=" posiCen tc" > 
+                <div class="en "> No.2 Vegan  </div>
+                <div class="ko   ">  No.2 비건파 </div>
+                <div class="ex "> 통곡물 식빵 </div>
+                <div class="ex "> 치즈 </div>
+                <div class="ex "> 야채 </div>
+            </div>
+        </div>
+        <div class="border img  " >
+            <div class=" posiCen tc" > 
+                <div class="en "> No.4 Arugula  </div>
+                    <div class="ko  line ">  No.4 유학파 </div>
+                    <div class="ex "> 통곡물 난 </div>
+                    <div class="ex "> 루꼴라 </div>
+                    <div class="ex "> 생모짜렐라 치즈 </div>
+            </div>
+        </div>
+    </div>
+</div>
