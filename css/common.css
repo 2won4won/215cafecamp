@@ -105,6 +105,7 @@
 .price80::before { content: '8.0'; }
 .price85::before { content: '8.5'; }
 .price90::before { content: '9.0'; }
+.price95::before { content: '9.5'; }
 .price100::before { content: '10.0'; }
 .price110::before { content: '11.0'; }
 .price120::before { content: '12.0';} 
