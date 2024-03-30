@@ -25,18 +25,28 @@
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
-            background-color: #0fa;
             
         }
-        
         .content {
             display: flex;
             justify-content: center;
             width: 100%;
         }
-        .nav {
-            width: 76%;
+        .logo { 
+            margin: 7rem 0 2rem;
+            display: flex;
+            justify-content: center;
         }
+        .logoTi { 
+            height: 4rem;
+            background-color: #000;
+            color: #FFF;
+            text-align: center;
+            line-height: 4rem;
+        }
+        .logo .ko { margin-left: 0;}
+        .logoTi,
+        .nav { width: 76%; }
         .navTiColor {
             /* border: 0.5rem solid #000; */
             background-color: #D7DBDA !important;
@@ -73,8 +83,9 @@
             /* padding-left: 50px; */
             opacity: 0.8;
         }
+        .logo .ko,
         .navTi .ko,
-        .navTi .en {font-size: 1.3rem;}
+        .navTi .en {font-size: 1.4rem;}
 
         .noDot .en::before,
         .navTi .en::before { content: "";}
@@ -154,6 +165,7 @@
         .sweetSalty { background: url('./img/photo/sweetSalty.jpg'); background-size: 100% 100%;}
         .sweetPotato { background: url('./img/photo/sweetPotato.jpg'); background-size: 100% 100%;}
         .mStrawshavedIce { background: url('./img/photo/mStrawshavedIce.jpg'); background-size: 100% 100%;}
+        .mSeed { background: url('./img/photo/mSeed.jpg'); background-size: 100% 100%;}
         .imgs {
             width: 8.9vw;
             height: 6vh;
@@ -287,6 +299,9 @@
 </head>
 <body>
     <div class="con">
+        <div class="logo ">
+            <div class="logoTi ko"> 쉼이 물드는 그 곳, Cafe SEO</div>
+        </div>
         <div class="content"> 
             <div class="nav" >
             <!-- <div class="nav"> -->
@@ -795,7 +810,7 @@
                                 <div class="item disJcBet modalBtn">
                                     <div class="dis">
                                         <div class="en">Seed Bowl</div>
-                                        <div class="ko"> 구마볼 </div>
+                                        <div class="ko"> 씨앗볼 </div>
                                         <div class="photo imgP " ></div>
                                     </div>
                                     <div class="price100 price"></div>
@@ -850,6 +865,7 @@
         <div class="img sweetPotato modalImg" data-type="Sweet Potato Bowl"></div>
         <div class="img fruitBowl modalImg" data-type="Today's Fruit Bowl"></div>
         <div class="img mStrawshavedIce modalImg" data-type="Fresh Strawberry Shaved Ice"></div>
+        <div class="img mSeed modalImg" data-type="mSeed Bowl"></div>
     </div>  
 </body>
 <script>
@@ -928,6 +944,53 @@
         $('.modal').fadeOut();
         $('.con').css("-webkit-filter", "none");
     });
+
+    // 시간 구하기
+
+    var Now = new Date();
+    var newYear = Now.getYear();
+    var newMonth = Now.getMonth()+1;
+    var newDay = Now.getDate();
+    var newHour = Now.getHours();
+    var newMins = Now.getMinutes();
+    function message(time) {
+        var time = time.toString();
+        if( time < 2 ) {
+            time = '0' + time ;
+            return time;
+        } else {
+            return time ;
+        }
+    }
+    //수요일
+    var week_array = new Array('일', '월', '화', '수', '목', '금', '토');
+    var today_num = new Date().getDay();
+        console.log(week_array[today_num]);
+        var wensday = today_num(3);
+        // alert(wenday);
+
+    newYear = message(newYear);
+    newMonth = message(newMonth);
+    newDay = message(newDay);
+    newHour = message(newHour);
+    newMins = message(newMins);
+
+    var nowTime = newYear + newMonth + newDay + newHour + newMins;
+    // var nowTime = newYear + newMonth + newDay + newHour + newMins;
+
+    var open = 1100;
+    var closeWeekday = 2000;
+    var closeWeekend = 2100;
+
+    // if( week_array[today_num] == '수') {
+    //     영업 종료
+    // } else if(주중) {
+    //     영업중
+    // } else if( 주말, 공휴일) {
+    //     영업중
+    // } else {
+    //     영업종료
+    // }
 
 
 </script>
