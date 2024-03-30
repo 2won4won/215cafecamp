@@ -9,7 +9,7 @@
      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     
-       <!-- Local file import -->
+    <!-- Local file import -->
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/font.css">
@@ -17,11 +17,27 @@
 
     <title>Document</title>
     <style>
-        
+        /* media  */
+        @media screen and (max-width : 2560px) {
+            html { font-size: 62.5%; }
+        }    
+        @media screen and (max-width : 479px) {
+            .con { width: 98vw;  } 
+        }    
+        @media all and (min-width:480px) and (max-width:767px) {
+            .con {  width: 65vw;  margin: 0 auto;  } 
+        }
+        @media all and (min-width:768px) and (max-width:1023px) {
+            .con {  width: 60vw;  margin: 0 auto;  } 
+        }
+        @media all and (min-width:1024px)  {
+            .con {  width: 50vw;  margin: 0 auto;  } 
+        }
+
         /* main 화면이 좌우상하로 움직이는 것을 방지 */
         .con {
             /* overflow: hidden; */
-            width: 100%;
+            /* width: 100%; */
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
@@ -33,9 +49,14 @@
             width: 100%;
         }
         .logo { 
-            margin: 7rem 0 2rem;
             display: flex;
             justify-content: center;
+        }
+        .logoTop {
+            margin: 7rem 0 0.5rem 0;
+        }
+        .logoBottom {
+            margin-top : 0.5rem ;
         }
         .logoTi { 
             height: 4rem;
@@ -299,8 +320,8 @@
 </head>
 <body>
     <div class="con">
-        <div class="logo ">
-            <div class="logoTi ko"> 쉼이 물드는 그 곳, Cafe SEO</div>
+        <div class="logo logoTop">
+            <div class="logoTi ko"> 쉼이 물드는 그 곳, </div>
         </div>
         <div class="content"> 
             <div class="nav" >
@@ -677,7 +698,7 @@
                                     </div>  
                                     <div class="price75 price"> </div> 
                                 </div>
-                                <div class="item disJcBet"> 
+                                <div class="item disJcBet none"> 
                                     <div class="dis">
                                         <div class="en">BlackBean Latte </div>
                                         <div class="ko"> 국산 서리태라떼 </div>
@@ -813,7 +834,7 @@
                                         <div class="ko"> 씨앗볼 </div>
                                         <div class="photo imgP " ></div>
                                     </div>
-                                    <div class="price100 price"></div>
+                                    <div class="price95 price"></div>
                                 </div>
                                 <div class="item disJcBet modalBtn">
                                     <div class="dis">
@@ -836,9 +857,12 @@
 
                         </div>
                     </div>
-                </div>   
+                </div> 
             </div>
         </div>
+        <div class="logo logoBottom">
+            <div class="logoTi ko"> Cafe SEO</div>
+        </div> 
         <div class="btn " >
             <div class="ko  "> 
                 <div > 쉼</div>
