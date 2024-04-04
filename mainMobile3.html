@@ -33,12 +33,6 @@
         @media all and (min-width:1024px)  {
             .con {  width: 50vw;  margin: 0 auto;  } 
         }
-        @font-face {
-          font-family: 'TAEBAEKmilkyway';
-          src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
-          font-weight: normal;
-          font-style: normal;
-        }
 
         /* main 화면이 좌우상하로 움직이는 것을 방지 */
         .con {
@@ -83,11 +77,6 @@
             transform: translateY(-100%);
         }
         .logo .ko { margin-left: 0;}
-        .message {
-            margin-left: 0.8rem;
-            font-size: 1.2rem !important;
-            font-family: TAEBAEKmilkyway;
-        }
         .logoTi,
         .nav { width: 76%; }
         .navTiColor {
@@ -899,6 +888,9 @@
             <img src="./img/icon/upbtn.png"  href="#">
         </div>
     </div>   
+    <div class="footer">
+        <div> footer </div>
+    </div>
     <div class="modal "> 
         <div class="img no1 modalImg" data-type="NO.1 Meat"></div>
         <div class="img no2 modalImg" data-type="NO.2 Vegan"></div>
@@ -1033,11 +1025,11 @@
     if ( today_num  == 3 ) {
         $('.message').text(" 오늘은 쉽니다.")
     } else if( today_num != 3 & (today_num != 0 || today_num != 6) & ( nowTime >= openTime || nowTime <= closeWeekdayTime)) {
-        $('.message').text(" '영업중'입니다.")
+        $('.message').text(" 영업중입니다.")
     } else if( today_num != 3 & (today_num == 0 || today_num == 6) & ( nowTime >= openTime || nowTime <= closeWeekendTime)) {
-        $('.message').text(" '영업중'입니다.")
+        $('.message').text(" 영업중입니다.")
     } else {
-        $('.message').text(" 영업 '준비중' 입니다.")
+        $('.message').text(" 영업 준비중입니다.")
     }  
     
 </script>
