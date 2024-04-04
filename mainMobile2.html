@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
     <!-- jquery -->
      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -64,6 +64,17 @@
             color: #FFF;
             text-align: center;
             line-height: 4rem;
+        }
+        .footer {
+            text-align: center;
+            color: #FFF;
+            width: inherit;
+            height: 5rem;
+            line-height: 5rem;
+            background-color: #000;
+            position: absolute;
+            bottom: 0;
+            z-index: 99;
         }
         .logo .ko { margin-left: 0;}
         .logoTi,
@@ -330,6 +341,7 @@
                     <div class="navTi dis navTiColor">
                         <div class="en">Cafe Hours</div>
                         <div class="ko"> 운영 시간 </div>
+                        <div class="message "> </div>
                     </div>
                     <div class="menu">
                         <div class="item disJcBet"> 
@@ -875,6 +887,9 @@
             </div>
             <img src="./img/icon/upbtn.png"  href="#">
         </div>
+        <div class="footer">
+            <div> footer </div>
+        </div>
     </div>   
     <div class="modal "> 
         <div class="img no1 modalImg" data-type="NO.1 Meat"></div>
@@ -970,52 +985,52 @@
     });
 
     // 시간 구하기
-
     var Now = new Date();
-    var newYear = Now.getYear();
-    var newMonth = Now.getMonth()+1;
-    var newDay = Now.getDate();
-    var newHour = Now.getHours();
-    var newMins = Now.getMinutes();
-    function message(time) {
-        var time = time.toString();
-        if( time < 2 ) {
-            time = '0' + time ;
-            return time;
-        } else {
-            return time ;
+    var nowYear = Now.getYear();
+    var nowMonth = Now.getMonth()+1;
+    var nowDay = Now.getDate();
+    var nowHour = Now.getHours();
+    var nowMins = Now.getMinutes();
+        function timer(time) {
+            var time = time.toString();
+            if( time < 2 ) {
+                time = '0' + time ;
+                return time;
+            } else {
+                return time ;
+            }
         }
-    }
+        nowYear = timer(nowYear);
+        nowMonth = timer(nowMonth);
+        nowDay = timer(nowDay);
+        nowHour = timer(nowHour);
+        var nowTime = nowHour + nowMins;
+        console.log(nowTime);
+        var openTime = 1100;
+        var closeWeekdayTime = 2000;
+        var closeWeekendTime = 2100;
+
     //수요일
-    var week_array = new Array('일', '월', '화', '수', '목', '금', '토');
+    var week = new Array('일', '월', '화', '수', '목', '금', '토');
     var today_num = new Date().getDay();
-        console.log(week_array[today_num]);
-        var wensday = today_num(3);
-        // alert(wenday);
 
-    newYear = message(newYear);
-    newMonth = message(newMonth);
-    newDay = message(newDay);
-    newHour = message(newHour);
-    newMins = message(newMins);
-
-    var nowTime = newYear + newMonth + newDay + newHour + newMins;
+        console.log('today ; ' + week[today_num]);
+        console.log('today_num ; ' + today_num );
+        console.log('wensday_num : ' + week[3] );
+        console.log('sunday_num : ' + week[0] );
+        console.log('saterday_num : ' + week[6] );
+  
     // var nowTime = newYear + newMonth + newDay + newHour + newMins;
-
-    var open = 1100;
-    var closeWeekday = 2000;
-    var closeWeekend = 2100;
-
-    // if( week_array[today_num] == '수') {
-    //     영업 종료
-    // } else if(주중) {
-    //     영업중
-    // } else if( 주말, 공휴일) {
-    //     영업중
-    // } else {
-    //     영업종료
-    // }
-
-
+    
+    if ( today_num  == 3 ) {
+        $('.message').text(" 오늘은 쉽니다.")
+    } else if( today_num != 3 & (today_num != 0 || today_num != 6) & ( nowTime >= openTime || nowTime <= closeWeekdayTime)) {
+        $('.message').text(" 영업중입니다.")
+    } else if( today_num != 3 & (today_num == 0 || today_num == 6) & ( nowTime >= openTime || nowTime <= closeWeekendTime)) {
+        $('.message').text(" 영업중입니다.")
+    } else {
+        $('.message').text(" 영업 준비중입니다.")
+    }  
+    
 </script>
 </html>
