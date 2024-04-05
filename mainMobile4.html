@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- ISO 적용 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- jquery -->
+     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    
+    <!-- Local file import -->
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/font.css">
+
+    <title> MOBILE </title>
+    <style>
+        html { 
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 100vw;
+            display: flex;
+            justify-content: center; 
+        }
+        .container {
+            width: 75vw;
+            margin-top: 4rem;
+        }
+        /* box size & css */
+        .box {
+            width: inherit;
+            border: 0.3rem solid #000;
+            margin: 0.3rem 0;
+            display: flex;
+        }
+        .boxHeight { height: 8rem; line-height: 8rem;}
+        .boxPadding { padding: 1.7rem;}
+        .mBorder {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            margin-bottom: 1.7rem;
+            height: 3.5rem; line-height: 3.5rem; padding: 2rem;
+            display: flex;
+        }
+        /* .dis { display: flex;  } */
+
+        /* font style */
+        .box .en,
+        .mBorder .en { font-size: 1.4rem ; }
+        .box .ko ,
+        .mBorder .ko { font-size: 1.5rem ; }
+
+        .box .en::before,
+        .mBorder .en::before  { content: ""; margin: 0; }
+
+
+        /* list */
+        .list { 
+            display: none;
+            padding: 1.4rem;
+            background-color: #fafafa;
+        }
+        .item {
+            display: flex; justify-content: space-between;
+            line-height: 3rem;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+        }
+        .list:nth-child(2) { padding: 0.3rem 0;  }
+        .list .en { font-size: 1.2rem ; }
+        .list .ko { font-size: 1.3rem ; }
+        /* .item > div:first-child { display: flex;} */
+
+
+        /* image */
+        .phone{ background: url('./img/icon/phone.png'); background-size: 100% 100%;
+            width: 6.6vw;
+            height: 4.4vh;
+            margin-top: 3vh; margin-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header ">  
+            <div  class="box boxHeight boxPadding ">
+                <!-- <div> -->
+                    <div > 쉼이 물드는 그 곳,</div>
+                    <div> Cafe SEO</div>
+                    <div class="message"> </div>
+                <!-- </div> -->
+            </div>
+        </div>
+        <div class="content "> 
+            <div >
+                <div class="box boxHeight boxPadding ">
+                    <div class="en"> Cafe Cafe Hours </div>
+                    <div class="ko"> 운영시간 </div>
+                </div>
+                <div class="list">
+                    <div class="item "> 
+                        <div class="en"> Weekdays</div>
+                        <div class="">
+                            <div class="ko"> 월 ~ 금 </div>
+                            <div class="price"> 11:00 ~ 20:00 </div>  
+                        </div>  
+                    </div>   
+                    <div class="item "> 
+                        <div class="en"> Weekend & Holiday</div>
+                        <div class="">
+                            <div class="ko"> 토, 일, 공휴일 </div>
+                            <div class="price"> 11:00 ~ 21:00 </div>  
+                        </div>  
+                    </div>   
+                </div>
+            </div>
+
+            <div >
+                <div class="box boxHeight boxPadding  ">
+                    <div class="en"> Meun List </div>
+                    <div class="ko"> 메뉴 </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer "> 
+            <div onclick="document.location.href = 'tel:031-941-7474' ">
+                <div class="box boxHeight boxPadding">
+                    <div class="en"> Contact </div>
+                    <div class="ko" > 031- 941 - 7474 </div>
+                    <div class="phone " ></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $('.box').on('click', function( ) {
+        $(this).next('.list').slideToggle(100);
+        $(this).attr('class', 'mBorder');
+    });
+</script>
+</html>
