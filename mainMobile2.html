@@ -207,7 +207,7 @@
         .yogurtBaRa { background: url('./img/photo/yogurtBaRa.jpg'); background-size: 100% 100%;}
         .sweetSalty { background: url('./img/photo/sweetSalty.jpg'); background-size: 100% 100%;}
         .sweetPotato { background: url('./img/photo/sweetPotato.jpg'); background-size: 100% 100%;}
-        .mStrawshavedIce { background: url('./img/photo/mStrawshavedIce.jpg'); background-size: 100% 100%;}
+        .mStrawShavedIce { background: url('./img/photo/mStrawShavedIce.jpg'); background-size: 100% 100%;}
         .mSeed { background: url('./img/photo/mSeed.jpg'); background-size: 100% 100%;}
         .imgs {
             width: 8.9vw;
@@ -911,7 +911,7 @@
         <div class="img sweetSalty modalImg" data-type="Sweet-Salty Bowl"></div>
         <div class="img sweetPotato modalImg" data-type="Sweet Potato Bowl"></div>
         <div class="img fruitBowl modalImg" data-type="Today's Fruit Bowl"></div>
-        <div class="img mStrawshavedIce modalImg" data-type="Fresh Strawberry Shaved Ice"></div>
+        <div class="img mStrawShavedIce modalImg" data-type="Fresh Strawberry Shaved Ice"></div>
         <div class="img mSeed modalImg" data-type="mSeed Bowl"></div>
     </div>  
 </body>
@@ -992,8 +992,8 @@
         $('.con').css("-webkit-filter", "none");
     });
 
-    // 시간 구하기
-    var Now = new Date();
+      // 시간 구하기
+      var Now = new Date();
     var nowYear = Now.getYear();
     var nowMonth = Now.getMonth()+1;
     var nowDay = Now.getDate();
@@ -1001,7 +1001,7 @@
     var nowMins = Now.getMinutes();
         function timer(time) {
             var time = time.toString();
-            if( time < 2 ) {
+            if( time.length < 2 ) {
                 time = '0' + time ;
                 return time;
             } else {
@@ -1012,8 +1012,14 @@
         nowMonth = timer(nowMonth);
         nowDay = timer(nowDay);
         nowHour = timer(nowHour);
+        nowMins = timer(nowMins);
+
         var nowTime = nowHour + nowMins;
-        console.log(nowTime);
+
+            console.log(nowHour);
+            console.log(nowMins);
+            console.log(nowTime);
+
         var openTime = 1100;
         var closeWeekdayTime = 2000;
         var closeWeekendTime = 2100;
@@ -1027,18 +1033,32 @@
         console.log('wensday_num : ' + week[3] );
         console.log('sunday_num : ' + week[0] );
         console.log('saterday_num : ' + week[6] );
-  
-    // var nowTime = newYear + newMonth + newDay + newHour + newMins;
-    
-    if ( today_num  == 3 ) {
-        $('.message').text(" 오늘은 쉽니다.")
-    } else if( today_num != 3 & (today_num != 0 || today_num != 6) & ( nowTime >= openTime || nowTime <= closeWeekdayTime)) {
-        $('.message').text(" '영업중'입니다.")
-    } else if( today_num != 3 & (today_num == 0 || today_num == 6) & ( nowTime >= openTime || nowTime <= closeWeekendTime)) {
-        $('.message').text(" '영업중'입니다.")
-    } else {
-        $('.message').text(" 영업 '준비중' 입니다.")
-    }  
-    
+
+    // 평일 운영시간
+    var runTimeWeekDay = (today_num != 0 || today_num != 6) & ( nowTime >= openTime & nowTime <= closeWeekdayTime) ;  
+    //  주말 운영시간 
+    var runTimeWeekend = (today_num == 0 || today_num == 6) & ( nowTime >= openTime & nowTime <= closeWeekdayTime) ;  
+    // 평일 운영시간 종료
+    var runTimeWeekDayEnd = (today_num != 0 || today_num != 6) & (  nowTime >= closeWeekdayTime  && nowTime <= 2400) ;  
+    //  주말 운영시간 
+    var runTimeWeekendEnd = (today_num == 0 || today_num == 6) & ( nowTime >= closeWeekdayTime && nowTime <=2400 ) ;  
+    //  운영시간 준비중
+    var runTime =  ( nowTime <= openTime) ; 
+
+        if ( today_num  == 3 ) {
+            $('.message').text(" 오늘은 쉽니다.")
+        } else if( today_num != 3 & runTimeWeekDay ) {
+            $('.message').text("'영업중'입니다.")
+        } else if( today_num != 3 & runTimeWeekend ) {
+            $('.message').text("'영업중'입니다.")
+        } else if( today_num != 3 & runTimeWeekDayEnd ) {
+            $('.message').text(" 오늘은 영업이 끝났습니다.")
+        } else if( today_num != 3 & runTimeWeekendEnd ) {
+            $('.message').text(" 오늘은 영업이 끝났습니다.")
+        } else if( today_num != 3 & runTime ) {
+            $('.message').text(" 영업준비중 입니다.")
+        } else {
+            $('.message').text(" 오늘은 영업이 끝났습니다. ")
+        }
 </script>
 </html>

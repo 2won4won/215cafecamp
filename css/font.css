@@ -24,6 +24,9 @@
          url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.ttf') format("truetype");
     font-display: swap;
   }  
+  
+@import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+
 .ko {
     font-family: twayair; font-size: 18px; margin-left: 15px;
 }
