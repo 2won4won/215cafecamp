@@ -158,9 +158,9 @@
         }
         .header .message  {
             /* font-family: IM_Hyemin-Bold; */
-            font-family: 'Codystar', sans-serif;
+            font-family: 'Codystar','TAEBAEKmilkyway', sans-serif;
             text-align: right;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
         }
         /* .header .mean { 
             font-family: IM_Hyemin-Bold;
@@ -289,7 +289,7 @@
                     <div class="item "> 
                         <div class="">
                             <div class="en"> Weekdays</div>
-                            <div class="ko"> 월 ~ 금 </div>
+                            <div class="ko"> 월, 화, 목, 금 </div>
                         </div>  
                         <div class="price"> 11:00 ~ 20:00 </div>  
                     </div>   
@@ -298,8 +298,16 @@
                             <div class="en"> Weekend & Holiday</div>
                             <div class="ko"> 토, 일, 공휴일 </div>
                         </div>  
-                            <div class="price"> 11:00 ~ 21:00 </div>  
+                        <div class="price"> 11:00 ~ 21:00 </div>  
                     </div>   
+                    <div class="item "> 
+                        <div class="">
+                            <div class="en"> Closed on Wensdays</div>
+                            <div class="ko"> 매주 수요일 </div>
+                        </div>  
+                        <div class="price"> 공휴일에는 영업합니다.  </div> 
+                    </div>   
+                      
                 </div>
             </div>
 
@@ -894,6 +902,7 @@
                 console.log('wensday_num : ' + week[3] );
                 console.log('sunday_num : ' + week[0] );
                 console.log('saterday_num : ' + week[6] );
+              
                 
                 // 평일 운영시간
                 var runTimeWeekDay = (today_num != 0 || today_num != 6) & ( nowTime >= openTime & nowTime <= closeWeekdayTime) ;  
@@ -905,9 +914,11 @@
                 var runTimeWeekendEnd = (today_num == 0 || today_num == 6) & ( nowTime >= closeWeekdayTime && nowTime <=2400 ) ;  
                 //  운영시간 준비중
                 var runTime =  ( nowTime <=  openTime ) ; 
+                var hoilday = ((nowDate == '04월 10일') || (nowDate == '05월 15일') || (nowDate == '09월 18일') || (nowDate == '10월 09일') || (nowDate == '12월 25일') );
                 
-            $('.nowDate').text(  nowDate );
-            if ( today_num  == 3 ) {
+            if ( hoilday ) {
+                $('.message').text( nowDate + " 임시 영업합니다.")
+            } else if (!hoilday && (today_num  == 3) ){
                 $('.message').text( nowDate + " 수요일은 쉽니다.")
             } else if( today_num != 3 & runTimeWeekDay ) {
                 $('.message').text( nowDate +  " '영업중' 입니다.")
@@ -922,7 +933,7 @@
             } else {
                 $('.message').text( nowDate + " 오늘은 영업이 끝났습니다. ")
             }
-    
+
     // modal
     var list = $('.modal .modalImg').html();
     var arr = [];
