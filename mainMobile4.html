@@ -38,10 +38,13 @@
             margin: 0.5vh 0;
             display: flex;
             position: relative;
-            height: 12vh; line-height: 12vh;
+            height: 12vh; 
+            line-height: 12vh;
             /* height: 8rem; line-height: 8rem; */
             padding: 1.7rem;
         }
+        /* .box .dis:first-child { margin-top: 2rem; line-height: 2rem; } */
+        
         .meunTi {
             position: relative;
             display: flex;
@@ -52,7 +55,8 @@
             transition: all 300ms ease-in-out;
             line-height: 2rem;
         }
-        /* 가로선 */
+
+        /* 대분류 가로선 */
         .meunTi::after {
             position: absolute;
             bottom: 0;
@@ -73,10 +77,27 @@
      
 
         /* font style */
+        .logo {
+            font-family: IM_Hyemin-Bold;
+            font-size: 1.8rem;
+        }
+       .logo .pointColor {
+            color: #016180;
+            font-weight: bold;
+        }
+        .logoEn {
+            font-family: zapfino;
+            font-size: 1.7rem;
+            border-bottom: 0.1rem solid #4C2C17;
+            padding-left: 14vw ;
+            padding-right: 6vw ;
+            margin-left: 1.5rem;
+        }
+       .logo .ml { margin-left: 0.7rem; }
         .box .en,
         .mBorder .en { font-size: 1.4rem ; }
         .box .ko ,
-        .mBorder .ko { font-size: 1.5rem ; }
+        .mBorder .ko { font-size: 1.5rem ;   }
 
         .no .en::before,
         .kindBox .en::before,
@@ -84,10 +105,16 @@
         .box .en::before,
         .mBorder .en::before  { content: ""; margin: 0; }
 
-     
-
         .item .en { color: #8C8C8C !important; }
         .item .price { color: #A4A4A4 !important; }
+
+        .messageFont {
+            font-family: "Codystar", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.4rem;
+            /* margin-top: 1rem; */
+        }
 
         /* list */
         .list { 
@@ -105,7 +132,7 @@
         .list .en { font-size: 1.1rem ; }
         .list .ko { font-size: 1.2rem ; margin-left: 0.9rem !important;}
         .list .ex { font-size: 1rem ; text-align: right;  line-height: 1.7rem; color: #808080; }
-        .list .item:last-child { margin-bottom: 0.8rem; background-color: aquamarine;}
+        .list .item:last-child { margin-bottom: 0.8rem; }
         
         .blockBox ,
         .kindBox { display: block;}
@@ -115,14 +142,8 @@
         .blockBox div { line-height: 1.9rem;}
         .blockBox .ko { margin-bottom: 1rem;}
 
-        .message {
-            font-family: "Codystar", sans-serif;
-            font-weight: 300;
-            font-style: normal;
-            font-size: 1.4rem;
-        }
         .header { box-sizing: border-box; }
-        .header .disJcBet  div { line-height: 2rem; padding-top: 2rem; }
+        .header .logo { line-height: 2rem;  }
        
         /* footer */
                 /* 아이폰 iso a link  css change */
@@ -131,14 +152,36 @@
         }
        
         /* image */
+        .imgP {
+            width: 5.6vw;
+            height: 3.4vh;
+            margin-top: 0.4rem;
+            margin-left: 0.4rem;
+            opacity: 0.7;
+        }
         .phone{ background: url('./img/icon/phone.png'); background-size: 100% 100%;
             width: 6.6vw;
             height: 4.4vh;
             position: absolute; top: 35%; right: 7rem;
         }
+        
+        .photo{ background: url('./img/icon/photo.png'); background-size: 100% 100%;}
+        
         /* modal image */
         .mStrawShavedIce { background: url('./img/photo/mStrawshavedIce.jpg'); background-size: 100% 100%;}
-        
+        .mYogurt { background: url('./img/photo/mYogurt.jpg'); background-size: 100% 100%;}
+        .mGreekYogurt { background: url('./img/photo/mGreekYogurt.jpg'); background-size: 100% 100%;}
+        .no1 { background: url('./img/photo/mNo1.jpg'); background-size: 100% 100%;}
+        .no2 { background: url('./img/photo/mNo2.jpg'); background-size: 100% 100%;}
+        .no3 { background: url('./img/photo/mNo3.jpg'); background-size: 100% 100%;}
+        .no4 { background: url('./img/photo/mNo4.jpg'); background-size: 100% 100%;}
+        .salad { background: url('./img/photo/salad.jpg'); background-size: 100% 100%;}
+        .yogurtBaRa { background: url('./img/photo/yogurtBaRa.jpg'); background-size: 100% 100%;}
+        .sweetSalty { background: url('./img/photo/sweetSalty.jpg'); background-size: 100% 100%;}
+        .mSeed { background: url('./img/photo/mSeed.jpg'); background-size: 100% 100%;}
+        .mRice { background: url('./img/photo/mRice.jpg'); background-size: 100% 100%;}
+        .fruitBowl { background: url('./img/photo/fruitBowl.jpg'); background-size: 100% 100%;}
+
         /* modal */
         .modal {
             display: none;
@@ -154,16 +197,40 @@
 <body>
     <div class="container">
         <div class="header ">  
-            <div class="box disJcBet ">
-                <div > 쉼이 물드는 그 곳, <br> Cafe SEO</div>
-                <div class="message"> </div>
+            <div class="box  disJcBet ">
+                <div class="logo  mt15">
+                    <div class="dis">
+                        <div> '</div>
+                        <div class="pointColor"> 쉼</div>
+                        <div> '</div>
+                        <div> 이 </div>
+                        <div class="pointColor ml"> 물 </div>
+                        <div> 드는 </div>
+                    </div>
+                    <div class="dis mt12">
+                        <div> 그 </div>
+                        <div class="pointColor ml"> 곳, </div>
+                        <!-- <div class="logoLine"> </div> -->
+                        <div class="logoEn"> Cafe SEO </div>
+                    </div>
+                </div>
             </div>
+            <!-- <div class="box disJcBet">
+                <div class="">
+                    <div class="en">Attach Image </div>
+                    <div class="photo  imgP" ></div>
+                </div>
+                <div class="ko">클릭하시면 상세 이미지를 보실 수 있어요.  </div>
+            </div> -->
         </div>
         <div class="content "> 
             <div >
                 <div class="box ">
-                    <div class="en"> Cafe Cafe Hours </div>
-                    <div class="ko"> 운영시간 </div>
+                    <!-- <div class="dis "> -->
+                        <div class="en"> Cafe Cafe Hours </div>
+                        <div class="ko"> 운영시간 </div>
+                    <!-- </div> -->
+                    <div class="message messageFont "> </div>
                 </div>
                 <div class="list">
                     <div class="item "> 
@@ -186,7 +253,10 @@
             <div >
                 <div class="box   ">
                     <div class="en"> Meun List </div>
-                    <div class="ko"> 메뉴 </div>
+                    <div class=" ">
+                        <div class="ko"> 메뉴 </div>
+                        <div class="messageFont"> 몸.도 맘.도 쉼.이 될 수 있는 맛. 멋. </div>
+                    </div>
                 </div>
                 <div class="list">
                     <div class="meunTi">
@@ -387,7 +457,7 @@
                     </div>
                     <div class="meunTi">
                         <div class="en"> Fresh Strawberry Season </div>
-                        <div class="ko"> 생딸기 시즌 </div>
+                        <div class="ko"> 생딸기 퐁당 시즌 </div>
                     </div>
                     <div class="list" >
                         <div class="item no  "> 
@@ -399,32 +469,266 @@
                         </div>
                         <div class="item "> 
                             <div>
-                                <div class="en"> Fresh Strawberry Latte</div>
+                                <div class="en">  Strawberry Latte</div>
                                 <div class="ko"> 생딸기 퐁당 라떼   </div>
                             </div>
                             <div class="price100 price"> </div>  
                         </div>
                         <div class="item "> 
                             <div>
-                                <div class="en"> Fresh Strawberry Smoothie</div>
+                                <div class="en">  Strawberry Smoothie</div>
                                 <div class="ko"> 생딸기 퐁당 스무디   </div>
                             </div>
                             <div class="price100 price"> </div>  
                         </div>
                         <div class="item "> 
                             <div>
-                                <div class="en"> Fresh Strawberry Juice</div>
+                                <div class="en">  Strawberry Juice</div>
                                 <div class="ko"> 생딸기 퐁당 쥬스   </div>
                             </div>
                             <div class="price150 price"> </div>  
                         </div>
                         <div class="item  modalBtn "> 
                             <div class=" ">
-                                <div class="en">Fresh Strawberry Shaved Ice</div>
+                                <div class="en"> Strawberry Shaved Ice</div>
                                 <div class="ko"> 생딸기 퐁당 빙수 </div>
                                 <div class="photo imgP" ></div>
                             </div>  
                             <div class="price170 price"></div>
+                        </div>
+                    </div>    
+                    <div class="meunTi">
+                        <div class="en"> Hand_Made Greek Yourt </div>
+                        <div class="ko"> 수제 그릭요거트 </div>
+                    </div>
+                    <div class="list" >
+                        <div class="item no  "> 
+                            <div></div>
+                            <div class=" blockBox">
+                                <div class="en disRight"> Greek Yogurt Smoothie  </div>
+                                <div class="ko disRight"> 매장에서 만드는 그릭요거트 넣은 스무디</div>
+                            </div>
+                        </div>
+                        <div class="item "> 
+                            <div>
+                                <div class="en"> Plain Greek Yogurt Smoothie  </div>
+                                <div class="ko"> 요거만 갈아  </div>
+                            </div>
+                            <div class="price100 price"> </div>  
+                        </div>
+                        <div class="item "> 
+                            <div>
+                                <div class="en"> Strawberry Greek Yogurt Smoothie  </div>
+                                <div class="ko"> 딸기 갈아  </div>
+                            </div>
+                            <div class="price100 price"> </div>  
+                        </div>
+                        <div class="item "> 
+                            <div>
+                                <div class="en"> Blueberry Greek Yogurt Smoothie  </div>
+                                <div class="ko"> 블루베리 갈아  </div>
+                            </div>
+                            <div class="price100 price"> </div>  
+                        </div>
+                        <div class="item no  "> 
+                            <div></div>
+                            <div class=" blockBox">
+                                <div class="en disRight"> Hand_Made Yourt + Fresh Fruit </div>
+                                <div class="ko disRight"> 수제 요거트 + 생과일 </div>
+                            </div>
+                        </div>
+                        <div class="item modalBtn"> 
+                            <div>
+                                <div class="en">YogurtBowl</div>
+                                <div class="ko"> 요거볼 </div>
+                                <div class="photo imgP " ></div>
+                            </div>
+                            <div class="price120 price"> </div>  
+                        </div>
+                        <div class="item modalBtn"> 
+                            <div>
+                                <div class="en">GreekYogurt Bowl</div>
+                                <div class="ko"> 그릭요거볼 </div>
+                                <div class="photo imgP " ></div>
+                            </div>
+                            <div class="price100 price"> </div>  
+                        </div>
+                    </div> 
+                    <div class="meunTi">
+                        <div class="en"> Milk Variation  </div>
+                        <div class="ko"> 우유 더하기 </div>
+                    </div>
+                    <div class="list" >
+                        <div class="item no  "> 
+                            <div></div>
+                            <div class=" blockBox">
+                                <div class="en disRight"> Milk Variation </div>
+                                <div class="ko disRight"> 우유를 맛있게 마시는 방법입니다.  </div>
+                            </div>
+                        </div>
+                        <div class="item   "> 
+                            <div >
+                                <div class="en "> Choco MilkShake </div>
+                                <div class="ko "> 초코 밀크쉐이크 </div>
+                            </div>
+                            <div class="price90 price"> </div>  
+                        </div>
+                        <div class="item "> 
+                            <div>
+                                <div class="en"> Mango MilkShake  </div>
+                                <div class="ko"> 망고 밀크쉐이크   </div>
+                            </div>
+                            <div class="price90 price"> </div>  
+                        </div>   
+                        <div class="item "> 
+                            <div>
+                                <div class="en"> Choco Latte  </div>
+                                <div class="ko"> 초코라떼 (어린이맛 / 으른이맛)  </div>
+                            </div>
+                            <div class="price75 price"> </div>  
+                        </div>   
+                    </div>    
+                    <div class="meunTi">
+                        <div class="en"> Flower  </div>
+                        <div class="ko"> 꽃차 </div>
+                    </div>
+                    <div class="list" >
+                        <div class="item no  "> 
+                            <div></div>
+                            <div class=" blockBox">
+                                <div class="en disRight"> Flower Tea </div>
+                                <div class="ko disRight"> 건강하고 향기로운 차입니다. </div>
+                            </div>
+                        </div>
+                        <div class="item   "> 
+                            <div >
+                                <div class="en "> Herb Tea </div>
+                                <div class="ko "> 아홉번 덖은 차 </div>
+                            </div>
+                            <div class="price80 price"> </div>  
+                        </div>
+                        <div class="item "> 
+                            <div>
+                                <div class="en"> ChamoMint</div>
+                                <div class="ko"> 카모민트 </div>
+                            </div>
+                            <div class="price75 price"> </div>  
+                        </div>   
+                        <div class="item "> 
+                            <div>
+                                <div class="en"> SSangWhaTang  </div>
+                                <div class="ko"> 경동 한의원 비법 쌍화탕   </div>
+                            </div>
+                            <div class="price90 price"> </div>  
+                        </div>   
+                    </div>    
+                    <div class="meunTi">
+                        <div class="en"> Cafe SEO's Meal  </div>
+                        <div class="ko"> Cafe SEO's 한끼 </div>
+                    </div>
+                    <div class="list" >
+                        <div class="item no  "> 
+                            <div></div>
+                            <div class=" blockBox">
+                                <div class="en disRight"> ??? </div>
+                                <div class="ko disRight"> 내 몸의 '쉼'이 될 재료 </div>
+                                <div class="ex disRight"> 아메리카노 ( Hot / Ice ) 한 잔 포함되어 있습니다. </div>
+                            </div>
+                        </div>
+                        <div class="item  modalBtn "> 
+                            <div >
+                                <div class="en ">NO.1 Meat</div>
+                                <div class="ko "> NO.1 고기파 </div>
+                                <div class="photo imgP " ></div>
+                            </div>
+                            <div class="price260 price"> </div>  
+                        </div>
+                        <div class="item  modalBtn "> 
+                            <div >
+                                <div class="en ">NO.2 Vegan</div>
+                                <div class="ko "> NO.2 비건파 </div>
+                                <div class="photo imgP " ></div>
+                            </div>
+                            <div class="price190 price"> </div>  
+                        </div>
+                        <div class="item  modalBtn "> 
+                            <div >
+                                <div class="en ">NO.3 Diet</div>
+                                <div class="ko "> NO.3 식단파 </div>
+                                <div class="photo imgP " ></div>
+                            </div>
+                            <div class="price190 price"> </div>  
+                        </div>
+                        <div class="item  modalBtn "> 
+                            <div >
+                                <div class="en ">NO.4 Arugula</div>
+                                <div class="ko "> NO.4 유학파 </div>
+                                <div class="photo imgP " ></div>
+                            </div>
+                            <div class="price230 price"> </div>  
+                        </div>
+                        <div class="item  modalBtn "> 
+                            <div >
+                                <div class="en ">Salad feat Arugula</div>
+                                <div class="ko "> 샐러드 feat 루꼴라 </div>
+                                <div class="photo imgP " ></div>
+                            </div>
+                            <div class="price190 price"> </div>  
+                        </div>
+                         
+                    </div>    
+                    <div class="meunTi">
+                        <div class="en"> Cafe SEO's Desert  </div>
+                        <div class="ko"> Cafe SEO's 디저트 </div>
+                    </div>
+                    <div class="list" >
+                        <div class="item no  "> 
+                            <div></div>
+                            <div class=" blockBox">
+                                <div class="en disRight"> Only Hear You can have it !! </div>
+                                <div class="ko disRight"> Cafe SEO 에서만 드실 수 있는 디저트입니다.</div>
+                                <div class="ex "> 달달하지만 달지 않는, 건강한 디저트 입니다.</div>
+                            </div>
+                        </div>
+                        <div class="item  modalBtn "> 
+                            <div >
+                                <div class="en ">YogurtBaRa</div>
+                                <div class="ko ">요거바라</div>
+                                <div class="photo imgP " ></div>
+                            </div>
+                            <div class="price120 price"> </div>  
+                        </div>
+                        <div class="item  modalBtn "> 
+                            <div >
+                                <div class="en ">Sweet-Salty Bowl</div>
+                                <div class="ko ">단짠볼</div>
+                                <div class="photo imgP " ></div>
+                            </div>
+                            <div class="price90 price"> </div>  
+                        </div>
+                        <div class="item  modalBtn "> 
+                            <div >
+                                <div class="en ">Seed Bowl</div>
+                                <div class="ko ">씨앗볼</div>
+                                <div class="photo imgP " ></div>
+                            </div>
+                            <div class="price95 price"> </div>  
+                        </div>
+                        <div class="item  modalBtn "> 
+                            <div >
+                                <div class="en ">Crispy Rice  Bowl</div>
+                                <div class="ko "> 뻥까볼 </div>
+                                <div class="photo imgP " ></div>
+                            </div>
+                            <div class="price85 price"> </div>  
+                        </div>
+                        <div class="item  modalBtn "> 
+                            <div >
+                                <div class="en ">Today's Fruit Bowl</div>
+                                <div class="ko "> 오늘의 과일볼  </div>
+                                <div class="photo imgP " ></div>
+                            </div>
+                            <div class="price30 price"> </div>  
                         </div>
                     </div>    
                 </div>
@@ -432,31 +736,36 @@
         </div>
         <div class="footer "> 
             <div onclick="document.location.href = 'tel:031-941-7474' ">
-                <div class="box  ">
-                    <div class="en"> Contact </div>
-                    <div class="ko " > 031- 941 - 7474 </div>
-                    <div class="phone " ></div>
+                <div class="box ">
+                    <!-- <div class="dis"> -->
+                        <div class="en"> Contact </div>
+                        <div class="ko " > 031- 941 - 7474 </div>
+                        <div class="phone " ></div>
+                    <!-- </div> -->
+                    <!-- <div class="messageFont"> 궁금하신 것이 있으면 전화 주세요.  </div> -->
                 </div>
             </div>
         </div>
     </div>
     <div class="modal "> 
+        <div class="img mStrawShavedIce modalImg" data-type="Fresh Strawberry Shaved Ice"></div>
+        <div class="img mYogurt modalImg" data-type="YogurtBowl"></div>
+        <div class="img mGreekYogurt modalImg" data-type="GreekYogurt Bowl"></div>
         <div class="img no1 modalImg" data-type="NO.1 Meat"></div>
         <div class="img no2 modalImg" data-type="NO.2 Vegan"></div>
         <div class="img no3 modalImg" data-type="NO.3 Diet"></div>
         <div class="img no4 modalImg" data-type="NO.4 Arugula"></div>
-        <div class="img mGreekYogurt modalImg" data-type="GreekYogurt Bowl"></div>
-        <div class="img mYogurt modalImg" data-type="YogurtBowl"></div>
         <div class="img salad modalImg" data-type="Salad feat Arugula"></div>
         <div class="img yogurtBaRa modalImg" data-type="YogurtBaRa"></div>
         <div class="img sweetSalty modalImg" data-type="Sweet-Salty Bowl"></div>
         <div class="img sweetPotato modalImg" data-type="Sweet Potato Bowl"></div>
-        <div class="img fruitBowl modalImg" data-type="Today's Fruit Bowl"></div>
-        <div class="img mStrawShavedIce modalImg" data-type="Fresh Strawberry Shaved Ice"></div>
         <div class="img mSeed modalImg" data-type="mSeed Bowl"></div>
+        <div class="img mRice modalImg" data-type="Crispy Rice  Bowl"></div>
+        <div class="img fruitBowl modalImg" data-type="Today's Fruit Bowl"></div>
     </div>  
 </body>
 <script>
+    // click open
     $('.box').on('click', function( ) {
         $(this).next('.list').slideToggle(100);
         $(this).toggleClass('mBorder');
@@ -465,6 +774,10 @@
     $('.meunTi').on('click', function( ) {
         $(this).next('.list').slideToggle(100);
     });
+
+    // logo click 방지
+    $('.header .box').off('click');
+    $('.footer .box').off('click');
     
     // click 이후 아이콘 위치 유지
     $('.footer').on('click', function( ) {
@@ -494,8 +807,10 @@
             nowHour = timer(nowHour);
             nowMins = timer(nowMins);
 
+            var nowDate = nowYear + nowMonth + nowDay ;
             var nowTime = nowHour + nowMins;
 
+                console.log("nowDate :" + nowDate);
                 console.log(nowHour);
                 console.log(nowMins);
                 console.log(nowTime);

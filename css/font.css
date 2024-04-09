@@ -23,10 +23,17 @@
          url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.woff') format('woff'),
          url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.ttf') format("truetype");
     font-display: swap;
-  }  
+}  
+@font-face {
+    font-family: 'IM_Hyemin-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
   
 @import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
-
+@import url('https://fonts.cdnfonts.com/css/zapfino');
+                
 .ko {
     font-family: twayair; font-size: 18px; margin-left: 15px;
 }
