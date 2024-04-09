@@ -146,24 +146,32 @@
         /* header  */
         .header { box-sizing: border-box; }
         .header .box { line-height: 2vh;}
-        /* .header .box:last-child  { 
+        .header .welcome {  
+            font-family: 'Codystar', sans-serif;
+            text-transform: uppercase;
+            font-size: 1.7rem;
+            line-height: 4vh;
+            display: block;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
         }
-        .header .mean { 
+        .header .message  {
+            /* font-family: IM_Hyemin-Bold; */
+            font-family: 'Codystar', sans-serif;
+            text-align: right;
+            font-size: 1.5rem;
+        }
+        /* .header .mean { 
             font-family: IM_Hyemin-Bold;
             font-size: 1.3rem;
             font-style: italic;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-         }
-        .header .box:last-child > div:nth-child(2)  {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        } */
-       
+        }
+        */
+
         /* footer */
                 /* 아이폰 iso a link  css change */
         a[href^="tel"] {
@@ -173,18 +181,12 @@
 
         /*  */
 
-        input {
-                -webkit-appearance: none;
-                -webkit-border-radius: 0;
-        }   
-        .ios .menu_bar{padding-bottom:constant(safe-area-inset-bottom);padding-bottom:env(safe-area-inset-bottom);}    
         .logoBottom {
             height: 10vh;
-            /* padding: 0 0 calc(constant(safe-area-inset-bottom)); */
-            padding: 0 0 calc(env(safe-area-inset-bottom));
+            width: 100vw;
             background-color: #000;
             position: absolute;
-            bottom: 0;
+            bottom: 10vh;
         }
                 /* image */
         .imgP {
@@ -244,6 +246,10 @@
 <body>
     <div class="container">
         <div class="header ">  
+            <div class="box  welcome">
+                <div class=""> Wecome to Cafe SEO </div>
+                <div class=" message "> </div>
+            </div> 
             <div class="box  disJcBet ">
                 <div class="logo  ">
                     <div class="dis">
@@ -262,6 +268,7 @@
                     </div>
                 </div>
             </div>
+            
             <!-- <div class="box ">
                 <div class="mean "> 
                     <div> 맘의 쉼이 되는, </div>
@@ -676,9 +683,10 @@
                         <div class="item no  "> 
                             <div></div>
                             <div class=" blockBox">
-                                <div class="en disRight"> ??? </div>
-                                <div class="ko disRight"> 내 몸의 '쉼'이 될 재료 </div>
+                                <div class="en disRight"> Healthy Food 4 U </div>
+                                <div class="ko disRight"> 내 몸의 '쉼'이 될 재료와 맛이고 싶습니다. </div>
                                 <div class="ex disRight"> 아메리카노 ( Hot / Ice ) 한 잔 포함되어 있습니다. </div>
+                                <div class="ex disRight"> 단품으로 판매 가능합니다 </div>
                             </div>
                         </div>
                         <div class="item  modalBtn "> 
@@ -733,7 +741,7 @@
                             <div class=" blockBox">
                                 <div class="en disRight"> Only Hear You can have it !! </div>
                                 <div class="ko disRight"> Cafe SEO 에서만 드실 수 있는 디저트입니다.</div>
-                                <div class="ex "> 달달하지만 달지 않는, 건강한 디저트 입니다.</div>
+                                <div class="ex "> 달달하지만 달지 않는 멋있는 디저트 입니다.</div>
                             </div>
                         </div>
                         <div class="item  modalBtn "> 
@@ -789,9 +797,6 @@
                 </div>
             </div>
         </div>
-        <div class="logoBottom">
-
-        </div>
         <div class="btn " >
             <!-- <div class="ko  "> 
                 <div > 쉼</div>
@@ -805,6 +810,9 @@
             <img src="./img/icon/upbtn.png"  href="#">
         </div>
     </div>
+    <!-- <div class="logoBottom">
+        <div> Wecome to Cafe SEO</div>
+    </div> -->
     <div class="modal "> 
         <div class="img mStrawShavedIce modalImg" data-type="Fresh Strawberry Shaved Ice"></div>
         <div class="img mYogurt modalImg" data-type="YogurtBowl"></div>
@@ -865,53 +873,54 @@
             nowHour = timer(nowHour);
             nowMins = timer(nowMins);
 
-            var nowDate = nowYear + nowMonth + nowDay ;
+            var nowDate = nowMonth +" 월 " + nowDay + " 일" ;
             var nowTime = nowHour + nowMins;
 
                 console.log("nowDate :" + nowDate);
+                console.log("nowTime :" + nowTime);
                 console.log(nowHour);
                 console.log(nowMins);
                 console.log(nowTime);
-
-            var openTime = 1100;
-            var closeWeekdayTime = 2000;
-            var closeWeekendTime = 2100;
-
-        //수요일
-        var week = new Array('일', '월', '화', '수', '목', '금', '토');
-        var today_num = new Date().getDay();
-
-            console.log('today ; ' + week[today_num]);
-            console.log('today_num ; ' + today_num );
-            console.log('wensday_num : ' + week[3] );
-            console.log('sunday_num : ' + week[0] );
-            console.log('saterday_num : ' + week[6] );
-
-        // 평일 운영시간
-        var runTimeWeekDay = (today_num != 0 || today_num != 6) & ( nowTime >= openTime & nowTime <= closeWeekdayTime) ;  
-        //  주말 운영시간 
-        var runTimeWeekend = (today_num == 0 || today_num == 6) & ( nowTime >= openTime & nowTime <= closeWeekdayTime) ;  
-        // 평일 운영시간 종료
-        var runTimeWeekDayEnd = (today_num != 0 || today_num != 6) & (  nowTime >= closeWeekdayTime  && nowTime <= 2400) ;  
-        //  주말 운영시간 
-        var runTimeWeekendEnd = (today_num == 0 || today_num == 6) & ( nowTime >= closeWeekdayTime && nowTime <=2400 ) ;  
-        //  운영시간 준비중
-        var runTime =  ( nowTime <= openTime) ; 
-
+                var openTime = 1100;
+                var closeWeekdayTime = 2000;
+                var closeWeekendTime = 2100;
+                
+                //수요일
+                var week = new Array('일', '월', '화', '수', '목', '금', '토');
+                var today_num = new Date().getDay();
+                
+                console.log('today ; ' + week[today_num]);
+                console.log('today_num ; ' + today_num );
+                console.log('wensday_num : ' + week[3] );
+                console.log('sunday_num : ' + week[0] );
+                console.log('saterday_num : ' + week[6] );
+                
+                // 평일 운영시간
+                var runTimeWeekDay = (today_num != 0 || today_num != 6) & ( nowTime >= openTime & nowTime <= closeWeekdayTime) ;  
+                //  주말 운영시간 
+                var runTimeWeekend = (today_num == 0 || today_num == 6) & ( nowTime >= openTime & nowTime <= closeWeekdayTime) ;  
+                // 평일 운영시간 종료
+                var runTimeWeekDayEnd = (today_num != 0 || today_num != 6) & (  nowTime >= closeWeekdayTime  && nowTime <= 2400) ;  
+                //  주말 운영시간 
+                var runTimeWeekendEnd = (today_num == 0 || today_num == 6) & ( nowTime >= closeWeekdayTime && nowTime <=2400 ) ;  
+                //  운영시간 준비중
+                var runTime =  ( nowTime <=  openTime ) ; 
+                
+            $('.nowDate').text(  nowDate );
             if ( today_num  == 3 ) {
-                $('.message').text(" 오늘은 쉽니다.")
+                $('.message').text( nowDate + " 수요일은 쉽니다.")
             } else if( today_num != 3 & runTimeWeekDay ) {
-                $('.message').text("'영업중'입니다.")
+                $('.message').text( nowDate +  " '영업중' 입니다.")
             } else if( today_num != 3 & runTimeWeekend ) {
-                $('.message').text("'영업중'입니다.")
+                $('.message').text( nowDate +  " '영업중' 입니다.")
             } else if( today_num != 3 & runTimeWeekDayEnd ) {
-                $('.message').text(" 오늘은 영업이 끝났습니다.")
+                $('.message').text( nowDate +  " 오늘은 영업이 끝났습니다.")
             } else if( today_num != 3 & runTimeWeekendEnd ) {
-                $('.message').text(" 오늘은 영업이 끝났습니다.")
+                $('.message').text( nowDate +  " 오늘은 영업이 끝났습니다.")
             } else if( today_num != 3 & runTime ) {
-                $('.message').text(" 영업준비중 입니다.")
+                $('.message').text( nowDate +  " 영업준비중 입니다.")
             } else {
-                $('.message').text(" 오늘은 영업이 끝났습니다. ")
+                $('.message').text( nowDate + " 오늘은 영업이 끝났습니다. ")
             }
     
     // modal
