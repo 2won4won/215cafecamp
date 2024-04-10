@@ -916,24 +916,25 @@
                 var runTime =  ( nowTime <=  openTime ) ; 
                 var hoilday = ((nowDate == '04월 10일') || (nowDate == '05월 15일') || (nowDate == '09월 18일') || (nowDate == '10월 09일') || (nowDate == '12월 25일') );
                 
-            if ( hoilday ) {
-                $('.message').text( nowDate + " 임시 영업합니다.")
-            } else if (!hoilday && (today_num  == 3) ){
-                $('.message').text( nowDate + " 수요일은 쉽니다.")
-            } else if( today_num != 3 & runTimeWeekDay ) {
-                $('.message').text( nowDate +  " '영업중' 입니다.")
-            } else if( today_num != 3 & runTimeWeekend ) {
-                $('.message').text( nowDate +  " '영업중' 입니다.")
-            } else if( today_num != 3 & runTimeWeekDayEnd ) {
-                $('.message').text( nowDate +  " 오늘은 영업이 끝났습니다.")
-            } else if( today_num != 3 & runTimeWeekendEnd ) {
-                $('.message').text( nowDate +  " 오늘은 영업이 끝났습니다.")
-            } else if( today_num != 3 & runTime ) {
-                $('.message').text( nowDate +  " 영업준비중 입니다.")
-            } else {
-                $('.message').text( nowDate + " 오늘은 영업이 끝났습니다. ")
-            }
+            // if ( hoilday ) {
+            //     $('.message').text( nowDate + " 임시 영업합니다.")
+            // } else if (!hoilday && (today_num  == 3) ){
+            //     $('.message').text( nowDate + " 수요일은 쉽니다.")
+            // } else if( today_num != 3 & runTimeWeekDay ) {
+            //     $('.message').text( nowDate +  " '영업중' 입니다.")
+            // } else if( today_num != 3 & runTimeWeekend ) {
+            //     $('.message').text( nowDate +  " '영업중' 입니다.")
+            // } else if( today_num != 3 & runTimeWeekDayEnd ) {
+            //     $('.message').text( nowDate +  " 오늘은 영업이 끝났습니다.")
+            // } else if( today_num != 3 & runTimeWeekendEnd ) {
+            //     $('.message').text( nowDate +  " 오늘은 영업이 끝났습니다.")
+            // } else if( today_num != 3 & runTime ) {
+            //     $('.message').text( nowDate +  " 영업준비중 입니다.")
+            // } else {
+            //     $('.message').text( nowDate + " 오늘은 영업이 끝났습니다. ")
+            // }
 
+            $('.message').text( nowDate + " 영업 준비중입니다. ")
     // modal
     var list = $('.modal .modalImg').html();
     var arr = [];
