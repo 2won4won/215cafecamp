@@ -10,15 +10,14 @@
     <title>Document</title>
     <style>
         #container {
-            position: absolute;
-            /* top: 6vh; */
-            left: 0;
-            right: 0;
-            bottom: 0;
-            height: 100%;
+        
+            height: auto;
+            min-height: 100%;
+            padding-bottom: 6vh;
+            background-color: darkblue;
         }
         .header {
-            height: 6vh;
+            min-height: 6vh;
             padding: 0 0 calc(constant(safe-area-inset-top) + 5px );
             padding: 0 0 cal(env(safe-area-inset-top) + 5px);
             background-color: cadetblue;
@@ -28,9 +27,13 @@
             background-color: cornflowerblue;
         }
         .footer {
-            position: absolute;
-            bottom: 0;
+            position: relative;
+            transform: translateY(0%);
 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
             width: 100%;
             height: 10vh;
             background-color: aqua;
