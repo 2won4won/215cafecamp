@@ -21,7 +21,7 @@
             right:0;
             bottom:0;
             height:100%;
-            background-color: darkblue;
+            /* background-color: darkblue; */
         }
         .header {
             width: 100%;
@@ -74,11 +74,10 @@
 </body>
 <script>
     // 주소창 없애기
-    window.addEventListener("load", function() {
-        setTimeout(function() {
-            window.scrollTo(0, 1);
-        }, 0);
-    });
+    $(document).ready(function(){
+	setTimeout(scrollTo, 0, 0, 1);
+});
+
 
 </script>
 </html>
