@@ -17,10 +17,15 @@
             box-sizing: border-box;
         }
 
-        html,
+        
         body {
-            height: 100vh;
-            height: fill-available;
+            min-height: 100vh;
+            /* min-height: fill-available; */
+            min-height: -webkit-fill-available;
+        }
+        html {
+            /* min-height: 100vh;
+            min-height: fill-available; */
             height: -webkit-fill-available;
         }
         
@@ -46,7 +51,7 @@
             background-color: chocolate;
             width: 75vw;
             margin: 0 auto;
-            min-height: calc(100vh - 10vh );
+            min-height: calc(100vh - 5vh );
             padding: 7vh;
             /* padding: 0 0 calc(constant(safe-area-inset-top) + 5vh); 
             padding: 0 0 calc(env(safe-area-inset-top) + 5vh); */
@@ -79,7 +84,7 @@
 		<div class="header">Header </div>
 		<div class="content"> 
             <div >
-                Content nnn
+                Content n2
             </div>
         </div>
 		<div class="footer">Footer2 </div>
