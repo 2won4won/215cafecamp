@@ -3,13 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <!-- 안드로이드 주소창 없애기 -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <!-- ios 주소창 없애기 -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-
     <title>Document</title>
-
     <style>
         * {
             margin: 0;
@@ -19,94 +13,89 @@
 
         html,
         body {
-            height: auto;
-            min-height:100vh;     
+            height: 100%;
         }
-        /* html {
-            min-height: 100vh;
-            min-height: fill-available;
-            height: -webkit-fill-available;
+        
+        #container {
+            /* width: 75vw; */
+            /* height: 100%;
+            display: flex;
+            flex-direction: column; */
+            /* position:absolute;
+    top:10vh;/* 헤더 높이 값을 넣어주세요. */
+    /* left:0;
+    right:0;
+    bottom:0;
+    height:100%; */
+            /* color: aliceblue;  */
+            position:absolute;
+    top:50px;/* 헤더 높이 값을 넣어주세요. */
+    left:0;
+    right:0;
+    bottom:0;
+    height:100%;
+
         }
-         */
-        /* #container {
-            height: auto;
-            min-height: 100vh;
-        } */
-       
+        
         .header {
             position: fixed;
-            left: 0px;
-            top: 0px;
+  left: 0px;
+  top: 0px;
 
-            width: 100%;
-            height: 5vh;
+  width: 100%;
+  height: 10vh;
 
-            padding-left: constant(safe-area-inset-left);
-            padding-right: constant(safe-area-inset-right);
+  padding-left: constant(safe-area-inset-left);
+  padding-right: constant(safe-area-inset-right);
 
-            padding-left: env(safe-area-inset-left);
-            padding-right: env(safe-area-inset-right);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 
-            background-color: green;
+  background-color: green;
         }
         
         .content {
-            background-color: chocolate;
+            /* min-height: calc(100vh - 10vh );
             width: 75vw;
-            margin: 0 auto;
-            min-height: calc(100vh - 5vh );
-            padding: 0 0 calc(constant(safe-area-inset-top) + 5vh); 
-            padding: 0 0 calc(env(safe-area-inset-top) + 5vh);
+            border: 0.3rem solid #000;
+            margin: auto; */
+            background-color: chocolate;
+            padding: 0 0 calc(constant(safe-area-inset-top) + 10vh);
+            padding: 0 0 calc(env(safe-area-inset-top) + 10vh);
         }
 
         .footer {
             position: fixed;
-            left: 0px;
-            bottom: 0px;
+  left: 0px;
+  bottom: 0px;
 
-            width: 100%;
-            height: 10vh;
+  width: 100%;
+  height: 10vh;
 
-            padding-bottom: constant(safe-area-inset-bottom);
-            padding-left: constant(safe-area-inset-left);
-            padding-right: constant(safe-area-inset-right);
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-left: constant(safe-area-inset-left);
+  padding-right: constant(safe-area-inset-right);
 
-            padding-bottom: env(safe-area-inset-bottom);
-            padding-left: env(safe-area-inset-left);
-            padding-right: env(safe-area-inset-right);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 
 
-            background-color: blue;
+  background-color: blue;
         }
 
     </style>
 </head>
 <body>
     <div id="container">
-		<div class="header">Header </div>
-		<div class="content"> 
-            <div >
-                Content n2
-            </div>
+		<div class="header">Header 42222</div>
+		<div class="content">
+           <div class="con">
+              new
+           </div>
         </div>
-		<div class="footer">Footerqq </div>
+		<div class="footer">Footer</div>
 	</div>
+    
 </body>
-<script>
-    // 주소창 없애기
-    window.addEventListener("load", function() {
-        setTimeout(function() {
-            window.scrollTo(0, 1);
-        }, 0);
-    });
-
-    const [innerHeight, setInnerHeight] = useState<number>(0);
-
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            setInnerHeight(window.innerHeight);
-        }
-    }, []);
-
-</script>
 </html>
