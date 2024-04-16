@@ -15,7 +15,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            height: 100%;
+            height: auto;
+            min-height: 100vh;
         }
         .header {
             height: 6vh;
@@ -23,7 +24,9 @@
             padding: 0 0 cal(env(safe-area-inset-top));
             background-color: cadetblue;
         }
-        .content {}
+        .content {
+            min-height: calc(100vh - 6vh);
+        }
         .footer {
             position: absolute;
             bottom: 0;
