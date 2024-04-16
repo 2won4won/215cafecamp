@@ -15,17 +15,16 @@
             left: 0;
             right: 0;
             bottom: 0;
-            height: auto;
-            min-height: 100vh;
+            height: 100%;
         }
         .header {
             height: 6vh;
-            padding: 0 0 calc(constant(safe-area-inset-top));
-            padding: 0 0 cal(env(safe-area-inset-top));
+            padding: 0 0 calc(constant(safe-area-inset-top) + 5px );
+            padding: 0 0 cal(env(safe-area-inset-top) + 5px);
             background-color: cadetblue;
         }
         .content {
-            /* min-height: calc(100vh - 11vh ); */
+            min-height: calc(100vh - 16vh );
             background-color: cornflowerblue;
         }
         .footer {
