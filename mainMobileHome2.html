@@ -30,22 +30,25 @@
             top: 0px;
 
             width: 100%;
-            height: 10vh;
-
+            height: 5vh;
+/* 
             padding-left: constant(safe-area-inset-left);
             padding-right: constant(safe-area-inset-right);
 
             padding-left: env(safe-area-inset-left);
-            padding-right: env(safe-area-inset-right);
+            padding-right: env(safe-area-inset-right); */
 
             background-color: green;
         }
         
         .content {
             background-color: chocolate;
+            width: 75vw;
+            margin: 0 auto;
             min-height: calc(100vh - 10vh );
-            padding: 0 0 calc(constant(safe-area-inset-top) + 10vh);
-            padding: 0 0 calc(env(safe-area-inset-top) + 10vh);
+            padding: 7vh;
+            /* padding: 0 0 calc(constant(safe-area-inset-top) + 5vh); 
+            padding: 0 0 calc(env(safe-area-inset-top) + 5vh); */
         }
 
         .footer {
@@ -56,13 +59,13 @@
             width: 100%;
             height: 10vh;
 
-            padding-bottom: constant(safe-area-inset-bottom);
+            /* padding-bottom: constant(safe-area-inset-bottom);
             padding-left: constant(safe-area-inset-left);
             padding-right: constant(safe-area-inset-right);
 
             padding-bottom: env(safe-area-inset-bottom);
             padding-left: env(safe-area-inset-left);
-            padding-right: env(safe-area-inset-right);
+            padding-right: env(safe-area-inset-right); */
 
 
             background-color: blue;
@@ -73,7 +76,11 @@
 <body>
     <div id="container">
 		<div class="header">Header </div>
-		<div class="content"> Content </div>
+		<div class="content"> 
+            <div >
+                Content nnn
+            </div>
+        </div>
 		<div class="footer">Footer </div>
 	</div>
 </body>
