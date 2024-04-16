@@ -3,11 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <!-- 안드로이드 주소창 없애기 -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <!-- ios 상단 주소창 없애기 -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-
     <title>Document</title>
     <style>
         * {
@@ -19,7 +14,7 @@
         html,
         body {
             height: 100vh;
-            height: fill-available;
+            min-height: fill-available;
         }
         
         #container {
@@ -65,7 +60,6 @@
             width: 75vw;
             border: 0.3rem solid #000;
             margin: auto; */
-            min-height: calc(100vh - 10vh );
             background-color: chocolate;
             padding: 0 0 calc(constant(safe-area-inset-top) + 10vh);
             padding: 0 0 calc(env(safe-area-inset-top) + 10vh);
@@ -93,9 +87,9 @@
 
     </style>
 </head>
-<body  onload="setTimeout(function() {window.scrollTo(0, 1)}, 100)">
+<body>
     <div id="container">
-		<div class="header">Header 11</div>
+		<div class="header">Header 42222</div>
 		<div class="content">
            <div class="con">
               new
@@ -106,11 +100,4 @@
     
     
 </body>
-<script>
-    window.addEventListener("load", function() {
-  setTimeout(function() {
-    window.scrollTo(0, 1);
-  }, 0);
-});
-</script>
 </html>
