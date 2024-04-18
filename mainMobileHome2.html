@@ -62,6 +62,9 @@
             padding-left: env(safe-area-inset-left);
             padding-right: env(safe-area-inset-right);
 
+            padding: 15px 0 calc(constant(safe-area-inset-bottom) + 15px);
+            padding: 15px 0 calc(env(safe-area-inset-bottom) + 15px);
+
             background-color: chocolate;
             z-index: 999;
         }
@@ -72,7 +75,7 @@
         <div class="header"> Header </div>     
         <div class="content"> Content   height: auto;
             min-height: 100vh; </div>     
-        <div class="footer"> Footer  </div>     
+        <div class="footer"> Footer padding </div>     
    </div> 
 </body>
 <script>
