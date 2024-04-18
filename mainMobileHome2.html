@@ -9,11 +9,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Document</title>
     <style>
-        /* body {
+        body {
             height: 100vh;
             height: -webkit-fill-available;
             height: fill-available;
-        } */
+        }
         #container {
             position:absolute;
             top:6vh;/* 헤더 높이 값을 넣어주세요. */
@@ -69,21 +69,15 @@
    <div id="container">
         <div class="header"> Header </div>     
         <div class="content"> Content  </div>     
-        <div class="footer"> Footer  ㅓㄴ </div>     
+        <div class="footer"> Footer  </div>     
    </div> 
 </body>
 <script>
     // 주소창 없애기
     $(document).ready(function(){
-	setTimeout(scrollTo, 0, 0, 1);
-});
-const [innerHeight, setInnerHeight] = useState<number>(0);
+        setTimeout(scrollTo, 0, 0, 1);
+    });
 
-useEffect(() => {
-	if (typeof window !== 'undefined') {
-		setInnerHeight(window.innerHeight);
-	}
-}, []);
 
 </script>
 </html>
