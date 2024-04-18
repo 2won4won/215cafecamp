@@ -9,18 +9,20 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Document</title>
     <style>
-        body {
+        /* body {
             height: 100vh;
             height: -webkit-fill-available;
             height: fill-available;
-        }
+        } */
         #container {
             position:absolute;
             top:6vh;/* 헤더 높이 값을 넣어주세요. */
             left:0;
             right:0;
             bottom:0;
-            height:100%;
+            height: auto;
+            min-height: 100vh;
+            /* height:100%; */
             /* background-color: darkblue; */
         }
         .header {
@@ -68,7 +70,8 @@
 <body>
    <div id="container">
         <div class="header"> Header </div>     
-        <div class="content"> Content  </div>     
+        <div class="content"> Content   height: auto;
+            min-height: 100vh; </div>     
         <div class="footer"> Footer  </div>     
    </div> 
 </body>
