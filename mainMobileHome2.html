@@ -16,9 +16,9 @@
         } */
     
           body {
-            min-height: 100vh;
-            min-height: -webkit-fill-available;
-            height: fill-available;
+            width: 100vw;
+            height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
         }
         #container {
             position:absolute;
@@ -79,7 +79,7 @@
 </head>
 <body>
    <div id="container">
-        <div class="header"> Header2 </div>     
+        <div class="header"> Header3 </div>     
         <div class="content"> 
             <div class=" "> 
                 <div >
@@ -614,6 +614,11 @@
         setTimeout(scrollTo, 0, 0, 1);
     });
 
-
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', vh + 'px');
+    window.addEventListener('resize', function () {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', vh + 'px');
+    });
 </script>
 </html>
