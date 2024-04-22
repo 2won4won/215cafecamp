@@ -14,14 +14,23 @@
             height: -webkit-fill-available;
             height: fill-available;
         } */
+        body {
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
         #container {
             position:absolute;
             top:6vh;/* 헤더 높이 값을 넣어주세요. */
             left:0;
             right:0;
             bottom:0;
-            height: auto;
-            min-height: 100vh;
+            /* height: auto; */
+            /* min-height: 100vh; */
             /* height:100%; */
             /* background-color: darkblue; */
         }
@@ -72,7 +81,7 @@
 </head>
 <body>
    <div id="container">
-        <div class="header"> Header </div>     
+        <div class="header"> Header1 </div>     
         <div class="content"> 
             <div class=" "> 
                 <div >
