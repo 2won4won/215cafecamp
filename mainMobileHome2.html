@@ -14,12 +14,6 @@
             height: -webkit-fill-available;
             height: fill-available;
         } */
-    
-          body {
-            width: 100vw;
-            height: 100vh;
-            height: calc(var(--vh, 1vh) * 100);
-        }
         #container {
             position:absolute;
             top:6vh;/* 헤더 높이 값을 넣어주세요. */
@@ -614,11 +608,6 @@
         setTimeout(scrollTo, 0, 0, 1);
     });
 
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', vh + 'px');
-    window.addEventListener('resize', function () {
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', vh + 'px');
-    });
+   
 </script>
 </html>
