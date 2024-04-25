@@ -10,22 +10,26 @@
     <!-- 상단 색상 -->
     <meta name="theme-color" content="#ff6600" />
     <!-- Local file import -->
-     <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/layout.css">
     <title>Document</title>
     <style>
         html {
             display: flex;
             justify-content: center;
         }
-        
+        body {
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+        }
         .mobile { 
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
             /* 좌우로 흔들리는 것 방지 - 가로스크롤 안생김  */
-            height: auto;
+            /* height: auto;
             min-height: 100vh;
-            padding-bottom: 5rem;
+            padding-bottom: 5rem; */
+            -webkit-overflow-scrolling: auto;
             /* height: 100vmax; */
 
         }
@@ -34,9 +38,12 @@
         .footer { 
             border: 0.5rem solid wheat; 
             height: 5rem;
-            position: relative;
-            transform: translateY(0%);
+            /* position: relative;
+            transform: translateY(0%); */
             background-color: coral;
+            position: fixed;
+            bottom: 0;
+            width: 100vw;
 
         }
     </style>
@@ -46,7 +53,7 @@
         <div class="nav"> nav </div>
         <div class="content"> content</div>
     </div>
-    <div class="footer"> footer1 </div>
+    <div class="footer"> footer2 </div>
 
 </body>
 <script>
