@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1, width=device-width,minimal-ui, viewport-fit=contain">
+    <meta name="viewport" content="initial-scale=1, width=device-width,minimal-ui, viewport-fit=cover">
     <!-- 안드로이드 주소창 제거 -->
     <meta name="mobile-web-app-capable" content="yes">
     <!-- ios 주소창 제거 -->
@@ -25,18 +25,19 @@
             box-sizing: border-box;
             /* 좌우로 흔들리는 것 방지 - 가로스크롤 안생김  */
             height: auto;
-            min-height: 100vh;
+            min-height: 100%;
+            padding-bottom: 5rem;
             -webkit-overflow-scrolling: auto;
         }
         .header,
         .nav { 
             border: 0.5rem solid black; 
-            position: fixed;
+            /* position: fixed;
             left: 0px;
             top: 0px;
 
             width: 100%;
-            height: 30px;
+            height: 30px; */
 
             padding-left: constant(safe-area-inset-left);
             padding-right: constant(safe-area-inset-right);
@@ -48,12 +49,15 @@
         }
         .content { border: 0.5rem solid red; }
         .footer { 
-            position: fixed;
+            height: 5rem;
+            position: relative;
+            transform: translateY(-100%);
+            /* position: fixed;
             left: 0px;
             bottom: 0px;
 
             width: 100%;
-            height: 30px;
+            height: 30px; */
 
             padding-bottom: constant(safe-area-inset-bottom);
             padding-left: constant(safe-area-inset-left);
@@ -70,11 +74,11 @@
     </style>
 </head>
 <body>
-    <!-- <div class="mobile">
-        <div class="nav"> nav1 </div>
+    <div class="mobile">
+        <div class="nav"> nav12 </div>
         <div class="content"> content</div>
         <div class="footer"> footer212 </div> 
-    </div> -->
+    </div>
     <!-- <header> header123 </header>
     <div class="content"> content</div>
     <footer> footer2 </footer> -->
