@@ -79,11 +79,17 @@
             z-index: 999;
         }
         body {
-            min-height: 100vh;
-            @supports (-webkit-touch-callout: none) {
-    min-height: -webkit-fill-available;
-  }
-        }
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+/* @supports (-webkit-touch-callout: none) {
+    height: -webkit-fill-available;
+  } */
         .b {
             background-color: aquamarine;
             width: 100vw;
@@ -109,7 +115,7 @@
     </div>
     <div class="footer"> footer212 </div>  -->
     <div class="b">
-        minsupports
+        webkit
     </div>
     <div class="footer"> footer </div> 
 
