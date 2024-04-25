@@ -22,21 +22,28 @@
             -moz-box-sizing: border-box;
             box-sizing: border-box;
             /* 좌우로 흔들리는 것 방지 - 가로스크롤 안생김  */
-            height: 100vmax;
+            min-height: 100vmax;
+            height: auto;
             /* height:calc(var(--vh, 1vh) * 100); */
 
         }
         .nav { border: 0.5rem solid black; }
         .content { border: 0.5rem solid red; }
-        .footer { border: 0.5rem solid wheat; }
+        .footer { 
+            border: 0.5rem solid wheat; 
+            height: 5rem;
+            position: relative;
+            transform: translateY(0%);
+            background-color:  gold;
+        }
     </style>
 </head>
 <body>
     <div class="mobile">
         <div class="nav"> nav11 </div>
         <div class="content"> content</div>
-        <div class="footer"> footer </div>
     </div>
+    <div class="footer"> footer </div>
 
 </body>
 <script>
