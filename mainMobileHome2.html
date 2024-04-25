@@ -78,12 +78,17 @@
             background-color: blue;
             z-index: 999;
         }
+        body {
+            min-height: 100vh;
+            @supports (-webkit-touch-callout: none) {
+    min-height: -webkit-fill-available;
+  }
+        }
         .b {
             background-color: aquamarine;
             width: 100vw;
             height: auto;
-            min-height: 100dvh;
-            min-height: 100vh;
+            /* min-height: 100dvh; */
             /* padding-bottom: 5rem; */
             
         }
@@ -104,7 +109,7 @@
     </div>
     <div class="footer"> footer212 </div>  -->
     <div class="b">
-        min%100dvh
+        minsupports
     </div>
     <div class="footer"> footer </div> 
 
