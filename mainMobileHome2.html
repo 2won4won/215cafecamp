@@ -29,7 +29,7 @@
 </head>
 <body>
     <div id="overlays">
-        <div id="bottomNavigation"></div>
+        <div id="bottomNavigation"> bb</div>
       </div>
       <div id="root"></div>
 </body>
@@ -39,21 +39,6 @@
         setTimeout(scrollTo, 0, 0, 1);
     });
 
-    let pendingUpdate: boolean = false;
-const portalElement = document.getElementById("overlays") as HTMLElement;
-
-function viewportHandler(e: Event) {
-  if (pendingUpdate) return;
-  pendingUpdate = true;
-
-  requestAnimationFrame(() => {
-    pendingUpdate = false;
- 
-    const viewport = e.target as VisualViewport;
-    portalElement.style.height = `${viewport.height}px`;
-  });
-}
-
-window.visualViewport?.addEventListener("scroll", viewportHandler);
+    
 </script>
 </html>
