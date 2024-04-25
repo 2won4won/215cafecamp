@@ -16,12 +16,18 @@
             display: flex;
             justify-content: center;
         }
+        html .mobile,
+        body .mobile {
+            position:relative;overflow:hidden!important;touch-action:none;
+        }
         .mobile { 
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
             /* 좌우로 흔들리는 것 방지 - 가로스크롤 안생김  */
-            height: 100vmax;
+            /* height: 100vmax; */
+            height:calc(var(--vh, 1vh) * 100);
+
         }
         .nav { border: 0.5rem solid black; }
         .content { border: 0.5rem solid red; }
@@ -30,7 +36,7 @@
 </head>
 <body>
     <div class="mobile">
-        <div class="nav"> nav </div>
+        <div class="nav"> nav1 </div>
         <div class="content"> content</div>
         <div class="footer"> footer </div>
     </div>
@@ -42,6 +48,48 @@
         setTimeout(scrollTo, 0, 0, 1);
     });
 
-   
+    let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', vh+"px");
+// resize
+window.addEventListener("resize", ()=>{
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', vh+"px");
+})
+const menuOn = () => {
+    if(menu.flag){
+      menu.flag = false;
+
+      // 전체 메뉴 닫을 때 고정된 높이 값 없애기
+      document.body.removeAttribute("style");
+      document.documentElement.removeAttribute("style");
+
+      // 컨텐츠 영역의 스크롤 값을 전체 메뉴 열기 전 높이 값으로 세팅
+      document.documentElement.scrollTop = menu.lastHeight;
+
+      // 컨텐츠 영역이 스크롤 되도록 html, body에서 class 제거
+      document.body.classList.remove("ovhi");
+      document.documentElement.classList.remove("ovhi");
+
+      // 아이폰 툴바랑 주소창 영역에 맞게 100vh를 다시 세팅
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }else{
+      menu.flag = true;
+
+      // 아이폰에서 전체 메뉴 시 컨텐츠 스크롤 위치 값 저장
+      menu.lastHeight = document.documentElement.scrollTop;
+
+      // 컨텐츠 영역이 스크롤 안되게 html, body에 class 추가
+      document.body.classList.add("ovhi");
+      document.documentElement.classList.add("ovhi");
+
+      // 전체 메뉴가 열리고 난 후(400s) 높이 값을 화면 크기 만큼만 쥐서 위아래로 touchmove해도 툴바랑 주소창 고정된 상태로 보여지게.
+      // 컨텐츠 영역의 스크롤 높이 값은 0이 됨.
+      setTimeout(() => {
+        document.body.setAttribute("style", "height:calc(var(--vh, 1vh) * 100)");
+      }, 390);
+    }
+}
+
 </script>
 </html>
