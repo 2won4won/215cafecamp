@@ -17,26 +17,27 @@
             display: flex;
             justify-content: center;
         }
-        body {
-            height: 100vh;
-height: -webkit-fill-available;
-height: fill-available;
-        }
+
         .mobile { 
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
             /* 좌우로 흔들리는 것 방지 - 가로스크롤 안생김  */
-            /* height: auto;
+            height: auto;
             min-height: 100vh;
-            padding-bottom: 5rem; */
+            padding-bottom: 5rem; 
             -webkit-overflow-scrolling: auto;
             /* height: 100vmax; */
+
+            padding-right:constant(safe-area-inset-right);
+            padding-left:constant(safe-area-inset-left);
+            padding-right:env(safe-area-inset-right);
+            padding-left:env(safe-area-inset-left);
 
         }
         .nav { border: 0.5rem solid black; }
         .content { border: 0.5rem solid red; }
-        .footer { 
+        footer { 
             border: 0.5rem solid wheat; 
             height: 5rem;
             /* position: relative;
@@ -44,15 +45,17 @@ height: fill-available;
             background-color: coral;
             position: fixed;
             bottom: 0;
+            padding: 15px 0 calc(constant(safe-area-inset-bottom) + 15px);
+            padding: 15px 0 calc(env(safe-area-inset-bottom) + 15px);
         }
     </style>
 </head>
 <body>
     <div class="mobile">
-        <div class="nav"> nav2 </div>
+        <div class="nav"> nav </div>
         <div class="content"> content</div>
     </div>
-    <div class="footer"> footer2 </div>
+    <footer> footer2 </footer>
 
 </body>
 <script>
