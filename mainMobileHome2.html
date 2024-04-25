@@ -23,13 +23,21 @@
             -moz-box-sizing: border-box;
             box-sizing: border-box;
             /* 좌우로 흔들리는 것 방지 - 가로스크롤 안생김  */
-            height: 100vmax;
+            height: auto;
+            min-height: 100%;
+            padding-bottom: 5rem;
+            /* height: 100vmax; */
 
         }
         .nav { border: 0.5rem solid black; }
         .content { border: 0.5rem solid red; }
         .footer { 
             border: 0.5rem solid wheat; 
+            height: 5rem;
+            position: relative;
+            transform: translateY(0%);
+            background-color: coral;
+
         }
     </style>
 </head>
@@ -37,8 +45,8 @@
     <div class="mobile">
         <div class="nav"> nav </div>
         <div class="content"> content</div>
-        <div class="footer"> footer</div>
     </div>
+    <div class="footer"> footer1 </div>
 
 </body>
 <script>
