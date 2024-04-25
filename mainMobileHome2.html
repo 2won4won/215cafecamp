@@ -14,27 +14,24 @@
     <link rel="stylesheet" href="css/layout.css">
     <title>Document</title>
     <style>
-    html, body{height: 100%}
-    .wrapper{
-        height:auto;
-        min-height: 100%;
-        padding-bottom: 193px; 
-	}
-    footer{
-    	height:193px; 
-    	position: relative;
-    	transform: translateY(-100%);
-	}
+    html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#bottomNavigation {
+    position: fixed;
+    bottom: 0;
+}
+
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <header>Header</header>
-        <div class="contents">컨텐츠 내용<div>
-    </div>
-    
-    <footer>Footer</footer>
-
+    <div id="overlays">
+        <div id="bottomNavigation"></div>
+      </div>
+      <div id="root"></div>
 </body>
 <script>
     // 모바일 접속시 상단 주소창 없애기
@@ -42,5 +39,21 @@
         setTimeout(scrollTo, 0, 0, 1);
     });
 
+    let pendingUpdate: boolean = false;
+const portalElement = document.getElementById("overlays") as HTMLElement;
+
+function viewportHandler(e: Event) {
+  if (pendingUpdate) return;
+  pendingUpdate = true;
+
+  requestAnimationFrame(() => {
+    pendingUpdate = false;
+ 
+    const viewport = e.target as VisualViewport;
+    portalElement.style.height = `${viewport.height}px`;
+  });
+}
+
+window.visualViewport?.addEventListener("scroll", viewportHandler);
 </script>
 </html>
