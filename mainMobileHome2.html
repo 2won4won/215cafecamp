@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width,initial-scale=1, viewport-fit=cover">
     <!-- 안드로이드 주소창 제거 -->
     <meta name="mobile-web-app-capable" content="yes">
     <!-- ios 주소창 제거 -->
@@ -37,14 +37,16 @@
         }
         .nav { border: 0.5rem solid black; }
         .content { border: 0.5rem solid red; }
-        footer { 
+        .footer { 
             border: 0.5rem solid wheat; 
             height: 5rem;
-            /* position: relative;
-            transform: translateY(0%); */
+            position: relative;
+            transform: translateY(0%);
             background-color: coral;
-            position: fixed;
-            bottom: 0;
+            
+            /* position: fixed;
+            bottom: 0; */
+
             padding: 15px 0 calc(constant(safe-area-inset-bottom) + 15px);
             padding: 15px 0 calc(env(safe-area-inset-bottom) + 15px);
         }
@@ -54,8 +56,9 @@
     <div class="mobile">
         <div class="nav"> nav </div>
         <div class="content"> content</div>
+        <!-- <div class="footer"> footer </div> -->
     </div>
-    <footer> footer2 </footer>
+    <!-- <footer> footer2 </footer> -->
 
 </body>
 <script>
