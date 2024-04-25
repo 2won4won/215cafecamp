@@ -12,17 +12,15 @@
     <title>Document</title>
     <style>
         html {
-            /* width: 100vw; */
             display: flex;
             justify-content: center;
-            /* border: 0.2rem solid grey; */
         }
         .mobile { 
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
             /* 좌우로 흔들리는 것 방지 - 가로스크롤 안생김  */
-            height: 100vmax;
+            height: 100vmax + 1rem;
         }
         .nav { border: 0.5rem solid black; }
         .content { border: 0.5rem solid red; }
@@ -38,7 +36,7 @@
 
 </body>
 <script>
-    // 주소창 없애기
+    // 모바일 접속시 상단 주소창 없애기
     $(document).ready(function(){
         setTimeout(scrollTo, 0, 0, 1);
     });
