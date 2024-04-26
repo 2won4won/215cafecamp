@@ -16,11 +16,21 @@
     <style>
     html{ height: 100%; border: 2px solid green; }
     body{ height: 100%; border: 2px solid red; }
-    
+    html, body{height: 100%}
+    .wrapper{
+        height:auto;
+        min-height: 100%;
+        padding-bottom: 193px; 
+	}
+    footer{
+    	height:193px; 
+    	position: relative;
+    	transform: translateY(-100%);
+	}
     </style>
 </head>
 <body>
-    <div class="b">
+    <!-- <div class="b">
         <div class="header"> 
             header2
         </div>
@@ -28,7 +38,13 @@
             content
         </div>
         <div class="footer">footer </div> 
+    </div> -->
+    <div class="wrapper">
+        <header>Header</header>
+        <div class="contents">컨텐츠 내용<div>
     </div>
+    
+    <footer>Footer</footer>
 
 </body>
 <script>
