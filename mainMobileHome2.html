@@ -14,19 +14,9 @@
     <link rel="stylesheet" href="css/layout.css">
     <title>Document</title>
     <style>
-    html, body{height: 100%}
-    .b{
-        height:100vh;
-        height: calc(var(--vh, 1vh) * 100);
-        min-height: 100%;
-        padding-bottom: 193px; 
-	}
-    footer{
-    	height:193px; 
-    	position: fixed;
-    	bottom: 0;
-        left: 0;
-	}
+    html{ height: 100%; border: 2px solid green; }
+    body{ height: 100%; border: 2px solid red; }
+    
     </style>
 </head>
 <body>
@@ -35,9 +25,9 @@
             header2
         </div>
         <div class="content"> 
-            
+            content
         </div>
-        <div class="footer"> </div> 
+        <div class="footer">footer </div> 
     </div>
 
 </body>
@@ -47,11 +37,6 @@
         setTimeout(scrollTo, 0, 0, 1);
     });
 
-    let vh = window.innerHeight * 0.01
-document.documentElement.style.setProperty('--vh', `${vh}px`)
-window.addEventListener('resize', () => {
-  let vh = window.innerHeight * 0.01
-  document.documentElement.style.setProperty('--vh', `${vh}px`)
-})
+   
 </script>
 </html>
