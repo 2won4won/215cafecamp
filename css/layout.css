@@ -9,40 +9,12 @@
     .grid:nth-child(2) { width: 31vw;  height:inherit; }
     .grid:last-child { width: 31vw;  height:inherit;  }
  } 
-
- @media screen and  (max-width : 479px){
-    .mobile { 
-        /* background-color: palevioletred; */
-        width: 75vw;
-        } 
-    }
-/* mobile */
-/* @media screen and  (max-width : 479px){
-    .mobile { 
-        background-color: palevioletred;
+@media screen and (max-width : 1199px) {
+    html { font-size: 62.5%; }
+    .mainBox { 
+        width: 98vw; border: 0.2rem red solid;
     } 
-    .nav { display: none;}
-} */
-/* mobile 가로 */
-@media screen and (min-width : 480px) and (max-width : 767px){
-    .mobile { 
-        background-color: skyblue;
-    } 
-    .nav { display: none;}
-}
-/* 테블렛  */
-@media screen and (min-width : 768px) and (max-width : 1023px){
-    .mobile { 
-        background-color: rebeccapurple;
-    } 
-    .content { display: none;}
-}
-/* pc  */
-@media screen and (min-width : 1024px) {
-    .mobile { 
-        background-color: greenyellow;
-    } 
-    .content { display: none;}
+    .grid { width: 95%; }
 
 }
 
