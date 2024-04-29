@@ -16,12 +16,12 @@
 
     <style>
     
-    .b{
+    .b {
         position:absolute;
-        top:50px;/* 헤더 높이 값을 넣어주세요. */
-        left:0;
-        right:0;
-        bottom:0;
+        top: 50px;    /* 헤더 높이 값을 넣어주세요. */
+        left: 0;
+        right: 0;
+        bottom: 0;
 	}
     .header{
         height: 50px;
@@ -34,8 +34,9 @@
     }
     .footer {
         height: 30px;
-        padding: 0 0 calc(constant(safe-area-inset-bottom));
-        padding: 0 0 calc(env(safe-area-inset-bottom));
+        bottom: 10px;
+        bottom: calc(constant(safe-area-inset-bottom) + 10px);
+        bottom: calc(env(safe-area-inset-bottom) + 10px);;
         background-color: chocolate;
     }
     </style>
