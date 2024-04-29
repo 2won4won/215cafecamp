@@ -24,6 +24,9 @@
         bottom: 0; */
         height: calc(var(--vh, 1vh) * 100 + 30px);
         border: 1rem solid red;
+        height: auto;
+        min-height: 100%;
+        padding-bottom: 30px;
 	}
     .header{
         height: 50px;
@@ -40,9 +43,9 @@
         bottom: calc(constant(safe-area-inset-bottom) + 10px);
         bottom: calc(env(safe-area-inset-bottom) + 10px);; */
         background-color: chocolate;
-        position: absolute;
-        bottom: 0;
-        left: 0;
+        position: relative;
+        transform: translateY(-100%);
+        
         width: 100%;
     }
     </style>
