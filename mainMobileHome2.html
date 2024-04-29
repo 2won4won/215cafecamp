@@ -15,30 +15,32 @@
     <title>Document</title>
 
     <style>
-    /* html{ height: 100%; border: 2px solid green; } */
-    /* body{ height: 100%; border: 2px solid red; } */
-    html, body{height: 100%}
-    .wrapper{
-        height:auto;
-        min-height: calc(var(--vh, 1vh) * 100 + 4rem);
-        /* min-height: 100vh; */
-        /* padding-bottom: 4rem;  */
-        border: 2px solid rgb(161, 147, 151); 
+    
+    .b{
+        position:absolute;
+        top:50px;/* 헤더 높이 값을 넣어주세요. */
+        left:0;
+        right:0;
+        bottom:0;
 	}
-    footer{
-    	height:4rem; 
-        width: 100%;
-    	position: fixed;
-        bottom: -30px;
-        left: 0;
-        background-color: rgb(197, 129, 40);
-        padding: 15px 0 calc(constant(safe-area-inset-bottom) + 15px);
-        padding: 15px 0 calc(env(safe-area-inset-bottom) + 15px);
+    .header{
+        height: 50px;
+    	padding: 0 0 calc(constant(safe-area-inset-top) + 5px);
+        padding: 0 0 calc(env(safe-area-inset-top) + 5px);
+        background-color: aqua;
 	}
+    .content {
+        height: 90vh;
+    }
+    .footer {
+        padding: 0 0 calc(constant(safe-area-inset-bottom));
+        padding: 0 0 calc(env(safe-area-inset-bottom));
+        background-color: chocolate;
+    }
     </style>
 </head>
 <body>
-    <!-- <div class="b">
+    <div class="b">
         <div class="header"> 
             header2
         </div>
@@ -46,14 +48,7 @@
             content
         </div>
         <div class="footer">footer </div> 
-    </div> -->
-    <div class="wrapper">
-        <header>Header11</header>
-        <div class="contents">컨텐츠 내용<div>
     </div>
-    
-    <footer>Footer</footer>
-
 </body>
 <script>
     // 모바일 접속시 상단 주소창 없애기
