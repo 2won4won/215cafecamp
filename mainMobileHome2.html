@@ -20,8 +20,11 @@
 
         border: 1rem solid yellowgreen;
         height: auto;
-        min-height: 100%;
-        padding-bottom: 30px;
+        min-height: 100vh;
+@supports (-webkit-appearance:none) and (stroke-color: transparent) {
+  min-height: -webkit-fill-available;
+}
+
 	}
     .header{
         height: 50px;
@@ -262,7 +265,7 @@
                 </div>
             </div>    
         </div>
-        <div class="footer">footer </div> 
+        <!-- <div class="footer">footer </div>  -->
     </div>
 </body>
 <script>
