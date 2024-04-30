@@ -17,12 +17,7 @@
     <style>
     
     .b {
-        /* position:absolute;
-        top: 50px;   
-        left: 0;
-        right: 0;
-        bottom: 0; */
-        height: calc(var(--vh, 1vh) * 100 );
+
         border: 1rem solid yellowgreen;
         height: auto;
         min-height: 100%;
@@ -35,17 +30,17 @@
         background-color: aqua;
 	}
     .content {
-        height: 90vh;
+        /* height: 90vh; */
     }
     .footer {
-        height: 30px;
+        height: 10rem;
         /* bottom: 10px;
         bottom: calc(constant(safe-area-inset-bottom) + 10px);
         bottom: calc(env(safe-area-inset-bottom) + 10px);; */
         background-color: chocolate;
-        position: relative;
-        transform: translateY(-100%);
-        
+        position: absolute;
+        bottom: 0;
+        left: 0;
         width: 100%;
     }
     </style>
@@ -56,7 +51,216 @@
             header2
         </div>
         <div class="content"> 
-            content
+            <div class="border">
+                <div class="priceColor tr price65 pb10"></div>
+                <div class="line">
+                    <div class="en enColor">Espresso</div>
+                    <div class="ko koColor">에스프레소</div>
+                </div>
+                <div class="line">
+                    <div class="en enColor">Americano</div>
+                    <div class="ko koColor">아메리카노</div>
+                </div>
+            </div>
+            <div class="border">
+                <div class="priceColor tr price70 pb10"></div>
+                <div class="line ">
+                    <div class="en enColor">Espresso Con Panna</div>
+                    <div class="ko koColor">에스프레소 콤파냐</div>
+                </div>
+            </div>
+            <div class="border">
+                <div class="priceColor tr price70 pb10"></div>
+                <div class="line">
+                    <div class="en enColor">Cafe Latte</div>
+                    <div class="ko koColor">카페 라떼</div>
+                </div>
+                <div class="line">
+                    <div class="en enColor">Cappuccino</div>
+                    <div class="ko koColor">카푸치노</div>
+                    <div class="latte">
+                        <div class="steam" id="steam1"> </div>
+                        <div class="steam" id="steam2"> </div>
+                        <div class="steam" id="steam3"> </div>
+                        <div class="steam" id="steam4"> </div>
+                        <div class="cup">
+                            <div class="cup_body">
+                                <div class="cup_shade"></div>
+                            </div>
+                            <div class="cup_handle"></div>
+                        </div>
+                    </div>
+                    <div class="saucer"></div>
+                </div>
+            </div>
+            <div class="border">
+                <div class="priceColor tr price65 pb10"></div>
+                <div class="line">
+                    <div class="en enColor">Espresso</div>
+                    <div class="ko koColor">에스프레소</div>
+                </div>
+                <div class="line">
+                    <div class="en enColor">Americano</div>
+                    <div class="ko koColor">아메리카노</div>
+                </div>
+            </div>
+            <div class="border">
+                <div class="priceColor tr price70 pb10"></div>
+                <div class="line ">
+                    <div class="en enColor">Espresso Con Panna</div>
+                    <div class="ko koColor">에스프레소 콤파냐</div>
+                </div>
+            </div>
+            <div class="border">
+                <div class="priceColor tr price70 pb10"></div>
+                <div class="line">
+                    <div class="en enColor">Cafe Latte</div>
+                    <div class="ko koColor">카페 라떼</div>
+                </div>
+                <div class="line">
+                    <div class="en enColor">Cappuccino</div>
+                    <div class="ko koColor">카푸치노</div>
+                    <div class="latte">
+                        <div class="steam" id="steam1"> </div>
+                        <div class="steam" id="steam2"> </div>
+                        <div class="steam" id="steam3"> </div>
+                        <div class="steam" id="steam4"> </div>
+                        <div class="cup">
+                            <div class="cup_body">
+                                <div class="cup_shade"></div>
+                            </div>
+                            <div class="cup_handle"></div>
+                        </div>
+                    </div>
+                    <div class="saucer"></div>
+                </div>
+            </div>
+            <div class="border">
+                <div class="priceColor tr price65 pb10"></div>
+                <div class="line">
+                    <div class="en enColor">Espresso</div>
+                    <div class="ko koColor">에스프레소</div>
+                </div>
+                <div class="line">
+                    <div class="en enColor">Americano</div>
+                    <div class="ko koColor">아메리카노</div>
+                </div>
+            </div>
+            <div class="border">
+                <div class="priceColor tr price70 pb10"></div>
+                <div class="line ">
+                    <div class="en enColor">Espresso Con Panna</div>
+                    <div class="ko koColor">에스프레소 콤파냐</div>
+                </div>
+            </div>
+            <div class="border">
+                <div class="priceColor tr price70 pb10"></div>
+                <div class="line">
+                    <div class="en enColor">Cafe Latte</div>
+                    <div class="ko koColor">카페 라떼</div>
+                </div>
+                <div class="line">
+                    <div class="en enColor">Cappuccino</div>
+                    <div class="ko koColor">카푸치노</div>
+                    <div class="latte">
+                        <div class="steam" id="steam1"> </div>
+                        <div class="steam" id="steam2"> </div>
+                        <div class="steam" id="steam3"> </div>
+                        <div class="steam" id="steam4"> </div>
+                        <div class="cup">
+                            <div class="cup_body">
+                                <div class="cup_shade"></div>
+                            </div>
+                            <div class="cup_handle"></div>
+                        </div>
+                    </div>
+                    <div class="saucer"></div>
+                </div>
+            </div>
+            <div class="border">
+                <div class="priceColor tr price65 pb10"></div>
+                <div class="line">
+                    <div class="en enColor">Espresso</div>
+                    <div class="ko koColor">에스프레소</div>
+                </div>
+                <div class="line">
+                    <div class="en enColor">Americano</div>
+                    <div class="ko koColor">아메리카노</div>
+                </div>
+            </div>
+            <div class="border">
+                <div class="priceColor tr price70 pb10"></div>
+                <div class="line ">
+                    <div class="en enColor">Espresso Con Panna</div>
+                    <div class="ko koColor">에스프레소 콤파냐</div>
+                </div>
+            </div>
+            <div class="border">
+                <div class="priceColor tr price70 pb10"></div>
+                <div class="line">
+                    <div class="en enColor">Cafe Latte</div>
+                    <div class="ko koColor">카페 라떼</div>
+                </div>
+                <div class="line">
+                    <div class="en enColor">Cappuccino</div>
+                    <div class="ko koColor">카푸치노</div>
+                    <div class="latte">
+                        <div class="steam" id="steam1"> </div>
+                        <div class="steam" id="steam2"> </div>
+                        <div class="steam" id="steam3"> </div>
+                        <div class="steam" id="steam4"> </div>
+                        <div class="cup">
+                            <div class="cup_body">
+                                <div class="cup_shade"></div>
+                            </div>
+                            <div class="cup_handle"></div>
+                        </div>
+                    </div>
+                    <div class="saucer"></div>
+                </div>
+            </div>                
+            <div class="border">
+                <div class="priceColor tr price65 pb10"></div>
+                <div class="line">
+                    <div class="en enColor">Espresso</div>
+                    <div class="ko koColor">에스프레소</div>
+                </div>
+                <div class="line">
+                    <div class="en enColor">Americano</div>
+                    <div class="ko koColor">아메리카노</div>
+                </div>
+            </div>
+            <div class="border">
+                <div class="priceColor tr price70 pb10"></div>
+                <div class="line ">
+                    <div class="en enColor">Espresso Con Panna</div>
+                    <div class="ko koColor">에스프레소 콤파냐</div>
+                </div>
+            </div>
+            <div class="border">
+                <div class="priceColor tr price70 pb10"></div>
+                <div class="line">
+                    <div class="en enColor">Cafe Latte</div>
+                    <div class="ko koColor">카페 라떼</div>
+                </div>
+                <div class="line">
+                    <div class="en enColor">Cappuccino</div>
+                    <div class="ko koColor">카푸치노</div>
+                    <div class="latte">
+                        <div class="steam" id="steam1"> </div>
+                        <div class="steam" id="steam2"> </div>
+                        <div class="steam" id="steam3"> </div>
+                        <div class="steam" id="steam4"> </div>
+                        <div class="cup">
+                            <div class="cup_body">
+                                <div class="cup_shade"></div>
+                            </div>
+                            <div class="cup_handle"></div>
+                        </div>
+                    </div>
+                    <div class="saucer"></div>
+                </div>
+            </div>    
         </div>
         <div class="footer">footer </div> 
     </div>
@@ -67,12 +271,6 @@
         setTimeout(scrollTo, 0, 0, 1);
     });
 
-    let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', vh+"px");
-// resize
-window.addEventListener("resize", ()=>{
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', vh+"px");
-})
+ 
 </script>
 </html>
