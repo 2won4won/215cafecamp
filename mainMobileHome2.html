@@ -16,65 +16,16 @@
 
     <style>
     body {
-  min-height: 100vh;
-  /* mobile viewport bug fix */
-  min-height: -webkit-fill-available;
+    padding-bottom: env(safe-area-inset-bottom);
 }
-
-html {
-  height: -webkit-fill-available;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* general styling */
-:root {
-  font-size: calc(1vw + 1vh + .625vmin);
-}
-
-body {
-  display: flex; 
-  flex-direction: column;
-  font-family: -apple-system, 
-    BlinkMacSystemFont, 
-    "Segoe UI", 
-    Roboto, 
-    Oxygen-Sans, 
-    Ubuntu, 
-    Cantarell, 
-    "Helvetica Neue", 
-    sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  margin: 0;
-}
-
-header,
-b,
-footer {
-  padding: 1rem;
-}
-footer { background-color: aqua;}
     .b {
 
-        border: 1rem solid red;
-        /* height: auto;
+        border: 1rem solid yellow;
+        height: auto;
         min-height: 100vh;
 @supports (-webkit-appearance:none) and (stroke-color: transparent) {
-  min-height: -webkit-fill-available; */
-/* } */
+  min-height: -webkit-fill-available;
+}
 
 	}
     .header{
@@ -87,15 +38,15 @@ footer { background-color: aqua;}
         /* height: 90vh; */
     }
     .footer {
-        /* height: 10rem; */
+        height: 10rem;
         /* bottom: 10px;
         bottom: calc(constant(safe-area-inset-bottom) + 10px);
         bottom: calc(env(safe-area-inset-bottom) + 10px);; */
-        /* background-color: chocolate;
+        background-color: chocolate;
         position: absolute;
-        bottom: 34px;
+        bottom: 0;
         left: 0;
-        width: 100%; */
+        width: 100%;
     }
     </style>
 </head>
@@ -349,9 +300,8 @@ footer { background-color: aqua;}
                 </div>
             </div>    
         </div>
-        <div class="footer">footer </div> 
+        <!-- <div class="footer">footer </div>  -->
     </div>
-    <footer> ggg </footer>
 </body>
 <script>
     // 모바일 접속시 상단 주소창 없애기
