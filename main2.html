@@ -24,125 +24,57 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
 
     <!-- Local file import -->
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/layout2.css">
+    <link rel="stylesheet" href="css/font2.css">
+    <link rel="stylesheet" href="css/common2.css">
     <link rel="stylesheet" href="css/effect.css">
+
     <script src="js/look.js"></script>
     <script src="js/word.js"></script>
  
     <style>
-        /* title color */
-        .title { background: url(img/background/spring2.jpeg); color: white;  }
-        /* .title { background: url(img/background/q5.png); color: white;  } */
-        
-        /* font color */
-        .enColor,
-        .turingColor,
-        .esoEx, 
-        .esoKind span:nth-child(odd) { color: #EABCF0; }
-        /* .esoKind span:nth-child(even) { color: #f7cdd0; } */
-        /* .esoKind span:nth-child(even) { color: #E9BFDA; } */
-
-        .koColor,
-        .esoKo, 
-        .esoEn  { color: #5C9596; }
-        .esoKind span:nth-child(even) { color: #FED48F; }
-
-        /* .priceColor { color: #F4D1FF; } */
-        .priceColor { color: #C3D9D1; }
-        
-        /* .exColor { color: #C3D9D1; }  koColor 보다 톤 다운   */
-        .exColor { color: #7BCAB3;; }   
-
-        .cup_body,
-        .point { background-color: #FEACC4 ;}  /* enColor 보다 진하게  */
-        .atseo { color: #FEACC4 ;}   /* point color 와 동일하게  */
-
-        /* eso en */
-        .esoEn { 
-            text-shadow: 0 6.36px 3.896px #f1dae0, 0 -1px 1px #f1dae0;
-        }
-        
-        /* eso latte_box */
-        .cup_handle { border : 2px solid  #BAB759; }
-        .saucer { background-color: #BAB759; }
-
-        @keyframes flip {
-            0%,80% {
-                color: #5C9596;     /* koColor 와 동일 */
-                transform: rotateY(360deg);
-            }
-        } 
-        /* we */
-        .we .w2 { color: #FF7793; }   /* enColor 보다 톤 다운   */
-        .we .w1 { color: #FDC6D6; }    /* w2 Color 보다 톤 다운   */
-
-        /* 전체적 layout */
-        .milkBox .ko,
-        .milkBox .ex,
-        .flowerBox .ko,
-        .flowerBox .ex,
-        .fruitBox .swiper .ko,
-        .fruitBox .swiper .ex { margin-top: 6px;}
+        .title { background: url(img/background/240403.png ); color: white;  }
+        .priceColor { color: purple;  }
+        .point { background-color:rgb(171, 106, 74); }
+        .test { background-color: darkcyan;}
     </style>
  
 </head>
 <body>
-    <div class="container posiCen">
-        <div class=" mainBox ">
-            <div class="grid disJcCol">
-                <div class="">
-                    <div class="title shadow"> Esprosso</div>
-                    <div id="eso"> </div>
-                </div>
-                <div id="coldBrew"> </div>
-                <div id="desert"> </div>
+    <div class="mainBox ">
+        <div class="grid ">
+            <div class="title shadow"> Esprosso</div>
+            <div id="eso" > </div>
+            <div id="coldBrew" > </div>
+        </div>
+        <div class="grid ">
+            <div class="">
+                <div class="title shadow"> Fruit </div>
+                <div id="fruit"> </div>
             </div>
-            <div class="grid disJcCol">
-                <div>
-                    <div class="title shadow"> Fruit</div>
-                    <div id="fruit"> </div>
-                </div>
+            <div class="">
                 <div id="we"> </div>
-                <div>
-                    <div class="title shadow"> 2024 Spring Season</div>
-                    <div id="season"> </div>
-                </div>
-                <div>
-                    <div class="title shadow">Milk</div>
-                    <div id="milk"> </div>
-                </div>
             </div>
-            <div class="grid disJcCol">
-                <div>
-                    <div class="title shadow"> Greek Yogurt</div>
-                    <div id="greek"> </div>
-                </div>
-                <div>
-                    <div class="title shadow">Cafe SEO's 한끼</div>
-                    <div id="meal"> </div>
-                </div>
-                <div>
-                    <div class="title shadow">Flower</div>
-                    <div id="flower"> </div>
-                </div>
+            <div class="">
+                <div class="title shadow"> 2024 Spring </div>
+                <div id="spring"> </div>
+            </div>
+            <div class="">
+                <div class="title shadow"> milk </div>
+                <div id="milk"> </div>
             </div>
         </div>
+        <div class="grid ">
+        </div>    
     </div>
 </body>
 <script type="text/javascript">
     $(document).ready(function(){
-        $("#eso").load("thema/eso.html");
-        $("#coldBrew").load("thema/coldBrew.html");
-        $("#desert").load("thema/desert.html");
-        $("#fruit").load("thema/fruit.html");
-        $("#greek").load("thema/greek.html");
-        $("#meal").load("thema/meal3.html");
-        $("#milk").load("thema/milk2.html");
-        $("#flower").load("thema/flower.html");
-        $("#season").load("thema/season2.html");
-        $("#we").load("thema/we.html");
+        $("#eso").load("new/eso.html");
+        $("#coldBrew").load("new/coldBrew.html");
+        $("#fruit").load("new/fruit.html");
+        $("#we").load("new/we.html");
+     
     });
 </script>
 </html>

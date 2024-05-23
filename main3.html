@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -33,38 +32,39 @@
  
     <style>
         /* title color */
-        .title { background: url(img/background/240523.jpg ); color: white;  }
+        .title { background: url(img/background/spring.jpeg); color: white;}
         
         /* font color */
-        .esoKind span:nth-child(even) ,
         .enColor,
-        .turingColor { color: #6abce2; }
+        .turingColor,
+        .esoEx, 
+        .esoKind span:nth-child(even) { color: #E9BFDA; }
 
-        .esoKind span:nth-child(odd),
         .koColor,
         .esoKo, 
-        .esoEn  { color: #235284; }
+        .esoEn,
+        .esoKind span:nth-child(odd) { color: #62C5C0; }
 
-        .priceColor { color: #B8E2F4; }
-        
-        .esoEx, 
-        .exColor { color: #90CBF9;; }   
-        
-        .cup_body { background-color: #46A2DA ;}
-        .point { background-color: #193A3B ;}  /* enColor 보다 진하게  */
+        .priceColor { color: #F5DC93; }
+
+        .exColor { color: #B1DDC9; }  /* koColor 보다 톤 다운   */
+
+        .cup_body,
+        .point { background-color: #FF779E ;}  /* enColor 보다 진하게  */
+        .atseo { color: #FF779E ;}   /* point color 와 동일하게  */
 
         /* eso en */
         .esoEn { 
-            text-shadow: 0 6.36px 3.896px #B5D7E4, 0 -1px 1px #B5D7E4;
+            text-shadow: 0 6.36px 3.896px #f1dae0, 0 -1px 1px #f1dae0;
         }
         
         /* eso latte_box */
-        .cup_handle { border : 2px solid  #193A3B; }
-        .saucer { background-color: #193A3B; }
+        .cup_handle { border : 2px solid  #62C5C0; }
+        .saucer { background-color: #62C5C0; }
 
         @keyframes flip {
             0%,80% {
-                color: #235284;     /* koColor 와 동일 */
+                color: #62C5C0;     /* koColor 와 동일 */
                 transform: rotateY(360deg);
             }
         } 
@@ -100,13 +100,13 @@
                 </div>
                 <div id="we"> </div>
                 <div>
-                    <div class="title shadow"> 2024 Summer Season</div>
+                    <div class="title shadow"> 2024 Spring Season</div>
                     <div id="season"> </div>
-                    <div id="milk"> </div>
                 </div>
-                <!-- <div>
-                    <div class="title shadow">Milk</div>
-                </div> -->
+                <div>
+                    <div class="title shadow">Flower</div>
+                    <div id="flower"> </div>
+                </div>
             </div>
             <div class="grid disJcCol">
                 <div>
@@ -114,12 +114,12 @@
                     <div id="greek"> </div>
                 </div>
                 <div>
-                    <div class="title shadow">Cafe SEO's 한끼</div>
+                    <div class="title shadow">Meal</div>
                     <div id="meal"> </div>
                 </div>
                 <div>
-                    <div class="title shadow">Flower</div>
-                    <div id="flower"> </div>
+                    <div class="title shadow">Milk</div>
+                    <div id="milk"> </div>
                 </div>
             </div>
         </div>
@@ -132,10 +132,10 @@
         $("#desert").load("thema/desert.html");
         $("#fruit").load("thema/fruit.html");
         $("#greek").load("thema/greek.html");
-        $("#meal").load("thema/meal3.html");
-        $("#milk").load("thema/milk2.html");
+        $("#meal").load("thema/meal.html");
+        $("#milk").load("thema/milk.html");
         $("#flower").load("thema/flower.html");
-        $("#season").load("thema/season3.html");
+        $("#season").load("thema/season.html");
         $("#we").load("thema/we.html");
     });
 </script>
