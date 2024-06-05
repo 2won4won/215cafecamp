@@ -1,6 +1,6 @@
 @media screen and (min-width : 1200px)  { 
     .mainBox { 
-        width: 89vw;  height: 87.2vh;  
+        width: 89vw;  height: 89.4vh;  
         display: flex;  justify-content: space-between;
         position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
         border: 0.3rem solid red;
@@ -54,18 +54,36 @@
     #milk .milk .border .line { display: flex; justify-content: space-between;}
 
     /* last grid */
-    #yogurt  .noBorder > div, 
-    #yogurt  .noBorder > div, 
-    #yogurt .leftBox .border, 
-    #yogurt .rightBox > div:nth-child(even), 
-    #yogurt .greekBox { display: flex; justify-content: space-between; }
-    #yogurt .leftBox { width: 35%; }
-    #yogurt .leftBox { width: 50%; } 
-    #yogurt .rightBox { width: 48%; }
-    #yogurt .rightBox .border, 
-    #yogurt .rightBox .img::before { border-radius: 50%; }
-    #yogurt .rightBox .border {  width: 5.1vw;  height: 16vh;  } 
+    /* #yogurt .yogurtImg { width: 46%;  }
+    #yogurt .plain { width: 52%;  }
+    #yogurt  .yogurtImg .border, 
+    #yogurt  .yogurtImg .img::before { border-radius: 50%; }
     
+    #yogurt .yogurtImg .img {  width: 5vw;  height: 15.2vh;  } 
+    #yogurt .yogurtImg .border .ko { margin-left: 0; } 
+
+    #yogurt .plain  { 
+         margin-top: 0.5rem; 
+    }
+    #yogurt .plain .border { border-radius: 50rem; width: 9vw;  height: 13vh;} */
+    /* #yogurt .plain .posNa { width: 29%; } */
+    /* #yogurt .plain > div:last-child { display: flex; justify-content: space-around; } */
+    /* #yogurt .plain .posNa { width: 25%; } */
+
+    /* #yogurt .plain .border  { border-radius: 50rem; margin-bottom: 0;} */
+    /* #yogurt .plain .border .ko {  margin-left: 0;} */
+    /* #yogurt .plain .img {  width: 4vw;  height: 7.2vh;  }  */
+    /* #yogurt .plain .border { height: 13vh; border-radius: 50%; } */
+    /* #yogurt .plain .border:nth-child(even) { margin: 0 0.8rem; } */
+    
+    /* #yogurt > div:last-child  .noBorder { padding-right: 0.6rem;} */
+    
+    /* #yogurt .yogurtImg .plain {width: 52%; margin: 0 0.5rem;  background-color: aqua;}  */
+    /* #yogurt .yogurtImg .plain  .border{ height: 12.2vh;  }  */
+    
+    /* #yogurt .yogurtImg .plain > div:first-child { display: flex;} */
+    /* #yogurt .yogurtImg .plain > div:last-child { display: flex;} */
+
     #meal .mealBox > div { display: flex; justify-content: space-between; }
 
     #flower .tea { display: flex; justify-content: space-between; }

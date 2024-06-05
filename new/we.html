@@ -3,130 +3,116 @@
 <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
-   
-    .we {
-         text-align:center; 
-         animation: x 10s infinite;
-         animation-delay: 5s;
+    .weare {
+        text-align:center;
+        overflow:hidden;
+        /* -webkit-backface-visibility: hidden;
+        -webkit-perspective: 1000;
+        -webkit-transform: translate3d(0,0,0); */
+        /* height: 50px; */
     }
-  
-    .we .logo {   
+    .we{   
         animation: showup 10s infinite;
-        height: 2.5rem;
-        line-height: 2.5rem;
+        margin-bottom: 10px;
+        /* margin-bottom: 30px; */
+        /* background-color: aqua; */
     }
-    .we .logo, 
-    .we .here {
-        font-size: 1.56rem;
+    .hi{   
+        animation: showdown 10s infinite;
+        /* padding-top: -150px; */
+    }
+    .we {
+        text-align:center;
+        font-family:'twayair';
+        font-weight:200;
+        padding-top:10px;
+    }
+    .we div:first-child {   
+        animation: showup 10s infinite;
+    }
+    .we div:first-child, .here {
+        /* color:#8f9e81; */
+        font-size:25px;
         font-family: twayair;
     } 
-    .we .place  {
+    .we div:last-child  {
+        /* color:#dbc2ad; */
+        font-size:18px;
+        font-family: Poppins-Regular;
+        width:0px;
         animation: reveal 10s infinite;
-        height: 2.5rem;
-        line-height: 2.5rem;
     }
-    .we .atseo {  
-        font-family: Poppins-Regular; font-size: 1.3rem;
-        width: 4.56rem;  position: relative;
-    }
-    .we .place  div {
+    .we div:last-of-type span {
+        /* margin-left:-50px; */
+        /* margin-left:-155px; */
         animation: slidein 10s infinite;
     }
     @keyframes showup {
-        0% { opacity:0; }
-        20% { opacity:1; }
-        80% { opacity:1; }
-        100% { opacity:0; }
+        0% {opacity:0;}
+        20% {opacity:1;}
+        80% {opacity:1;}
+        100% {opacity:0;}
     }
-    @keyframes reveal {
-        0% { opacity:0; width:0px; }
-        20% { opacity:1; width:0px; }
-        30% { width: 230px; }   /* 넓이조정 */
-        70% { opacity:1; }
-        100% { opacity:0; width: 230px; }
-    } 
+    @keyframes showdown {
+        0% {opacity:1;}
+        20% {opacity:0;}
+        70% {opacity:0;}
+        100% {opacity:1;}
+    }
     @keyframes slidein {
         0% { margin-left:-170px; }
         20% { margin-left:-170px; }
         35% { margin-left:20px; }
         100% { margin-left:20px; }
     }
-    @keyframes showdown {
-        0% { opacity: 0; }
-        20% { opacity: 1; }
-        70% { opacity: 1; }
-        100% { opacity: 0; }
-    }
-    /* @keyframes showdown {
-        0% { opacity: 1; }
-        20% { opacity: 0; }
-        70% { opacity: 0; }
-        100% { opacity: 1; }
-    } */
+    @keyframes reveal {
+        0% {opacity:0;width:0px;}
+        20% {opacity:1;width:0px;}
+        30% {width:210px;}   /* 넓이조정 */
+        80% {opacity:1;}
+        100% {opacity:0; width:210px;}
+    } 
     .we div, .hi div {
         display:inline-block;
         overflow:hidden;
         white-space:nowrap;
     }  
     .hi {
-        position: absolute; left: 0; top: 0;
-
-        font-family: 'Tangerine', cursive;
-        font-size: 2rem;
+        height: 90px;
+        font-size:35px;
+        font-family: 'Tangerine', cursive;;
         font-weight: 900;
-        opacity: 0;
-        /* animation: x 10s infinite;  */
-        
-        animation: x 10s infinite;
         /* position: absolute;
         bottom: 30%;
         left:50%;
         transform:translateX(-50%); */
-        /* filter: opacity(0.8); */
+        filter: opacity(0.6);
         text-align: center;
+        /* padding-top:-200px; */
+        /* padding-top: 40px; */
     }
-    
+    .we span:first-child {
+        width: 25px; 
+        height: 35px;
+        position: relative;
+    }
+    /* .we img { width: 3.9rem; height: 3.2rem; margin-bottom: -0.6rem; } */
     .we img { width: 20px; height: 25px; margin-left: -6px; margin-top: -3px;}
     /* .flag {
         background: url('./img/icon/flag.png');
         background-size: 100% 100%;
         background-repeat: no-repeat;
     } */
-    #we { position: relative;  }
-    .c {   
-        font-size: 3rem;   
-        animation: x 10s infinite;    
-    }
-    .cc {
-        position: absolute; left: 0; top: 0;
-        font-size: 3rem; 
-        opacity: 0;
-        animation: x 10s infinite; 
-        animation-delay: 5s;
-    }
-    @keyframes x {
-        0% { opacity: 0; }
-        5% { opacity: 1; }
-        45% { opacity: 1; }
-        50% { opacity: 0; }
-        100% { opacity: 0; }
-    }
 </style>
-<!-- <div class="we ">
-    <div class="logo enColor">쉼이 물드는 그 곳,
+<div class="we ">
+    <div >
+        <span class="koColor"> 쉼이 물드는 그 곳, </span>
     </div>
-    <div class="place">
-        <div class="atseo "> at SEO </div>
-        <div class="here  koColor ">  Cafe SEO </div>
+    <div>
+        <span class="atseo enColor"> at SEO </span>
+        <span class="here  koColor"> Cafe SEO </span>    
     </div>
 </div>
-<div class="hi ">
+<!-- <div class="hi none">
    Hello 2024, Happy New Year
 </div> -->
-<div class="c">
-    <div class=" ">쉼이 물드는 그 곳,
-</div>
-<div class="cc">
-    <div class=" ">cafeseo
-</div>
-

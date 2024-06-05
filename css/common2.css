@@ -57,6 +57,7 @@
 .price100::before { content: '10.0'; }
 .price110::before { content: '11.0'; }
 .price120::before { content: '12.0';} 
+.price130::before { content: '13.0';} 
 .price150::before { content: '15.0';} 
 .price170::before { content: '17.0';} 
 .price190::before { content: '19.0';} 
@@ -64,4 +65,34 @@
 .price230::before { content: '23.0';} 
 .price260::before { content: '26.0';} 
 
-
+/* img */
+.img {
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+}
+.img::before {
+    width: 100%;
+    content: "";
+    opacity: 0.2;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #000;
+}
+.img .enColor,
+.img .koColor,
+.img .priceColor {
+    color:  white;
+}
+.disJcBet { display: flex; justify-content: space-between;}
+.posNa { position: relative;}
+.posiCen {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+}
+/* 글자 정렬 */
+.tc { text-align: center;}
+.tl { text-align: left;}
+.tr { text-align: right;}
