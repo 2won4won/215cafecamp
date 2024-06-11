@@ -33,32 +33,25 @@
  
     <style>
         /* title color */
-        .title { background: url(img/background/240403.png ); color: white;  }
-        /* .title { background: url(img/background/q5.png); color: white;  } */
+        .title { background: url(img/background/240523.jpg ); color: white;  }
         
         /* font color */
+        .esoKind span:nth-child(even) ,
         .enColor,
-        .turingColor { color: #2CCCEB; }
-        .esoKind span:nth-child(odd) { color: #138EC0; }
-        /* .esoKind span:nth-child(odd) { color: #7AD854; } */
+        .turingColor { color: #6abce2; }
 
+        .esoKind span:nth-child(odd),
         .koColor,
         .esoKo, 
-        .esoEn  { color: #138EC0; }
-        
-        .esoKind span:nth-child(even) { color: #7AD854; }
+        .esoEn  { color: #235284; }
 
-        /* .priceColor { color: #F4D1FF; } */
-        .priceColor { color: #B5D7E4; }
+        .priceColor { color: #B8E2F4; }
         
-        /* .exColor { color: #C3D9D1; }  koColor 보다 톤 다운   */
         .esoEx, 
-        .exColor { color: #7AC9D0;; }   
-        /* .exColor { color: #7BCAB3;; }    */
+        .exColor { color: #90CBF9;; }   
         
-        .cup_body,
-        .point { background-color: #7ED348 ;}  /* enColor 보다 진하게  */
-        .atseo { color: #7ED348 ;}   /* point color 와 동일하게  */
+        .cup_body { background-color: #46A2DA ;}
+        .point { background-color: #193A3B ;}  /* enColor 보다 진하게  */
 
         /* eso en */
         .esoEn { 
@@ -66,12 +59,12 @@
         }
         
         /* eso latte_box */
-        .cup_handle { border : 2px solid  #BAB759; }
-        .saucer { background-color: #BAB759; }
+        .cup_handle { border : 2px solid  #193A3B; }
+        .saucer { background-color: #193A3B; }
 
         @keyframes flip {
             0%,80% {
-                color: #5C9596;     /* koColor 와 동일 */
+                color: #235284;     /* koColor 와 동일 */
                 transform: rotateY(360deg);
             }
         } 
@@ -80,12 +73,18 @@
         .we .w1 { color: #FDC6D6; }    /* w2 Color 보다 톤 다운   */
 
         /* 전체적 layout */
-        .milkBox .ko,
-        .milkBox .ex,
-        .flowerBox .ko,
-        .flowerBox .ex,
+        #season .straw,
+        #flower .ko,
+        #flower .ex,
+        #milk .leftBox .priceColor,
+        #milk .leftBox .ko,
+        #milk .leftBox .ex { margin-top: 0.5rem;}
+
         .fruitBox .swiper .ko,
-        .fruitBox .swiper .ex { margin-top: 6px;}
+        .fruitBox .swiper .ex { margin-top: 6px ; }
+
+
+
     </style>
  
 </head>
@@ -103,17 +102,19 @@
             <div class="grid disJcCol">
                 <div>
                     <div class="title shadow"> Fruit</div>
-                    <div id="fruit"> </div>
+                    <div id="fruit" > </div>
                 </div>
                 <div id="we"> </div>
                 <div>
-                    <div class="title shadow"> 2024 Spring Season</div>
-                    <div id="season"> </div>
+                    <div class="title shadow"> 2024 Summer Season</div>
+                    <!-- <div class="disJcBet"> -->
+                        <div id="season"> </div>
+                        <div id="milk"> </div>
+                    <!-- </div> -->
                 </div>
-                <div>
+                <!-- <div>
                     <div class="title shadow">Milk</div>
-                    <div id="milk"> </div>
-                </div>
+                </div> -->
             </div>
             <div class="grid disJcCol">
                 <div>
@@ -138,11 +139,11 @@
         $("#coldBrew").load("thema/coldBrew.html");
         $("#desert").load("thema/desert.html");
         $("#fruit").load("thema/fruit.html");
-        $("#greek").load("thema/greek.html");
+        $("#greek").load("thema/greek3.html");
         $("#meal").load("thema/meal3.html");
-        $("#milk").load("thema/milk2.html");
+        $("#milk").load("thema/milk3.html");
         $("#flower").load("thema/flower.html");
-        $("#season").load("thema/season2.html");
+        $("#season").load("thema/season4.html");
         $("#we").load("thema/we.html");
     });
 </script>

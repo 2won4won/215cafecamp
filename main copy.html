@@ -73,12 +73,17 @@
         .we .w1 { color: #FDC6D6; }    /* w2 Color 보다 톤 다운   */
 
         /* 전체적 layout */
-        .milkBox .ko,
-        .milkBox .ex { background-color: #90CBF9;}
+        #season .straw,
+        #flower .ko,
+        #flower .ex,
+        #milk .leftBox .priceColor,
+        #milk .leftBox .ko,
+        #milk .leftBox .ex { margin-top: 0.5rem;}
 
-        .flowerBox .ko { margin: 0.6rem 0;background-color: #90CBF9; }
         .fruitBox .swiper .ko,
         .fruitBox .swiper .ex { margin-top: 6px ; }
+
+
 
     </style>
  
@@ -102,8 +107,10 @@
                 <div id="we"> </div>
                 <div>
                     <div class="title shadow"> 2024 Summer Season</div>
-                    <div id="season"> </div>
-                    <div id="milk"> </div>
+                    <!-- <div class="disJcBet"> -->
+                        <div id="season"> </div>
+                        <div id="milk"> </div>
+                    <!-- </div> -->
                 </div>
                 <!-- <div>
                     <div class="title shadow">Milk</div>
@@ -132,11 +139,11 @@
         $("#coldBrew").load("thema/coldBrew.html");
         $("#desert").load("thema/desert.html");
         $("#fruit").load("thema/fruit.html");
-        $("#greek").load("thema/greek2.html");
+        $("#greek").load("thema/greek3.html");
         $("#meal").load("thema/meal3.html");
-        $("#milk").load("thema/milk2.html");
+        $("#milk").load("thema/milk3.html");
         $("#flower").load("thema/flower.html");
-        $("#season").load("thema/season3.html");
+        $("#season").load("thema/season4.html");
         $("#we").load("thema/we.html");
     });
 </script>
