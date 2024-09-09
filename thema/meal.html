@@ -61,7 +61,7 @@
         width: 2vw;
         height: 3.8vh;
         position: absolute;
-        bottom: -1vh;
+        bottom: 0.7vh;
         left: 1.0vw;
         opacity: 0.5;
     }
@@ -69,7 +69,7 @@
         width: 2.1vw;
         height: 4.2vh;
         position: absolute;
-        bottom: -1vh;
+        bottom: 0.6vh;
         left: 3.0vw;
         opacity: 0.5;
     }
@@ -141,14 +141,42 @@
     }
     .no4Photo {
         background: url('./img/photo/no4.png');
-        background-size: 100% 100%;
+        background-size: cover;
         background-repeat: no-repeat;
     }
+    .winterDay {
+        background: url('./img/photo/w.jpg');
+        background-size: 110% 120%;
+        background-repeat: no-repeat;
+        height: 12rem;
+        margin-top: 0.3rem;
+        position: relative;
+        border-radius: 0.9rem;
+    }
+    .winterDay::before {
+        content:"";
+        opacity: 0.4;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-color: #000;
+        border-radius: 0.9rem;
+    }
+    .winterDay .en {
+        color: white;
+        text-align: center;
+        position: relative;
+    }
+    
     /* layout 설정 */
-    .mealBox .zone { width: 30%; height: 17rem;  }
+    .mealBox .img { width: 100%; height: 98%; border-radius: 0.9rem ;}
+    .mealBox .zone { width: 30%;  }
+    .mealBox .winterDay .en::before { content: "";}
+    .mealBox .winterDay .posiCen { width: 100%; text-align: center;}
  
     /* 한끼 사진 종류 정렬 */
-    .mealBox .zone > div:nth-child(2) { margin-top: 1.8rem; }
     .mealBox .ex { margin: 0.1rem  0; }
     .mealBox  .ko { padding: 0.3rem 0;}
 
@@ -165,7 +193,7 @@
 
 <div class="mealBox " >
     <div class="disJcBet">
-        <div class="zone ">
+        <div class="zone " >
             <div class="posNa ">
                 <div class="no2Photo  photo "> </div>
                 <div class="">
@@ -198,21 +226,37 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="zone">
-            
-            <div class="">
-                <div div class="tr posNa">
-                    <div class="en enColor"> Summer Day </div>
-                    <div class="ko koColor  ">  어느 여름날 </div>
-                    <div class="ex exColor"> 오미자 </div>
-                    <div class="ex exColor"> 곤약 파스타 </div>
-                    <div class="ex exColor"> 시즌 과일 </div>
-                    <div class="omija omijaR"> </div>
-                    <div class="summerDay photoL photo"> </div>
+        <div class="zone ">
+            <div class="posNa ">
+                <div class="">
+                    <div class="tc">
+                        <div class="en enColor"> One Winter's Day   </div>
+                        <div class="ko koColor  ">  어느 겨울날 </div>
+                    </div>
+                </div>
+                <div class="winterDay  photo " > 
+                    <div class="posiCen" >
+                        <div class="en exColor"> 찬 바람 불면 </div>
+                        <div class="en enColor "> Coming Soon </div>
+                    </div>
                 </div>
             </div>
-            
-        </div> -->
+        </div>
+        <div class="zone disJcCol none" >
+            <div class="  img  winterDay"> 
+                <div class="posiCen ">
+                    <div class="posNa ">
+                        <div class="tc">
+                            <div class="en enColor"> One Winter's Day </div>
+                            <div class="ko koColor  ">  어느 겨울날 </div>
+                            <div class="ko exColor "> 찬 바람 불면 </div>
+                        </div>
+                        <div class="en enColor"> Coming Soon </div>
+                    </div>
+                </div>
+            </div>
+             
+        </div>
     </div>
     <div> </div>
 </div>
