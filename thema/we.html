@@ -68,9 +68,9 @@
     @keyframes reveal {
         0% {opacity:0;width:0px;}
         20% {opacity:1;width:0px;}
-        30% {width:210px;}   /* 넓이조정 */
+        30% {width:310px;}   /* 넓이조정 */
         80% {opacity:1;}
-        100% {opacity:0; width:210px;}
+        100% {opacity:0; width:310px;}
     } 
     .we div, .hi div {
         display:inline-block;
@@ -78,8 +78,8 @@
         white-space:nowrap;
     }  
     .hi {
-        height: 90px;
-        font-size:35px;
+        /* height: 90px; */
+        font-size: 2.2rem;
         font-family: 'Tangerine', cursive;;
         font-weight: 900;
         /* position: absolute;
@@ -106,6 +106,16 @@
 </style>
 <div class="we ">
     <div >
+        <span class="koColor"> GoodBye Summer </span>
+        
+    </div>
+    <div>
+        <span class="atseo enColor"> at SEO</span>
+        <span class="here  koColor"> 
+            Hello Autumm
+        </span>    
+    </div>
+    <!-- <div >
         <span class="koColor"> 쉼이 물드는 그 곳, </span>
         
     </div>
@@ -114,8 +124,16 @@
         <span class="here  koColor"> 
             Cafe SEO
         </span>    
-    </div>
+    </div> -->
 </div>
-<div class="hi none">
-   Hello 2024, Happy New Year
-</div>
+<!-- <div class="hi  ">
+   GoodBye Summer, Hello Fall
+</div> -->
+
+<!-- <script type="text/javascript">
+    if($('.hi').show ) {
+        $('.we').css('display', 'none');
+    } else if($('.hi').hide ) {
+        $('.we').css('display', 'block');
+    } else {}
+</script> -->

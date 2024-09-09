@@ -1,73 +1,76 @@
 <style>
-    /* flower border size 맞추기 위해서 */
-    .seasonBox .border:nth-child(even) { width: 30%; }
-    .seasonBox .border:nth-child(odd) { 
-        width: 29%;   
-        box-shadow: none;
-        padding: 0;
-        margin-bottom: 0;
-    }
-    .seasonBox .straw  { margin-top: 12px; }
-    .seasonBox .straw > div:nth-child(2) { padding: 0 5px 0 60px; }
-    /* 가격 위치 조정 */
-    .seasonBox .priceColor {margin-top: 10px;}
     /* icon 삽입 */
-    .strawberry { background: url('./img/icon/strawberry.png'); background-size: 100% 100%;}
-    .imgs {
-        width: 3.5vw;
-        height: 6.1vh;
+    .snowflake { background: url('./img/icon/snowflake.png');  
+                 background-size: 100% 100%;
+                 background-repeat: no-repeat;
+                }
+    .hot { background: url('./img/icon/hot.png'); 
+            background-size: 100% 100%;
+            background-repeat: no-repeat;}
+    .snowflakeIcon {
+        width: 3vw;
+        height: 6.7vh;
         position: absolute;
-        bottom: -2.5vh;
-        left: 2.8vw;
-        /* top: 19vh;
-        right: 20.7vw; */
-        opacity: 0.7;
+        top: 1.7vh;
+        right: -0.1vw;
+        opacity: 0.5;
     }
+    .hotIcon {
+        width: 2vw;
+        height: 4.1vh;
+        position: absolute;
+        top: 1.7vh;
+        left: 1.1vw;
+        opacity: 0.6;
+    }
+    .powerShaved { 
+        background: url('./img/photo/powerShaved.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .seasonBox3  .disJcBet > div { width: 32%; }
+    .seasonBox3  .disJcBet .border,
+    .seasonBox3  .disJcBet .img::before { 
+        border-radius: 4rem;
+        height: 10.5vh; 
+        text-align: center;
+    }
+    .seasonBox3 .disJcBet .border:nth-child(2) { margin: 0 1rem; }
+    .seasonBox3 .disJcBet .border .en::before { content: "";}
+    .seasonBox3 .disJcBet .border .ko { margin: 0.4rem 0;}
+    .seasonBox3 .border .posNa .ko { padding-bottom: 13px;}
+    .seasonBox3 .posNa .posiCen { width: 100%; }
+    .seasonBox3 .posNa .posiCen .ko { line-height: 1.4rem;}
 </style>
-<div class="seasonBox  disJcBet">
-    <div class=" border">
-        <div class="tc">
-            <div class="en enColor line"> Fresh Strawberry Latte </div>
-            <div class="ko koColor "> 생딸기 퐁당 라떼 </div>
-            <!-- <div class="ex exColor"> 생딸기 듬뿍 담은 라떼 </div> -->
-            <div class="disCen line">
-                <div class="price100 priceColor  ">  </div>
+
+
+<div class="seasonBox3  ">
+    <div class="disJcBet">
+        <div class=" border img powerShaved ">
+            <div class="posiCen">
+                <div class="en enColor "> Powder Shaved Ice </div>
+                <div class="ko koColor  "> 가루 빙수 </div>
+                <div class="price170 priceColor  ">  </div>
             </div>
-        </div>
-        <div class="tc">
-            <div class="en enColor line"> Fresh Strawberry Smoothie </div>
-            <div class="ko koColor "> 생딸기 퐁당 스무디 </div>
-            <!-- <div class="ex exColor"> 생딸기 듬뿍 담은 스무디 </div> -->
-            <div class="disCen line">
-                <div class="price100 priceColor  ">  </div>
+        </div>  
+        <div class=" posNa">
+            <div class="tc posiCen">
+                <!-- <div class="en enColor ">  </div> -->
+                <div class="ko koColor  "> 떠나가는 <br> 여름도 <br> 여전히 뜨겁다. </div>
+                <div class="snowflake snowflakeIcon" ></div>
             </div>
-        </div>
-    </div>
-    <div class="noBorder border ">
-        <div class="">
-            <div class="en enColor tc "> 
-                <div> Spring is season of </div> 
-                <div> Fresh Strawberry </div> 
-            </div>
-            <div class="disCen posNa">
-                <div class="ko koColor line dis straw "> 
-                    <div class=""> 봄은 </div>
-                    <div> 생딸기 </div>
-                    <div> 시즌 </div>
-                    <div class="strawberry imgs" ></div>
+            <div class="hot hotIcon" ></div>
+        </div>  
+        <div class=" border img summerDay">
+            <div class="posiCen">
+                <div div class="posNa">
+                    <div class="en enColor"> Summer Day </div>
+                    <div class="ko koColor  ">  어느 여름날 </div>
+                    <div class="price190 priceColor  ">  </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="disCen border" >
-        <div class="tc">
-            <div class="en enColor line"> Fresh Strawberry Juice</div>
-            <div class="ko koColor "> 생딸기 퐁당 쥬스 </div>
-            <!-- <div class="ex exColor"> 생딸기 듬뿍 담은 쥬스 </div> -->
-            <div class="disCen line">
-                <div class="price150 priceColor  ">  </div>
-            </div>
-        </div>
-    </div>
+        </div> 
+    </div>  
 </div>
 
