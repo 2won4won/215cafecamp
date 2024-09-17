@@ -33,25 +33,29 @@
  
     <style>
         /* title color */
-        .title { background: url(img/background/240523.jpg ); color: white;  }
-        
+        /* .title { background: url(img/background/atum01.jpg ); color: white;  } */
+        .title { background: url(img/background/backf03.jpg ); color: white;  }
+
         /* font color */
-        .esoKind span:nth-child(even) ,
+        .esoKind span:nth-child(even) { color: #943D2C; }
         .enColor,
-        .turingColor { color: #6abce2; }
+        .turingColor { color: #BFAC97; }
+        /* .turingColor { color: #CA6D28; } */
 
         .esoKind span:nth-child(odd),
         .koColor,
         .esoKo, 
-        .esoEn  { color: #235284; }
+        .esoEn  { color: #A39789; }
+        /* .esoEn  { color: #616B50; } */
 
-        .priceColor { color: #B8E2F4; }
+        .priceColor { color: #EDCEBF; }
+        /* .priceColor { color: #632414; } */
         
         .esoEx, 
-        .exColor { color: #90CBF9;; }   
+        .exColor { color: #E7CDAE; }   
         
-        .cup_body { background-color: #46A2DA ;}
-        .point { background-color: #193A3B ;}  /* enColor 보다 진하게  */
+        .cup_body { background-color: #E7CDAE ;}
+        .point { background-color: #814E39 ;}  /* enColor 보다 진하게  */
 
         /* eso en */
         .esoEn { 
@@ -59,12 +63,12 @@
         }
         
         /* eso latte_box */
-        .cup_handle { border : 2px solid  #193A3B; }
-        .saucer { background-color: #193A3B; }
+        .cup_handle { border : 2px solid  #7F250E; }
+        .saucer { background-color: #7F250E; }
 
         @keyframes flip {
             0%,80% {
-                color: #235284;     /* koColor 와 동일 */
+                color: #616B50;     /* koColor 와 동일 */
                 transform: rotateY(360deg);
             }
         } 
@@ -74,6 +78,8 @@
 
         /* 전체적 layout */
         #season .straw,
+        /* #greek .plain .border .ko, */
+        /* #greek .plain .border .priceColor, */
         #flower .ko,
         #flower .ex,
         #milk .leftBox .priceColor,
@@ -106,7 +112,7 @@
                 </div>
                 <div id="we"> </div>
                 <div>
-                    <div class="title shadow"> 2024 Summer Season</div>
+                    <div class="title shadow"> 2024 GoodByeSummer, Hello autumm </div>
                     <!-- <div class="disJcBet"> -->
                         <div id="season"> </div>
                         <div id="milk"> </div>
@@ -118,7 +124,7 @@
             </div>
             <div class="grid disJcCol">
                 <div>
-                    <div class="title shadow"> Greek Yogurt</div>
+                    <div class="title shadow">Hand-Made Yogurt & Greek Yogurt</div>
                     <div id="greek"> </div>
                 </div>
                 <div>
@@ -139,11 +145,12 @@
         $("#coldBrew").load("thema/coldBrew.html");
         $("#desert").load("thema/desert.html");
         $("#fruit").load("thema/fruit.html");
-        $("#greek").load("thema/greek3.html");
-        $("#meal").load("thema/meal3.html");
+        $("#greek").load("thema/greek2.html");
+        // $("#greek").load("thema/greek3.html");
+        $("#meal").load("thema/meal.html");
         $("#milk").load("thema/milk3.html");
         $("#flower").load("thema/flower.html");
-        $("#season").load("thema/season4.html");
+        $("#season").load("thema/season.html");
         $("#we").load("thema/we.html");
     });
 </script>
