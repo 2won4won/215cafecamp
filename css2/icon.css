@@ -118,6 +118,19 @@
     right:  -45%; */
     opacity: 0.9;
 }
+.vanilla {
+    background: url('../img/icon/vanilla.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 1.9vw;
+    height: 3.9vh;
+    position: absolute;
+    top: 4.8vh;
+    right: 2rem;
+    /* bottom: -8vh;
+    right:  -45%; */
+    opacity: 0.9;
+}
 .all {
     background: url('../img/icon/all.png');
     background-size: 100% 100%;

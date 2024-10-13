@@ -24,134 +24,95 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
 
     <!-- Local file import -->
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css2/layout.css">
+    <link rel="stylesheet" href="css2/font.css">
+    <link rel="stylesheet" href="css2/common.css">
+    <link rel="stylesheet" href="css2/icon.css">
     <link rel="stylesheet" href="css/effect.css">
     <script src="js/look.js"></script>
     <script src="js/word.js"></script>
- 
+
     <style>
+
         /* title color */
-        /* .title { background: url(img/background/atum01.jpg ); color: white;  } */
-        .title { background: url(img/background/backf03.jpg ); color: white;  }
+         .title { background: url(img/background/f01.jpg ); color: white;  }
 
         /* font color */
-        .esoKind span:nth-child(even) { color: #943D2C; }
-        .enColor,
-        .turingColor { color: #BFAC97; }
-        /* .turingColor { color: #CA6D28; } */
+        .esoKo,
+        .enColor { color: #64747B ;}
 
-        .esoKind span:nth-child(odd),
-        .koColor,
-        .esoKo, 
-        .esoEn  { color: #A39789; }
-        /* .esoEn  { color: #616B50; } */
+        .esoEn,
+        .koColor { color: #6A5D4A ;}
+        .exColor { color: #A3ACA9 ;}
+        .priceColor { color: #E2DCD0 ;}
+        .esoEx{ color: #A08679 ;}
 
-        .priceColor { color: #EDCEBF; }
-        /* .priceColor { color: #632414; } */
-        
-        .esoEx, 
-        .exColor { color: #E7CDAE; }   
-        
-        .cup_body { background-color: #E7CDAE ;}
-        .point { background-color: #814E39 ;}  /* enColor 보다 진하게  */
+        .latteEx,
+        .coldKo { color: #8F9E81;}
 
-        /* eso en */
-        .esoEn { 
-            text-shadow: 0 6.36px 3.896px #B5D7E4, 0 -1px 1px #B5D7E4;
-        }
-        
         /* eso latte_box */
-        .cup_handle { border : 2px solid  #7F250E; }
-        .saucer { background-color: #7F250E; }
+        .cup_body { background-color: #5F6F52 ;}
+        .cup_handle { border : 2px solid  #C4661F; }
+        .saucer { background-color: #C4661F; }
 
-        @keyframes flip {
-            0%,80% {
-                color: #616B50;     /* koColor 와 동일 */
-                transform: rotateY(360deg);
-            }
-        } 
-        /* we */
-        .we .w2 { color: #FF7793; }   /* enColor 보다 톤 다운   */
-        .we .w1 { color: #FDC6D6; }    /* w2 Color 보다 톤 다운   */
-
-        /* 전체적 layout */
-        #season .straw,
-        /* #greek .plain .border .ko, */
-        /* #greek .plain .border .priceColor, */
-        #flower .ko,
-        #flower .ex,
-        #milk .leftBox .priceColor,
-        #milk .leftBox .ko,
-        #milk .leftBox .ex { margin-top: 0.5rem;}
-
-        .fruitBox .swiper .ko,
-        .fruitBox .swiper .ex { margin-top: 6px ; }
-
-
-
+        /* friut  */
+        .point { background-color: #AF4749;}
+/* .ba { background-color: #C4661F;} */
     </style>
- 
 </head>
+
 <body>
-    <div class="container posiCen">
-        <div class=" mainBox ">
-            <div class="grid disJcCol">
-                <div class="">
-                    <div class="title shadow"> Esprosso</div>
-                    <div id="eso"> </div>
-                </div>
-                <div id="coldBrew"> </div>
-                <div id="desert"> </div>
+    <div class="mainBox posiCen ba"> 
+        <div class="grid disJcCol"> 
+            <div>
+                <div class="title shadow"> Esprosso</div>
+                <div id="eso"> </div>
             </div>
-            <div class="grid disJcCol">
-                <div>
-                    <div class="title shadow"> Fruit</div>
-                    <div id="fruit" > </div>
-                </div>
-                <div id="we"> </div>
-                <div>
-                    <div class="title shadow"> 2024 GoodByeSummer, Hello autumm </div>
-                    <!-- <div class="disJcBet"> -->
-                        <div id="season"> </div>
-                        <div id="milk"> </div>
-                    <!-- </div> -->
-                </div>
-                <!-- <div>
-                    <div class="title shadow">Milk</div>
-                </div> -->
+            <!-- <div id="cafe"></div> -->
+            <div id="we"> </div>
+        </div>
+        <div class="grid blr disJcCol"> 
+            <div>
+                <div class="title shadow"> Fruit</div>
+                <div id="fruit"> </div>
             </div>
-            <div class="grid disJcCol">
-                <div>
-                    <div class="title shadow">Hand-Made Yogurt & Greek Yogurt</div>
-                    <div id="greek"> </div>
-                </div>
-                <div>
-                    <div class="title shadow">Cafe SEO's 한끼</div>
-                    <div id="meal"> </div>
-                </div>
-                <div>
-                    <div class="title shadow">Flower</div>
-                    <div id="flower"> </div>
-                </div>
+            <div>
+                <div class="title shadow"> 2024 Autumn Season </div>
+                <div id="season"> </div>
+                <div id="milk"> </div>
             </div>
+        </div>
+        <div class="grid blb disJcCol"> 
+            <div>
+                <div class="title shadow"> Greek Yogurt </div>
+                <div id="greek"> </div>
+            </div>
+            <div>
+                <div class="title shadow"> HanGGi </div>
+                <div id="meal"> </div>
+            </div>
+            
+
         </div>
     </div>
 </body>
+
 <script type="text/javascript">
     $(document).ready(function(){
-        $("#eso").load("thema/eso.html");
+        $("#eso").load("cate/eso.html");
+        $("#fruit").load("cate/fruit.html");
+        $("#greek").load("cate/greek.html");
+        $("#meal").load("cate/meal.html");
+        $("#season").load("cate/season.html");
+        $("#we").load("cate/we.html");
+        // $("#cafe").load("cate/cafe.html");
+        $("#milk").load("cate/milk.html");
+
         $("#coldBrew").load("thema/coldBrew.html");
         $("#desert").load("thema/desert.html");
-        $("#fruit").load("thema/fruit.html");
-        $("#greek").load("thema/greek2.html");
         // $("#greek").load("thema/greek3.html");
-        $("#meal").load("thema/meal.html");
-        $("#milk").load("thema/milk3.html");
         $("#flower").load("thema/flower.html");
-        $("#season").load("thema/season.html");
-        $("#we").load("thema/we.html");
+        // $("#season").load("thema/season.html");
     });
 </script>
 </html>
