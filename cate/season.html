@@ -6,9 +6,11 @@
     .teaBox .bigZone  .border { width: 100%;}
     .teaBox .smallZone { width: 65%;}
     /* .teaBox .smallZone { width: 63%;} */
-    .milkBox .smallZone { width: 71%;}
-    .milkBox .bigZone { width: 27%;}
-    .milkBox .border:last-child { margin-bottom: 0; }
+    /* .milkBox .smallZone { width: 71%;} */
+    /* .milkBox .bigZone { width: 27%;} */
+    .milkBox .border { margin-bottom: 0; }
+    .milkBox .border:nth-child(even) { width: 33%;}
+    .milkBox .border:nth-child(odd) { width: 51%;}
     
     /* heart effect */
     .particletext { position: relative; }
@@ -152,7 +154,7 @@
     </div>
 </div>
 <div class="teaBox ">
-    <div class="border ">
+    <div class="border none ">
         <div class=" disJcBet line ">
             <div class="dis   ">
                 <div class="en enColor"> BoRiGaeYeok</div>
@@ -215,18 +217,57 @@
             </div>
         </div>
     </div>
-    <div class="milkBox ">
+    <div class="milkBox disJcBet">
         <div class="border ">
-            <div class=" disJcBet line ">
-                <div class="dis   ">
-                    <div class="en enColor"> SSangWhaTang</div>
-                    <div class="ko koColor "> 대추쌍화탕 </div>
-                    <div class="ex exColor word ">  </div>
+            <div class="  ">
+                <div class="disJcBet line">
+                    <div class="en enColor"> BoRiGaeYeok</div>
+                    <div class="price85 priceColor"></div>
                 </div>    
-                <div class="price100 priceColor"></div>
+                <div class="">
+                    <div class="ko koColor lineKo "> 보리개역 </div>
+                    <div class="ex exColor  lineKo">  옛 제주식 미숫가루 (제주산 보리와 콩으로 고소X고소) </div>
+                </div>
             </div>
         </div>
-        
+        <div class="border ">
+            <div class="  ">
+                <div class="disJcBet line">
+                    <div class="en enColor"> SSangWhaTang</div>
+                    <div class="price100 priceColor"></div>
+                </div>    
+                <div class="">
+                    <div class="ko koColor lineKo "> 대추쌍화탕 </div>
+                    <div class="ex exColor word lineKo ">  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="milkBox none">
+        <div class="border ">
+            <div class=" disJcBet line">
+                <div class="dis ">
+                    <div class="en enColor"> SSangWhaTang</div>
+                    <div class="ko koColor  "> 대추쌍화탕 </div>
+                    <div class="ex exColor word ">  </div>
+                </div>    
+                <!-- <div class="dis line"> -->
+                <div class="price100 priceColor"></div>
+                <!-- </div> -->
+            </div>
+        </div>
+        <div class="border  ">
+            <div class=" disJcBet line ">
+                <div class=" dis  ">
+                    <div class="en enColor"> BoRiGaeYeok</div>
+                    <div class="ko koColor "> 보리개역 </div>
+                    <div class="ex exColor "> 옛 제주식 미숫가루 (제주산 보리와 콩으로 고소X고소) </div>
+                </div>    
+                <!-- <div class="   "> -->
+                    <div class="price85 priceColor"></div>
+                <!-- </div>     -->
+            </div>
+        </div>
     </div>
 </div>
 <script>
