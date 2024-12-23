@@ -125,10 +125,12 @@
 .price130::before { content: '13.0';} 
 .price150::before { content: '15.0';} 
 .price170::before { content: '17.0';} 
+.price180::before { content: '18.0';} 
 .price190::before { content: '19.0';} 
 .price200::before { content: '20.0';} 
 .price230::before { content: '23.0';} 
 .price260::before { content: '26.0';} 
+.price280::before { content: '28.0';} 
 
 /* margin & padding */
 .mt4 { margin-top: 0.4rem; }

@@ -1,12 +1,23 @@
-@media screen and (min-width : 1200px)  { 
+@media screen and (min-width : 1381px)  { 
     .mainBox { 
         width: 88.2vw;  height: 84.2vh;  
         display: flex;  justify-content: space-between;
-        /* background-color: aquamarine; */
+        /* background-color: red; */
     }
     .grid:first-child { width: 31%;  height:inherit;  }
     .grid:nth-child(2) { width: 33%;  height:inherit; }
     .grid:last-child { width: 33%;  height:inherit;  }
+    /* .grid { width: 32%;  height:inherit;  } */
+ } 
+ @media screen and (min-width : 1200px ) and (max-width : 1380px) { 
+    .mainBox { 
+        width: 85.2vw;  height: 60.5vh;  
+        display: flex;  justify-content: space-between;
+        /* background-color: aquamarine; */
+    }
+    /* .grid:first-child { width: 31%;  height:inherit;  }
+    .grid:nth-child(2) { width: 33%;  height:inherit; }
+    .grid:last-child { width: 33%;  height:inherit;  } */
     /* .grid { width: 32%;  height:inherit;  } */
  } 
 @media screen and (max-width : 1199px) {
