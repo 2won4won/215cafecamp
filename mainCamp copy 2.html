@@ -42,15 +42,15 @@
         body { background-image: linear-gradient(45deg, rgba(209, 0, 42, 0.6) 0%, #0E5DC4 100%);}
         
         /* .ba { border: 0.4rem red solid; } */
-        .disJcBet { width: 100%;}
-        .card { width: 19%; height: 100%;  }
+        /* .mainBox { width: 100%;} */
+        /* .card { width: 19%; height: 100%;  }
         .card:last-child { width: 20%;   }
         .card:last-child .border{ margin-bottom: 0 !important;  }
         .card:last-child .img { height: 52%; }
-        .card:last-child .menu { height: 48%; padding: 0;}
+        .card:last-child .menu { height: 48%; padding: 0;} */
         /* .card:last-child .menu { height: 40%; border: 0.3rem solid red;} */
         
-        .card .img { 
+        /* .card .img { 
             width: 100%; height: 38.5%; 
             border-top-left-radius: 3% ; border-top-right-radius: 3%;
           }
@@ -58,12 +58,12 @@
             width: 100%;  padding: 1rem 0rem ; box-sizing: border-box; 
             border-bottom-left-radius: 3% ; border-bottom-right-radius: 3%;
             word-break: keep-all;
-        }
-        .card .border { padding: 0; border-radius: 0.7rem;}
+        } */
+        /* .card .border { padding: 0; border-radius: 0.7rem;}
         .card .line { 
             border-bottom: #fff 0.1rem solid; 
             padding-bottom: 1rem; margin-bottom: 1.2rem;
-        }
+        } */
 
         .card .menu .en, 
         .card .menu .ex, 
@@ -73,17 +73,45 @@
         .card .menu .ko { margin-left: 0;}
         .card .menu .en::before { content: ""; margin-right: 0; } 
         .card .menu .ex { margin-top: 0.4rem; line-height: 1.3rem; }
-    </style>
+
+        .mainBox > div { width: inherit; }
+        .w2 { width: 45%; height: 12rem;  border: 0.3rem red solid;}
+        .w4 { width: 24%; height: 25rem;  border: 0.3rem black solid; }
+        .card .border { padding: 0; border-radius: 0.7rem;}
+        .w2 .img {
+            width: 60%; height: inherit; 
+            border-top-left-radius: 3% ; border-top-right-radius: 3%;
+        }
+        .w2 .menu {
+            width: 40%; height: inherit; 
+            box-sizing: border-box; 
+            border-bottom-left-radius: 3% ; border-bottom-right-radius: 3%;
+            word-break: keep-all;
+        }
+        .w4 .img {
+            width: inherit; height: 40%; 
+            border-top-left-radius: 3% ; border-top-right-radius: 3%;
+        }
+        .w4 .menu {
+            width: 100%; height: 40%; 
+            box-sizing: border-box; 
+            border-bottom-left-radius: 3% ; border-bottom-right-radius: 3%;
+            word-break: keep-all;
+        }
+        .card .line { 
+            border-bottom: #fff 0.1rem solid; 
+            padding-bottom: 0.6rem; margin-bottom: 0.6rem;
+        }
+        </style>
 
 </head>
 <body>
     <div class="mainBox posiCen ">
-        
-        <div class="disJcBet ">
-            <div class=" card "> 
-                <div class="img border bbq215"> </div>
-                <div class="menu "> 
-                    <div class="   " >
+        <div class=" "> 
+            <div class="disJcBet " > 
+                <div class="w2 card disJcBet"> 
+                    <div class="img border bbq215"> </div>
+                    <div class="menu "> 
                         <div class="disJcBet line">
                             <div class="ko koColor  "> BBQ SET </div>
                         </div> 
@@ -94,13 +122,24 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class=" card "> 
-                <div class="img potato border"> 
-
+                <div class="w2 card  disJcBet"> 
+                    <div class="menu "> 
+                        <div class="disJcBet line">
+                            <div class="ko koColor  "> 아뜨 구이 </div>
+                        </div> 
+                        <div class="en enColor  ">215's Dried Fish Jerky   </div>
+                        <div class="ex enColor "> 
+                            뜨거운 맥반석 위에 반건조 오징어, 한치, 쥐치포, 아귀포와 함께
+                            단호박 등을 직접 구워 드실 수 있습니다. 앗뜨거우니 유아와 아동을 동반하신 분들은 더욱더 화상에 유의하세요.
+                        </div>
+                    </div>
+                    <div class="img border stone"> </div>
                 </div>
-                <div class="menu "> 
-                    <div class="   " >
+            </div>
+            
+            <div class="disJcBet " > 
+                <div class="w4  "> 
+                    <div class="menu "> 
                         <div class="disJcBet line">
                             <div class="ko koColor  "> 4가지 감튀 </div>
                             <div class="price130 priceColor">  </div>
@@ -108,59 +147,13 @@
                         <div class="en enColor ">215's Frided Potato  </div>
                         <div class="ex enColor "> 각기 다른 모양과 두께의 감자튀김을 건강하게 드릴 수 있습니다.  </div>
                     </div>
+                    <div class="img border stone border"> </div>
                 </div>
+                <div class="w4 "> </div>
+                <div class="w4 "> </div>
+                <div class="w4 "> </div>
             </div>
-            <div class=" card "> 
-                <div class="img pollack border"> </div>
-                <div class="menu "> 
-                    <div class="   " >
-                        <div class="disJcBet line">
-                            <div class="ko koColor  "> 빠삭 먹태 </div>
-                            <div class="price130 priceColor">  </div>
-                        </div>
-                        <div class="en enColor  ">215's Dried Pollack  </div>
-                        <div class="ex enColor "> 
-                            빠~삭하고 포실포실한 먹태 구이입니다. 
-                            무언가 먹고 싶으나 배부르지 않는 것이 생각 날때 제격입니다. 
-                            또한 칼로리 걱정이 없는 다이어트 식품입니다.  . 
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class=" card "> 
-                <div class="img  no4 border"> </div>
-                <div class="menu "> 
-                    <div class="   " >
-                        <div class="disJcBet line">
-                            <div class="ko koColor  "> No.4 유학파 </div>
-                            <div class="price230 priceColor">  </div>
-                        </div>
-                        <div class="en enColor  ">CafeSEO's No.4  </div>
-                        <div class="ex enColor "> 
-                            인도 난 위에 토마토, 생모짤렐라 치즈로 토핑하고 
-                            이탈리아 열무인 루꼴라를 듬뿍 올라간 상품입니다. 
-                            아메리카 한 잔이 포함된 가격입니다. 단품도 가능합니다.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class=" card "> 
-                <div class="img  stone border"> </div>
-                <div class="menu "> 
-                    <div class="   " >
-                        <div class="disJcBet line">
-                            <div class="ko koColor  "> 아뜨 꾸이 </div>
-                            <div class="price280 priceColor">  </div>
-                        </div>
-                        <div class="en enColor  "> 215's Dried Fish Jerky  </div>
-                        <div class="ex enColor "> 
-                            뜨거운 맥반석 위에 반건조 오징어, 한치, 쥐치포, 아귀포와 함께
-                            단호박, 고구마 등을 직접 구워 드실 수 있습니다. 앗뜨거우니 화상에 유의해 주세요. 
-                            특히 유아와 아동을 동반하신 분들은 더욱더 조심조심.
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>
 </body>

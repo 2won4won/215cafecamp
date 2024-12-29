@@ -11,7 +11,7 @@
  } 
  @media screen and (min-width : 1200px ) and (max-width : 1380px) { 
     .mainBox { 
-        width: 85.2vw;  height: 60.5vh;  
+        width: 85.2vw;  height: 80vh;  
         display: flex;  justify-content: space-between;
         /* background-color: aquamarine; */
     }
