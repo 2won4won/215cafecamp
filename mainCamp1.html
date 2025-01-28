@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <!-- font style -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link
+        href="https://www.dafontfree.net/embed/ZWF0LWF0LWpvZXMtc3QtcmVndWxhciZkYXRhLzc1L2UvMTY0NzUyL0VhdCBhdCBKb2VzJ3MgU3QudHRm"
+        rel="stylesheet" type="text/css" />
+    <!-- <script src="https://c.webfontfree.com/c.js?f=TypoRoundRegularDemo" type="text/javascript"></script>     -->
+
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+
+    <!-- Local file import -->
+    <link rel="stylesheet" href="css2/layout.css">
+    <link rel="stylesheet" href="css2/font.css">
+    <link rel="stylesheet" href="css2/common.css">
+    <link rel="stylesheet" href="css2/icon.css">
+    <link rel="stylesheet" href="css/effect.css">
+    <!-- <script src="js/look.js"></script> -->
+    <!-- <script src="js/word.js"></script> -->
+
+    <style>
+        .bc { background-color: blanchedalmond; }
+        .bo { border: 0.1rem solid red;}
+        .mainBox { width: 75%; height:  75%;}
+        .mainBox .grid { width: 47%; height: 100%;}
+
+        .title { background: url(img/background/winter2.jpg ); color: white;   }
+        .bbq .border { }
+        .swiper .border { padding: 0;}
+    </style>
+
+</head>
+<body>
+    <div class="posiCen bo mainBox">
+        <!-- <div class="grid disJcCol bo ">
+            <div class=" title shadow "> BBQ </div>
+            <div class=" bbq"> 
+                <div class="border"> 
+                    <div class="disJcBet line">
+                        <div class="dis ">
+                            <div class="en enColor"> SET for 1 person </div>
+                            <div class="ko koColor"> 1인 세트 </div>
+                        </div>
+                        <div class="priceColor price250"> </div>
+                    </div>
+                </div>
+                <div class="border"> 
+                    <div class="disJcBet line">
+                        <div class="dis ">
+                            <div class="en enColor"> SET for 2 person </div>
+                            <div class="ko koColor"> 2인 세트 </div>
+                        </div>
+                        <div class="priceColor price500"> </div>
+                    </div>
+                </div>
+                <div class="border"> 
+                    <div class="disJcBet line">
+                        <div class="dis ">
+                            <div class="en enColor"> SET for 4 person </div>
+                            <div class="ko koColor"> 4인 세트 </div>
+                        </div>
+                        <div class="priceColor price1000"> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="  "> MEAT </div>
+            <div id="swiper"></div>  
+        </div> -->
+        <div class="grid disJcCol bc bo">
+            <div class=" title shadow "> BBQ </div>
+            <div class=" card "> 
+                <div class="img border bbq215"> </div>
+                <div class="menu "> 
+                    <div class="   " >
+                        <div class="disJcBet line">
+                            <div class="ko koColor  "> BBQ SET </div>
+                        </div> 
+                        <div class="en enColor  ">215's BBQ  </div>
+                        <div class="ex enColor "> 
+                            국내산 생고기 '한돈'을 사용합니다. 삼겹살, 목살, 등갈비(10,000원 추가) 중 선택이 가능합니다.  
+                            겉은 바삭하고 속은 촉촉한 육즙이 배어있는 BBQ입니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid disJcCol bc bo">
+
+        </div>
+        
+    </div>
+</body>
+<script>
+    $(document).ready(function(){ 
+        $("#swiper").load("cate/swiper.html");
+    });
+</script>
+</html>

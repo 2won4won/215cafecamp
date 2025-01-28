@@ -64,6 +64,9 @@
 .price200::before { content: '20.0';} 
 .price230::before { content: '23.0';} 
 .price260::before { content: '26.0';} 
+.price250::before { content: '25.0';} 
+.price500::before { content: '50.0';} 
+.price1000::before { content: '100.0';} 
 
 /* img */
 .img {

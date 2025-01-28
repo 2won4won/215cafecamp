@@ -131,6 +131,9 @@
 .price230::before { content: '23.0';} 
 .price260::before { content: '26.0';} 
 .price280::before { content: '28.0';} 
+.price250::before { content: '25.0';} 
+.price500::before { content: '50.0';} 
+.price1000::before { content: '100.0';} 
 
 /* margin & padding */
 .mt4 { margin-top: 0.4rem; }

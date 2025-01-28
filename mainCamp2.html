@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- font style -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One" />
+    <link
+    href="https://www.dafontfree.net/embed/ZWF0LWF0LWpvZXMtc3QtcmVndWxhciZkYXRhLzc1L2UvMTY0NzUyL0VhdCBhdCBKb2VzJ3MgU3QudHRm"
+    rel="stylesheet" type="text/css" />
+    
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+    
+    <!-- Local file import -->
+    <!-- <link rel="stylesheet" href="css2/layout.css"> -->
+    <link rel="stylesheet" href="css2/font.css">
+    <link rel="stylesheet" href="css2/common.css">
+
+    <style>
+        body { background-image: linear-gradient(45deg, rgba(209, 0, 42, 0.6) 0%, #0E5DC4 100%);}  
+        .bbq215 {
+            background: url('../img/photo/bbq215.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        .pollack {
+            background: url('../img/photo/pollack.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        .potato {
+            background: url('../img/photo/potato.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        .stone1 {
+            background: url('../img/photo/stone1.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        .stone2 {
+            background: url('../img/photo/stone2.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            width: 12vw;
+            height: 30vh;
+            /* position: absolute; */
+            top: -37vh;
+            left: -3.3vw;
+        }
+        .fishBall {
+            background: url('../img/photo/fishBall.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        .bc { border: 1px solid red ;}
+        .main { width: 85%; height: 75%; }
+        .main .grid:first-child { width: 24%;  }
+        .main .grid:last-child { width: 75%;  }
+        /* .main  {  color: #fff;} */
+
+        .bbq .card { width: 100%; height: 100%;  }
+        .side .card { width: 24%; height: 100%;  }
+        .card .img { width: 100%; height: 57%; }
+        
+        .card .border { padding: 0; border-radius: 0.7rem;}
+
+        /* .card .menu { 
+            width: 100%;  padding: 1rem 0rem ; box-sizing: border-box; 
+            border-bottom-left-radius: 3% ; border-bottom-right-radius: 3%;
+            word-break: keep-all;
+        } */
+        .card .menu { padding: 0 0.5rem 1rem 0.5rem;}
+        /* .br { border-radius: 50%;} */
+        .swiper {  }
+    </style>
+      
+</head>
+<body>
+    <div class=" main posiCen  disJcBet">
+        <div class="grid bbq"> 
+            <div class="card "> 
+                <div class="img  bbq215 border br"> </div>
+                <div class="ex enColor "> 
+                    국내산 생고기 '한돈'을 사용합니다. <br>
+                    겉은 바삭하고 속은 촉촉한 육즙이 배어있는 BBQ입니다. <br>
+                    삼겹살, 목살, 등갈비(10,000원 추가) 중 선택이 가능합니다. <br> 
+                </div>
+                <div class=" menu "> 
+                    <div class="  "> 
+                        <div class="disJcBet line">
+                            <div class="dis ">
+                                <div class="en enColor"> SET for 1 person </div>
+                                <div class="ko koColor"> 1인 세트 </div>
+                            </div>
+                            <div class="priceColor price250"> </div>
+                        </div>
+                    </div>
+                    <div class=""> 
+                        <div class="disJcBet line">
+                            <div class="dis ">
+                                <div class="en enColor"> SET for 2 people </div>
+                                <div class="ko koColor"> 2인 세트 </div>
+                            </div>
+                            <div class="priceColor price500"> </div>
+                        </div>
+                    </div>
+                    <div class=""> 
+                        <div class="disJcBet line">
+                            <div class="dis ">
+                                <div class="en enColor"> SET for 4 people </div>
+                                <div class="ko koColor"> 4인 세트 </div>
+                            </div>
+                            <div class="priceColor price1000"> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper bc">
+                    <div class="swiper-wrapper">
+                        <!-- slides -->
+                        <div class="swiper-slide border tc posNa "> 삼겹살 </div>
+                        <div class="swiper-slide border tc posNa "> 목살 </div>
+                        <div class="swiper-slide border tc posNa "> 등갈비  </div>
+                        <div class="swiper-pagination"> </div>
+                    </div>
+                </div>    
+
+            </div>
+        </div>
+        <div class="grid bc disJcBet side"> 
+            <div class="card bc"> 
+                <div class="img  potato border br"> </div>
+            </div>
+            <div class="card "> 
+                <div class="img  fishBall border br"> </div>
+            </div>
+            <div class="card "> 
+                <div class="img  pollack border br"> </div>
+            </div>
+            <div class="card "> 
+                <div class="img  stone1 border  br"> </div>
+                <div class="  stone2 posNa"> </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            slidesPerView : 3,
+            spaceBetween : 15,
+            loop : true,
+            loopAdditionalSlides : 1,
+            autoplay : {
+                delay : 2500,
+                disableOnInteraction : false,
+            },
+            pagination : {
+                el : '.swiper-pagination',
+            },
+            observer : true,
+            observeParents : true
+        });
+    </script> 
+</body>
+</html>
