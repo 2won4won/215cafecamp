@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <!-- font style -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One" />
+    <link
+    href="https://www.dafontfree.net/embed/ZWF0LWF0LWpvZXMtc3QtcmVndWxhciZkYXRhLzc1L2UvMTY0NzUyL0VhdCBhdCBKb2VzJ3MgU3QudHRm"
+    rel="stylesheet" type="text/css" />
+    <!-- <script src="https://c.webfontfree.com/c.js?f=TypoRoundRegularDemo" type="text/javascript"></script>     -->
+    
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+
+    <!-- Local file import -->
+    <link rel="stylesheet" href="css2/layout.css">
+    <link rel="stylesheet" href="css2/font.css">
+    <link rel="stylesheet" href="css2/common.css">
+    <link rel="stylesheet" href="css2/icon.css">
+
+    <style>
+         body { background-image: linear-gradient(45deg, rgba(209, 0, 42, 0.6) 0%, #0E5DC4 100%);}
+        .w { width: 70%; height: 77%;}
+        .w30 { width: 33%;}
+        .w65 { width: 62%;}
+
+        .w  {  color: #fff;}
+        .card .menu .ex, 
+        .card .menu .ko { margin-left: 0;}
+        .card .menu .en::before { content: ""; margin-right: 0; } 
+        .card .menu .ex { margin-top: 0.4rem; line-height: 1.5rem; }
+       
+        .zone:first-child {  width: 73%;}
+        .zone:last-child {  width: 24%;}
+        .zone:last-child .card {  width: 100%; height: 70%;}
+
+        .bbq { height:51% ; width: 100%;}
+        .side { height:45% ;  width: 100%;}
+
+        .br { border : 1px solid red ;}
+        .bc { background-color: aqua;}
+
+        .bbq .imgZone { width: 59%; height: 100%;}    
+        .bbq .menu { width: 38%; height: 100%;}    
+        .bbq .meat .border { border-radius: 50%; width: 6rem; height: 6rem; margin-bottom: 0;}    
+   
+        .card .img { 
+            width: 100%; height: 100%; 
+            border-top-left-radius: 3% ; border-top-right-radius: 3%;
+        }
+        .card .border { padding: 0; border-radius: 0.7rem;}
+
+        .side .card { width: 32%; height: 65%;}
+        .swiper { height: 100%;}
+   </style>
+</head>
+<body>
+    <div class="posiCen disJcBet w br">
+        <div class="zone  disJcCol br">
+            <div class="bbq  card  disJcBet "> 
+                <div class="imgZone">
+                    <div class="img border bbq215 br"> </div>
+                </div>
+                <div class="menu disJcCol"> 
+                    <div class="   " >
+                        <div class="ko line ">215's BBQ set </div> 
+                        <div class="en   "> 215's BBQ set  </div>
+                        <div class="ex  "> 
+                            국내산 생고기 '한돈'을 사용합니다. <br> 
+                            겉은 바삭하고 속은 촉촉한 육즙이 배어있는 BBQ입니다.<br> 
+                        </div>
+                    </div>
+                    <div>
+                        <div class="border">
+                            <div class="disJcBet line">
+                                <div class="dis ">
+                                    <div class="en "> SET for 1 person </div>
+                                    <div class="ko "> 1인 세트 </div>
+                                </div>
+                                <div class=" price250"> </div>
+                            </div>
+                        </div>
+                        <div class="border">
+                            <div class="disJcBet line">
+                                <div class="dis ">
+                                    <div class="en "> SET for 2 people </div>
+                                    <div class="ko "> 2인 세트 </div>
+                                </div>
+                                <div class=" price500"> </div>
+                            </div>
+                        </div>
+                        <div class="border">
+                            <div class="disJcBet line">
+                                <div class="dis ">
+                                    <div class="en "> SET for 4 people </div>
+                                    <div class="ko "> 4인 세트 </div>
+                                </div>
+                                <div class=" price1000"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="meat disJcBet ">
+                        <div class=" ko w30">  삼겹살, <br> 목살,<br> 등갈비(10,000원 추가)<br> 중 선택이 가능합니다.  </div>
+                        <div class=" disJcBet w65 ">
+                            <div class="border "> </div>
+                            <div class="border "> </div>
+                            <div class="border "> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="side disJcBet"> 
+                <div class=" card "> 
+                    <div class="img potato border"> 
+    
+                    </div>
+                    <div class="menu "> 
+                        <div class="   " >
+                            <div class="disJcBet line">
+                                <div class="ko koColor  "> 4가지 감튀 </div>
+                                <div class="price130 priceColor">  </div>
+                            </div>
+                            <div class="en enColor ">215's Frided Potato  </div>
+                            <div class="ex enColor "> 각기 다른 모양과 두께의 감자튀김을 건강하게 드릴 수 있습니다.  </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" card "> 
+                    <div class="img pollack border"> </div>
+                    <div class="menu "> 
+                        <div class="   " >
+                            <div class="disJcBet line">
+                                <div class="ko koColor  "> 빠삭 먹태 </div>
+                                <div class="price130 priceColor">  </div>
+                            </div>
+                            <div class="en enColor  ">215's Dried Pollack  </div>
+                            <div class="ex enColor "> 
+                                빠~삭하고 포실포실한 먹태 구이입니다. <br> 
+                                무언가 먹고 싶으나 배부르지 않는 것이 생각 날때 제격입니다. <br> 
+                                또한 칼로리 걱정이 없는 다이어트 식품입니다.  <br>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" card "> 
+                    <div class="img  fishBall border"> </div>
+                    <div class="menu "> 
+                        <div class="   " >
+                            <div class="disJcBet line">
+                                <div class="ko koColor  "> 호오 오뎅탕  </div>
+                                <div class="price180 priceColor">  </div>
+                            </div>
+                            <div class="en enColor  "> 215's Hot FishBall Soup  </div>
+                            <div class="ex enColor "> 
+                                인도 난 위에 토마토, 생모짤렐라 치즈로 토핑하고 
+                                이탈리아 열무인 루꼴라를 듬뿍 올라간 상품입니다. 
+                                아메리카 한 잔이 포함된 가격입니다. 단품도 가능합니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="zone br"> 
+            <div class=" card "> 
+                <div class="img  stone border"> </div>
+                <div class="menu "> 
+                    <div class="   " >
+                        <div class="disJcBet line">
+                            <div class="ko koColor  "> 아뜨 꾸이 </div>
+                            <div class="price280 priceColor">  </div>
+                        </div>
+                        <div class="en enColor  "> 215's Dried Fish Jerky  </div>
+                        <div class="ex enColor "> 
+                            뜨거운 맥반석 위에 <br>  
+                            반건조 오징어, 한치, 쥐치포, 아귀포와 함께 <br> 
+                            단호박, 고구마 등을 직접 구워 드실 수 있습니다. <br> 
+                            앗뜨거우니 화상에 유의해 주세요. <br> 
+                            특히 유아와 아동을 동반하신 분들은 더욱더 조심조심.<br> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const swiper = new Swiper('.swiper', {
+        slidesPerView : 3,
+        spaceBetween : 15,
+        loop : true,
+        loopAdditionalSlides : 1,
+        autoplay : {
+            delay : 2500,
+            disableOnInteraction : false,
+        },
+        pagination : {
+            el : '.swiper-pagination',
+        },
+        observer : true,
+        observeParents : true
+    });
+</script>
+</html>

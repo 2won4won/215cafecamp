@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <!-- font style -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One" />
+    <link
+    href="https://www.dafontfree.net/embed/ZWF0LWF0LWpvZXMtc3QtcmVndWxhciZkYXRhLzc1L2UvMTY0NzUyL0VhdCBhdCBKb2VzJ3MgU3QudHRm"
+    rel="stylesheet" type="text/css" />
+    <!-- <script src="https://c.webfontfree.com/c.js?f=TypoRoundRegularDemo" type="text/javascript"></script>     -->
+    
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+
+    <!-- Local file import -->
+    <link rel="stylesheet" href="css2/layout.css">
+    <link rel="stylesheet" href="css2/font.css">
+    <link rel="stylesheet" href="css2/common.css">
+    <link rel="stylesheet" href="css2/icon.css">
+
+    <style>
+         body { background-image: linear-gradient(45deg, rgba(209, 0, 42, 0.6) 0%, #0E5DC4 100%);}
+        .w { width: 74%; height: 84%;}
+        .w30 { width: 33%;}
+        .w65 { width: 62%;}
+        .w { color:  white;}
+
+        .card .menu .ex, 
+        .card .menu .ko { margin-left: 0;}
+        .card .menu .en::before { content: ""; margin-right: 0; } 
+        .card .menu .ex { margin-top: 0.4rem; line-height: 1.7rem; }
+        
+        .card .img { 
+            width: 100%; height: 100%; 
+            border-top-left-radius: 3% ; border-top-right-radius: 3%;
+        }
+        .card > .border { padding: 0; border-radius: 0.7rem;}
+        .card .line { 
+            border-bottom: #fff 0.1rem solid; 
+            padding-bottom: 1rem; margin-bottom: 1.2rem;
+        }
+        .br { border : 1px solid red ;}
+        .bc { background-color: aqua;}
+
+        .bbq { width: 100%; height: 38%;}
+        .side { width: 100%; height: 55%;}
+
+        .bbq .card { width: 100%; height: 100% ;}
+        .bbq .card .img { width: 52%; height: 100% ;}
+        .bbq .card .menu { width: 46%; height: 100% ;}
+        .bbq .left { width: 42%;}
+        .bbq .right { width: 56%;}
+        .bbq .right .border { width: 30%; text-align: center; }
+
+        .side .card { width: 22% ; height: 100%;}
+        .side .card:last-child { width: 27% ; height: 100%;}
+        .side .card .img { width: 100%; height: 57% ;}
+        
+        .swiper { width: 100%; height: 5rem}
+        .swiper .border { 
+            height: 100%; 
+            border-radius: 50%; margin-bottom: 0; 
+        }
+        .pig_w {
+            width: 4vw;
+            height: 6.6vh;
+            position: absolute;
+            top: 1.0vh;
+            right: 0.9vw;
+            opacity: 0.5;
+        }
+   </style>
+</head>
+<body>
+    <div class=" posiCen disJcCol  w">
+        <div class="bbq br "> 
+            <div class=" card disJcBet  " >
+                <div class=" img border bbq215 " > </div>
+                <div class=" menu  disJcCol ">
+                    <div>
+                        <div class="ko line ">215's BBQ set </div> 
+                        <div class="en   "> 215's BBQ set  </div>
+                    </div>
+                    <div  class=" disJcBet "> 
+                        <div class="  left " >
+                            <div class="ex  "> 
+                                겉은 바삭하고 속은 촉촉한 육즙이 배어있는 BBQ입니다.<br> 
+                                맛나게 정성스럽게 '몽바'로 구워 드립니다. <br> 
+                                객실로 구워서 가져다가 드립니다. <br> 
+                                소요시간은 대략 30분 소요됩니다.  <br> 
+                            </div>
+                        </div>
+                        <div class="  right disJcBet">
+                            <div class="border disCen">
+                                <!-- <div class="disJcBet"> -->
+                                    <div class=" ">
+                                        <div class="en "> SET for 1 person </div>
+                                        <div class="ko "> 1인 세트 </div>
+                                    <!-- </div> -->
+                                    <div class=" price250"> </div>
+                                </div>
+                            </div>
+                            <div class="border">
+                                <!-- <div class="disJcBet line"> -->
+                                    <!-- <div class="dis "> -->
+                                        <div class="en "> SET for 2 people </div>
+                                        <div class="ko "> 2인 세트 </div>
+                                    <!-- </div> -->
+                                    <div class=" price250"> </div>
+                                <!-- </div> -->
+                            </div>
+                            <div class="border">
+                                <!-- <div class="disJcBet line"> -->
+                                    <!-- <div class="dis "> -->
+                                        <div class="en "> SET for 4 people </div>
+                                        <div class="ko "> 4인 세트 </div>
+                                    <!-- </div> -->
+                                    <div class=" price250"> </div>
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" disJcBet br" > 
+                        <div class="left ex  posNa" > 
+                            국내산 생고기 '한돈'을 사용합니다. <br>
+                            조리전 1인당 200 gram 기준입니다. <br>
+                            조리 후에는 중량의 차이가 납니다.
+                            <div class="pig_w "></div>
+                            <!-- 삼겹살, <br> 목살,<br> 등갈비(10,000원 추가) -->
+                        </div>
+                        <div class="right " > 
+                            <div class="swiper ">
+                                <div class="swiper-wrapper ">
+                                    <!-- slides -->
+                                    <div class="swiper-slide tc posNa border   ">  
+                                        <div class="posiCen img pork_w "> 삼겹살 </div> 
+                                    </div>
+                                    <div class="swiper-slide  tc posNa  border">  
+                                        <div class="posiCen img meat_w"> 목살 </div> 
+                                    </div>
+                                    <div class="swiper-slide  tc posNa  border">  
+                                        <div class="posiCen img ribs_w "> 등갈비 </div> 
+                                    </div>
+                                    <!-- <div class="swiper-pagination"> </div> -->
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="side  disJcBet br "> 
+            <div class=" card " > 
+                <div class="img potato border " > </div>
+                <div class="menu " > 
+                    <div class="disJcBet line">
+                        <div class="ko koColor  "> 4가지 감튀 </div>
+                        <div class="price130 priceColor">  </div>
+                    </div>
+                    <div class="en enColor ">215's Frided Potato  </div>
+                    <div class="ex enColor "> 
+                        각기 다른 모양과 두께의 감자튀김과 모짜렐라 튀김을 <br> 
+                        건강하게 드릴 수 있습니다. 
+                    </div>
+                </div>
+            </div>
+            <div class=" card " > 
+                <div class="img pollack border " > </div>
+                <div class="menu " > 
+                    <div class="disJcBet line">
+                        <div class="ko koColor  "> 빠삭 먹태 </div>
+                        <div class="price130 priceColor">  </div>
+                    </div>
+                    <div class="en enColor  ">215's Dried Pollack  </div>
+                    <div class="ex enColor "> 
+                        빠~삭하고 포실포실한 먹태 구이입니다. <br> 
+                        무언가 먹고 싶으나 배부르지 않는 것이 생각날 때 제격입니다. <br> 
+                        또한 칼로리 걱정이 없는 다이어트 식품입니다.  <br>  
+                    </div>
+                </div>
+            </div>
+            <div class=" card " > 
+                <div class="img  fishBall border " > </div>
+                <div class="menu " >
+                    <div class="disJcBet line">
+                        <div class="ko koColor  "> 호오 오뎅탕  </div>
+                        <div class="price180 priceColor">  </div>
+                    </div>
+                    <div class="en enColor  "> 215's Hot FishBall Soup  </div>
+                    <div class="ex enColor "> 
+                        뜨근한 국물이 생각날 때,<br>
+                        찬 바람 쌩쌩 불 때,  <br>
+                        그 때가 제때인 오뎅탕입니다.
+                    </div>
+                </div>
+            </div>
+            <div class=" card " > 
+                <div class="img stone border " > </div>
+                <div class="menu " > 
+                    <div class="disJcBet line">
+                        <div class="ko koColor  "> 아뜨 꾸이 </div>
+                        <div class="price280 priceColor">  </div>
+                    </div>
+                    <div class="en enColor  "> 215's Dried Fish Jerky  </div>
+                    <div class="ex enColor "> 
+                        뜨거운 맥반석 위에 <br>
+                        반건조 오징어, 한치, 쥐치포, 아귀포 등을 직접 구워 드실 수 있습니다. <br> 
+                        앗 뜨거우니 화상에 유의해 주세요. <br> 
+                        특히 유아와 아동을 동반하신 분들은 더욱더 조심조심 해주세요.<br> 
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+
+    </div>
+</body>
+<script>
+    const swiper = new Swiper('.swiper', {
+        slidesPerView : 3,
+        spaceBetween : 20,
+        loop : true,
+        loopAdditionalSlides : 1,
+        autoplay : {
+            delay : 2500,
+            disableOnInteraction : false,
+        },
+        pagination : {
+            el : '.swiper-pagination',
+        },
+        observer : true,
+        observeParents : true
+    });
+</script>
+</html>
