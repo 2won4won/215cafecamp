@@ -28,17 +28,18 @@
     <link rel="stylesheet" href="css2/font.css">
     <link rel="stylesheet" href="css2/common.css">
     <link rel="stylesheet" href="css2/icon.css">
+    <script src="js/word.js"></script>
 
     <style>
          body { background-image: linear-gradient(45deg, rgba(209, 0, 42, 0.6) 0%, #0E5DC4 100%);}
-        .w { width: 74%; height: 82%; color:  white;}
+        .w { width: 65%; height: 82%; color:  white;}
         .w30 { width: 33%;}
         .w65 { width: 62%;}
 
         .card .menu .ex, 
         .card .menu .ko { margin-left: 0;}
         .card .menu .en::before { content: ""; margin-right: 0; } 
-        .card .menu .ex { margin-top: 0.4rem; line-height: 1.7rem; }
+        .card .menu .ex { margin-top: 0.8rem; line-height: 1.7rem; }
         
         .card .img { 
             width: 100%; height: 100%; 
@@ -50,61 +51,57 @@
             padding-bottom: 1rem; margin-bottom: 1.2rem;
         }
 
-        .br { border : 1px solid red ;}
-        .bc { background-color: aqua;}
-        .pl4 { padding-left: 0.4rem;}
-
-        .bbq { width: 100%; height: 38%;}
+        .bbq { width: 100%; height: 39%;}
         .side { width: 100%; height: 54%;}
 
         .bbq .card { width: 100%; height: 100% ;}
-        .bbq .card .img { width: 52%; height: 100% ;}
-        .bbq .card .menu { width: 46%; height: 100% ;}
-        .bbq .left { width: 42%;}
+        .bbq .card .img { width: 48%; height: 100% ;}
+        .bbq .card .menu { width: 50%; height: 100% ;}
+        .bbq .left { width: 45%;}
         .bbq .right { width: 56%;}
         .bbq .right .ko { padding-left: 0.7rem;}
         .bbq .right .line { padding-bottom: 0.2rem; 
             padding-left: 0.4rem; padding-right: 0.4rem !important;
         }
-       
+        .bbq .left span { display: inline-block;   padding-bottom: 1rem; font-size: 1rem;}
 
         .side .card { width: 22% ; height: 100%;}
         .side .card:last-child { width: 28% ; height: 100%;}
         .side .card .img { width: 100%; height: 58% ;}
         
-        .swiper { width: 100%; height: 5rem}
+        .swiper { width: 100%; height: 100%}
         .swiper .border { 
             height: 100%; 
             border-radius: 50%; margin-bottom: 0; 
         }
-        .swiper .ko { line-height: 5.5rem; text-align: left; margin-left: 1.1rem !important;}
+        .swiper .ko { line-height: 6rem; text-align: left; margin-left: 0.6rem !important;}
         .pig_w {
             width: 4vw;
             height: 6.6vh;
             position: absolute;
             top: -0.2vh;
-            right: 0.9vw;
+            right: 1.9vw;
             opacity: 0.8;
         }
         .pork_w {
             width: 2.4vw;
             height: 5.9vh;
             position: absolute;
-            top: 1.0vh;
-            right: 0.7vw;
+            top: 1.6vh;
+            right: 0.6vw;
         }
         .meat_w {
             width: 2.4vw;
             height: 5.9vh;
             position: absolute;
-            top: 1.0vh;
-            right: 0.7vw;
+            top: 1.6vh;
+            right: 0.6vw;
         }
         .ribs_w  {
             width: 2.4vw;
             height: 5.9vh;
             position: absolute;
-            top: 1.0vh;
+            top: 1.6vh;
             right: 0.6vw;
         }
    </style>
@@ -120,9 +117,8 @@
                     <div  class=" disJcBet "> 
                         <div class="  left " >
                             <div class="ex  "> 
-                                국내산 생고기 '한돈'을 사용합니다. <br>
+                                <span class="word"> </span> <br>
                                 겉은 바삭하고 속은 촉촉한 육즙이 배어있는 BBQ입니다.<br> 
-                                조리 전 1인당 200 gram 기준입니다. <br>
                                 조리 후에는 중량의 차이가 납니다.<br>
                                 소요 시간은 대략 30분입니다.  <br> 
                             </div>
@@ -160,7 +156,7 @@
                     <div class=" disJcBet " > 
                         <div class="left ex  posNa" > 
                             선택 사항 <br>
-                            삼겹살, 목살, 등갈비 (10,000원 추가)
+                            등갈비는 대략 700gram 으로 <br> 10,000원 추가.
                             <div class="pig_w "></div>
                         </div>
                         <div class="right " > 
@@ -197,8 +193,9 @@
                     </div>
                     <div class="en enColor ">215's Frided Potato  </div>
                     <div class="ex enColor "> 
-                        각기 다른 모양과 두께의 감자튀김, 해쉬브라운, 모짜렐라 튀김을 <br> 
-                        건강하게 드릴 수 있습니다. 
+                        각기 다른 모양과 두께의 감자튀김, 해쉬브라운, 치즈스틱을 <br> 
+                        에어프라이어로 구워서 건강하게 드실 수 있습니다. <br>
+                        칼로리 걱정은 DOWN. <br>
                     </div>
                 </div>
             </div>
@@ -212,8 +209,8 @@
                     <div class="en enColor  ">215's Dried Pollack  </div>
                     <div class="ex enColor "> 
                         빠~삭하고 포실포실한 먹태 구이입니다. <br> 
-                        무언가 먹고 싶으나 배부르지 않는 것이 생각날 때 제격입니다. <br> 
-                        또한 칼로리 걱정이 없는 다이어트 식품입니다.  <br>  
+                        입이 심심하나 배부르지 않는 것이 생각날 때 제격입니다. <br>
+                        맥주와 단짝.
                     </div>
                 </div>
             </div>
@@ -241,7 +238,7 @@
                     </div>
                     <div class="en enColor  "> 215's Dried Fish Jerky  </div>
                     <div class="ex enColor "> 
-                        뜨거운 맥반석 위에 반건조 오징어, 한치, 쥐치포, 아귀포 등을 직접 구워 드실 수 있습니다. <br> 
+                        뜨거운 맥반석 위에 다양한 반건조 건어물을 직접 구워 드실 수 있습니다. <br> 
                         앗 뜨거우니 화상에 유의해 주세요. <br> 
                         특히 유아와 아동을 동반하신 분들은 더욱더 조심조심 해주세요.<br> 
                     </div>
