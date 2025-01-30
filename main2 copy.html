@@ -32,7 +32,9 @@
 
     <style>
          body { background-image: linear-gradient(45deg, rgba(209, 0, 42, 0.6) 0%, #0E5DC4 100%);}
-        .w { width: 70%; height: 78%; color:  white;}
+        .w { width: 65%; height: 82%; color:  white;}
+        .w30 { width: 33%;}
+        .w65 { width: 62%;}
 
         .card .menu .ex, 
         .card .menu .ko { margin-left: 0;}
@@ -63,24 +65,22 @@
         }
         .bbq .left span { display: inline-block;   padding-bottom: 1rem; font-size: 1rem;}
 
-        .side .card { width: 20% ; height: 100%;}
-        .side .card:last-child { width: 25% ; height: 100%;}
+        .side .card { width: 22% ; height: 100%;}
+        .side .card:last-child { width: 28% ; height: 100%;}
         .side .card .img { width: 100%; height: 58% ;}
-        .side > .border { padding: 1.4rem  1.4rem 2.1rem 1.4rem ; }
-
+        
         .swiper { width: 100%; height: 100%}
         .swiper .border { 
             height: 100%; 
             border-radius: 50%; margin-bottom: 0; 
         }
         .swiper .ko { line-height: 6rem; text-align: left; margin-left: 0.6rem !important;}
-        .swiper .ko > div:last-child { padding: 0 !important; line-height: black;}
         .pig_w {
             width: 4vw;
             height: 6.6vh;
             position: absolute;
             top: -0.2vh;
-            right: 2.3vw;
+            right: 1.9vw;
             opacity: 0.8;
         }
         .pork_w {
@@ -102,54 +102,8 @@
             height: 5.9vh;
             position: absolute;
             top: 1.6vh;
-            right: 0.2vw;
+            right: 0.6vw;
         }
-
-        .won {  position: absolute; top: 5.6vh; left: 0.6vw; }
-        .variable {
-            display: flex;
-            font-variation-settings: "wght"275, "wdth"50;
-            text-align: center;
-            animation: swapthings 3s infinite both cubic-bezier(0.17, 0.04, 0.04, 0.99);
-            font-size: 1.5rem;
-            font-family: 'Inconsolata';
-            margin-top: 1rem;
-        }
-
-        .work {
-            animation: swapthings2 3s infinite both cubic-bezier(0.17, 0.04, 0.04, 0.99);
-        }
-
-
-        @keyframes swapthings {
-            0% {
-                font-variation-settings: "wght"275, "wdth"50;
-            }
-
-            50% {
-                font-variation-settings: "wght"900, "wdth"200;
-            }
-
-            100% {
-                font-variation-settings: "wght"275, "wdth"50;
-            }
-        }
-
-        @keyframes swapthings2 {
-            0% {
-                font-variation-settings: "wght"900, "wdth"200;
-            }
-        
-
-            50% {
-                font-variation-settings: "wght"275, "wdth"50;
-            }
-
-            100% {
-                font-variation-settings: "wght"900, "wdth"200;
-            }
-        }
-    
    </style>
 </head>
 <body>
@@ -200,10 +154,9 @@
                         </div>
                     </div>
                     <div class=" disJcBet " > 
-                        <div class="left ex  posNa meat  " > 
-                            <div class="variable ">
-                                <span class="work"> Your </span>  Choice ?
-                            </div>
+                        <div class="left ex  posNa" > 
+                            선택 사항 <br>
+                            등갈비는 대략 700gram 으로 <br> 10,000원 추가.
                             <div class="pig_w "></div>
                         </div>
                         <div class="right " > 
@@ -220,7 +173,6 @@
                                     </div>
                                     <div class="swiper-slide  tc posNa  border">  
                                         <div class=" ko  "> 등갈비 </div> 
-                                        <div class="won"> +10,000원  </div>
                                         <div class=" ribs_w ">  </div> 
                                     </div>
                                     <!-- <div class="swiper-pagination"> </div> -->
@@ -232,7 +184,7 @@
             </div>
         </div>
         <div class="side  disJcBet "> 
-            <div class=" card border " > 
+            <div class=" card " > 
                 <div class="img potato border " > </div>
                 <div class="menu " > 
                     <div class="disJcBet line">
@@ -247,7 +199,7 @@
                     </div>
                 </div>
             </div>
-            <div class=" card border " > 
+            <div class=" card " > 
                 <div class="img pollack border " > </div>
                 <div class="menu " > 
                     <div class="disJcBet line">
@@ -262,7 +214,7 @@
                     </div>
                 </div>
             </div>
-            <div class=" card  border" > 
+            <div class=" card " > 
                 <div class="img  fishBall border " > </div>
                 <div class="menu " >
                     <div class="disJcBet line">
@@ -277,7 +229,7 @@
                     </div>
                 </div>
             </div>
-            <div class=" card  border " > 
+            <div class=" card " > 
                 <div class="img stone border " > </div>
                 <div class="menu " > 
                     <div class="disJcBet line">
@@ -292,7 +244,9 @@
                     </div>
                 </div>
             </div>
+           
         </div>
+
     </div>
 </body>
 <script>

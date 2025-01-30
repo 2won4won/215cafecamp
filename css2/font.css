@@ -79,6 +79,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('https://ggayane.github.io/css-experiments/Inconsolata-VF.ttf');
+    font-weight: 275 900;
+    font-stretch: 50% 200%;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
 @import url('https://fonts.cdnfonts.com/css/zapfino');
 
