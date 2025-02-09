@@ -32,9 +32,7 @@
 
     <style>
          body { background-image: linear-gradient(45deg, rgba(209, 0, 42, 0.6) 0%, #0E5DC4 100%);}
-        .w { width: 65%; height: 82%; color:  white;}
-        .w30 { width: 33%;}
-        .w65 { width: 62%;}
+        .w { width: 62%; height: 73%; color:  white;}
 
         .card .menu .ex, 
         .card .menu .ko { margin-left: 0;}
@@ -51,36 +49,39 @@
             padding-bottom: 1rem; margin-bottom: 1.2rem;
         }
 
-        .bbq { width: 100%; height: 39%;}
+        .bbq { width: 100%; height: 42%;}
         .side { width: 100%; height: 54%;}
 
+        /* .bbq215 { opacity: 0.9;} */
         .bbq .card { width: 100%; height: 100% ;}
         .bbq .card .img { width: 48%; height: 100% ;}
         .bbq .card .menu { width: 50%; height: 100% ;}
         .bbq .left { width: 45%;}
-        .bbq .right { width: 56%;}
+        .bbq .right { width: 55%;}
         .bbq .right .ko { padding-left: 0.7rem;}
         .bbq .right .line { padding-bottom: 0.2rem; 
             padding-left: 0.4rem; padding-right: 0.4rem !important;
         }
         .bbq .left span { display: inline-block;   padding-bottom: 1rem; font-size: 1rem;}
 
-        .side .card { width: 22% ; height: 100%;}
-        .side .card:last-child { width: 28% ; height: 100%;}
+        .side .card { width: 20% ; height: 100%;}
+        .side .card:last-child { width: 26% ; height: 100%;}
         .side .card .img { width: 100%; height: 58% ;}
-        
+        .side > .border { padding: 1.1rem  1.3rem 2.5rem 1.1rem ; }
+
         .swiper { width: 100%; height: 100%}
         .swiper .border { 
             height: 100%; 
             border-radius: 50%; margin-bottom: 0; 
         }
         .swiper .ko { line-height: 6rem; text-align: left; margin-left: 0.6rem !important;}
+        .swiper .ko > div:last-child { padding: 0 !important; line-height: black;}
         .pig_w {
             width: 4vw;
             height: 6.6vh;
             position: absolute;
             top: -0.2vh;
-            right: 1.9vw;
+            right: 1.3vw;
             opacity: 0.8;
         }
         .pork_w {
@@ -102,8 +103,54 @@
             height: 5.9vh;
             position: absolute;
             top: 1.6vh;
-            right: 0.6vw;
+            right: 0.2vw;
         }
+
+        .won {  position: absolute; top: 5.6vh; left: 0.6vw; }
+        .variable {
+            display: flex;
+            font-variation-settings: "wght"275, "wdth"50;
+            text-align: center;
+            animation: swapthings 3s infinite both cubic-bezier(0.17, 0.04, 0.04, 0.99);
+            font-size: 1.5rem;
+            font-family: 'Inconsolata';
+            margin-top: 1.2rem;
+        }
+
+        .work {
+            animation: swapthings2 3s infinite both cubic-bezier(0.17, 0.04, 0.04, 0.99);
+        }
+
+
+        @keyframes swapthings {
+            0% {
+                font-variation-settings: "wght"275, "wdth"50;
+            }
+
+            50% {
+                font-variation-settings: "wght"900, "wdth"200;
+            }
+
+            100% {
+                font-variation-settings: "wght"275, "wdth"50;
+            }
+        }
+
+        @keyframes swapthings2 {
+            0% {
+                font-variation-settings: "wght"900, "wdth"200;
+            }
+        
+
+            50% {
+                font-variation-settings: "wght"275, "wdth"50;
+            }
+
+            100% {
+                font-variation-settings: "wght"900, "wdth"200;
+            }
+        }
+    
    </style>
 </head>
 <body>
@@ -154,9 +201,10 @@
                         </div>
                     </div>
                     <div class=" disJcBet " > 
-                        <div class="left ex  posNa" > 
-                            선택 사항 <br>
-                            등갈비는 대략 700gram 으로 <br> 10,000원 추가.
+                        <div class="left ex  posNa meat  " > 
+                            <div class="variable ">
+                                <span class="work"> Your </span>  Choice ?
+                            </div>
                             <div class="pig_w "></div>
                         </div>
                         <div class="right " > 
@@ -173,6 +221,7 @@
                                     </div>
                                     <div class="swiper-slide  tc posNa  border">  
                                         <div class=" ko  "> 등갈비 </div> 
+                                        <div class="won"> +10,000원  </div>
                                         <div class=" ribs_w ">  </div> 
                                     </div>
                                     <!-- <div class="swiper-pagination"> </div> -->
@@ -184,7 +233,7 @@
             </div>
         </div>
         <div class="side  disJcBet "> 
-            <div class=" card " > 
+            <div class=" card border " > 
                 <div class="img potato border " > </div>
                 <div class="menu " > 
                     <div class="disJcBet line">
@@ -193,13 +242,13 @@
                     </div>
                     <div class="en enColor ">215's Frided Potato  </div>
                     <div class="ex enColor "> 
-                        각기 다른 모양과 두께의 감자튀김, 해쉬브라운, 치즈스틱을 <br> 
+                        각기 다른 모양의 감자튀김, 해쉬브라운, 치즈스틱을 <br> 
                         에어프라이어로 구워서 건강하게 드실 수 있습니다. <br>
                         칼로리 걱정은 DOWN. <br>
                     </div>
                 </div>
             </div>
-            <div class=" card " > 
+            <div class=" card border " > 
                 <div class="img pollack border " > </div>
                 <div class="menu " > 
                     <div class="disJcBet line">
@@ -209,12 +258,12 @@
                     <div class="en enColor  ">215's Dried Pollack  </div>
                     <div class="ex enColor "> 
                         빠~삭하고 포실포실한 먹태 구이입니다. <br> 
-                        입이 심심하나 배부르지 않는 것이 생각날 때 제격입니다. <br>
-                        맥주와 단짝.
+                        입이 심심할 때 제격입니다. <br>
+                        물론 맥주와 단짝이지요.
                     </div>
                 </div>
             </div>
-            <div class=" card " > 
+            <div class=" card  border" > 
                 <div class="img  fishBall border " > </div>
                 <div class="menu " >
                     <div class="disJcBet line">
@@ -229,7 +278,7 @@
                     </div>
                 </div>
             </div>
-            <div class=" card " > 
+            <div class=" card  border " > 
                 <div class="img stone border " > </div>
                 <div class="menu " > 
                     <div class="disJcBet line">
@@ -238,15 +287,13 @@
                     </div>
                     <div class="en enColor  "> 215's Dried Fish Jerky  </div>
                     <div class="ex enColor "> 
-                        뜨거운 맥반석 위에 다양한 반건조 건어물을 직접 구워 드실 수 있습니다. <br> 
+                        뜨거운 맥반석 위에 다양한 건어물을 직접 구워 드실 수 있습니다. <br> 
                         앗 뜨거우니 화상에 유의해 주세요. <br> 
                         특히 유아와 아동을 동반하신 분들은 더욱더 조심조심 해주세요.<br> 
                     </div>
                 </div>
             </div>
-           
         </div>
-
     </div>
 </body>
 <script>

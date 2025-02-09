@@ -39,6 +39,7 @@
 }
 .border2  .border { width: 4%; }
 .border3  .border { width: 25%; }
+.border4  .border { width: 17%; }
 
 .noBorder { padding: 0 1.563rem; }
 .noBorder .en::before { content: "" }
@@ -132,6 +133,7 @@
 .price260::before { content: '26.0';} 
 .price280::before { content: '28.0';} 
 .price250::before { content: '25.0';} 
+.price400::before { content: '40.0';} 
 .price500::before { content: '50.0';} 
 .price1000::before { content: '100.0';} 
 

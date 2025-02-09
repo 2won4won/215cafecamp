@@ -179,6 +179,21 @@
     background-repeat: no-repeat;
 }
 
+.pork {
+    background: url('../img/icon/pork.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.meat {
+    background: url('../img/icon/meat.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.rib {
+    background: url('../img/icon/ribs.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
 .pig_w {
     background: url('../img/icon/pig_w.png');
     background-size: 100% 100%;
