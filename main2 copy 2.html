@@ -28,54 +28,71 @@
     <link rel="stylesheet" href="css2/font.css">
     <link rel="stylesheet" href="css2/common.css">
     <link rel="stylesheet" href="css2/icon.css">
+    <link rel="stylesheet" href="css/effect.css">
     <script src="js/word.js"></script>
 
     <style>
         .bc { background-color: aqua ; }
         .bl { border: 1px solid black; }
 
-        .camp { width: 85%; height: 75%; border: 1px solid red; }
-        .camp > div:first-child { width: 32%; }
-        .camp > div:nth-child(2n) { width: 31%; }
-        .camp > div:last-child { width: 35%; }
         .title { background: url(img/background/winter2.jpg ); color: white;  }
+        
+        /* font color */
+        .enColor { color: #92001E ;}
+        .koColor { color: #2F5323 ;}
+        .exColor { color: #678D55 ;}
+        .priceColor { color: #DCDDD8 ;}
+        
+        /* eso latte_box */
+        .cup_body { background-color: #92001E ;}
+        .cup_handle { border : 2px solid  #2F5323; }
+        .saucer { background-color: #2F5323; }
+
+        .camp { width: 83%; height: 75%; }
+        .camp .bbq{ width: 32%; }
+        .camp .side { width: 30%; }
+        .camp .cafe { width: 36%; }
+        .photo { position: relative;}
+        .photo::before {
+            content: "";
+            opacity: 0.3;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0px;
+            bottom: 0px;
+            background-color: #000;
+        }
+        .photo .priceColor,
+        .photo .en,
+        .photo .ko {
+            color: white ; 
+            text-align: center;
+            position: relative;
+        }
         .underline { 
             width: 11rem;   /* 언더라인 길이가 움직이는 것 방지 */
             border-bottom: black 0.1rem solid; 
             padding-bottom: 0.6rem; margin-bottom: 1rem;
+            font-family: "EVECondom-Regular";
+            font-size: 1.6rem;
+            font-weight: 400;
+            font-style: normal;
+            opacity: 0.7;
         }
-        /* .card .menu .ex, 
-        .card .menu .ko { margin-left: 0;}
-        .card .menu .en::before { content: ""; margin-right: 0; }  */
-        
         
         .bbq .disJcBet { align-items: center;  }
         .bbq .left .ko { line-height: 1.5rem; }
         .bbq .right { width: 71%;}
-        /* .word { width: 100%; height: 2rem; color: aliceblue; position: relative;} */
-        /* .bbq .img { width: 100%; height: 31%; border-radius: 2rem;} */
         .bbq .bbq215 { 
             width: 100%; height: 31%; 
             border-radius: 2rem; 
             position: relative;
         }
         .bbq .bbq215::before {
-            content: "";
-            opacity: 0.3;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            right: 0px;
-            bottom: 0px;
-            background-color: #000;
             border-radius: 2rem;
         }
-        .bbq .bbq215 .word {
-            color: white;
-            text-align: center;
-            position: relative;
-        }
-        .swiper {  padding-left: 0.5rem;}
+        .swiper {  padding: 0 0.32rem;}
         .swiper .border { 
             padding: 0 ; border-radius: 4rem;
             height: 6rem; line-height: 5.5rem; 
@@ -144,11 +161,12 @@
         .side .line {  border-bottom: black 0.1rem solid; margin: 0.5rem 0 ; }
         .side .en::before { content: "";}
         .side .ex { line-height: 1.5rem;}
-
-        /* .cafe .disJcBet .border { width: 24%;} */
+        
         .cafe .disJcBet .border .ko { margin: 0.6rem;  }
         .cafe .noBorder { margin-bottom: 0.6rem;}
-        .cafe .border4 .border { height: auto;}
+        .cafe .border4 .border { height: auto; margin-bottom: 0 !important;}
+        .cafe .border3 .ko { padding-bottom: 0.8rem;}
+
 
     </style>
 </head>
@@ -156,7 +174,6 @@
     <div class=" posiCen disJcBet  camp  ">
         <div class="bbq  disJcCol "> 
             <div class=" title shadow"> 215's BBQ </div>
-            <!-- <div class="word " > </div> -->
             <div class=" card  " >  
                 <div class=" disJcBet a">
                     <div class="left">  
@@ -199,6 +216,14 @@
                             </div>
                             <div class=" price400"> </div>
                         </div>
+                        <div class=" border  disJcBet line" > 
+                            <div class="dis ">
+                                <div class="en "> Add for 4 people </div>
+                                <div class="ko "> 4인 추가 </div>
+                                <div class="ex "> 조리전 800g   </div>
+                            </div>
+                            <div class=" price800"> </div>
+                        </div>
                     </div>
                 </div>
                 <div class=" disJcBet mt6 ">
@@ -231,10 +256,147 @@
                     </div>
                 </div>    
             </div>
-            <div class=" bbq215 "> 
-                <div class=" tc posiCen" > </div>
+            <div class=" bbq215 photo"> 
+                <div class=" tc posiCen  ko" > 215CafeCamp는 국내산 생고기 "한돈"을 사용합니다. </div>
             </div>
         </div>
+   
+        <div class="cafe disJcCol  "> 
+            <div class=" title shadow"> 215's Cafe </div>
+            <div >
+                <div class="dis line noBorder">
+                    <div class="en enColor "> 215's Espresso </div>
+                    <div class="ko koColor ">  에스프레소  </div>
+                </div>
+                <div class=" eso border line disJcBet " > 
+                    <div class="dis">
+                        <div class="en enColor"> Americano </div>
+                        <div class="ko koColor"> 아메리카노 </div>
+                    </div>
+                    <div class="priceColor  price65 "></div>
+                </div>
+                <div class="disJcBet border3">
+                    <div class="  border " > 
+                        <div class="disJcBet line" >
+                            <div class="en enColor"> Cafe Latte </div>
+                            <div class="priceColor  price65 "></div>
+                        </div>
+                        <div class="ko koColor"> 카페라떼 </div>
+                    </div>
+                    <div class="  border " > 
+                        <div class="disJcBet line" >
+                            <div class="en enColor"> Cappuccino </div>
+                            <div class="priceColor  price65 "></div>
+                        </div>
+                        <div class="ko koColor"> 카푸치노 </div>
+                        <!-- <div class="latte ">
+                            <div class="steam" id="steam1"> </div>
+                            <div class="steam" id="steam2"> </div>
+                            <div class="steam" id="steam3"> </div>
+                            <div class="steam" id="steam4"> </div>
+                            <div class="cup">
+                                <div class="cup_body">
+                                    <div class="cup_shade"></div>
+                                </div>
+                                <div class="cup_handle"></div>
+                            </div>
+                        </div>
+                        <div class="saucer"></div> -->
+                    </div>
+                    <div class="  border posNa " >
+                        <div class="disJcBet line" >
+                            <div class="en enColor"> Vanilla Latte </div>
+                            <div class="priceColor  price75 "></div>
+                        </div> 
+                        <div class="ko koColor "> 바닐라 라떼 </div>
+                        <div class="vanilla " ></div>
+                    </div>
+                </div>
+            </div>
+            <div class=" fruit ">
+                <div class="dis line noBorder">
+                    <div class="en enColor "> Hand-Made Syrup with Fresh Fruit</div>
+                    <div class="ko koColor ">  매장에서 생과일로 직접 만드는 수제청 Tea & Ade </div>
+                </div>
+                <div class=" disJcBet border3">
+                    
+                    <div class="  border " > 
+                        <div class=" disJcBet line" >
+                            <div class="en enColor"> Lemon </div>
+                            <div class="priceColor  price75 "></div>
+                        </div>
+                        <div class="ko koColor"> 썬키스트 레몬 </div>
+                        <div class="ex exColor"> 골다공증 예방, 면역력 강화 </div>
+                    </div>
+                    <div class="  border " > 
+                        <div class=" disJcBet line" >
+                            <div class="en enColor"> Omija </div>
+                            <div class="priceColor  price80 "></div>
+                        </div>
+                        <div class="ko koColor"> 문경 오미자 </div>
+                        <div class="ex exColor"> 피부 미용, 간 해독 작용 </div>
+                    </div>
+                    <div class="  border " > 
+                        <div class=" disJcBet line" >
+                            <div class="en enColor"> Yuja </div>
+                            <div class="priceColor  price75 "></div>
+                        </div>
+                        <div class="ko koColor"> 고흥 유자 </div>
+                        <div class="ex exColor"> 인지기능 향상, 심장병 예방 </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="flower ">
+                <div class="dis line noBorder">
+                    <div class="en enColor "> flower </div>
+                    <div class="ko koColor ">  </div>
+                </div>
+                <div class="line disJcBet border">
+                    <div class=" dis ">
+                        <div class="en enColor"> SSangWhaTang </div>
+                        <div class="ko koColor "> 대추쌍화탕 </div>
+                        <div class="ex exColor word "> </div>
+                    </div>    
+                    <div class="price80 priceColor"></div>
+                </div>
+                <div class="disJcBet border4">
+                    <div class="line  border tc">
+                        <!-- <div class=" dis"> -->
+                            <div class="en enColor"> CaCaO Tea</div>
+                            <div class="ko koColor "> 카카오 차 </div>
+                            <div class="ex exColor "> 인지기능 향상, <br> 심장병 예방 </div>
+                        <!-- </div>     -->
+                        <div class="price80 priceColor"></div>
+                    </div>
+                    <div class="line  border tc">
+                        <!-- <div class=" dis"> -->
+                            <div class="en enColor"> Herb Tea</div>
+                            <div class="ko koColor "> 아홉번 덖은 차 </div>
+                            <div class="ex exColor "> 기력 회복,<br> 소화불량 해소 </div>
+                        <!-- </div>     -->
+                        <div class="price80 priceColor"></div>
+                    </div>
+                    <div class="line  border tc">
+                        <!-- <div class=" dis"> -->
+                            <div class="en enColor"> Carmo</div>
+                            <div class="ko koColor "> 페파민트 </div>
+                            <div class="ex exColor "> 식욕 억제,<br> 위장과 대장 진전 </div>
+                        <!-- </div>     -->
+                        <div class="price80 priceColor"></div>
+                    </div>
+                    <div class="line  border tc">
+                        <!-- <div class=" dis"> -->
+                            <div class="en enColor"> Peppermint</div>
+                            <div class="ko koColor  "> 카모 </div>
+                            <div class="ex exColor "> 심신 진정,<br> 통증 완화 </div>
+                        <!-- </div>     -->
+                        <div class="price80 priceColor"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="side disJcCol  "> 
             <div class=" title shadow"> 215's Side Menu </div>
             <div class="  disJcBet  " > 
@@ -247,7 +409,7 @@
                         </div>
                         <div class="en enColor  "> 215's Frided Potato  </div>
                         <div class="ex enColor  mt6"> 
-                            각기 다른 모양의 감자튀김, 해쉬브라운, <br> 
+                             <br> 
                             치즈스틱을 에어프라이어로 구워서 <br>
                             건강하게 드실 수 있습니다. 
                         </div>
@@ -301,112 +463,6 @@
                 </div>
             </div>
         </div>
-        <div class="cafe bl  "> 
-            <div class=" title shadow"> 215's Cafe </div>
-            <div class="dis line noBorder">
-                <div class="en enColor "> 215's Espresso </div>
-                <div class="ko koColor ">  에스프레소  </div>
-            </div>
-            <div class=" eso border line disJcBet " > 
-                <div class="dis">
-                    <div class="en enColor"> Americano </div>
-                    <div class="ko koColor"> 아메리카노 </div>
-                </div>
-                <div class="priceColor  price65 "></div>
-            </div>
-            <div class="disJcBet border3">
-                <div class=" latte border " > 
-                    <div class="en enColor"> Cafe Latte </div>
-                    <div class="ko koColor"> 카페라떼 </div>
-                    <div class="priceColor  price65 "></div>
-                </div>
-                <div class=" latte border " > 
-                    <div class="en enColor"> Cafe Latte </div>
-                    <div class="ko koColor"> 카페라떼 </div>
-                    <div class="priceColor  price65 "></div>
-                </div>
-                <div class=" latte border " > 
-                    <div class="en enColor"> Cafe Latte </div>
-                    <div class="ko koColor"> 카페라떼 </div>
-                    <div class="priceColor  price65 "></div>
-                </div>
-            </div>
-            <div class=" fruit ">
-                <div class="dis line noBorder">
-                    <div class="en enColor "> Hand-Made Syrup with Fresh Fruit</div>
-                    <div class="ko koColor ">  매장에서 생과일로 직접 만드는 수제청 </div>
-                </div>
-                <div class=" disJcBet border3">
-                    
-                    <div class="  border " > 
-                        <div class="en enColor"> Lemon </div>
-                        <div class="ko koColor"> 레몬 </div>
-                        <div class="ex exColor"> 골다공증 예방, 면역력 강화 </div>
-                        <div class="priceColor  price75 "></div>
-                    </div>
-                    <div class="  border " > 
-                        <div class="en enColor"> Lemon </div>
-                        <div class="ko koColor"> 레몬 </div>
-                        <div class="ex exColor"> 골다공증 예방, 면역력 강화 </div>
-                        <div class="priceColor  price75 "></div>
-                    </div>
-                    <div class="  border " > 
-                        <div class="en enColor"> Lemon </div>
-                        <div class="ko koColor"> 레몬 </div>
-                        <div class="ex exColor"> 골다공증 예방, 면역력 강화 </div>
-                        <div class="priceColor  price75 "></div>
-                    </div>
-                </div>
-            </div>
-            <div class="flower ">
-                <div class="dis line noBorder">
-                    <div class="en enColor "> flwer</div>
-                    <div class="ko koColor "> fff</div>
-                </div>
-                <div class="line disJcBet border">
-                    <div class=" dis">
-                        <div class="en enColor"> SSangWhaTang </div>
-                        <div class="ko koColor "> 대추쌍화탕 </div>
-                        <div class="ex exColor word "> </div>
-                    </div>    
-                    <div class="price80 priceColor"></div>
-                </div>
-                <div class="disJcBet border4">
-                    <div class="line  border">
-                        <!-- <div class=" dis"> -->
-                            <div class="en enColor"> CaCaO Tea</div>
-                            <div class="ko koColor "> 카카오 차 </div>
-                            <div class="ex exColor "> 인지기능 향상, 심장병 예방 </div>
-                        <!-- </div>     -->
-                        <div class="price80 priceColor"></div>
-                    </div>
-                    <div class="line  border">
-                        <!-- <div class=" dis"> -->
-                            <div class="en enColor"> Herb Tea</div>
-                            <div class="ko koColor "> 아홉번 덖은 차 </div>
-                            <div class="ex exColor "> 기력 회복, 소화불량 해소 </div>
-                        <!-- </div>     -->
-                        <div class="price80 priceColor"></div>
-                    </div>
-                    <div class="line  border">
-                        <!-- <div class=" dis"> -->
-                            <div class="en enColor"> Peppermint</div>
-                            <div class="ko koColor "> 페파민트 </div>
-                            <div class="ex exColor "> 식욕 억제, 위장과 대장 진전 </div>
-                        <!-- </div>     -->
-                        <div class="price80 priceColor"></div>
-                    </div>
-                    <div class="line  border">
-                        <!-- <div class=" dis"> -->
-                            <div class="en enColor"> Peppermint</div>
-                            <div class="ko koColor "> 페파민트 </div>
-                            <div class="ex exColor "> 식욕 억제, 위장과 대장 진전 </div>
-                        <!-- </div>     -->
-                        <div class="price80 priceColor"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </body>     
 <script>
@@ -424,6 +480,10 @@
         },
         observer : true,
         observeParents : true
+    });
+
+    $(document).ready(function(){
+        $("#we").load("cate/we.html");
     });
 </script>
 </html>

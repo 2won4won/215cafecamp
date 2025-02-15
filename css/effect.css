@@ -124,13 +124,13 @@
   animation-delay: calc(.3s * var(--i));
 }
 
- /* @keyframes flip {
+  @keyframes flip {
   0%,80% {
     /* color: #B93716; */
     color: #537496;
     transform: rotateY(360deg);
   }
-}  */
+}  
 /* mug & steaming */
 .steamimg {
   position: absolute;
@@ -327,4 +327,52 @@
   /* ? */
   .on {
     background-image: linear-gradient(to right top, #ddb76a, #ddb76a, #ddb76a, #ddb76a, #ddb76a, #ddb76a, #ddb76a, #ddb76a, #ddb76a, #efdcf2, #f9d8e8, #ffd6da) !important;
+  }
+
+
+  /* 글자 크기.. */
+  /* <div class="choice " >
+      <span class="work"> Your </span>  Choice ?
+  </div> */
+  .choice {
+    display: flex;
+    font-variation-settings: "wght"275, "wdth"150;
+    text-align: center;
+    animation: swapthings 3s infinite both cubic-bezier(0.17, 0.04, 0.04, 0.99);
+    font-size: 1.5rem;
+    font-family: 'Inconsolata';
+    margin-top: 1.2rem; 
+    color: chocolate;
+  }
+  .work { 
+      color: green;
+      animation: swapthings2 3s infinite both cubic-bezier(0.17, 0.04, 0.04, 0.99);
+  }
+  @keyframes swapthings {
+      0% {
+          font-variation-settings: "wght"275, "wdth"50;
+      }
+
+      50% {
+          font-variation-settings: "wght"900, "wdth"150;
+      }
+
+      100% {
+          font-variation-settings: "wght"275, "wdth"50;
+      }
+  }
+
+  @keyframes swapthings2 {
+      0% {
+          font-variation-settings: "wght"900, "wdth"200; 
+      }
+
+
+      50% {
+          font-variation-settings: "wght"275, "wdth"50;
+      }
+
+      100% {
+          font-variation-settings: "wght"900, "wdth"200; 
+      }
   }

@@ -38,7 +38,7 @@
     
 }
 .border2  .border { width: 4%; }
-.border3  .border { width: 25%; }
+.border3  .border { width: 24%; }
 .border4  .border { width: 17%; }
 
 .noBorder { padding: 0 1.563rem; }
@@ -135,6 +135,7 @@
 .price250::before { content: '25.0';} 
 .price400::before { content: '40.0';} 
 .price500::before { content: '50.0';} 
+.price800::before { content: '80.0';} 
 .price1000::before { content: '100.0';} 
 
 /* margin & padding */
