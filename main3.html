@@ -38,30 +38,63 @@
          /* body ,
         .border { background: #333; color: #fff;} */
 
+        .title { background: url(img/background/spring1.jpg); color: white;  }
+        .ko { color: #3A968C;}
+        .ex { color: #E9ABC6;}
+        .en { color: #D88BA4;}
+        .priceColor { color: #81C0BA;}
+        .stepTi { color: #F9C8CC;}
+        .stepEx { color:#4F6E63; }
+        .choice { color:  #B22515;}
+        /* .choice { color:  #97CFD8;} */
+        .work { color: #46A994;}
+        
         /* 전체적 layout */
-        .camp { border: 2px solid mediumorchid; width: 81%; height: 75%; }
+        .camp {  width: 84%; height: 75%; }
         .bbq { width: 36%;}
-        .side { width: 29%;}
+        .side { width: 27%;}
         .cafe { width: 33%;}
+        .camp > div > div:last-child .border { margin-bottom: 0;}
+        .camp .tc .ko {  margin: 0.4rem 0;}
 
         /* bbq  */
-        .bbq .left { width: 23% ; height: auto ; align-self: center; }
+        .bbq .left { width: 23% ; height: auto ; align-self: center; padding-bottom: 0.3rem; }
         .bbq .right { width: 75%; height: auto ; }
-        .bbq .step4 .right { height: 14vh;  }
-        .bbq .step4 .right .img { width: 100%; height: 100%; }
+        .bbq .stepTi { 
+            font-family: "paytone One";
+            text-transform: uppercase;
+            display: block;
+            font-size: 35px;
+            opacity: 0.3;
+            letter-spacing: -3px;
+        }
+        .bbq .stepEx { margin-top: 0.3rem;}
 
-        /* active .위치확인요 */
+        /* bbq >active .위치확인요 */
         .border.active { background-color: blue;}
 
-        /* .swiper { } */
+        /* bbq >  .swiper { } */
         .bbq .swiper .border { 
-            padding: 0 ; border-radius: 3rem;
-            height: 6rem; line-height: 5.5rem; 
+            padding: 0 ; border-radius: 3rem;  height: 6rem; 
+            padding-top: 2rem; box-sizing: border-box; line-height: 1.5rem;
         }
         .swiper .icon {
             width: 2.4vw;  height: 5.8vh;
-            position: absolute;  top: 2vh;  right: 1vw;
+            position: absolute;  top: 1.7vh;  left: 3.1vw; opacity: 0.9;
         }
+        .swiper .rib { left: 3.7vw;}
+        .swiper .ko { margin-left: 2.6rem; }
+
+        /*  bbq > image */
+        .bbq .step3 .right { height: 15vh;  }
+        .bbq .step3 .right .img { width: 100%; height: 100%; }
+        /* .bbq .step4 .right .bbq215::before { 
+            content: "";
+            opacity: 0.5;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #000;
+         } */
+        /* .bbq .step4 .img .bandy { color: #fff; position: relative;} */
 
         /* side  */
         .side .img {width: 100%; height: 100%;}
@@ -121,25 +154,25 @@
         }
         .bandy {  
             text-align: center; color: #0000;  position: relative; 
-            font-size: 1vw; font-family: "Montserrat", sans-serif;
+            font-size: 1.1vw;  font-family: 'IM_Hyemin-Bold';
         }
         .bandy  span:before,
         .bandy  span:after {
             position: absolute;
             inset: 0;  content: attr(data-val); color: #F9F6EF;
             text-shadow: .1em .01em .1em color-mix(in lab, currentcolor, #0005 80%);
-            animation: text-mv linear 15s infinite alternate;
+            animation: text-mv linear 15s infinite alternate; width: 38rem;
         }
-        .a:before {background-color: darksalmon;
-            clip-path: inset(-100% 80% -100% -100%);
+        .a:before { background-color: #3A968C;
+            clip-path: inset(-10% 80% -50% -10%);
             transform:
-                translatey(.65lh) /* 위아래로..크면 내려감 */
+                translatey(.85lh) /* 위아래로..크면 내려감 */
                 translatex(-1px)
                 rotatey(-45deg)
                 rotatez(4deg)
                 skew(3deg, 3deg);
         }
-        .a:after {background-color: deeppink;
+        .a:after { background-color: #B22515;
             mask-image:
                 linear-gradient(
                     90deg,
@@ -148,13 +181,13 @@
                     #0000 0
                 );
                 transform:
-                    translatey(-.45lh)
+                    translatey(-.35lh)
                     rotatey(45deg)
                     rotatez(-1deg)
                     translatex(-1px)
                     skew(-2deg, -5deg);
         }
-        .b:before {background-color: blueviolet;
+        .b:before { background-color: #3A968C;
             mask-image:
                 linear-gradient(
                     90deg,
@@ -162,34 +195,34 @@
                     #000 40% 60%,
                     #0000 0
                 );
-                transform:
-                translatey(-.08lh)
+            transform:
+                translatey(-.01lh)
                 translatex(-1px)
                 rotatey(-45deg)
                 rotatez(4deg)
                 skew(3deg, 3deg);
         }
-        .b:after { background-color: chartreuse;
+        .b:after { background-color: #B22515;
             clip-path: 
-            inset(-100% -100% -100% 60%);
+                 inset(-100% -100% -100% 60%);
             transform:
-                translatey(.31lh)
+                translatey(.41lh)
                 rotatey(45deg)
                 rotatez(-1deg)
                 translatex(-2.5px)
-                skew(-2deg, -5deg);
+                skew(-3deg, -5deg);
         }
     </style>
 </head>
 <body>
     <div class=" posiCen disJcBet  camp ">
-        <div class=" bbq disJcCol  bl"> 
+        <div class=" bbq disJcCol "> 
             <div class=" title shadow " > 215CafeCamp's BBQ </div>
             <div class=" step1 disJcBet "> 
                 <div class="left ">
                     <div class="stepTi" > STEP 1 </div>
                     <div class="stepEx "> 
-                        겉은 바삭하고 <br> 속은 촉촉한  <br> 육즙이 배어있는 <br> BBQ입니다.  
+                        1인 1세트  <br> 96개월 ~ 1,200개월
                     </div>
                 </div>
                 <div class="right ">
@@ -241,20 +274,35 @@
                                 <div class=" meat icon">  </div> 
                             </div>
                             <div class="swiper-slide  posNa  border">  
-                                <div class=" ko  "> 등갈비  </div> 
-                                <div class=" won "> +10,000원  </div>
-                                <div class=" rib icon icon2">  </div> 
+                                <div class=" ko  "> 등갈비 <br> +10.0 </div> 
+                                <div class=" rib icon ">  </div> 
                             </div>
                             <!-- <div class="swiper-pagination"> </div> -->
                         </div>
                     </div>    
                 </div>
             </div>
-            <div class="step3  disJcBet ">
-                <div class="left ">
+            <div class=" step3 disJcBet">
+                <div class="left "> 
                     <div class="stepTi" > STEP 3 </div>
                     <div class="stepEx "> 
-                        주문 후 <br> 조리시간은 <br> 대략 30분 <br> 소요됩니다.  
+                        겉은 바삭하고 <br> 속은 촉촉한  <br> 육즙이 배어있는 <br> BBQ입니다. 
+                    </div>
+                </div>
+                <div class=" right border " >
+                    <div class=" posNa img bbq215 disCen">
+                        <div class="bandy ">"215CafeCamp"는 국내산 생고기를 사용합니다.
+                            <span class="a " data-val='"215CafeCamp"는 국내산 생고기를 사용합니다.' aria-hidden="true"></span>
+                            <span class="b" data-val='"215CafeCamp"는 국내산 생고기를 사용합니다.' aria-hidden="true"></span>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="step4  disJcBet ">
+                <div class="left ">
+                    <div class="stepTi" > STEP 4 </div>
+                    <div class="stepEx "> 
+                        조리시간은 <br> 대략 30분 소요됩니다.  
                     </div>
                 </div>
                 <div class=" border right disJcBet tc" > 
@@ -275,21 +323,7 @@
                     </div>
                 </div>
             </div>
-            <div class=" step4 disJcBet">
-                <div class="left "> 
-                    <div class="stepTi" > STEP 4 </div>
-                    <div class="stepEx "> 
-                    </div>
-                </div>
-                <div class=" right border bl" >
-                    <div class=" posNa img bbq215 disCen">
-                        <div class="bandy">"215CafeCamp"는 국내산 생고기를 사용합니다.
-                            <span class="a" data-val='"215CafeCamp"는 국내산 생고기를 사용합니다. ' aria-hidden="true"></span>
-                            <span class="b" data-val='"215CafeCamp"는 국내산 생고기를 사용합니다. ' aria-hidden="true"></span>
-                        </div>
-                    </div>
-                </div> 
-            </div>
+            
         </div>
         <div class="side disJcCol bl">
             <div class=" title shadow " > 215CafeCamp's Side Menu </div>
@@ -358,20 +392,16 @@
                         </div>
                         <div class="priceColor price65"></div>
                     </div>
-                    <div class="disJcBet">
-                        <div class="border "> 
-                            <div class="disJcBet line">
-                                <div class="en" > Cafe Latte </div>
-                                <div class="priceColor price70"></div>
-                            </div>
+                    <div class="disJcBet border tc">
+                        <div class="  "> 
+                            <div class="en" > Cafe Latte </div>
                             <div class="ko" > 카페라떼 </div>
+                            <div class="priceColor price70"></div>
                         </div>
-                        <div class="border "> 
-                            <div class="disJcBet line">
-                                <div class="en" > Cappuccino </div>
-                                <div class="priceColor price70"></div>
-                            </div>
+                        <div class=" "> 
+                             <div class="en" > Cappuccino </div>
                             <div class="ko" > 카푸치노 </div>
+                            <div class="priceColor price70"></div>
                         </div>
                     </div>
                     <div class="border line disJcBet"> 
@@ -455,7 +485,7 @@
                         </div>
                     </div>    
                 </div>
-                <div class="border line disJcBet"> 
+                <div class="border line disJcBet mt6"> 
                     <div class="dis" >
                         <div class="en" > SSangWhaTang </div>
                         <div class="ko" > 대추쌍화탕 </div>

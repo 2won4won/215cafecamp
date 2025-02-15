@@ -341,11 +341,9 @@
     animation: swapthings 3s infinite both cubic-bezier(0.17, 0.04, 0.04, 0.99);
     font-size: 1.5rem;
     font-family: 'Inconsolata';
-    margin-top: 1.2rem; 
-    color: chocolate;
+    /* margin-top: 1rem;  */
   }
   .work { 
-      color: green;
       animation: swapthings2 3s infinite both cubic-bezier(0.17, 0.04, 0.04, 0.99);
   }
   @keyframes swapthings {
