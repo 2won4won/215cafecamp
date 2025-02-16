@@ -282,6 +282,7 @@
     transform: translate3d(0, -100%, 0);
   }
 }
+
 /* moving focus letter */
 .moving { position: relative ;}
 .moving .text-wrapper {
