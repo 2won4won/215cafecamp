@@ -35,7 +35,7 @@
         .bc { background-color: cyan;}
         .bl { border: 2px solid seagreen;}
         /* body { background-image: linear-gradient(45deg, rgba(209, 0, 42, 0.6) 0%, #0E5DC4 100%);} */
-        /* boby {} */
+
         .title { background: url(img/background/spring1.jpg); color: white;  }
         .stepTi,
         .ko { color: #3A968C;}
@@ -49,52 +49,13 @@
         .work { color: #46A994;}
         
         /* 전체적 layout */
-        .camp {  width: 83%; height: 77%; }
-        .bbq { width: 33%;}
-        .side { width: 30%;}
+        .camp {  width: 82%; height: 77%; }
+        .bbq { width: 31%;}
+        .side { width: 29%;}
         .cafe { width: 33%;}
         .camp .tc .ko {  margin: 0.4rem 0;}
 
         /* bbq  */
-
-        .camp .bbq .menu { 
-            width: 48%; height: 100%; box-sizing: border-box;
-            background: #333; color: white;
-        }
-        .camp .bbq .content .ko { color: white;}
-        .camp .bbq .menu .img{ width: 100%; height: 10rem; margin-top: 1rem; }
-        /* .camp2 .bbq .menu .content { padding-top: 1.2rem;} */
-        .camp .bbq .menu .content .menuLine{   
-            border-bottom: white 0.1rem solid; 
-            padding-bottom: 0.6rem; padding-top: 1.2rem; margin-bottom: 1rem;
-        }
-        .camp .bbq .menu .content .ex {  line-height: 1.3rem;}
-        .camp .bbq > div:last-child .border { margin-bottom: 0; }
-        
-        .camp .bbq .menu.active { 
-            background: #333; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8); 
-            color: white; border-radius: 0.5rem; }
-        .camp .bbq .menu.active .content .menuLine { border-bottom: white 0.1rem solid; }  
-        .camp .bbq .menu .imgBelly {  
-            background: url('./img/photo/imgBelly.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         } 
-        .camp .bbq .menu .imgNeck {  
-            background: url('./img/photo/imgNeck.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         } 
-        .camp .bbq .menu .imgLib {  
-            background: url('./img/photo/imgLib.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         } 
-        .camp .bbq .menu .imgBeef {  
-            background: url('./img/photo/imgBeef.png');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         }
         .cafe .sm,
         .bbq .left { width: 23% ; height: auto ; align-self: center; padding-bottom: 0.3rem; }
         .bbq .right { width: 75%; height: auto ; }
@@ -109,7 +70,7 @@
         .bbq .stepEx { margin-top: 0.3rem;}
         .step4 .left { margin-bottom: 1.25rem;}
 
-        /* bbq >aactive .위치확인요 */
+        /* bbq >active .위치확인요 */
         .border.active { background-color: blue;}
 
         /* bbq >  .swiper { } */
@@ -210,7 +171,7 @@
          } 
          .cardBox .icon {
             width: 2.4vw;  height: 5.1vh;
-            position: absolute;  top: 5.5vh;  right: 4.3vw; 
+            position: absolute;  top: 5.5vh;  right: 3.3vw; 
         }
          /* .cardBox .icon2 {
             width: 2.7vw;  height: 6.2vh;
@@ -359,50 +320,106 @@
     <div class=" posiCen disJcBet  camp ">
         <div class=" bbq disJcCol "> 
             <div class=" title shadow " > 215CafeCamp's BBQ </div>
-            <div class="disJcBet ">
-                <div class="menu border ">
-                    <div class="img imgBelly "></div>
-                    <div class="content ">
-                        <div class="menuLine disJcBet"> 
-                            <div class="ko" > 삼겹살 </div>
-                            <div class="price500" > </div>
+            <div class=" cardBox ">
+                <div class=" ">
+                    <div class=" disJcBet">
+                        <div class="card ">
+                            <div class="face face1 "> 
+                                <div class="content img imgBelly posNa " >
+                                    <div class="box">
+                                        <div class="ko "> 생삼겹살 </div>
+                                        <div class=" price500 priceColor tc">  </div>
+                                    </div>
+                                    <div class="pork_w icon "></div>
+                                </div>
+                            </div>
+                            <div class="face face2 ">
+                                <div class="content "> 
+                                    <div class="disJcBet cardLine " >
+                                        <div class="ko "> 생삼겹살 </div>
+                                        <div class="price500 priceColor"></div>
+                                    </div>
+                                    <div class="ex tr mt6">
+                                        생삼겹살<br>  국내산 생고기 <br> 
+                                        2인 400gram
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="ex tr "> 삼겹살 <br> 국내산 생고기  <br> 2인 기준 400gram </div>
+                        <div class="card ">
+                            <div class="face face1 "> 
+                                <div class="content img imgNeck posNa" >
+                                    <div class="box">
+                                        <div class="ko "> 목살 </div>
+                                        <div class="price500 priceColor tc"></div>
+                                    </div>    
+                                    <div class="nn_w icon "></div>
+                                </div>
+                            </div>
+                            <div class="face face2 ">
+                                <div class="content "> 
+                                    <div class="disJcBet cardLine" >
+                                        <div class="ko "> 목살 </div>
+                                        <div class="price500 priceColor tc"></div>
+                                    </div>
+                                    <div class="ex tr mt6">
+                                        생목살<br>  국내산 생고기 <br> 
+                                        2인 400gram
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" disJcBet">
+                        <div class="card ">
+                            <div class="face face1 "> 
+                                <div class="content img imgLib posNa" >
+                                    <div class="box">
+                                        <div class="ko "> 등갈비 </div>
+                                        <div class=" price600  priceColor tc">  </div>
+                                    </div>    
+                                </div>
+                                <div class="ribs_w icon "></div>
+                            </div>
+                            <div class="face face2 ">
+                                <div class="content "> 
+                                    <div class="disJcBet cardLine" >
+                                        <div class="ko "> 등갈비 </div>
+                                        <div class="price600 priceColor"></div>
+                                    </div>
+                                    <div class="ex tr mt6">
+                                        등갈비 <br>  국내산 생고기 <br> 
+                                        2인 600gram
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <div class="face face1 "> 
+                                <div class="content img imgBeef" >
+                                    <div class="box" >
+                                        <div class="ko "> 소갈비살  </div>
+                                        <div class="price700 priceColor tc"></div>
+                                    </div>
+                                    <!-- <div class="pork_w icon "></div> -->
+                                </div>
+                            </div>
+                            <div class="face face2 ">
+                                <div class="content "> 
+                                    <div class="disJcBet cardLine" >
+                                        <div class="ko "> 소갈비살 </div>
+                                        <div class="price700 priceColor"></div>
+                                    </div>
+                                    <div class="ex tr mt6">
+                                        생소갈비살 <br>  미국산 생고기 <br> 
+                                        2인 500gram
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="menu border">
-                    <div class="img img imgNeck "></div>
-                    <div class="content ">
-                        <div class="menuLine disJcBet"> 
-                            <div class="ko" >  목살 </div>
-                            <div class="price500" > </div>
-                        </div>
-                        <div class="ex tr "> 목살 <br>  국내산 생고기 <br> 2인 기준 400gram </div>
-                    </div>
-                </div>
-            </div>
-            <div class="disJcBet ">
-                <div class="menu border">
-                    <div class="img img imgLib "></div>
-                    <div class="content ">
-                        <div class="menuLine disJcBet"> 
-                            <div class="ko" >  등갈비 </div>
-                            <div class="price600" > </div>
-                        </div>
-                        <div class="ex tr "> 등갈비 <br> 국내산 생고기 <br> 2인 기준 600gram </div>
-                    </div>
-                </div>
-                <div class="menu border">
-                    <div class="img img imgBeef "></div>
-                    <div class="content ">
-                        <div class="menuLine disJcBet"> 
-                            <div class="ko" > 소갈비살 </div>
-                            <div class="price700" > </div>
-                        </div>
-                        <div class="ex tr ">  소갈비살 <br> 미국산 생고기 <br> 2인 기준 500gram </div>
-                    </div>
-                </div>
-            </div>
+            </div>            
         </div>
         <div class="side disJcCol">
             <div class=" title shadow " > 215CafeCamp's Side Menu </div>

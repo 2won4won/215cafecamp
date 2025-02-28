@@ -35,7 +35,7 @@
         .bc { background-color: cyan;}
         .bl { border: 2px solid seagreen;}
         /* body { background-image: linear-gradient(45deg, rgba(209, 0, 42, 0.6) 0%, #0E5DC4 100%);} */
-        /* boby {} */
+
         .title { background: url(img/background/spring1.jpg); color: white;  }
         .stepTi,
         .ko { color: #3A968C;}
@@ -50,51 +50,12 @@
         
         /* 전체적 layout */
         .camp {  width: 83%; height: 77%; }
-        .bbq { width: 33%;}
-        .side { width: 30%;}
-        .cafe { width: 33%;}
+        .bbq { width: 36%;}
+        .side { width: 28%;}
+        .cafe { width: 32%;}
         .camp .tc .ko {  margin: 0.4rem 0;}
 
         /* bbq  */
-
-        .camp .bbq .menu { 
-            width: 48%; height: 100%; box-sizing: border-box;
-            background: #333; color: white;
-        }
-        .camp .bbq .content .ko { color: white;}
-        .camp .bbq .menu .img{ width: 100%; height: 10rem; margin-top: 1rem; }
-        /* .camp2 .bbq .menu .content { padding-top: 1.2rem;} */
-        .camp .bbq .menu .content .menuLine{   
-            border-bottom: white 0.1rem solid; 
-            padding-bottom: 0.6rem; padding-top: 1.2rem; margin-bottom: 1rem;
-        }
-        .camp .bbq .menu .content .ex {  line-height: 1.3rem;}
-        .camp .bbq > div:last-child .border { margin-bottom: 0; }
-        
-        .camp .bbq .menu.active { 
-            background: #333; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8); 
-            color: white; border-radius: 0.5rem; }
-        .camp .bbq .menu.active .content .menuLine { border-bottom: white 0.1rem solid; }  
-        .camp .bbq .menu .imgBelly {  
-            background: url('./img/photo/imgBelly.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         } 
-        .camp .bbq .menu .imgNeck {  
-            background: url('./img/photo/imgNeck.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         } 
-        .camp .bbq .menu .imgLib {  
-            background: url('./img/photo/imgLib.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         } 
-        .camp .bbq .menu .imgBeef {  
-            background: url('./img/photo/imgBeef.png');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         }
         .cafe .sm,
         .bbq .left { width: 23% ; height: auto ; align-self: center; padding-bottom: 0.3rem; }
         .bbq .right { width: 75%; height: auto ; }
@@ -109,7 +70,7 @@
         .bbq .stepEx { margin-top: 0.3rem;}
         .step4 .left { margin-bottom: 1.25rem;}
 
-        /* bbq >aactive .위치확인요 */
+        /* bbq >active .위치확인요 */
         .border.active { background-color: blue;}
 
         /* bbq >  .swiper { } */
@@ -118,8 +79,8 @@
             padding-top: 2rem; box-sizing: border-box; line-height: 1.5rem;
         }
         .swiper .icon {
-            width: 3.4vw;  height: 6.8vh;
-            position: absolute;  top: 1.7vh;  right: 4.1vw; opacity: 0.9;
+            width: 2.4vw;  height: 5.8vh;
+            position: absolute;  top: 1.7vh;  left: 3.1vw; opacity: 0.9;
         }
         .swiper .rib { left: 3.7vw;}
         .swiper .ko { margin-left: 2.6rem; }
@@ -151,21 +112,14 @@
         .cardBox .card.active .face.face1 { transform: translateY(0); }
         .cardBox .card .face.face1 .content { opacity: 0.5;  transition: 0.5s; }
         .cardBox .card .face.face1 .content .ko {
-            padding: 0;  color: #fff;   text-align: center; 
-            margin-bottom: 1rem; margin-left: 0rem; 
+            padding: 0;  color: #fff;   text-align: center; line-height: 11rem;
         }
         .cardBox .card.active .face.face1 .content { opacity: 1; }
 
         /* 카드 이미지가 보일 때 ko 안보임 */
-        .cardBox .card.active .face.face1 .img  .icon, 
-        .cardBox .card.active .face.face1 .img  .ko, 
-        .cardBox .card.active .face.face1 .img  .priceColor {    display: none;  }
+        .cardBox .card.active .face.face1 .img  .ko {    display: none;  }
 
         /* imgae */
-        .cardBox  .icon {
-            width: 2.4vw;  height: 5.8vh;
-            position: absolute;  top: 5.7vh;  right: 3.1vw; opacity: 0.9;
-        }
         .cardBox .card .img {width: 100%; height: 100%;}
         .cardBox .card.active .face.face1  { opacity: 1;  }
         .cardBox .card.active .face.face1 .imgPotato {  
@@ -188,45 +142,6 @@
             background-size: 100% 100%;
             background-repeat: no-repeat;
          }
-         .cardBox .card.active .face.face1 .imgBelly {  
-            background: url('./img/photo/imgBelly.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         } 
-         .cardBox .card.active .face.face1 .imgNeck {  
-            background: url('./img/photo/imgNeck.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         } 
-         .cardBox .card.active .face.face1 .imgLib {  
-            background: url('./img/photo/imgLib.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         } 
-         .cardBox .card.active .face.face1 .imgBeef {  
-            background: url('./img/photo/imgBeef.png');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         } 
-         .cardBox .icon {
-            width: 2.4vw;  height: 5.1vh;
-            position: absolute;  top: 5.5vh;  right: 4.3vw; 
-        }
-         /* .cardBox .icon2 {
-            width: 2.7vw;  height: 6.2vh;
-            position: absolute;  top: 5.5vh;  right: 2.5vw; 
-        } */
-        .cardBox .box { margin: 4rem; margin-left: -1rem;}
-        .cardBox.pork_w {
-            background: url('./img/icon/pork_w.png');
-        }
-        .cardBox.nn_w {
-            background: url('./img/icon/pork_w.png');
-        }
-        .cardBox.ribs_w  {
-            background: url('./img/icon/ribs_w.png');
-        }
-
         /* 메뉴 설명 */
         .cardBox .card .face.face2 {
             position: relative;
@@ -246,14 +161,6 @@
         }
 
         /* cafe */
-        .stepTi { 
-            font-family: "paytone One";
-            text-transform: uppercase;
-            display: block;
-            font-size: 35px;
-            opacity: 0.3;
-            letter-spacing: -3px;
-        }
         .cafe .sm { width: 24% ; height: auto ; align-self: center;}
         .cafe .big { width: 75% ;}
         .cafe .eso .big .disJcBet .border,
@@ -359,47 +266,108 @@
     <div class=" posiCen disJcBet  camp ">
         <div class=" bbq disJcCol "> 
             <div class=" title shadow " > 215CafeCamp's BBQ </div>
-            <div class="disJcBet ">
-                <div class="menu border ">
-                    <div class="img imgBelly "></div>
-                    <div class="content ">
-                        <div class="menuLine disJcBet"> 
-                            <div class="ko" > 삼겹살 </div>
-                            <div class="price500" > </div>
-                        </div>
-                        <div class="ex tr "> 삼겹살 <br> 국내산 생고기  <br> 2인 기준 400gram </div>
+            <div class=" step1 disJcBet "> 
+                <div class="left ">
+                    <div class="stepTi" > STEP 1 </div>
+                    <div class="stepEx "> 
+                        1인 1세트  <br> 96개월 ~ 1,200개월
                     </div>
                 </div>
-                <div class="menu border">
-                    <div class="img img imgNeck "></div>
-                    <div class="content ">
-                        <div class="menuLine disJcBet"> 
-                            <div class="ko" >  목살 </div>
-                            <div class="price500" > </div>
+                <div class="right ">
+                    <div class="border line disJcBet">
+                        <div class="dis" >
+                            <div class="en"> SET for 1 person </div>
+                            <div class="ko"> 1인 세트 </div>
+                            <div class="ex"> 고기 선택  : 1 종류 (200gram) </div>
                         </div>
-                        <div class="ex tr "> 목살 <br>  국내산 생고기 <br> 2인 기준 400gram </div>
+                        <div class="priceColor price250">  </div>
+                    </div>
+                    <div class="border line disJcBet">
+                        <div class="dis" >
+                            <div class="en"> SET for 2 people </div>
+                            <div class="ko"> 2인 세트 </div>
+                            <div class="ex"> 고기 선택 : 1 종류 (400gram) </div>
+                        </div>
+                        <div class="priceColor price500">  </div>
+                    </div>
+                    <div class="border line disJcBet">
+                        <div class="dis" >
+                            <div class="en"> SET for 4 people </div>
+                            <div class="ko"> 4인 세트 </div>
+                            <div class="ex"> 고기 선택 : 2 종류 (800gram) </div>
+                        </div>
+                        <div class="priceColor price1000">  </div>
                     </div>
                 </div>
             </div>
-            <div class="disJcBet ">
-                <div class="menu border">
-                    <div class="img img imgLib "></div>
-                    <div class="content ">
-                        <div class="menuLine disJcBet"> 
-                            <div class="ko" >  등갈비 </div>
-                            <div class="price600" > </div>
+            <div class=" step2 disJcBet"> 
+                <div class="left "> 
+                    <div class="stepTi"> STEP 2</div>
+                    <div class="stepEx "> 
+                        <div class="choice " >
+                            <span class="work"> Your </span>  Choice ?
                         </div>
-                        <div class="ex tr "> 등갈비 <br> 국내산 생고기 <br> 2인 기준 600gram </div>
                     </div>
                 </div>
-                <div class="menu border">
-                    <div class="img img imgBeef "></div>
-                    <div class="content ">
-                        <div class="menuLine disJcBet"> 
-                            <div class="ko" > 소갈비살 </div>
-                            <div class="price700" > </div>
+                <div class="right "> 
+                    <div class="swiper ">
+                        <div class="swiper-wrapper ">
+                            <!-- slides -->
+                            <div class="swiper-slide posNa border  ">  
+                                <div class=" ko  "> 삼겹 </div> 
+                                <div class=" pork icon">  </div> 
+                            </div>
+                            <div class="swiper-slide  posNa  border">  
+                                <div class=" ko  "> 목살 </div> 
+                                <div class=" meat icon">  </div> 
+                            </div>
+                            <div class="swiper-slide  posNa  border">  
+                                <div class=" ko  "> 등갈비 <br> +10.0 </div> 
+                                <div class=" rib icon ">  </div> 
+                            </div>
+                            <!-- <div class="swiper-pagination"> </div> -->
                         </div>
-                        <div class="ex tr ">  소갈비살 <br> 미국산 생고기 <br> 2인 기준 500gram </div>
+                    </div>    
+                </div>
+            </div>
+            <div class=" step3 disJcBet">
+                <div class="left "> 
+                    <div class="stepTi" > STEP 3 </div>
+                    <div class="stepEx "> 
+                        겉은 바삭하고 <br> 속은 촉촉한  <br> 육즙이 배어있는 <br> BBQ입니다. 
+                    </div>
+                </div>
+                <div class=" right border " >
+                    <div class=" posNa img bbq215 disCen">
+                        <div class="bandy ">"215CafeCamp"는 국내산 생고기를 사용합니다.
+                            <span class="a " data-val='"215CafeCamp"는 국내산 생고기를 사용합니다.' aria-hidden="true"></span>
+                            <span class="b" data-val='"215CafeCamp"는 국내산 생고기를 사용합니다.' aria-hidden="true"></span>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="step4  disJcBet ">
+                <div class="left ">
+                    <div class="stepTi" > STEP 4 </div>
+                    <div class="stepEx "> 
+                        조리시간은 <br> 대략 30분 소요됩니다.  
+                    </div>
+                </div>
+                <div class=" border right disJcBet tc" > 
+                    <div class="  "> 
+                        <div class="en"> Add for 1 person </div>
+                        <div class="ko"> 1인 추가 </div>
+                        <div class="priceColor price200">  </div>
+                    </div>
+                    <div class="   "> 
+                        <div class="en"> Add for 2 people </div>
+                        <div class="ko"> 2인 추가 </div>
+                        <div class="priceColor price400"> </div>
+                    </div>
+                    <div class="   "> 
+                        <div class="en"> Add for 4 people</div>
+                        <div class="ko"> 4인 추가 </div>
+                        <div class="priceColor price800">  </div>
                     </div>
                 </div>
             </div>
@@ -412,10 +380,7 @@
                         <div class="card ">
                             <div class="face face1 "> 
                                 <div class="content img imgPotato" >
-                                    <div class="posiCen" >
-                                        <div class="ko "> 4가지 감튀 </div>
-                                        <div class="price130 priceColor tc"></div>
-                                    </div>
+                                    <div class="ko "> 4가지 감튀 </div>
                                 </div>
                             </div>
                             <div class="face face2 ">
@@ -435,10 +400,8 @@
                         <div class="card">
                             <div class="face face1  "> 
                                 <div class="content img imgPollack" >
-                                    <div class="posiCen" >
-                                        <div class="ko"> 빠삭 먹태 </div>
-                                        <div class="price130 priceColor tc"></div>
-                                    </div>
+                                    <!-- <div class=" img pollack"></div> -->
+                                    <div class="ko"> 빠삭 먹태 </div>
                                 </div>
                             </div>
                             <div class="face face2  ">
@@ -459,10 +422,8 @@
                         <div class="card">
                             <div class="face face1 "> 
                                 <div class="content img imgFishBall" >
-                                    <div class="posiCen" >
-                                        <div class="ko"> 호오 오뎅 </div>
-                                        <div class="price180 priceColor tc"></div>
-                                    </div>
+                                    <!-- <div class="img fishBall"></div> -->
+                                    <div class="ko"> 호오 오뎅 </div>
                                 </div>
                             </div>
                             <div class="face face2 ">
@@ -482,10 +443,8 @@
                         <div class="card">
                             <div class="face face1 "> 
                                 <div class="content img imgStone" >
-                                    <div class="posiCen" >
-                                        <div class="ko"> 아뜨 꾸이 </div>
-                                        <div class="price280 priceColor tc"></div>
-                                    </div>
+                                    <!-- <div class=""></div> -->
+                                    <div class="ko"> 아뜨 꾸이 </div>
                                 </div>
                             </div>
                             <div class="face face2 ">

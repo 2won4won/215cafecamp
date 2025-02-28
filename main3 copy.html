@@ -33,39 +33,28 @@
 
     <style>
         .bc { background-color: cyan;}
+        .bb { background-color: rgb(224, 77, 153);}
         .bl { border: 2px solid seagreen;}
+       
         /* body { background-image: linear-gradient(45deg, rgba(209, 0, 42, 0.6) 0%, #0E5DC4 100%);} */
-        /* boby {} */
         .title { background: url(img/background/spring1.jpg); color: white;  }
         .stepTi,
         .ko { color: #3A968C;}
         .en { color: #E9ABC6;}
         .ex { color: #97CFD8; font-family: 'HancomMalangMalang-Regular';}
-        /* .priceColor { color: #737A63;} */
-        .priceColor { color: #97CFD8;;}
-        .side .priceColor { color: #F9C8CC;}
-        .stepEx { color:#737A63;  font-family: 'Bareun_hipi'; font-size: 1.3rem;}
-        .choice { color:  #B22515;}
-        .work { color: #46A994;}
         
-        /* 전체적 layout */
-        .camp {  width: 83%; height: 77%; }
-        .bbq { width: 33%;}
-        .side { width: 30%;}
-        .cafe { width: 33%;}
-        .camp .tc .ko {  margin: 0.4rem 0;}
+        .camp { width: 80%; height: 75%;  box-sizing: border-box;}
+        .camp .bbq { width: 32%; height: 100%;}
+        .camp .side { width: 31%; height: 100%;}
+        .camp .cafe { width: 31%; height: 100%;}
 
-        /* bbq  */
 
-        .camp .bbq .menu { 
-            width: 48%; height: 100%; box-sizing: border-box;
-            background: #333; color: white;
-        }
-        .camp .bbq .content .ko { color: white;}
+
+        .camp .bbq .menu { width: 40%; height: 100%;}
         .camp .bbq .menu .img{ width: 100%; height: 10rem; margin-top: 1rem; }
         /* .camp2 .bbq .menu .content { padding-top: 1.2rem;} */
         .camp .bbq .menu .content .menuLine{   
-            border-bottom: white 0.1rem solid; 
+            border-bottom: #3A968C 0.1rem solid; 
             padding-bottom: 0.6rem; padding-top: 1.2rem; margin-bottom: 1rem;
         }
         .camp .bbq .menu .content .ex {  line-height: 1.3rem;}
@@ -91,50 +80,10 @@
             background-repeat: no-repeat;
          } 
         .camp .bbq .menu .imgBeef {  
-            background: url('./img/photo/imgBeef.png');
+            background: url('./img/photo/imgBeef.jpg');
             background-size: 100% 100%;
             background-repeat: no-repeat;
-         }
-        .cafe .sm,
-        .bbq .left { width: 23% ; height: auto ; align-self: center; padding-bottom: 0.3rem; }
-        .bbq .right { width: 75%; height: auto ; }
-        .stepTi { 
-            font-family: "paytone One";
-            text-transform: uppercase;
-            display: block;
-            font-size: 35px;
-            opacity: 0.3;
-            letter-spacing: -3px;
-        }
-        .bbq .stepEx { margin-top: 0.3rem;}
-        .step4 .left { margin-bottom: 1.25rem;}
-
-        /* bbq >aactive .위치확인요 */
-        .border.active { background-color: blue;}
-
-        /* bbq >  .swiper { } */
-        .bbq .swiper .border { 
-            padding: 0 ; border-radius: 3rem;  height: 6rem; 
-            padding-top: 2rem; box-sizing: border-box; line-height: 1.5rem;
-        }
-        .swiper .icon {
-            width: 3.4vw;  height: 6.8vh;
-            position: absolute;  top: 1.7vh;  right: 4.1vw; opacity: 0.9;
-        }
-        .swiper .rib { left: 3.7vw;}
-        .swiper .ko { margin-left: 2.6rem; }
-
-        /*  bbq > image */
-        .bbq .step3 .right { height: 15vh;  }
-        .bbq .step3 .right .img { width: 100%; height: 100%; }
-
-        /* side  */
-        .side .cardBox{ 
-            width: 100%; 
-            position: relative;
-            /* display: flex;
-            justify-content: space-between; */
-        }
+         } 
 
         /* card 전체 크기 */
         .cardBox .card { 
@@ -151,21 +100,14 @@
         .cardBox .card.active .face.face1 { transform: translateY(0); }
         .cardBox .card .face.face1 .content { opacity: 0.5;  transition: 0.5s; }
         .cardBox .card .face.face1 .content .ko {
-            padding: 0;  color: #fff;   text-align: center; 
-            margin-bottom: 1rem; margin-left: 0rem; 
+            padding: 0;  color: #fff;   text-align: center; line-height: 11rem;
         }
         .cardBox .card.active .face.face1 .content { opacity: 1; }
 
         /* 카드 이미지가 보일 때 ko 안보임 */
-        .cardBox .card.active .face.face1 .img  .icon, 
-        .cardBox .card.active .face.face1 .img  .ko, 
-        .cardBox .card.active .face.face1 .img  .priceColor {    display: none;  }
+        .cardBox .card.active .face.face1 .img  .ko {    display: none;  }
 
         /* imgae */
-        .cardBox  .icon {
-            width: 2.4vw;  height: 5.8vh;
-            position: absolute;  top: 5.7vh;  right: 3.1vw; opacity: 0.9;
-        }
         .cardBox .card .img {width: 100%; height: 100%;}
         .cardBox .card.active .face.face1  { opacity: 1;  }
         .cardBox .card.active .face.face1 .imgPotato {  
@@ -188,45 +130,6 @@
             background-size: 100% 100%;
             background-repeat: no-repeat;
          }
-         .cardBox .card.active .face.face1 .imgBelly {  
-            background: url('./img/photo/imgBelly.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         } 
-         .cardBox .card.active .face.face1 .imgNeck {  
-            background: url('./img/photo/imgNeck.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         } 
-         .cardBox .card.active .face.face1 .imgLib {  
-            background: url('./img/photo/imgLib.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         } 
-         .cardBox .card.active .face.face1 .imgBeef {  
-            background: url('./img/photo/imgBeef.png');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         } 
-         .cardBox .icon {
-            width: 2.4vw;  height: 5.1vh;
-            position: absolute;  top: 5.5vh;  right: 4.3vw; 
-        }
-         /* .cardBox .icon2 {
-            width: 2.7vw;  height: 6.2vh;
-            position: absolute;  top: 5.5vh;  right: 2.5vw; 
-        } */
-        .cardBox .box { margin: 4rem; margin-left: -1rem;}
-        .cardBox.pork_w {
-            background: url('./img/icon/pork_w.png');
-        }
-        .cardBox.nn_w {
-            background: url('./img/icon/pork_w.png');
-        }
-        .cardBox.ribs_w  {
-            background: url('./img/icon/ribs_w.png');
-        }
-
         /* 메뉴 설명 */
         .cardBox .card .face.face2 {
             position: relative;
@@ -245,16 +148,8 @@
             padding-bottom: 0.3rem; margin-top: 0.3rem; 
         }
 
-        /* cafe */
-        .stepTi { 
-            font-family: "paytone One";
-            text-transform: uppercase;
-            display: block;
-            font-size: 35px;
-            opacity: 0.3;
-            letter-spacing: -3px;
-        }
-        .cafe .sm { width: 24% ; height: auto ; align-self: center;}
+/* cafe */
+.cafe .sm { width: 24% ; height: auto ; align-self: center;}
         .cafe .big { width: 75% ;}
         .cafe .eso .big .disJcBet .border,
         .cafe .flower .big .border { width: 38%; }
@@ -353,11 +248,12 @@
                 translatex(-2.5px)
                 skew(-3deg, -5deg);
         }
+
     </style>
 </head>
 <body>
-    <div class=" posiCen disJcBet  camp ">
-        <div class=" bbq disJcCol "> 
+    <div class=" posiCen disJcBet  camp  bl">
+        <div class="bbq  disJcCol ">
             <div class=" title shadow " > 215CafeCamp's BBQ </div>
             <div class="disJcBet ">
                 <div class="menu border ">
@@ -403,8 +299,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="side disJcCol">
+        </div>   
+        <div class="side disJcCol "> 
             <div class=" title shadow " > 215CafeCamp's Side Menu </div>
             <div class=" cardBox ">
                 <div class=" ">
@@ -412,10 +308,7 @@
                         <div class="card ">
                             <div class="face face1 "> 
                                 <div class="content img imgPotato" >
-                                    <div class="posiCen" >
-                                        <div class="ko "> 4가지 감튀 </div>
-                                        <div class="price130 priceColor tc"></div>
-                                    </div>
+                                    <div class="ko "> 4가지 감튀 </div>
                                 </div>
                             </div>
                             <div class="face face2 ">
@@ -435,10 +328,8 @@
                         <div class="card">
                             <div class="face face1  "> 
                                 <div class="content img imgPollack" >
-                                    <div class="posiCen" >
-                                        <div class="ko"> 빠삭 먹태 </div>
-                                        <div class="price130 priceColor tc"></div>
-                                    </div>
+                                    <!-- <div class=" img pollack"></div> -->
+                                    <div class="ko"> 빠삭 먹태 </div>
                                 </div>
                             </div>
                             <div class="face face2  ">
@@ -459,10 +350,8 @@
                         <div class="card">
                             <div class="face face1 "> 
                                 <div class="content img imgFishBall" >
-                                    <div class="posiCen" >
-                                        <div class="ko"> 호오 오뎅 </div>
-                                        <div class="price180 priceColor tc"></div>
-                                    </div>
+                                    <!-- <div class="img fishBall"></div> -->
+                                    <div class="ko"> 호오 오뎅 </div>
                                 </div>
                             </div>
                             <div class="face face2 ">
@@ -482,10 +371,8 @@
                         <div class="card">
                             <div class="face face1 "> 
                                 <div class="content img imgStone" >
-                                    <div class="posiCen" >
-                                        <div class="ko"> 아뜨 꾸이 </div>
-                                        <div class="price280 priceColor tc"></div>
-                                    </div>
+                                    <!-- <div class=""></div> -->
+                                    <div class="ko"> 아뜨 꾸이 </div>
                                 </div>
                             </div>
                             <div class="face face2 ">
@@ -506,7 +393,7 @@
                 </div>
             </div>
         </div>
-        <div class=" cafe  disJcCol  "> 
+        <div class="cafe disJcCol "> 
             <div class=" title shadow " > 215CafeCamp's Cafe </div>
             <div class="eso disJcBet">
                 <div class="sm">
@@ -661,6 +548,7 @@
                 </div> 
             </div>     
         </div>
+        
     </div>
 </body>
 
@@ -686,7 +574,7 @@
     });
 
     // 선택한 class를 순차적으로 찾고 css 변경
-    var items = document.querySelectorAll('.card');
+    var items = document.querySelectorAll('.menu');
     var cnt = 0;
 
     function activeFunc() {
@@ -708,7 +596,33 @@
     }
 
     // 일정 간격으로 activeFunc 실행
-    setInterval(activeFunc, 2000);
+    setInterval(activeFunc, 2500);
+
+      // 선택한 class를 순차적으로 찾고 css 변경
+    var card = document.querySelectorAll('.card');
+    var i = 0;
+
+    function actCard() {
+        // 모든 요소에서 active 클래스를 제거
+        card.forEach(function(a) {
+            a.classList.remove('active');
+        });
+        
+        // 현재 cnt에 해당하는 요소에 active 클래스 추가
+        card[i].classList.add('active');
+        // $('.active').removeClass('ko');
+      
+       
+        // cnt를 다음 요소로 이동 (순환)
+        i++;
+        if (i >= items.length) {
+            i = 0; // 다시 처음으로 돌아감
+        }
+    }
+
+    // 일정 간격으로 activeFunc 실행
+    setInterval(actCard, 2500);
+
 
 
 </script>

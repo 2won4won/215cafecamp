@@ -135,7 +135,9 @@
 .price250::before { content: '25.0';} 
 .price400::before { content: '40.0';} 
 .price500::before { content: '50.0';} 
-.price800::before { content: '80.0';} 
+.price600::before { content: '60.0';} 
+.price600::before { content: '60.0';} 
+.price700::before { content: '70.0';} 
 .price1000::before { content: '100.0';} 
 
 /* margin & padding */
