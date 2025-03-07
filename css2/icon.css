@@ -157,6 +157,11 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
+.bbq215W {
+    background: url('../img/photo/bbq215W.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
 
 .pollack {
     background: url('../img/photo/pollack.png');
@@ -214,8 +219,60 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
+.vanilla_w {
+    background: url('../img/icon/vanilla_w.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat; width: 1.9vw;
+    height: 3.9vh;
+    position: absolute;
+    top: 4.8vh;
+    right: 2rem;
+    /* bottom: -8vh;
+    right:  -45%; */
+    opacity: 0.9;
+}
 .no4 {
     background: url('../img/photo/no4.png');
     background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.imgBelly {  
+    background: url('../img/photo/imgBelly.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+ } 
+ .imgNeck {  
+    background: url('../img/photo/imgNeck.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+ } 
+ .imgLib {  
+    background: url('../img/photo/imgLib.jpg');
+    background-size: 100% 105%;
+    background-repeat: no-repeat;
+ } 
+ .imgBeef {  
+    background: url('../img/photo/imgBeef.png');
+    background-size: 105% 110%;
+    background-repeat: no-repeat;
+}
+.imgRice {  
+    background: url('../img/photo/imgRice.jpg');
+    background-size: 105% 110%;
+    background-repeat: no-repeat;
+}
+.imgRice {  
+    background: url('../img/photo/imgRice.jpg');
+    background-size: 105% 110%;
+    background-repeat: no-repeat;
+}
+.imgRamen {  
+    background: url('../img/photo/imgRamen.jpg');
+    background-size: 105% 110%;
+    background-repeat: no-repeat;
+}
+.imgAmericano {  
+    background: url('../img/photo/imgAmericano.png');
+    background-size: 105% 110%;
     background-repeat: no-repeat;
 }

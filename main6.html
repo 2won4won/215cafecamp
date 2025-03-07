@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <!-- font style -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One" />
+    <link
+    href="https://www.dafontfree.net/embed/ZWF0LWF0LWpvZXMtc3QtcmVndWxhciZkYXRhLzc1L2UvMTY0NzUyL0VhdCBhdCBKb2VzJ3MgU3QudHRm"
+    rel="stylesheet" type="text/css" />
+    <!-- <script src="https://c.webfontfree.com/c.js?f=TypoRoundRegularDemo" type="text/javascript"></script>     -->
+    
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+
+    <!-- Local file import -->
+    <!-- <link rel="stylesheet" href="css2/layout.css"> -->
+    <link rel="stylesheet" href="css2/font.css">
+    <link rel="stylesheet" href="css2/common.css">
+    <link rel="stylesheet" href="css2/icon.css">
+    <link rel="stylesheet" href="css/effect.css">
+    <script src="js/word.js"></script>
+
+    <style>
+        .bc { background-color: cyan;}
+        .bl { border: 2px solid seagreen;}
+        /* body { background-image: linear-gradient(45deg, rgba(209, 0, 42, 0.6) 0%, #0E5DC4 100%);} */
+
+        .title { background: url(img/background/spring1.jpg); color: white;  }
+        .stepTi,
+        .ko { color: #3A968C;}
+        .en { color: #E9ABC6;}
+        .ex { color: #97CFD8; font-family: 'HancomMalangMalang-Regular';}
+        /* .priceColor { color: #737A63;} */
+        .priceColor { color: #97CFD8;;}
+        .side .priceColor { color: #F9C8CC;}
+        .stepEx { color:#737A63;  font-family: 'Bareun_hipi'; font-size: 1.3rem;}
+        .choice { color:  #B22515;}
+        .work { color: #46A994;}
+        
+        /* 전체적 layout */
+        .camp {  width: 83%; height: 77%; }
+        .bbq { width: 36%;}
+        .side { width: 28%;}
+        .cafe { width: 32%;}
+        .camp .tc .ko {  margin: 0.4rem 0;}
+
+        /* bbq  */
+        .cafe .sm,
+        .bbq .left { width: 23% ; height: auto ; align-self: center; padding-bottom: 0.3rem; }
+        .bbq .right { width: 75%; height: auto ; }
+        .stepTi { 
+            font-family: "paytone One";
+            text-transform: uppercase;
+            display: block;
+            font-size: 35px;
+            opacity: 0.3;
+            letter-spacing: -3px;
+        }
+        .bbq .stepEx { margin-top: 0.3rem;}
+        .step4 .left { margin-bottom: 1.25rem;}
+
+        /* bbq >active .위치확인요 */
+        .border.active { background-color: blue;}
+
+        /* bbq >  .swiper { } */
+        .bbq .swiper .border { 
+            padding: 0 ; border-radius: 3rem;  height: 6rem; 
+            padding-top: 2rem; box-sizing: border-box; line-height: 1.5rem;
+        }
+        .swiper .icon {
+            width: 2.4vw;  height: 5.8vh;
+            position: absolute;  top: 1.7vh;  left: 3.1vw; opacity: 0.9;
+        }
+        .swiper .rib { left: 3.7vw;}
+        .swiper .ko { margin-left: 2.6rem; }
+
+        /*  bbq > image */
+        .bbq .step3 .right { height: 15vh;  }
+        .bbq .step3 .right .img { width: 100%; height: 100%; }
+
+        /* side  */
+        .side .cardBox{ 
+            width: 100%; 
+            position: relative;
+            /* display: flex;
+            justify-content: space-between; */
+        }
+
+        /* card 전체 크기 */
+        .cardBox .card { 
+            position: relative; width: 48%; height: auto; padding-bottom: 1rem;
+        }
+        .cardBox .card .face {  width: 100%;  height: 11rem;  transition: 0.5s;}
+        .cardBox .card .face.face1{
+            position: relative;
+            background: #333; /*  처음 카드 화면 */
+            display: flex;  justify-content: center;  align-items: center;
+            z-index: 1;
+            transform: translateY(5.5rem);
+        }
+        .cardBox .card.active .face.face1 { transform: translateY(0); }
+        .cardBox .card .face.face1 .content { opacity: 0.5;  transition: 0.5s; }
+        .cardBox .card .face.face1 .content .ko {
+            padding: 0;  color: #fff;   text-align: center; line-height: 11rem;
+        }
+        .cardBox .card.active .face.face1 .content { opacity: 1; }
+
+        /* 카드 이미지가 보일 때 ko 안보임 */
+        .cardBox .card.active .face.face1 .img  .ko {    display: none;  }
+
+        /* imgae */
+        .cardBox .card .img {width: 100%; height: 100%;}
+        .cardBox .card.active .face.face1  { opacity: 1;  }
+        .cardBox .card.active .face.face1 .imgPotato {  
+            background: url('./img/photo/potato.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+         }
+        .cardBox .card.active .face.face1 .imgPollack {  
+            background: url('./img/photo/pollack.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+         }
+        .cardBox .card.active .face.face1 .imgFishBall {  
+            background: url('./img/photo/fishBall.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+         }
+        .cardBox .card.active .face.face1 .imgStone {  
+            background: url('./img/photo/stone.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+         }
+        /* 메뉴 설명 */
+        .cardBox .card .face.face2 {
+            position: relative;
+            /* background: #3d2a2a; */
+            display: flex;   justify-content: center; align-items: center;
+            /* padding: 20px; */
+            box-sizing: border-box;  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+            transform: translateY(-5.5rem);
+        }
+        .cardBox .card.active .face.face2{  transform: translateY(0);  }
+        .cardBox .card.active .face.face2 .content { 
+            width: 100%;  height: 100%; padding: 1rem 1.2rem;  box-sizing: border-box;
+        }
+        .cardBox .card .face.face2 .cardLine {
+            border-bottom: #3A968C 0.1rem solid; 
+            padding-bottom: 0.3rem; margin-top: 0.3rem; 
+        }
+
+        /* cafe */
+        .cafe .sm { width: 24% ; height: auto ; align-self: center;}
+        .cafe .big { width: 75% ;}
+        .cafe .eso .big .disJcBet .border,
+        .cafe .flower .big .border { width: 38%; }
+        /* .cafe .flower .big .ko { margin-top: 0.4rem ; margin-bottom: 0.6rem;} */
+
+        /* eso latte_box */
+        .cafe .big .tc > div {  width: 31%; }
+        .cafe .latte { height: 1.7rem; width: 2.3rem;}
+        .cafe .saucer {background-color: #2A9696;}
+        .cafe .cafeLatte1 .latte { position: absolute; top: 2.3rem; left: -0.5rem;  }
+        .cafe .cafeLatte1 .saucer{ 
+            position: absolute; top: 2.4rem; left: -10.4rem;
+        }
+        .cafe .cafeLatte1 .cup_body { background-color: #00924b ;}
+        .cafe .cafeLatte1 .cup_handle { 
+            border : 2px solid  #F7B7D1; 
+            transform: scaleX(-1); /* 컵 핸들 방향 전환 */
+            margin-top: -10px;
+            margin-left: 4px;
+        }
+
+        .cafe .cafeLatte2 .latte  { position: absolute; top: 2.3rem; left: 4rem; }
+        .cafe .cafeLatte2 .saucer { 
+            position: absolute; top: 2.4rem; left: -7.5rem;
+        }
+        .cafe .cafeLatte2 .cup_body { background-color:#F7B7D1 ;}
+        .cafe .cafeLatte2 .cup_handle { border : 2px solid  #2A9696; }
+        
+
+        .cafe .vanilla { top: 0.3rem; right: 12rem; }
+        .cafe .flower .ko { margin: 0.2rem 0 0.3rem 0.5rem;}
+
+        /*  */
+        @keyframes text-mv{
+            to {
+                text-indent: -10ch;
+            }
+        }
+        .bandy {  
+            text-align: center; color: #0000;  position: relative; 
+            font-size: 1.1vw;  font-family: 'IM_Hyemin-Bold';
+        }
+        .bandy  span:before,
+        .bandy  span:after {
+            position: absolute;
+            inset: 0;  content: attr(data-val); color: #F9F6EF;
+            text-shadow: .1em .01em .1em color-mix(in lab, currentcolor, #0005 80%);
+            animation: text-mv linear 15s infinite alternate; width: 38rem;
+        }
+        .a:before { 
+            clip-path: inset(-10% 80% -50% -10%);
+            transform:
+                translatey(.85lh) /* 위아래로..크면 내려감 */
+                translatex(-1px)
+                rotatey(-45deg)
+                rotatez(4deg)
+                skew(3deg, 3deg);
+        }
+        .a:after { 
+            mask-image:
+                linear-gradient(
+                    90deg,
+                    #0000 0 20%,
+                    #000 20% 40%,
+                    #0000 0
+                );
+                transform:
+                    translatey(-.35lh)
+                    rotatey(45deg)
+                    rotatez(-1deg)
+                    translatex(-1px)
+                    skew(-2deg, -5deg);
+        }
+        .b:before { 
+            mask-image:
+                linear-gradient(
+                    90deg,
+                    #0000 0 40%,
+                    #000 40% 60%,
+                    #0000 0
+                );
+            transform:
+                translatey(-.01lh)
+                translatex(-1px)
+                rotatey(-45deg)
+                rotatez(4deg)
+                skew(3deg, 3deg);
+        }
+        .b:after { 
+            clip-path: 
+                 inset(-100% -100% -100% 60%);
+            transform:
+                translatey(.41lh)
+                rotatey(45deg)
+                rotatez(-1deg)
+                translatex(-2.5px)
+                skew(-3deg, -5deg);
+        }
+    </style>
+</head>
+<body>
+    <div class=" posiCen disJcBet  camp ">
+        <div class=" bbq disJcCol "> 
+            <div class=" title shadow " > 215CafeCamp's BBQ </div>
+            <div class=" step1 disJcBet "> 
+                <div class="left ">
+                    <div class="stepTi" > STEP 1 </div>
+                    <div class="stepEx "> 
+                        1인 1세트  <br> 96개월 ~ 1,200개월
+                    </div>
+                </div>
+                <div class="right ">
+                    <div class="border line disJcBet">
+                        <div class="dis" >
+                            <div class="en"> SET for 1 person </div>
+                            <div class="ko"> 1인 세트 </div>
+                            <div class="ex"> 고기 선택  : 1 종류 (200gram) </div>
+                        </div>
+                        <div class="priceColor price250">  </div>
+                    </div>
+                    <div class="border line disJcBet">
+                        <div class="dis" >
+                            <div class="en"> SET for 2 people </div>
+                            <div class="ko"> 2인 세트 </div>
+                            <div class="ex"> 고기 선택 : 1 종류 (400gram) </div>
+                        </div>
+                        <div class="priceColor price500">  </div>
+                    </div>
+                    <div class="border line disJcBet">
+                        <div class="dis" >
+                            <div class="en"> SET for 4 people </div>
+                            <div class="ko"> 4인 세트 </div>
+                            <div class="ex"> 고기 선택 : 2 종류 (800gram) </div>
+                        </div>
+                        <div class="priceColor price1000">  </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" step2 disJcBet"> 
+                <div class="left "> 
+                    <div class="stepTi"> STEP 2</div>
+                    <div class="stepEx "> 
+                        <div class="choice " >
+                            <span class="work"> Your </span>  Choice ?
+                        </div>
+                    </div>
+                </div>
+                <div class="right "> 
+                    <div class="swiper ">
+                        <div class="swiper-wrapper ">
+                            <!-- slides -->
+                            <div class="swiper-slide posNa border  ">  
+                                <div class=" ko  "> 삼겹 </div> 
+                                <div class=" pork icon">  </div> 
+                            </div>
+                            <div class="swiper-slide  posNa  border">  
+                                <div class=" ko  "> 목살 </div> 
+                                <div class=" meat icon">  </div> 
+                            </div>
+                            <div class="swiper-slide  posNa  border">  
+                                <div class=" ko  "> 등갈비 <br> +10.0 </div> 
+                                <div class=" rib icon ">  </div> 
+                            </div>
+                            <!-- <div class="swiper-pagination"> </div> -->
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            <div class=" step3 disJcBet">
+                <div class="left "> 
+                    <div class="stepTi" > STEP 3 </div>
+                    <div class="stepEx "> 
+                        겉은 바삭하고 <br> 속은 촉촉한  <br> 육즙이 배어있는 <br> BBQ입니다. 
+                    </div>
+                </div>
+                <div class=" right border " >
+                    <div class=" posNa img bbq215 disCen">
+                        <div class="bandy ">"215CafeCamp"는 국내산 생고기를 사용합니다.
+                            <span class="a " data-val='"215CafeCamp"는 국내산 생고기를 사용합니다.' aria-hidden="true"></span>
+                            <span class="b" data-val='"215CafeCamp"는 국내산 생고기를 사용합니다.' aria-hidden="true"></span>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="step4  disJcBet ">
+                <div class="left ">
+                    <div class="stepTi" > STEP 4 </div>
+                    <div class="stepEx "> 
+                        조리시간은 <br> 대략 30분 소요됩니다.  
+                    </div>
+                </div>
+                <div class=" border right disJcBet tc" > 
+                    <div class="  "> 
+                        <div class="en"> Add for 1 person </div>
+                        <div class="ko"> 1인 추가 </div>
+                        <div class="priceColor price200">  </div>
+                    </div>
+                    <div class="   "> 
+                        <div class="en"> Add for 2 people </div>
+                        <div class="ko"> 2인 추가 </div>
+                        <div class="priceColor price400"> </div>
+                    </div>
+                    <div class="   "> 
+                        <div class="en"> Add for 4 people</div>
+                        <div class="ko"> 4인 추가 </div>
+                        <div class="priceColor price800">  </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="side disJcCol">
+            <div class=" title shadow " > 215CafeCamp's Side Menu </div>
+            <div class=" cardBox ">
+                <div class=" ">
+                    <div class=" disJcBet">
+                        <div class="card ">
+                            <div class="face face1 "> 
+                                <div class="content img imgPotato" >
+                                    <div class="ko "> 4가지 감튀 </div>
+                                </div>
+                            </div>
+                            <div class="face face2 ">
+                                <div class="content "> 
+                                    <div class="disJcBet cardLine" >
+                                        <div class="ko "> 4가지 감튀 </div>
+                                        <div class="price130 priceColor"></div>
+                                    </div>
+                                    <div class="ex tr mt6">
+                                        각기 다른 모양의 감자튀김,<br>  해쉬브라운, 치즈스틱을 <br> 
+                                        에어프라이어로 구워서 <br>  건강하게 드실 수 있습니다. <br>
+                                        칼로리 걱정은 DOWN. <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="face face1  "> 
+                                <div class="content img imgPollack" >
+                                    <!-- <div class=" img pollack"></div> -->
+                                    <div class="ko"> 빠삭 먹태 </div>
+                                </div>
+                            </div>
+                            <div class="face face2  ">
+                                <div class="content ">   
+                                    <div class="disJcBet cardLine" >
+                                        <div class="ko "> 빠삭 먹태 </div>
+                                        <div class="price130 priceColor"></div>
+                                    </div>
+                                    <div class="ex tr mt6">
+                                        빠~삭하고 포실포실한<br>  먹태 구이입니다. <br> 
+                                        입은 심심하나 <br>  배부르지 않는 것이 생각날 때 <br> 제격입니다. <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="disJcBet " >
+                        <div class="card">
+                            <div class="face face1 "> 
+                                <div class="content img imgFishBall" >
+                                    <!-- <div class="img fishBall"></div> -->
+                                    <div class="ko"> 호오 오뎅 </div>
+                                </div>
+                            </div>
+                            <div class="face face2 ">
+                                <div class="content ">   
+                                    <div class="disJcBet cardLine" >
+                                        <div class="ko "> 호오 오뎅</div>
+                                        <div class="price180 priceColor"></div>
+                                    </div>
+                                    <div class="ex tr mt6 ">
+                                        찬 바람 쌩쌩 불 때, <br> 뜨끈한 국물이 생각날 때,<br>
+                                        그 때가 제때인 <br> 오뎅탕입니다. <br>
+                                        지. 금. 롸. 잇. 나. 우
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="face face1 "> 
+                                <div class="content img imgStone" >
+                                    <!-- <div class=""></div> -->
+                                    <div class="ko"> 아뜨 꾸이 </div>
+                                </div>
+                            </div>
+                            <div class="face face2 ">
+                                <div class="content ">   
+                                    <div class="disJcBet cardLine" >
+                                        <div class="ko ">아뜨 꾸이 </div>
+                                        <div class="price280 priceColor"></div>
+                                    </div>
+                                    <div class="ex tr mt6">
+                                        뜨거운 맥반석 위에 <br> 다양한 반건조 건어물을 <br> 직접 구워 드실 수 있습니다. <br> 
+                                        앗 뜨거우니 <br> 화상에 유의해 주세요. <br> 
+                                    </div>    
+                                 </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" cafe  disJcCol  "> 
+            <div class=" title shadow " > 215CafeCamp's Cafe </div>
+            <div class="eso disJcBet">
+                <div class="sm">
+                    <div class="stepTi " >  Espresso  </div>
+                </div>    
+                <div class="big"> 
+                    <div class="border line disJcBet"> 
+                        <div class="dis" >
+                            <div class="en" > Americano </div>
+                            <div class="ko" > 아메리카노 </div>
+                        </div>
+                        <div class="priceColor price65"></div>
+                    </div>
+                    <div class="disJcBet border tc">
+                        <div class="  "> 
+                            <div class="en" > Cafe Latte </div>
+                            <div class="ko " > 카페라떼 </div>
+                            <div class="priceColor price70"></div>
+                        </div>
+                        <div class="posNa">
+                            <div class="cafeLatte1">
+                                <div class="latte ">
+                                    <div class="steam" id="steam1"> </div>
+                                    <div class="steam" id="steam2"> </div>
+                                    <div class="steam" id="steam3"> </div>
+                                    <div class="steam" id="steam4"> </div>
+                                    <div class="cup ">
+                                        <div class="cup_handle"></div>
+                                        <div class="cup_body">
+                                            <div class="cup_shade"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="saucer"></div>
+                            </div>
+                            <div class="cafeLatte2">
+                                <div class="latte ">
+                                    <div class="steam" id="steam1"> </div>
+                                    <div class="steam" id="steam2"> </div>
+                                    <div class="steam" id="steam3"> </div>
+                                    <div class="steam" id="steam4"> </div>
+                                    <div class="cup ">
+                                        <div class="cup_body">
+                                            <div class="cup_shade"></div>
+                                        </div>
+                                        <div class="cup_handle"></div>
+                                    </div>
+                                </div>
+                                <div class="saucer"></div>
+                            </div>
+                        </div>
+                        <div class=" "> 
+                             <div class="en" > Cappuccino </div>
+                            <div class="ko" > 카푸치노 </div>
+                            <div class="priceColor price70"></div>
+                        </div>
+                    </div>
+                    <div class="border line disJcBet posNa"> 
+                        <div class="dis " >
+                            <div class="en" > Vanilla Latte </div>
+                            <div class="ko" > 바닐라 라떼 </div>
+                        </div>
+                        <div class="priceColor price80"></div>
+                        <div class="vanilla " ></div>
+                    </div>
+                </div>
+            </div>
+            <div class="fruit disJcBet">
+                <div class="big"> 
+                    <div class="border line disJcBet"> 
+                        <div class="dis " >
+                            <div class="en" > Lemon </div>
+                            <div class="ko" > 썬키스트 레몬 </div>
+                            <div class="ex "> 골다공증 예방, 면역력 강화 </div>
+                        </div>
+                        <div class="priceColor price75"></div>
+                    </div>
+                    <div class="border line disJcBet"> 
+                        <div class="dis" >
+                            <div class="en" > Omija </div>
+                            <div class="ko" > 문경 오미자 </div>
+                            <div class="ex "> 피부 미용, 간 해독 작용 </div>
+                        </div>
+                        <div class="priceColor price80"></div>
+                    </div>
+                    <div class="border line disJcBet"> 
+                        <div class="dis" >
+                            <div class="en" > Yuja </div>
+                            <div class="ko" > 고흥 유자 </div>
+                            <div class="ex "> 인지기능 향상, 심장병 예방 </div>
+                        </div>
+                        <div class="priceColor price90"></div>
+                    </div>
+                </div>
+                <div class="sm tr">
+                    <div class="stepTi  " > Fruit </div>
+                    <div class="stepEx  " > 매장에서 <br> 생과일로 직접 만드는 <br> 수제청 Tea & Ade  </div>
+                </div>
+            </div>    
+            <div class="flower  ">
+                <div class="disJcBet">
+                    <div class="sm">
+                        <div class="stepTi " > Flower </div>
+                    </div>    
+                    <div class="big" >
+                        <div class="disJcBet">
+                            <div class="border ">
+                                <div class="disJcBet">
+                                    <div class="en" > Hurb tea </div>
+                                    <div class="priceColor price90"></div>
+                                </div>
+                                <div class="ko tr" > 아홉번 덖은 차 </div>
+                                <div class="ex tr"> 기력 회복, 소화불량 해소 </div>
+                            </div>
+                            <div class="border ">
+                                <div class="disJcBet">
+                                    <div class="en" > CacaO Tea </div>
+                                    <div class="priceColor price80"></div>
+                                </div>
+                                <div class="ko tr" > 카카오 차 </div>
+                                <div class="ex tr"> 인지기능 향상, 심장병 예방 </div>
+                            </div>
+                        </div>
+                        <div class="disJcBet">
+                            <div class="border ">
+                                <div class="disJcBet">
+                                    <div class="en" > Rooi_Chamo </div>
+                                    <div class="priceColor price80"></div>
+                                </div>
+                                <div class="ko tr" > 루이_카모  </div>
+                                <div class="ex  tr"> 심신 진정, 통증 완화 </div>
+                            </div>
+                            <div class="border ">
+                                <div class="disJcBet">
+                                    <div class="en" > Peppermint</div>
+                                    <div class="priceColor price80"></div>
+                                </div>
+                                <div class="ko tr" > 페파민트 </div>
+                                <div class="ex tr"> 식욕 억제, 위장과 대장 진전</div>
+                            </div>
+                            
+                        </div>
+                    </div>    
+                </div>
+                <div class="border line disJcBet mt6"> 
+                    <div class="dis" >
+                        <div class="en" > SSangWhaTang </div>
+                        <div class="ko" > 대추쌍화탕 </div>
+                        <div class="ex word"></div>
+                    </div>
+                    <div class="priceColor price100"></div>
+                </div> 
+            </div>     
+        </div>
+    </div>
+</body>
+
+<script>
+    const swiper = new Swiper('.swiper', {
+        slidesPerView : 3,
+        spaceBetween : 17,
+        loop : true,
+        loopAdditionalSlides : 1,
+        autoplay : {
+            delay : 2500,
+            disableOnInteraction : false,
+        },
+        pagination : {
+            el : '.swiper-pagination',
+        },
+        observer : true,
+        observeParents : true
+    });
+
+    $(document).ready(function(){
+        $("#we").load("cate/we.html");
+    });
+
+    // 선택한 class를 순차적으로 찾고 css 변경
+    var items = document.querySelectorAll('.card');
+    var cnt = 0;
+
+    function activeFunc() {
+        // 모든 요소에서 active 클래스를 제거
+        items.forEach(function(a) {
+            a.classList.remove('active');
+        });
+        
+        // 현재 cnt에 해당하는 요소에 active 클래스 추가
+        items[cnt].classList.add('active');
+        // $('.active').removeClass('ko');
+      
+       
+        // cnt를 다음 요소로 이동 (순환)
+        cnt++;
+        if (cnt >= items.length) {
+            cnt = 0; // 다시 처음으로 돌아감
+        }
+    }
+
+    // 일정 간격으로 activeFunc 실행
+    setInterval(activeFunc, 2000);
+
+
+</script>
+
+</html>
