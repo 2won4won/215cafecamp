@@ -138,8 +138,10 @@
 .price600::before { content: '60.0';} 
 .price600::before { content: '60.0';} 
 .price700::before { content: '70.0';} 
+.price800::before { content: '80.0';} 
 .price1000::before { content: '100.0';} 
 .price1100::before { content: '110.0';} 
+.price1200::before { content: '120.0';} 
 
 /* margin & padding */
 .mt4 { margin-top: 0.4rem; }
