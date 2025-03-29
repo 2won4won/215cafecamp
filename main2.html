@@ -51,7 +51,7 @@
         .ex { color: #807F80; font-family: 'HancomMalangMalang-Regular';}
 
         /* 전체적 layout */
-        .main { width: 85%; height: 78%; /* box-sizing: border-box; */}
+        .main { width: 86%; height: 78%; /* box-sizing: border-box; */}
         .main .camp { width: 40%; height: 100%;}
         .main .side { width: 27%; height: 100%; }
         .main .cafe { width: 30%; height: 100%; }
@@ -99,8 +99,29 @@
            transform: scaleX(1.3);  transition: all 0.5s ease-in-out ;
            -o-transform:scale(1.3); -moz-transform:scale(1.3); -webkit-transform:scale(1.3);
          }
-         .main .set215 .ci.active  .img  .ko { display: none;  }
-        
+        .main .set215 .ci.active  .img  .ko { display: none;  }
+
+        .main .airplane {
+            position: absolute;
+            width: 5rem;
+            height: 3.5rem;
+            top: 57%;
+            left: 0%;
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            animation: move 6s infinite;
+        }
+        @keyframes move {
+            60% {
+                left: 15%;
+                opacity: 1;
+            }
+            100% {
+                left: 80%;
+                opacity: 0;
+            }
+        }
+  
         /* side  */
         .side .cardBox{ 
             width: 100%; 
@@ -292,16 +313,20 @@
                         </div>
                     </div>
                     <div class="disJcBet ">
-                        <div class=" border  disJcBet "> 
-                            <div class="img imgChunck "> </div>
+                        <div class=" border  disJcBet  posNa"> 
+                            <div class="img imgJeju "> </div>
                             <div class="content">
                                 <div class="unLine disJcBet"> 
-                                    <div class="ko" > 소살치살 </div>
-                                    <div class="price800" > </div>
+                                    <div class="ko" > 제주 막고기 </div>
+                                    <div class="price500" > </div>
                                 </div>
                                 <div class="ex tr "> 
-                                    살치살 <br> 미국산 생고기 <br> 2인 기준 500gram <br> BBQ 굽는 시간 10분 
+                                    제주에서 오는 막고기 <br> 2인 기준 500gram 
+                                    <br> 여러 부위가 막섞어  있는 <br>  못생긴 맛있는  <br> 제주 돼지고기 
                                 </div>
+                            </div>
+                            <div class="airplane" >
+                                <div class=""></div>
                             </div>
                         </div>
                         <div class=" border disJcBet "> 
@@ -325,27 +350,27 @@
                     <div class="price1200" > </div>
                 </div>
                 <div class="ex tr mt6">
-                    25,000 + 25,000  + 35,000 + 40,000 + 2,000 + 4,000 + 6,500 + 6,500 = <span> 144,000</span>
+                    25,000 + 25,000  + 37,500 + 40,000 + 2,000 + 4,000 + 6,500 + 6,500 = <span> 146,500</span>
                 </div>
                 <div class=" disJcBet ">
                     <div class=" ci  "> 
                         <div class=" imgBelly img "> 
-                            <div class="ko posiCen"> 삼겹살 <br> 250g </div> 
+                            <div class="ko posiCen"> 삼겹살 <br> 200g </div> 
                         </div>
                     </div>
                     <div class=" ci  "> 
                         <div class=" imgNeck img "> 
-                            <div class="ko posiCen"> 목살 <br> 250g </div> 
+                            <div class="ko posiCen"> 목살 <br> 200g </div> 
+                        </div>
+                    </div>
+                    <div class=" ci  "> 
+                        <div class=" imgJeju img "> 
+                            <div class="ko posiCen"> 제주 막고기 <br> 300g </div> 
                         </div>
                     </div>
                     <div class=" ci  "> 
                         <div class=" imgBeef img "> 
                             <div class="ko posiCen"> 소갈비살 <br> 300g </div> 
-                        </div>
-                    </div>
-                    <div class=" ci  "> 
-                        <div class=" imgChunck img "> 
-                            <div class="ko posiCen"> 살치살 <br> 200g </div> 
                         </div>
                     </div>
                     <div class=" ci  "> 

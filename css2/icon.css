@@ -219,6 +219,11 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
+.airplane {  
+    background: url('../img/icon/wFlight.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
 .vanilla_w {
     background: url('../img/icon/vanilla_w.png');
     background-size: 100% 100%;
@@ -261,6 +266,12 @@
     background-size: 105% 110%;
     background-repeat: no-repeat;
 }
+.imgJeju {  
+    background: url('../img/photo/imgJeju.jpg');
+    background-size: 125% 115%;
+    background-repeat: no-repeat;
+}
+
 .imgRice {  
     background: url('../img/photo/imgRice.jpg');
     background-size: 105% 110%;
