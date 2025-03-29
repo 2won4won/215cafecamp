@@ -270,6 +270,7 @@
     background: url('../img/photo/imgJeju.jpg');
     background-size: 125% 115%;
     background-repeat: no-repeat;
+    opacity: 0.9;
 }
 
 .imgRice {  
