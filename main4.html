@@ -29,106 +29,101 @@
     <link rel="stylesheet" href="css2/common.css">
     <link rel="stylesheet" href="css2/icon.css">
     <link rel="stylesheet" href="css/effect.css">
+    <!-- <link rel="stylesheet" href="css2/cardBox.css"> -->
     <script src="js/word.js"></script>
 
     <style>
         .bc { background-color: cyan;}
+        .ba { background-color: antiquewhite;}
+        .bw { background-color: white;}
         .bl { border: 2px solid seagreen;}
-        /* body { background-image: linear-gradient(45deg, rgba(209, 0, 42, 0.6) 0%, #0E5DC4 100%);} */
-        /* boby {} */
-        .title { background: url(img/background/spring1.jpg); color: white;  }
-        .stepTi,
-        .ko { color: #3A968C;}
-        .en { color: #E9ABC6;}
-        .ex { color: #97CFD8; font-family: 'HancomMalangMalang-Regular';}
-        /* .priceColor { color: #737A63;} */
-        .priceColor { color: #97CFD8;;}
-        .side .priceColor { color: #F9C8CC;}
-        .stepEx { color:#737A63;  font-family: 'Bareun_hipi'; font-size: 1.3rem;}
-        .choice { color:  #B22515;}
-        .work { color: #46A994;}
-        
+        .bb { border: 2px solid violet;}
+        .bg { border: 2px solid greenyellow;}
+         body {  
+            background-color: #333;
+        }
+         /* body {  
+             background-repeat: no-repeat;  
+             background: url('./img/background/aa.jpg'); object-fit: cover;
+        } */
+
+        .title { background: url('./img/background/a3_st.png'); color: #ED4758;  }
+        .main span { color: #fff;}
+        .ex { color: #807F80; font-family: 'HancomMalangMalang-Regular';}
+
         /* 전체적 layout */
-        .camp {  width: 83%; height: 77%; }
-        .bbq { width: 33%;}
-        .side { width: 30%;}
-        .cafe { width: 33%;}
-        .camp .tc .ko {  margin: 0.4rem 0;}
-
-        /* bbq  */
-
-        .camp .bbq .menu { 
-            width: 48%; height: 100%; box-sizing: border-box;
-            background: #333; color: white;
+        .main { width: 86%; height: 79%; /* box-sizing: border-box; */}
+        .main .camp { width: 41%; height: 100%;}
+        .main .side { width: 26%; height: 100%; }
+        .main .cafe { width: 30%; height: 100%; }
+        
+        .main .kind { width:100%; }
+        .main .kind .bbq .border { 
+            background: #333; padding: 1.2rem 1.4rem 0.7rem 1.2rem !important;
+            width: 44%; height: 18vh; color: white; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8); 
         }
-        .camp .bbq .content .ko { color: white;}
-        .camp .bbq .menu .img{ width: 100%; height: 10rem; margin-top: 1rem; }
-        /* .camp2 .bbq .menu .content { padding-top: 1.2rem;} */
-        .camp .bbq .menu .content .menuLine{   
+        .main .kind .bbq  .img { width: 56%; height: 17vh; }
+        .main .kind .bbq  .content { width: 40%; height: 100%;  line-height: 1.7rem;}
+        .main .kind .bbq .border .unLine { 
             border-bottom: white 0.1rem solid; 
-            padding-bottom: 0.6rem; padding-top: 1.2rem; margin-bottom: 1rem;
+            padding-bottom: 0.1rem; padding-top: 0.5rem; margin-bottom: 1rem;
         }
-        .camp .bbq .menu .content .ex {  line-height: 1.3rem;}
-        /* .camp .bbq > div:last-child .border { margin-bottom: 0; } */
         
-        .camp .bbq .menu.active { 
-            background: #333; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8); 
-            color: white; border-radius: 0.5rem; }
-        .camp .bbq .menu.active .content .menuLine { border-bottom: white 0.1rem solid; }  
-        .camp .bbq .menu .imgBelly {  
-            background: url('./img/photo/imgBelly.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         } 
-        .camp .bbq .menu .imgNeck {  
-            background: url('./img/photo/imgNeck.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         } 
-        .camp .bbq .menu .imgLib {  
-            background: url('./img/photo/imgLib.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         } 
-        .camp .bbq .menu .imgV {  
-            background: url('./img/photo/imgBeef.png');
-            background-size: 130% 120%;
-            background-repeat: no-repeat;
-         } 
-        
-        .cafe .sm,
-        .bbq .left { width: 23% ; height: auto ; align-self: center; padding-bottom: 0.3rem; }
-        .bbq .right { width: 75%; height: auto ; }
-        .stepTi { 
-            font-family: "paytone One";
-            text-transform: uppercase;
-            display: block;
-            font-size: 35px;
-            opacity: 0.3;
-            letter-spacing: -3px;
+        .main .video,
+        .main .set215 { 
+            width: 100%; /* height: 30%;  */ box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8); 
+            background: #333; box-sizing: border-box; margin-bottom: 0;
         }
-        .bbq .stepEx { margin-top: 0.3rem;}
-        .step4 .left { margin-bottom: 1.25rem;}
-
-        /* bbq >aactive .위치확인요 */
-        .border.active { background-color: blue;}
-
-        /* bbq >  .swiper { } */
-        .bbq .swiper .border { 
-            padding: 0 ; border-radius: 3rem;  height: 6rem; 
-            padding-top: 2rem; box-sizing: border-box; line-height: 1.5rem;
+        .main .set215 .unLine { 
+            border-bottom: white 0.1rem solid; 
+            padding-bottom: 0.3rem; padding-top: 1.1rem; 
         }
-        .swiper .icon {
-            width: 3.4vw;  height: 6.8vh;
-            position: absolute;  top: 1.7vh;  right: 4.1vw; opacity: 0.9;
+        .main .set215 .ex, 
+        .main .set215 .price1100, 
+        .main .set215 .price1200, 
+        .main .set215  .ko { color: white; position: relative;}
+        .main .set215 .ci { 
+            position: relative; border-radius: 50%; box-sizing: border-box;
+            width: 7rem; height: 7rem; /* padding:2.4rem 1rem 1rem 1rem;  */
+            margin-top: 1.2rem;
+            z-index: 9; color: white; line-height: 1.3rem; text-align: center; margin-top: 2r;
+            box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
         }
-        .swiper .rib { left: 3.7vw;}
-        .swiper .ko { margin-left: 2.6rem; }
+        .main .set215 .ex  { color: #807F80;}
+        .main .set215 .ex span { 
+            text-decoration: line-through; color: white ; 
+            text-decoration-thickness: 0.2rem; text-decoration-color: #807F80; 
+        }
+        .main .set215 .ci .img { width: 100%; height: 100%; border-radius: 50%; }
+        .main .set215 .ci .ko { padding-left: 0; margin-left: 0;}
+        .main .set215 .ci.active  {  overflow: hidden; }
+        .main .set215 .ci.active  .img {  
+           transform: scaleX(1.3);  transition: all 0.5s ease-in-out ;
+           -o-transform:scale(1.3); -moz-transform:scale(1.3); -webkit-transform:scale(1.3);
+         }
+        .main .set215 .ci.active  .img  .ko { display: none;  }
 
-        /*  bbq > image */
-        .bbq .step3 .right { height: 15vh;  }
-        .bbq .step3 .right .img { width: 100%; height: 100%; }
-
+        .main .airplane {
+            position: absolute;
+            width: 4rem;
+            height: 3rem;
+            top: 70%;
+            left: 0%;
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            animation: move 6s infinite;
+        }
+        @keyframes move {
+            60% {
+                left: 15%;
+                opacity: 1;
+            }
+            100% {
+                left: 80%;
+                opacity: 0;
+            }
+        }
+  
         /* side  */
         .side .cardBox{ 
             width: 100%; 
@@ -139,15 +134,15 @@
 
         /* card 전체 크기 */
         .cardBox .card { 
-            position: relative; width: 48%; height: auto; padding-bottom: 1rem;
+            position: relative; width: 48%; height: auto; padding-bottom: 1rem; color: #fff;
         }
-        .cardBox .card .face {  width: 100%;  height: 11rem;  transition: 0.5s;}
+        .cardBox .card .face {  width: 100%; height: 11.5rem; transition: 0.5s;}
         .cardBox .card .face.face1{
             position: relative;
             background: #333; /*  처음 카드 화면 */
             display: flex;  justify-content: center;  align-items: center;
             z-index: 1;
-            transform: translateY(5.5rem);
+            transform: translateY(5rem);
         }
         .cardBox .card.active .face.face1 { transform: translateY(0); }
         .cardBox .card .face.face1 .content { opacity: 0.5;  transition: 0.5s; }
@@ -168,7 +163,10 @@
             position: absolute;  top: 5.7vh;  right: 3.1vw; opacity: 0.9;
         }
         .cardBox .card .img {width: 100%; height: 100%;}
-        .cardBox .card.active .face.face1  { opacity: 1;  }
+
+        .cardBox .card.active .face.face1 .video,
+        .cardBox .card.active .face.face1  { opacity: 1;  }/* 동영상 보임 */
+
         .cardBox .card.active .face.face1 .imgPotato {  
             background: url('./img/photo/potato.png');
             background-size: 100% 100%;
@@ -179,78 +177,64 @@
             background-size: 100% 100%;
             background-repeat: no-repeat;
          }
-        .cardBox .card.active .face.face1 .imgFishBall {  
-            background: url('./img/photo/fishBall.png');
+        .cardBox .card.active .face.face1 .imgChestnut {  
+            background: url('./img/photo/imgChestnut.jpg');
             background-size: 100% 100%;
             background-repeat: no-repeat;
          }
-        .cardBox .card.active .face.face1 .imgStone {  
-            background: url('./img/photo/stone.png');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         }
-         .cardBox .card.active .face.face1 .imgBelly {  
-            background: url('./img/photo/imgBelly.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         } 
-         .cardBox .card.active .face.face1 .imgNeck {  
-            background: url('./img/photo/imgNeck.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         } 
-         .cardBox .card.active .face.face1 .imgLib {  
-            background: url('./img/photo/imgLib.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         } 
-         /* .cardBox .card.active .face.face1 .imgBeef {  
-            background: url('./img/photo/imgBeef.png');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-         }  */
+        
+    /* video   반응형에도 중앙에 위치  */
+        .main .side .videoBox {
+                position: relative;  
+                width: 100%;  height: 11.5rem;  overflow: hidden; 
+        }
+        .main .side .videoBox .video {
+                width: 100%; height: 100%; opacity: 0;
+        }
+       video { 
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
          .cardBox .icon {
             width: 2.4vw;  height: 5.1vh;
             position: absolute;  top: 5.5vh;  right: 4.3vw; 
-        }
-         /* .cardBox .icon2 {
-            width: 2.7vw;  height: 6.2vh;
-            position: absolute;  top: 5.5vh;  right: 2.5vw; 
-        } */
-        .cardBox .box { margin: 4rem; margin-left: -1rem;}
-        .cardBox.pork_w {
-            background: url('./img/icon/pork_w.png');
-        }
-        .cardBox.nn_w {
-            background: url('./img/icon/pork_w.png');
-        }
-        .cardBox.ribs_w  {
-            background: url('./img/icon/ribs_w.png');
         }
 
         /* 메뉴 설명 */
         .cardBox .card .face.face2 {
             position: relative;
-            /* background: #3d2a2a; */
             display: flex;   justify-content: center; align-items: center;
-            /* padding: 20px; */
             box-sizing: border-box;  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-            transform: translateY(-5.5rem);
+            transform: translateY(-6.5rem);
+            background-color: #333;
         }
         .cardBox .card.active .face.face2{  transform: translateY(0);  }
         .cardBox .card.active .face.face2 .content { 
             width: 100%;  height: 100%; padding: 1rem 1.2rem;  box-sizing: border-box;
         }
         .cardBox .card .face.face2 .cardLine {
-            border-bottom: #3A968C 0.1rem solid; 
+            border-bottom: white 0.1rem solid; 
             padding-bottom: 0.3rem; margin-top: 0.3rem; 
         }
 
+        .sideMenu { width: 100%; height: 10%; color: white; line-height: 1.4rem;  }
+        .sideMenu .swiper { width: 100%; height: 100%; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);  }
+        .sideMenu .icon {
+            width: 3.2vw;  height: 5.8vh; opacity: 0.7; padding-top: 1rem;
+            position: absolute;  top: 50%;  left: 50%; transform: translate(-50%, -50%); 
+        }
+        
+
         /* cafe */
-        /* .cafe .border { background: #333; color: white;}
-        .cafe .en,
-        .cafe .priceColor,
-        .cafe .ko { color: white;} */
+        .main .cafe { color: white; }
+        .main .cafe .en { color: #807F80; }
+      
+        .main .cafe .border { box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);  }
         .stepTi { 
             font-family: "paytone One";
             text-transform: uppercase;
@@ -258,9 +242,12 @@
             font-size: 35px;
             opacity: 0.3;
             letter-spacing: -3px;
+            /* color: black */
         }
+        .stepEx { /* color:#737A63; */  font-family: 'Bareun_hipi'; font-size: 1.3rem;}
         .cafe .sm { width: 24% ; height: auto ; align-self: center;}
         .cafe .big { width: 75% ;}
+        .main .cafe .milk > div:nth-child(odd) {width: 43%;}
         .cafe .eso .big .disJcBet .border,
         .cafe .flower .big .border { width: 38%; }
         /* .cafe .flower .big .ko { margin-top: 0.4rem ; margin-bottom: 0.6rem;} */
@@ -268,251 +255,362 @@
         /* eso latte_box */
         .cafe .big .tc > div {  width: 31%; }
         .cafe .latte { height: 1.7rem; width: 2.3rem;}
-        .cafe .saucer {background-color: #2A9696;}
-        .cafe .cafeLatte1 .latte { position: absolute; top: 2.3rem; left: -0.5rem;  }
+        .cafe .saucer {background-color:#757575;}
+        .cafe .cafeLatte1 .latte { position: absolute; top: 2.3rem; left: -0.9rem;  }
         .cafe .cafeLatte1 .saucer{ 
-            position: absolute; top: 2.4rem; left: -10.4rem;
+            position: absolute; top: 2.4rem; left: -10.9rem;
         }
-        .cafe .cafeLatte1 .cup_body { background-color: #00924b ;}
+        .cafe .cafeLatte1 .cup_body { background-color: #696969 ;}
         .cafe .cafeLatte1 .cup_handle { 
-            border : 2px solid  #F7B7D1; 
+            border : 2px solid  #676767;
             transform: scaleX(-1); /* 컵 핸들 방향 전환 */
             margin-top: 0px;
             margin-left: 2px;
         }
 
-        .cafe .cafeLatte2 .latte  { position: absolute; top: 2.3rem; left: 4rem; }
+        .cafe .cafeLatte2 .latte  { position: absolute; top: 2.3rem; left: 3.1rem; }
         .cafe .cafeLatte2 .saucer { 
-            position: absolute; top: 2.4rem; left: -7.5rem;
+            position: absolute; top: 2.4rem; left: -8.3rem;
         }
-        .cafe .cafeLatte2 .cup_body { background-color:#F7B7D1 ;}
-        .cafe .cafeLatte2 .cup_handle { border : 2px solid  #2A9696; }
+        .cafe .cafeLatte2 .cup_body { background-color:#807F80 ;}
+        .cafe .cafeLatte2 .cup_handle { border : 2px solid #696969; }
         
 
-        .cafe .vanilla { top: 0.3rem; right: 12rem; }
+        .cafe .eso .vanilla_w { top: 0.3rem; right: 11rem; }
         .cafe .flower .ko { margin: 0.2rem 0 0.3rem 0.5rem;}
+        .main .cafe .flower > .border:last-child{ margin-bottom: 0;}
 
-        /*  */
-        @keyframes text-mv{
-            to {
-                text-indent: -10ch;
+        .main .set215 .set { 
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            /* margin: 3em auto 0; */
+            max-width: 100%;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .main .set215 .set .setKind {
+            flex: 1;
+            margin: 1rem 0;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; 
+        }
+        .main .set215 .set .setKind .setBox {
+            width: 100%;
+            /* border: 1px solid red; */
+            height: 9rem;
+            position: relative;
+            display: inline-block;
+            perspective: 800px
+        }
+        .main .set215 .set .setKind .setBox .cover {
+            border-radius: 6px;
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            top: 0;
+            z-index: 2;
+            transition: 0.3s ease;
+            transform-origin: top left;
+            /* font: 900 28px/0.9 "Poppins", sans-serif; */
+            text-transform: uppercase;
+            color: #fff;
+            overflow: hidden;
+            background-color: red;
+        }
+        .main .set215 .set .setKind .setBox .cover .coverborder {
+            width: 80%;
+			height: 80%;
+			border: 0.1rem solid #fff;
+			margin: 10%;
+        }    
+        .main .set215 .set .setKind .setBox .cover .coverborder span {
+            display: inline-block;
+			position: absolute;
+			bottom: 7.5px;
+			left: 10px;
+			padding: 10px;
+			max-width: 50%; color: #fff;
+        }    
+        .main .set215 .set .setKind .setBox .cover .coverborder .coverTop { 
+            position: absolute;
+			left: 0;
+			width: calc(100% + 64px);
+			margin-left: -32px;
+			z-index: 4;
+			border-radius: 3px 3px 4px 4px;
+			opacity: 0;
+        }
+        .main .set215 .set .setKind .setBox .cover .coverborder .base { 
+            background: #fff;
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            top: 0;
+            border-radius: 8px;
+            padding: 15px;
+            grid-gap: 8px;
+        }
+        .main .set215 .set .setKind:hover .cover {
+            /* .cover { */
+			    transform: rotateX(78deg);
+            /* } */
+        }
+        .main .set215 .set .setKind:hover .coverTop {
+            animation: startTransition 0.17s forwards 0.1s;
+        }
+        @keyframes startTransition {
+            0% {
+                opacity: 0;
+                top: 200px;
+                transform: scale(0.5);
+                height: 0;
+            }
+            40% {
+                opacity: 1;
+            }
+            100% {
+                top: 22px;
+                opacity: 1;
+                transform: scale(1);
+                height: 15px;
+                box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.2);
             }
         }
-        .bandy {  
-            text-align: center; color: #0000;  position: relative; 
-            font-size: 1.1vw;  font-family: 'IM_Hyemin-Bold';
-        }
-        .bandy  span:before,
-        .bandy  span:after {
-            position: absolute;
-            inset: 0;  content: attr(data-val); color: #F9F6EF;
-            text-shadow: .1em .01em .1em color-mix(in lab, currentcolor, #0005 80%);
-            animation: text-mv linear 15s infinite alternate; width: 38rem;
-        }
-        .a:before { 
-            clip-path: inset(-10% 80% -50% -10%);
-            transform:
-                translatey(.85lh) /* 위아래로..크면 내려감 */
-                translatex(-1px)
-                rotatey(-45deg)
-                rotatez(4deg)
-                skew(3deg, 3deg);
-        }
-        .a:after { 
-            mask-image:
-                linear-gradient(
-                    90deg,
-                    #0000 0 20%,
-                    #000 20% 40%,
-                    #0000 0
-                );
-                transform:
-                    translatey(-.35lh)
-                    rotatey(45deg)
-                    rotatez(-1deg)
-                    translatex(-1px)
-                    skew(-2deg, -5deg);
-        }
-        .b:before { 
-            mask-image:
-                linear-gradient(
-                    90deg,
-                    #0000 0 40%,
-                    #000 40% 60%,
-                    #0000 0
-                );
-            transform:
-                translatey(-.01lh)
-                translatex(-1px)
-                rotatey(-45deg)
-                rotatez(4deg)
-                skew(3deg, 3deg);
-        }
-        .b:after { 
-            clip-path: 
-                 inset(-100% -100% -100% 60%);
-            transform:
-                translatey(.41lh)
-                rotatey(45deg)
-                rotatez(-1deg)
-                translatex(-2.5px)
-                skew(-3deg, -5deg);
-        }
+
     </style>
 </head>
 <body>
-    <div class=" posiCen disJcBet  camp ">
-        <div class=" bbq disJcCol "> 
-            <div class=" title shadow " > 215CafeCamp's BBQ </div>
-            <div class="disJcBet ">
-                <div class="menu border ">
-                    <div class="img imgBelly "></div>
-                    <div class="content ">
-                        <div class="menuLine disJcBet"> 
-                            <div class="ko" > 삼겹살 </div>
-                            <div class="price500" > </div>
-                        </div>
-                        <div class="ex tr "> 삼겹살 <br> 국내산 생고기  <br> 2인 기준 400gram  <br> BBQ 굽는 시간 30분</div>
-                    </div>
-                </div>
-                <div class="menu border">
-                    <div class="img img imgNeck "></div>
-                    <div class="content ">
-                        <div class="menuLine disJcBet"> 
-                            <div class="ko" >  목살 </div>
-                            <div class="price500" > </div>
-                        </div>
-                        <div class="ex tr "> 목살 <br>  국내산 생고기 <br> 2인 기준 400gram  <br> BBQ 굽는 시간 30분 </div>
-                    </div>
-                </div>
-            </div>
-            <div class="disJcBet ">
-                <div class="menu border">
-                    <div class="img img imgLib "></div>
-                    <div class="content ">
-                        <div class="menuLine disJcBet"> 
-                            <div class="ko" >  등갈비 </div>
-                            <div class="price600" > </div>
-                        </div>
-                        <div class="ex tr "> 등갈비 <br> 국내산 생고기 <br> 2인 기준 600gram <br> BBQ 굽는 시간 30분 </div>
-                    </div>
-                </div>
-                <div class="menu border">
-                    <div class="img imgV "></div>
-                    <div class="content ">
-                        <div class="menuLine disJcBet"> 
-                            <div class="ko" > 소갈비살 </div>
-                            <div class="price700" > </div>
-                        </div>
-                        <div class="ex tr ">  소갈비살 <br> 미국산 생고기 <br> 2인 기준 500gram <br> BBQ 굽는 시간 10분 </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="side disJcCol">
-            <div class=" title shadow " > 215CafeCamp's Side Menu </div>
-            <div class=" cardBox ">
-                <div class=" ">
+    <div class="posiCen disJcBet main">
+        <div class="camp disJcCol ">
+            <div class=" title shadow " > <span>215Ca</span>feCa <span>m</span>p's <span>BB</span>Q</div>
+            <div class=" kind disJcCol ">
+                <div class="bbq disJcCol  "> 
                     <div class=" disJcBet">
-                        <div class="card ">
-                            <div class="face face1 "> 
-                                <div class="content img imgPotato" >
-                                    <div class="posiCen" >
-                                        <div class="ko "> 4가지 감튀 </div>
-                                        <div class="price130 priceColor tc"></div>
-                                    </div>
+                        <div class="  border disJcBet"> 
+                            <div class="img imgBelly "> </div>
+                            <div class="content">
+                                <div class="unLine disJcBet"> 
+                                    <div class="ko" > 삼겹살 </div>
+                                    <div class="price500" > </div>
                                 </div>
-                            </div>
-                            <div class="face face2 ">
-                                <div class="content "> 
-                                    <div class="disJcBet cardLine" >
-                                        <div class="ko "> 4가지 감튀 </div>
-                                        <div class="price130 priceColor"></div>
-                                    </div>
-                                    <div class="ex tr mt6">
-                                        각기 다른 모양의 감자튀김,<br>  해쉬브라운, 치즈스틱을 <br> 
-                                        에어프라이어로 구워서 <br>  건강하게 드실 수 있습니다. <br>
-                                        칼로리 걱정은 DOWN. <br>
-                                    </div>
+                                <div class="ex tr "> 
+                                    삼겹살 <br> 국내산 생고기  <br> 2인 기준 400gram  <br> BBQ 굽는 시간 30분
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="face face1  "> 
-                                <div class="content img imgPollack" >
-                                    <div class="posiCen" >
-                                        <div class="ko"> 빠삭 먹태 </div>
-                                        <div class="price130 priceColor tc"></div>
-                                    </div>
+                        <div class=" border disJcBet "> 
+                            <div class="img imgNeck "> </div>
+                            <div class="content">
+                                <div class="unLine disJcBet"> 
+                                    <div class="ko" > 목살 </div>
+                                    <div class="price500" > </div>
                                 </div>
-                            </div>
-                            <div class="face face2  ">
-                                <div class="content ">   
-                                    <div class="disJcBet cardLine" >
-                                        <div class="ko "> 빠삭 먹태 </div>
-                                        <div class="price130 priceColor"></div>
-                                    </div>
-                                    <div class="ex tr mt6">
-                                        빠~삭하고 포실포실한<br>  먹태 구이입니다. <br> 
-                                        입은 심심하나 <br>  배부르지 않는 것이 생각날 때 <br> 제격입니다. <br>
-                                    </div>
+                                <div class="ex tr "> 
+                                    목살 <br> 국내산 생고기  <br> 2인 기준 400gram  <br> BBQ 굽는 시간 30분
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="disJcBet " >
-                        <div class="card">
-                            <div class="face face1 "> 
-                                <div class="content img imgFishBall" >
-                                    <div class="posiCen" >
-                                        <div class="ko"> 호오 오뎅 </div>
-                                        <div class="price180 priceColor tc"></div>
-                                    </div>
+                    <div class="disJcBet ">
+                        <div class=" border  disJcBet  posNa"> 
+                            <div class="img imgJeju "> </div>
+                            <div class="content">
+                                <div class="unLine disJcBet"> 
+                                    <div class="ko" > 제주 막고기 </div>
+                                    <div class="price500" > </div>
+                                </div>
+                                <div class="ex tr "> 
+                                    제주에서 오는 막고기 <br> 2인 기준 500gram 
+                                    <br> 여러 부위가 막섞어  있는 <br>  막생긴 맛있는  <br> 제주 돼지고기 
                                 </div>
                             </div>
-                            <div class="face face2 ">
-                                <div class="content ">   
-                                    <div class="disJcBet cardLine" >
-                                        <div class="ko "> 호오 오뎅</div>
-                                        <div class="price180 priceColor"></div>
-                                    </div>
-                                    <div class="ex tr mt6 ">
-                                        찬 바람 쌩쌩 불 때, <br> 뜨끈한 국물이 생각날 때,<br>
-                                        그 때가 제때인 <br> 오뎅탕입니다. <br>
-                                        지. 금. 롸. 잇. 나. 우
-                                    </div>    
-                                </div>
+                            <div class="airplane" >
+                                <div class=""></div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="face face1 "> 
-                                <div class="content img imgStone" >
-                                    <div class="posiCen" >
-                                        <div class="ko"> 아뜨 꾸이 </div>
-                                        <div class="price280 priceColor tc"></div>
-                                    </div>
+                        <div class=" border disJcBet "> 
+                            <div class="img imgBeef "> </div>
+                            <div class="content">
+                                <div class="unLine disJcBet"> 
+                                    <div class="ko" > 소갈비살 </div>
+                                    <div class="price700" > </div>
                                 </div>
+                                <div class="ex tr ">  
+                                    소갈비살 <br> 미국산 생고기 <br> 2인 기준 500gram <br> BBQ 굽는 시간 10분 
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" border   set215 posNa"> 
+                <div class="unLine disJcBet "> 
+                    <div class="ko " > 215 SET  (for 2~3 people)</div>
+                    <!-- <div class="price1200" > </div> -->
+                </div>
+                <!-- <div class="ex tr mt6">
+                    25,000 + 25,000  + 37,500 + 40,000 + 2,000 + 4,000 + 6,500 + 6,500 = <span> 146,500</span>
+                </div> -->
+                <div class=" disJcBet  ">
+                    <div class="set ">
+                        <div class="setKind" > 
+                            <div class="setBox"> 
+                                <div class="cover"> 
+                                    <div class="coverborder"> <span>No.1 SET  <br> 돼지 </span> </div>
+                                </div>
+                                <div class="coverTop" > </div>
+                                <div class="base" > </div>
                             </div>
-                            <div class="face face2 ">
-                                <div class="content ">   
-                                    <div class="disJcBet cardLine" >
-                                        <div class="ko ">아뜨 꾸이 </div>
-                                        <div class="price280 priceColor"></div>
-                                    </div>
-                                    <div class="ex tr mt6">
-                                        뜨거운 맥반석 위에 <br> 다양한 반건조 건어물을 <br> 직접 구워 드실 수 있습니다. <br> 
-                                        앗 뜨거우니 <br> 화상에 유의해 주세요. <br> 
-                                    </div>    
-                                 </div>
-
+                        </div>
+                        <div class="setKind " > 
+                            <div class="setBox"> 
+                                <div class="cover"> 
+                                    <div class="coverborder"> <span>No.2 SET  <br> 소 + 돼지 </div>
+                                </div>
+                                <div class="coverTop" > </div>
+                                <div class="base" > </div>
+                            </div>
+                        </div>
+                        <div class="setKind " > 
+                            <div class="setBox"> 
+                                <div class="cover"> 
+                                    <div class="coverborder"> <span>No.3 SET  <br> 소 + 돼지 </div>
+                                </div>
+                                <div class="coverTop" > </div>
+                                <div class="base" > </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class=" cafe  disJcCol  "> 
-            <div class=" title shadow " > 215CafeCamp's Cafe </div>
+        <div class="side disJcCol ">
+            <div class=" title shadow " > <span>215Caf</span>eCamp's <span> Side </span>  </div>
+            <div class=" cardBox">
+                <div class=" disJcBet ">
+                    <div class="card ">
+                        <div class="face face1 "> 
+                            <div class="content img imgPotato" >
+                                <div class="posiCen" >
+                                    <div class="ko "> 4가지 감튀 </div>
+                                    <div class="price130 priceColor tc"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="face face2 ">
+                            <div class="content "> 
+                                <div class="disJcBet cardLine" >
+                                    <div class="ko "> 4가지 감튀 </div>
+                                    <div class="price130 priceColor"></div>
+                                </div>
+                                <div class="ex tr mt6">
+                                    각기 다른 모양의 감자튀김,<br>  해쉬브라운, 치즈스틱을 <br> 
+                                    에어프라이어로 구워서 <br>  건강하게 드실 수 있습니다. <br>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="face face1  "> 
+                            <div class="content img imgPollack" >
+                                <div class="posiCen" >
+                                    <div class="ko"> 빠삭 먹태 </div>
+                                    <div class="price180 priceColor tc"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="face face2  ">
+                            <div class="content ">   
+                                <div class="disJcBet cardLine" >
+                                    <div class="ko "> 빠삭 먹태 </div>
+                                    <div class="price180 priceColor"></div>
+                                </div>
+                                <div class="ex tr mt6">
+                                    빠~삭하고 포실포실한<br>  먹태 구이입니다. <br> 건강한 먹거리입니다.<br>
+                                    칼로리 걱정은 DOWN.  <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="disJcBet " >
+                    <div class="card">
+                        <div class="face face1 "> 
+                            <div class="content  videoBox" >
+                                <div class="posiCen" >
+                                    <div class="ko"> 달달 밤밤 </div>
+                                    <div class="price100 priceColor tc"></div>
+                                </div>
+                                <video loop autoplay muted playinline poster="" class="video">
+                                    <source src="./img/video/chestNut.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="face face2 ">
+                            <div class="content ">   
+                                <div class="disJcBet cardLine" >
+                                    <div class="ko mt6 "> 달달 밤밤 </div>
+                                    <div class="price100 priceColor"></div>
+                                </div>
+                                <div class="ex tr mt6 ">
+                                    달콤하고 <br> 고소한 약단밤 <br> 최고의 간식
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="face face1 "> 
+                            <div class="content  videoBox" >
+                                <div class="posiCen" >
+                                    <div class="ko"> 아뜨 꾸이 </div>
+                                    <div class="price180 priceColor tc"></div>
+                                </div>
+                                <video loop autoplay muted playinline poster="" class="video">
+                                    <source src="./img/video/stone.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="face face2 ">
+                            <div class="content ">   
+                                <div class="disJcBet cardLine" >
+                                    <div class="ko mt6">아뜨 꾸이 </div>
+                                    <div class="price180 priceColor"></div>
+                                </div>
+                                <div class="ex tr mt6">
+                                    HOT HOT 맥반석 위에 <br> 직접 구워 드실 수 있습니다. <br> 
+                                        화상에 유의해 주세요. <br> 
+                                </div>    
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" sideMenu none">
+                <div class="swiper ">
+                    <div class="swiper-wrapper">
+                        <!-- slides -->
+                        <div class="swiper-slide   posNa"> 
+                            <div  class=" oilNoodle icon ko tc" > 들기름<br>국수 </div>
+                        </div>
+                        <div class="swiper-slide   posNa"> 
+                            <div  class=" soup icon ko tc" > 된장 <br> 찌개 </div>
+                        </div>
+                        <div class="swiper-slide   posNa"> 
+                            <div  class=" noodle icon ko tc" > 비빔 <br>국수 </div>
+                        </div>
+                        <div class="swiper-slide   posNa"> 
+                            <div  class=" portRice icon ko tc" > 코펠<br>밥 </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cafe disJcCol ">
+            <div class=" title shadow " > <span>215Caf</span>eCamp's <span> Cafe </span>  </div>
             <div class="eso disJcBet">
                 <div class="sm">
                     <div class="stepTi " >  Espresso  </div>
@@ -525,11 +623,13 @@
                         </div>
                         <div class="priceColor price65"></div>
                     </div>
-                    <div class="disJcBet border tc">
+                    <div class="disJcBet border tc milk">
                         <div class="  "> 
-                            <div class="en" > Cafe Latte </div>
+                            <div class="disJcBet line">
+                                <div class="en" > Cafe Latte </div>
+                                <div class="priceColor price70"></div>
+                            </div>
                             <div class="ko " > 카페라떼 </div>
-                            <div class="priceColor price70"></div>
                         </div>
                         <div class="posNa">
                             <div class="cafeLatte1">
@@ -563,10 +663,12 @@
                                 <div class="saucer"></div>
                             </div>
                         </div>
-                        <div class=" "> 
-                             <div class="en" > Cappuccino </div>
-                            <div class="ko" > 카푸치노 </div>
-                            <div class="priceColor price70"></div>
+                        <div class="  "> 
+                            <div class="disJcBet line">
+                                <div class="en" > Cappuccino </div>
+                                <div class="priceColor price70"></div>
+                            </div>
+                            <div class="ko " > 카페라떼 </div>
                         </div>
                     </div>
                     <div class="border line disJcBet posNa"> 
@@ -575,7 +677,7 @@
                             <div class="ko" > 바닐라 라떼 </div>
                         </div>
                         <div class="priceColor price80"></div>
-                        <div class="vanilla " ></div>
+                        <div class="vanilla_w " ></div>
                     </div>
                 </div>
             </div>
@@ -664,36 +766,31 @@
                     </div>
                     <div class="priceColor price100"></div>
                 </div> 
-            </div>     
+            </div> 
         </div>
     </div>
 </body>
-
 <script>
     const swiper = new Swiper('.swiper', {
-        slidesPerView : 3,
-        spaceBetween : 17,
-        loop : true,
-        loopAdditionalSlides : 1,
-        autoplay : {
-            delay : 2500,
-            disableOnInteraction : false,
-        },
-        pagination : {
-            el : '.swiper-pagination',
-        },
-        observer : true,
-        observeParents : true
-    });
+      slidesPerView : 4,
+      spaceBetween : 13,
+      loop : true,
+      loopAdditionalSlides : 1,
+      autoplay : {
+          delay : 2500,
+          disableOnInteraction : false,
+      },
+      pagination : {
+          el : '.swiper-pagination',
+      },
+      observer : true,
+      observeParents : true
+  });
 
-    $(document).ready(function(){
-        $("#we").load("cate/we.html");
-    });
-
-    // 선택한 class를 순차적으로 찾고 css 변경
-    var items = document.querySelectorAll('.card');
+  // 선택한 class를 순차적으로 찾고 css 변경
+    var items = document.querySelectorAll('.ci');
     var cnt = 0;
-
+    
     function activeFunc() {
         // 모든 요소에서 active 클래스를 제거
         items.forEach(function(a) {
@@ -701,21 +798,39 @@
         });
         
         // 현재 cnt에 해당하는 요소에 active 클래스 추가
-        items[cnt].classList.add('active');
-        // $('.active').removeClass('ko');
-      
-       
+        items[cnt].classList.add('active');  
         // cnt를 다음 요소로 이동 (순환)
         cnt++;
         if (cnt >= items.length) {
             cnt = 0; // 다시 처음으로 돌아감
         }
     }
-
-    // 일정 간격으로 activeFunc 실행
     setInterval(activeFunc, 2000);
+
+    const list = document.querySelectorAll('.card');
+    let currentIndex = 0;
+
+    // 각 카드별 지연 시간 (밀리초 단위)
+    const delays = [2000, 2000, 4000, 4000]; // 예시: 카드 개수만큼 시간 설정
+
+    function cardActive() {
+        // 모든 요소에서 active 클래스를 제거
+        list.forEach(list => list.classList.remove('active'));
+        
+        // 현재 인덱스에 해당하는 요소에 active 클래스 추가
+        list[currentIndex].classList.add('active');
+        
+        // 다음 인덱스 계산
+        currentIndex = (currentIndex + 1) % list.length;
+        
+        // 현재 카드에 해당하는 지연 시간으로 다음 실행 예약
+        setTimeout(cardActive, delays[currentIndex]);
+    }
+
+    // 초기 실행
+    cardActive();
+
 
 
 </script>
-
 </html>
