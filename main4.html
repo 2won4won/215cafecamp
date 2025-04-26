@@ -52,7 +52,7 @@
         .ex { color: #807F80; font-family: 'HancomMalangMalang-Regular';}
 
         /* 전체적 layout */
-        .main { width: 86%; height: 83%; /* box-sizing: border-box; */}
+        .main { width: 86%; height: 80%; /* box-sizing: border-box; */}
         .main .camp { width: 40%; height: 100%;}
         .main .side { width: 27%; height: 100%; }
         .main .cafe { width: 30%; height: 100%; }
@@ -60,9 +60,9 @@
         .main .kind { width:100%; }
         .main .kind .bbq .border { 
             background: #333; padding: 1.2rem 1.4rem 0.7rem 1.2rem !important;
-            width: 44%; height: 20vh; color: white; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8); 
+            width: 44%; height: 18vh; color: white; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8); 
         }
-        .main .kind .bbq  .img { width: 56%; height: 19vh; }
+        .main .kind .bbq  .img { width: 56%; height: 17vh; }
         .main .kind .bbq  .content { width: 40%; height: 100%;  line-height: 1.7rem;}
         .main .kind .bbq .border .unLine { 
             border-bottom: white 0.1rem solid; 
@@ -295,19 +295,19 @@
 
         .cafe .eso .vanilla_w { top: 0.3rem; right: 11rem; }
         .cafe .flower .ko { margin: 0.2rem 0 0.3rem 0.5rem;}
-        .main .cafe .flower > .border:last-child{ margin-bottom: 0;}
+        .main .cafe .season .big .border{ margin-bottom: 0 !important; }
         .w1 { width: 22%; margin-top: 0.7rem; }
         .w2 { width: 73%;}
         .common { padding-top: 2rem; box-sizing: border-box;}
         /* .camp .set215 .border { padding-bottom: 1rem;}  */
         /* .camp .set215 .border:last-child { margin-top: 1.4rem;}  */
-        .camp .set215 .img { width: 5rem; height: 4rem;}
+        .camp .set215 .img { width: 5rem; height: 4rem; }
         .camp .set215 .img:first-child { transform: scaleX(-1); margin-right: 0.3rem;}
 
     </style>
 </head>
 <body>
-    <div class="posiCen disJcBet main ">
+    <div class="posiCen disJcBet main bb">
         <div class="camp disJcCol ">
             <div class=" title shadow " > <span>215Ca</span>feCa <span>m</span>p's <span>BB</span>Q</div>
             <div class=" kind disJcCol ">
@@ -348,7 +348,7 @@
                                 </div>
                                 <div class="ex tr "> 
                                     제주에서 오는 막고기 <br> 2인 기준 500gram 
-                                    <br> 여러 부위가 막섞어  있는 <br>  막생긴 맛있는  <br> 제주 돼지고기 
+                                    <br> 여러 부위가 막섞어  있는 <br>  막생긴  제주 돼지고기 
                                 </div>
                             </div>
                             <div class="airplane" >
@@ -710,25 +710,25 @@
                         </div>
                     </div>    
                 </div>
-                <div class="disJcBet ">
-                    <div class="sm">
-                        <div class="stepTi " >  Only Hot  </div>
-                    </div> 
-                    <div class="big" >
-                        <div class="border   mt6"> 
-                            <div class="disJcBet line" >
-                                <div class="en" >SSangWhaTang </div>
-                                <div class="priceColor price100"></div>
-                            </div>
-                            <div class="dis" >
-                                <div class="ko" > 대추쌍화탕 </div>
-                                <div class="ex word"></div>
-                            </div>
-                        </div> 
-                    </div>
-                     
-                </div>
             </div> 
+            <div class=" season disJcBet ">
+                <div class="sm">
+                    <div class="stepTi " >  Only Hot  </div>
+                </div> 
+                <div class="big" >
+                    <div class="border   "> 
+                        <div class="disJcBet line" >
+                            <div class="en" >SSangWhaTang </div>
+                            <div class="priceColor price100"></div>
+                        </div>
+                        <div class="dis" >
+                            <div class="ko" > 대추쌍화탕 </div>
+                            <div class="ex word"></div>
+                        </div>
+                    </div> 
+                </div>
+                 
+            </div>
         </div>
     </div>
 </body>
