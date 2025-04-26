@@ -4,9 +4,9 @@
 .disJcBet {
     display: flex;  justify-content: space-between;
 }
-/* .disJcAro {
+.disJcAro {
     display: flex;  justify-content:space-around;
-} */
+}
 .disCen { 
     display: flex;  justify-content: center; align-items: center;
 }
@@ -146,3 +146,7 @@
 /* margin & padding */
 .mt4 { margin-top: 0.4rem; }
 .mt6 { margin-top: 0.6rem; }
+.mt8 { margin-top: 0.8rem; }
+.mt12 { margin-top: 1.2rem; }
+.mb0 { margin-bottom:0; }
+.pt4 { margin-top: 0.4rem; }

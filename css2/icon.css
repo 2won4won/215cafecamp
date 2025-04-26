@@ -200,7 +200,7 @@
     background-repeat: no-repeat;
 }
 .pig_w {
-    background: url('../img/icon/pig_w.png');
+    background: url('../img/icon/wPig.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -210,12 +210,12 @@
     background-repeat: no-repeat;
 }
 .meat_w {
-    background: url('../img/icon/meat_w.png');
+    background: url('../img/icon/wMeat.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 .pork_w {
-    background: url('../img/icon/pork_w.png');
+    background: url('../img/icon/wPork.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -225,7 +225,7 @@
     background-repeat: no-repeat;
 }
 .vanilla_w {
-    background: url('../img/icon/vanilla_w.png');
+    background: url('../img/icon/wVanilla.png');
     background-size: 100% 100%;
     background-repeat: no-repeat; width: 1.9vw;
     height: 3.9vh;
@@ -273,6 +273,7 @@
     opacity: 0.9;
 }
 
+
 .imgRice {  
     background: url('../img/photo/imgRice.jpg');
     background-size: 105% 110%;
@@ -291,5 +292,35 @@
 .imgAmericano {  
     background: url('../img/photo/imgAmericano.png');
     background-size: 105% 110%;
+    background-repeat: no-repeat;
+}
+.wPig {  
+    background: url('../img/icon/wPig.png');
+    background-size: 85% 80%;
+    background-repeat: no-repeat;
+}
+.wCow {  
+    background: url('../img/icon/wCow.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.wAmeriHot {  
+    background: url('../img/icon/wAmeriHot.png');
+    background-size: 60% 70%;
+    background-repeat: no-repeat;
+}
+.wAmeriIce {  
+    background: url('../img/icon/wAmeriIce.png');
+    background-size: 80% 85%;
+    background-repeat: no-repeat;
+}
+.wRice {  
+    background: url('../img/icon/wRice.png');
+    background-size: 55% 65%;;
+    background-repeat: no-repeat;
+}
+.wRamen {  
+    background: url('../img/icon/wRamen.png');
+    background-size: 60% 70%;
     background-repeat: no-repeat;
 }

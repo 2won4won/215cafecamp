@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -52,44 +52,53 @@
         .ex { color: #807F80; font-family: 'HancomMalangMalang-Regular';}
 
         /* 전체적 layout */
-        .main { width: 86%; height: 79%; /* box-sizing: border-box; */}
-        .main .camp { width: 41%; height: 100%;}
-        .main .side { width: 26%; height: 100%; }
+        .main { width: 86%; height: 83%; /* box-sizing: border-box; */}
+        .main .camp { width: 40%; height: 100%;}
+        .main .side { width: 27%; height: 100%; }
         .main .cafe { width: 30%; height: 100%; }
         
         .main .kind { width:100%; }
         .main .kind .bbq .border { 
             background: #333; padding: 1.2rem 1.4rem 0.7rem 1.2rem !important;
-            width: 44%; height: 18vh; color: white; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8); 
+            width: 44%; height: 20vh; color: white; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8); 
         }
-        .main .kind .bbq  .img { width: 56%; height: 17vh; }
+        .main .kind .bbq  .img { width: 56%; height: 19vh; }
         .main .kind .bbq  .content { width: 40%; height: 100%;  line-height: 1.7rem;}
         .main .kind .bbq .border .unLine { 
             border-bottom: white 0.1rem solid; 
-            padding-bottom: 0.1rem; padding-top: 0.5rem; margin-bottom: 1rem;
+            padding-bottom: 0.1rem; padding-top: 1.2rem; margin-bottom: 1rem;
         }
-        
-        .main .video,
-        .main .set215 { 
-            width: 100%; /* height: 30%;  */ box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8); 
+
+        .main .set215 .border,
+        .main .setMenu {
+            width: 100%;  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8); 
             background: #333; box-sizing: border-box; margin-bottom: 0;
         }
+        .main .set215 .w2 .mt6 > div > div { margin-top: 0.4rem;}
+        .main .video { 
+            width: 100%; height: 30%;  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8); 
+            background: #333; box-sizing: border-box; margin-bottom: 0;
+        }
+        .main .setMenu .unLine,
         .main .set215 .unLine { 
             border-bottom: white 0.1rem solid; 
             padding-bottom: 0.3rem; padding-top: 1.1rem; 
         }
+        .main .setMenu .ko,
         .main .set215 .ex, 
-        .main .set215 .price1100, 
+        .main .set215 .price1000, 
         .main .set215 .price1200, 
         .main .set215  .ko { color: white; position: relative;}
         .main .set215 .ci { 
-            position: relative; border-radius: 50%; box-sizing: border-box;
-            width: 7rem; height: 7rem; /* padding:2.4rem 1rem 1rem 1rem;  */
-            margin-top: 1.2rem;
+            position: relative; border-radius: 50%; /* box-sizing: border-box; */
+            width: 6rem; height: 6rem; /* padding:2.4rem 1rem 1rem 1rem;  */
+            /* margin-top: 1.2rem; */
             z-index: 9; color: white; line-height: 1.3rem; text-align: center; margin-top: 2r;
             box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
         }
+        .main .setMenu,
         .main .set215 .ex  { color: #807F80;}
+        .main .setMenu .ex span, 
         .main .set215 .ex span { 
             text-decoration: line-through; color: white ; 
             text-decoration-thickness: 0.2rem; text-decoration-color: #807F80; 
@@ -152,18 +161,19 @@
         }
         .cardBox .card.active .face.face1 .content { opacity: 1; }
 
+
         /* 카드 이미지가 보일 때 ko 안보임 */
         .cardBox .card.active .face.face1 .img  .icon, 
         .cardBox .card.active .face.face1 .img  .ko, 
         .cardBox .card.active .face.face1 .img  .priceColor {    display: none;  }
 
-        /* imgae */
+        /* image */
         .cardBox  .icon {
             width: 2.4vw;  height: 5.8vh;
             position: absolute;  top: 5.7vh;  right: 3.1vw; opacity: 0.9;
         }
         .cardBox .card .img {width: 100%; height: 100%;}
-
+        
         .cardBox .card.active .face.face1 .video,
         .cardBox .card.active .face.face1  { opacity: 1;  }/* 동영상 보임 */
 
@@ -181,6 +191,13 @@
             background: url('./img/photo/imgChestnut.jpg');
             background-size: 100% 100%;
             background-repeat: no-repeat;
+         }
+        .cardBox .card.active .face.face1 .imgCarb {  
+            background: url('./img/photo/imgCarb.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            position: relative;
+            opacity: 0.5;
          }
         
     /* video   반응형에도 중앙에 위치  */
@@ -248,8 +265,8 @@
         .cafe .sm { width: 24% ; height: auto ; align-self: center;}
         .cafe .big { width: 75% ;}
         .main .cafe .milk > div:nth-child(odd) {width: 43%;}
-        .cafe .eso .big .disJcBet .border,
-        .cafe .flower .big .border { width: 38%; }
+        .cafe .eso .big .disJcBet .border { width: 38%; }
+        .cafe .flower .big .disJcBet .border { width: 38%; }
         /* .cafe .flower .big .ko { margin-top: 0.4rem ; margin-bottom: 0.6rem;} */
 
         /* eso latte_box */
@@ -279,111 +296,18 @@
         .cafe .eso .vanilla_w { top: 0.3rem; right: 11rem; }
         .cafe .flower .ko { margin: 0.2rem 0 0.3rem 0.5rem;}
         .main .cafe .flower > .border:last-child{ margin-bottom: 0;}
-
-        .main .set215 .set { 
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            /* margin: 3em auto 0; */
-            max-width: 100%;
-            justify-content: space-around;
-            align-items: center;
-        }
-        .main .set215 .set .setKind {
-            flex: 1;
-            margin: 1rem 0;
-            padding: 1rem;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap; 
-        }
-        .main .set215 .set .setKind .setBox {
-            width: 100%;
-            /* border: 1px solid red; */
-            height: 9rem;
-            position: relative;
-            display: inline-block;
-            perspective: 800px
-        }
-        .main .set215 .set .setKind .setBox .cover {
-            border-radius: 6px;
-            width: inherit;
-            height: inherit;
-            position: absolute;
-            top: 0;
-            z-index: 2;
-            transition: 0.3s ease;
-            transform-origin: top left;
-            /* font: 900 28px/0.9 "Poppins", sans-serif; */
-            text-transform: uppercase;
-            color: #fff;
-            overflow: hidden;
-            background-color: red;
-        }
-        .main .set215 .set .setKind .setBox .cover .coverborder {
-            width: 80%;
-			height: 80%;
-			border: 0.1rem solid #fff;
-			margin: 10%;
-        }    
-        .main .set215 .set .setKind .setBox .cover .coverborder span {
-            display: inline-block;
-			position: absolute;
-			bottom: 7.5px;
-			left: 10px;
-			padding: 10px;
-			max-width: 50%; color: #fff;
-        }    
-        .main .set215 .set .setKind .setBox .cover .coverborder .coverTop { 
-            position: absolute;
-			left: 0;
-			width: calc(100% + 64px);
-			margin-left: -32px;
-			z-index: 4;
-			border-radius: 3px 3px 4px 4px;
-			opacity: 0;
-        }
-        .main .set215 .set .setKind .setBox .cover .coverborder .base { 
-            background: #fff;
-            width: inherit;
-            height: inherit;
-            position: absolute;
-            top: 0;
-            border-radius: 8px;
-            padding: 15px;
-            grid-gap: 8px;
-        }
-        .main .set215 .set .setKind:hover .cover {
-            /* .cover { */
-			    transform: rotateX(78deg);
-            /* } */
-        }
-        .main .set215 .set .setKind:hover .coverTop {
-            animation: startTransition 0.17s forwards 0.1s;
-        }
-        @keyframes startTransition {
-            0% {
-                opacity: 0;
-                top: 200px;
-                transform: scale(0.5);
-                height: 0;
-            }
-            40% {
-                opacity: 1;
-            }
-            100% {
-                top: 22px;
-                opacity: 1;
-                transform: scale(1);
-                height: 15px;
-                box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.2);
-            }
-        }
+        .w1 { width: 22%; margin-top: 0.7rem; }
+        .w2 { width: 73%;}
+        .common { padding-top: 2rem; box-sizing: border-box;}
+        /* .camp .set215 .border { padding-bottom: 1rem;}  */
+        /* .camp .set215 .border:last-child { margin-top: 1.4rem;}  */
+        .camp .set215 .img { width: 5rem; height: 4rem;}
+        .camp .set215 .img:first-child { transform: scaleX(-1); margin-right: 0.3rem;}
 
     </style>
 </head>
 <body>
-    <div class="posiCen disJcBet main">
+    <div class="posiCen disJcBet main ">
         <div class="camp disJcCol ">
             <div class=" title shadow " > <span>215Ca</span>feCa <span>m</span>p's <span>BB</span>Q</div>
             <div class=" kind disJcCol ">
@@ -446,41 +370,57 @@
                     </div>
                 </div>
             </div>
-            <div class=" border   set215 posNa"> 
-                <div class="unLine disJcBet "> 
-                    <div class="ko " > 215 SET  (for 2~3 people)</div>
-                    <!-- <div class="price1200" > </div> -->
+            <div class="set215 "> 
+                <div class=" border disJcBet ">
+                    <div class="disJcBet w1  disCen ">
+                        <div class="img wPig  " ></div>
+                        <div class="img wPig mt8" ></div>
+                    </div>
+                    <div class=" w2"> 
+                        <div class="" >
+                            <div class="disJcBet unLine" >
+                                <div class=" ko  "> 돼지SET (2~3인용) </div>
+                                <div class="price1000" > </div>
+                            </div>
+                        </div>    
+                        <div class=" ">
+                            <div class="ex tr">
+                                50,000 + 25,000 + 25,000 + 2,000 + 4,000 + 6,500 + 6,500 = <span> 119,000</span>
+                            </div>
+                            <div class="disJcBet mt6">
+                                <div class="ko tc"> <div > 제주 막고기 </div>  <div> 500g </div>  </div> 
+                                <div class="ko tc "> <div > 삼겹 </div>  <div> 200g </div>  </div> 
+                                <div class="ko tc"> <div > 목살 </div>  <div> 200g </div>  </div> 
+                                <div class="ko tc"> <div > 햇반 </div>  <div> 1 </div>  </div> 
+                                <div class="ko tc"> <div > 라면 </div>  <div> 1 </div>  </div> 
+                                <div class="ko tc"> <div > 아메리카노 </div>  <div> 1+1 </div>  </div> 
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- <div class="ex tr mt6">
-                    25,000 + 25,000  + 37,500 + 40,000 + 2,000 + 4,000 + 6,500 + 6,500 = <span> 146,500</span>
-                </div> -->
-                <div class=" disJcBet  ">
-                    <div class="set ">
-                        <div class="setKind" > 
-                            <div class="setBox"> 
-                                <div class="cover"> 
-                                    <div class="coverborder"> <span>No.1 SET  <br> 돼지 </span> </div>
-                                </div>
-                                <div class="coverTop" > </div>
-                                <div class="base" > </div>
+                <div class=" border disJcBet mt12">
+                    <div class="disJcBet w1 disCen ">
+                        <div class="img wCow mt8" ></div>
+                        <div class="img wPig " ></div>
+                    </div>
+                    <div class=" w2"> 
+                        <div class="" >
+                            <div class="disJcBet unLine" >
+                                <div class=" ko  "> 소•돼지SET (2~3인용) </div>
+                                <div class="price1200" > </div>
                             </div>
-                        </div>
-                        <div class="setKind " > 
-                            <div class="setBox"> 
-                                <div class="cover"> 
-                                    <div class="coverborder"> <span>No.2 SET  <br> 소 + 돼지 </div>
-                                </div>
-                                <div class="coverTop" > </div>
-                                <div class="base" > </div>
+                        </div>    
+                        <div class=" ">
+                            <div class="ex tr">
+                                70,000 + 25,000 + 25,000 + 2,000 + 4,000 + 6,500 + 6,500 = <span> 139,000</span>
                             </div>
-                        </div>
-                        <div class="setKind " > 
-                            <div class="setBox"> 
-                                <div class="cover"> 
-                                    <div class="coverborder"> <span>No.3 SET  <br> 소 + 돼지 </div>
-                                </div>
-                                <div class="coverTop" > </div>
-                                <div class="base" > </div>
+                            <div class="disJcBet mt6">
+                                <div class="ko tc"> <div > 소갈비살 </div>  <div> 500g </div>  </div> 
+                                <div class="ko tc "> <div > 삼겹 </div>  <div> 200g </div>  </div> 
+                                <div class="ko tc"> <div > 목살 </div>  <div> 200g </div>  </div> 
+                                <div class="ko tc"> <div > 햇반 </div>  <div> 1 </div>  </div> 
+                                <div class="ko tc"> <div > 라면 </div>  <div> 1 </div>  </div> 
+                                <div class="ko tc"> <div > 아메리카노 </div>  <div> 1+1 </div>  </div> 
                             </div>
                         </div>
                     </div>
@@ -516,7 +456,7 @@
                     </div>
                     <div class="card">
                         <div class="face face1  "> 
-                            <div class="content img imgPollack" >
+                            <div class="content img imgPollack " >
                                 <div class="posiCen" >
                                     <div class="ko"> 빠삭 먹태 </div>
                                     <div class="price180 priceColor tc"></div>
@@ -539,25 +479,33 @@
                 </div>
                 <div class="disJcBet " >
                     <div class="card">
-                        <div class="face face1 "> 
+                        <!-- <div class="face face1 "> 
                             <div class="content  videoBox" >
                                 <div class="posiCen" >
-                                    <div class="ko"> 달달 밤밤 </div>
-                                    <div class="price100 priceColor tc"></div>
+                                    <div class="ko"> 든든 탄수 </div>
+                                    <div class="price130 priceColor tc"></div>
                                 </div>
                                 <video loop autoplay muted playinline poster="" class="video">
                                     <source src="./img/video/chestNut.mp4" type="video/mp4">
                                 </video>
                             </div>
+                        </div> -->
+                        <div class="face face1  "> 
+                            <div class="content img imgCarb " >
+                                <div class="posiCen" >
+                                    <div class="ko"> 든든 탄수 </div>
+                                    <div class="price130 priceColor tc"></div>
+                                </div>
+                            </div>
                         </div>
                         <div class="face face2 ">
                             <div class="content ">   
                                 <div class="disJcBet cardLine" >
-                                    <div class="ko mt6 "> 달달 밤밤 </div>
-                                    <div class="price100 priceColor"></div>
+                                    <div class="ko mt6 "> 든든 탄수</div>
+                                    <div class="price130 priceColor"></div>
                                 </div>
                                 <div class="ex tr mt6 ">
-                                    달콤하고 <br> 고소한 약단밤 <br> 최고의 간식
+                                    든든한 가래떡과<br> 달달한 고구마는 <br> 최고의 간식 <br> 맛있게 먹으면 "0" 칼로리!!
                                 </div>    
                             </div>
                         </div>
@@ -679,11 +627,18 @@
                         <div class="priceColor price80"></div>
                         <div class="vanilla_w " ></div>
                     </div>
+                    <div class="border line disJcBet posNa"> 
+                        <div class="dis " >
+                            <div class="en" >  Sua Da Latte </div>
+                            <div class="ko" > 연유 라떼 </div>
+                        </div>
+                        <div class="priceColor price80"></div>
+                    </div>
                 </div>
             </div>
-            <div class="fruit disJcBet">
+            <!-- <div class="fruit disJcBet">
                 <div class="big"> 
-                    <div class="border line disJcBet"> 
+                    <div class="border line disJcBet mt4"> 
                         <div class="dis " >
                             <div class="en" > Lemon </div>
                             <div class="ko" > 썬키스트 레몬 </div>
@@ -691,7 +646,7 @@
                         </div>
                         <div class="priceColor price75"></div>
                     </div>
-                    <div class="border line disJcBet"> 
+                    <div class="border line disJcBet mt4"> 
                         <div class="dis" >
                             <div class="en" > Omija </div>
                             <div class="ko" > 문경 오미자 </div>
@@ -699,73 +654,80 @@
                         </div>
                         <div class="priceColor price80"></div>
                     </div>
-                    <div class="border line disJcBet"> 
-                        <div class="dis" >
-                            <div class="en" > Yuja </div>
-                            <div class="ko" > 고흥 유자 </div>
-                            <div class="ex "> 인지기능 향상, 심장병 예방 </div>
-                        </div>
-                        <div class="priceColor price90"></div>
-                    </div>
                 </div>
                 <div class="sm tr">
                     <div class="stepTi  " > Fruit </div>
-                    <div class="stepEx  " > 매장에서 <br> 생과일로 직접 만드는 <br> 수제청 Tea & Ade  </div>
+                    <div class="stepEx  " > 생과일로 직접 만드는 <br> 수제청 Tea & Ade  </div>
                 </div>
-            </div>    
-            <div class="flower  ">
+            </div>     -->
+            <div class="flower  mb0">
                 <div class="disJcBet">
                     <div class="sm">
-                        <div class="stepTi " > Flower </div>
+                        <div class="stepTi " > Only Ice </div>
                     </div>    
                     <div class="big" >
-                        <div class="disJcBet">
+                        <div class="disJcBet" >
                             <div class="border ">
-                                <div class="disJcBet">
-                                    <div class="en" > Hurb tea </div>
-                                    <div class="priceColor price90"></div>
+                                <div class="disJcBet line">
+                                    <div class="en" > Peach Iced Tea </div>
+                                    <div class="priceColor price75"></div>
                                 </div>
-                                <div class="ko tr" > 아홉번 덖은 차 </div>
-                                <div class="ex tr"> 기력 회복, 소화불량 해소 </div>
+                                <div class="ko " > 피치 아이스티 </div>
+                                <div class="ex "> 면역력 강화, 항산화 효과 </div>
                             </div>
                             <div class="border ">
-                                <div class="disJcBet">
-                                    <div class="en" > CacaO Tea </div>
+                                <div class="disJcBet line">
+                                    <div class="en" > Omija </div>
                                     <div class="priceColor price80"></div>
                                 </div>
-                                <div class="ko tr" > 카카오 차 </div>
-                                <div class="ex tr"> 인지기능 향상, 심장병 예방 </div>
+                                <div class="ko " > 문경 오미자 </div>
+                                <div class="ex "> 피부 미용, 간 해독 작용 </div>
+                            </div>
+                        </div>
+                        <div class="border ">
+                            <div class="disJcBet line">
+                                <div class="en" > Mango MilkShake </div>
+                                <div class="priceColor price100"></div>
+                            </div>
+                            <div class="dis">
+                                <div class="ko " > 망고밀크쉐이크 </div>
+                                <div class="ex ">  우유 + 하겐다즈 아이스크림  </div>
                             </div>
                         </div>
                         <div class="disJcBet">
-                            <div class="border ">
-                                <div class="disJcBet">
-                                    <div class="en" > Rooi_Chamo </div>
-                                    <div class="priceColor price80"></div>
-                                </div>
-                                <div class="ko tr" > 루이_카모  </div>
-                                <div class="ex  tr"> 심신 진정, 통증 완화 </div>
+                            <div class="border">
+                                <div class="en line" > Mango Margarita  </div>
+                                <div class="ko " > 썬라이즈버진 </div>
+                                <div class="ex mt4"> 망고청 + 라임 + 탄산수 </div>
+                                <div class="priceColor price100 tr mt4"></div>
                             </div>
-                            <div class="border ">
-                                <div class="disJcBet">
-                                    <div class="en" > Peppermint</div>
-                                    <div class="priceColor price80"></div>
-                                </div>
-                                <div class="ko tr" > 페파민트 </div>
-                                <div class="ex tr"> 식욕 억제, 위장과 대장 진전</div>
+                            <div class="border">
+                                <div class="en line" > PassionFruit   </div>
+                                <div class="ko " > 백향과버진 </div>
+                                <div class="ex mt4"> 백향과청 + 라임 + 탄산수 </div>
+                                <div class="priceColor price100 tr mt4"></div>
                             </div>
-                            
                         </div>
                     </div>    
                 </div>
-                <div class="border line disJcBet mt6"> 
-                    <div class="dis" >
-                        <div class="en" > SSangWhaTang </div>
-                        <div class="ko" > 대추쌍화탕 </div>
-                        <div class="ex word"></div>
+                <div class="disJcBet ">
+                    <div class="sm">
+                        <div class="stepTi " >  Only Hot  </div>
+                    </div> 
+                    <div class="big" >
+                        <div class="border   mt6"> 
+                            <div class="disJcBet line" >
+                                <div class="en" >SSangWhaTang </div>
+                                <div class="priceColor price100"></div>
+                            </div>
+                            <div class="dis" >
+                                <div class="ko" > 대추쌍화탕 </div>
+                                <div class="ex word"></div>
+                            </div>
+                        </div> 
                     </div>
-                    <div class="priceColor price100"></div>
-                </div> 
+                     
+                </div>
             </div> 
         </div>
     </div>
@@ -829,8 +791,6 @@
 
     // 초기 실행
     cardActive();
-
-
 
 </script>
 </html>
