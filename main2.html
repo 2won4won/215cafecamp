@@ -50,12 +50,14 @@
         .title { background: url('./img/background/a3_st.png'); color: #ED4758;  }
         .main span { color: #fff;}
         .ex { color: #807F80; font-family: 'HancomMalangMalang-Regular';}
+        .priceColor { color: #a1a0a7;}
+        
 
         /* 전체적 layout */
-        .main { width: 82%; height: 80%; /* box-sizing: border-box; */}
-        .main .camp { width: 45%; height: 100%;}
+        .main { width: 81%; height: 81%; /* box-sizing: border-box; */}
+        .main .camp { width: 43%; height: 100%;}
         .main .side { width: 16%; height: 100%; }
-        .main .cafe { width: 35%; height: 100%; }
+        .main .cafe { width: 37%; height: 100%; }
         
         .main .kind { width:100%; }
         .main .kind .bbq .border { 
@@ -86,8 +88,8 @@
         }
         .main .setMenu .ko,
         .main .set215 .ex, 
-        .main .set215 .price1000, 
-        .main .set215 .price1200, 
+        /* .main .set215 .price1000, 
+        .main .set215 .price1200,  */
         .main .set215  .ko { color: white; position: relative;}
         .main .set215 .ci { 
             position: relative; border-radius: 50%; /* box-sizing: border-box; */
@@ -266,7 +268,8 @@
         .cafe .big { width: 74% ;}
         .main .cafe .milk > div:nth-child(odd) {width: 43%;}
         .cafe .eso .big .disJcBet .border { width: 38%; }
-        .cafe .flower .big .disJcBet .border { width: 38%; }
+        .cafe .milk .big .disJcBet .border ,
+        .cafe .flower .big .disJcBet .border { width: 39%; }
         /* .cafe .flower .big .ko { margin-top: 0.4rem ; margin-bottom: 0.6rem;} */
 
         /* eso latte_box */
@@ -307,7 +310,7 @@
     </style>
 </head>
 <body>
-    <div class="posiCen disJcBet main ">
+    <div class="posiCen disJcBet main bb">
         <div class="camp disJcCol ">
             <div class=" title shadow " > <span>215Ca</span>feCa <span>m</span>p's <span>BB</span>Q</div>
             <div class=" kind disJcCol ">
@@ -318,10 +321,10 @@
                             <div class="content">
                                 <div class="unLine disJcBet"> 
                                     <div class="ko" > 삼겹살 </div>
-                                    <div class="price500" > </div>
+                                    <div class="price500 priceColor" > </div>
                                 </div>
                                 <div class="ex tr "> 
-                                    삼겹살 <br> 국내산 생고기  <br> 2인 기준 400gram  <br> BBQ 굽는 시간 30분
+                                     국내산 생고기  <br> 조리전 2인 기준 400g <br> BBQ 굽는 시간 30분
                                 </div>
                             </div>
                         </div>
@@ -330,10 +333,10 @@
                             <div class="content">
                                 <div class="unLine disJcBet"> 
                                     <div class="ko" > 목살 </div>
-                                    <div class="price500" > </div>
+                                    <div class="price500 priceColor" > </div>
                                 </div>
                                 <div class="ex tr "> 
-                                    목살 <br> 국내산 생고기  <br> 2인 기준 400gram  <br> BBQ 굽는 시간 30분
+                                     국내산 생고기  <br> 조리전 2인 기준 400g  <br> BBQ 굽는 시간 30분
                                 </div>
                             </div>
                         </div>
@@ -344,10 +347,10 @@
                             <div class="content">
                                 <div class="unLine disJcBet"> 
                                     <div class="ko" > 제주 막고기 </div>
-                                    <div class="price500" > </div>
+                                    <div class="price500 priceColor" > </div>
                                 </div>
                                 <div class="ex tr "> 
-                                    제주에서 오는 막고기 <br> 2인 기준 500gram 
+                                    제주에서 오는 막고기 <br>조리전 2인 기준 500g 
                                     <br> 여러 부위가 막섞어  있는 <br>  막생긴  제주 돼지고기 
                                 </div>
                             </div>
@@ -360,10 +363,10 @@
                             <div class="content">
                                 <div class="unLine disJcBet"> 
                                     <div class="ko" > 소갈비살 </div>
-                                    <div class="price700" > </div>
+                                    <div class="price700 priceColor" > </div>
                                 </div>
                                 <div class="ex tr ">  
-                                    소갈비살 <br> 미국산 생고기 <br> 2인 기준 500gram <br> BBQ 굽는 시간 10분 
+                                     미국산 생고기 <br> 조리전 2인 기준 500gram <br> BBQ 굽는 시간 15분 
                                 </div>
                             </div>    
                         </div>
@@ -379,8 +382,8 @@
                     <div class=" w2"> 
                         <div class="" >
                             <div class="disJcBet unLine" >
-                                <div class=" ko  "> 돼지SET (2~3인용) </div>
-                                <div class="price1000" > </div>
+                                <div class=" ko  "> 돼지SET (2~3인용)   </div>
+                                <div class="price1000 priceColor" > </div>
                             </div>
                         </div>    
                         <div class=" ">
@@ -406,8 +409,8 @@
                     <div class=" w2"> 
                         <div class="" >
                             <div class="disJcBet unLine" >
-                                <div class=" ko  "> 소•돼지SET (2~3인용) </div>
-                                <div class="price1200" > </div>
+                                <div class=" ko  "> 소돼지SET (2~3인용) </div>
+                                <div class="price1200 priceColor" > </div>
                             </div>
                         </div>    
                         <div class=" ">
@@ -436,7 +439,7 @@
                             <div class="content img imgPotato" >
                                 <div class="posiCen" >
                                     <div class="ko "> 4가지 감튀 </div>
-                                    <div class="price130 priceColor tc"></div>
+                                    <div class="price130 priceColor tc "></div>
                                 </div>
                             </div>
                         </div>
@@ -619,20 +622,23 @@
                             <div class="ko " > 카페라떼 </div>
                         </div>
                     </div>
-                    <div class="border line disJcBet posNa"> 
-                        <div class="dis " >
-                            <div class="en" > Vanilla Latte </div>
-                            <div class="ko" > 바닐라 라떼 </div>
+                    <div>
+                        <div class="border line disJcBet posNa"> 
+                            <div class="dis " >
+                                <div class="en" > Vanilla Latte </div>
+                                <div class="ko" > 바닐라 라떼 </div>
+                            </div>
+                            <div class="priceColor price80"></div>
+                            <div class="vanilla_w " ></div>
                         </div>
-                        <div class="priceColor price80"></div>
-                        <div class="vanilla_w " ></div>
-                    </div>
-                    <div class="border line disJcBet posNa"> 
-                        <div class="dis " >
-                            <div class="en" >  Sua Da Latte </div>
-                            <div class="ko" > 연유 라떼 </div>
+                        <div class="border line disJcBet posNa"> 
+                            <div class="dis " >
+                                <div class="en" >  Sua Da Latte </div>
+                                <div class="ko" > 연유 라떼 </div>
+                            </div>
+                            <div class="priceColor price80"></div>
                         </div>
-                        <div class="priceColor price80"></div>
+
                     </div>
                 </div>
             </div>
@@ -660,74 +666,107 @@
                     <div class="stepEx  " > 생과일로 직접 만드는 <br> 수제청 Tea & Ade  </div>
                 </div>
             </div>     -->
-            <div class="flower  mb0">
+            <div class="flower">
                 <div class="disJcBet">
                     <div class="sm">
-                        <div class="stepTi " > Only Ice </div>
+                        <div class="stepTi " > hot or Ice </div>
                     </div>    
                     <div class="big" >
                         <div class="disJcBet" >
                             <div class="border ">
                                 <div class="disJcBet line">
-                                    <div class="en" > Peach Iced Tea </div>
-                                    <div class="priceColor price75"></div>
-                                </div>
-                                <div class="ko " > 피치 아이스티 </div>
-                                <div class="ex "> 면역력 강화, 항산화 효과 </div>
-                            </div>
-                            <div class="border ">
-                                <div class="disJcBet line">
                                     <div class="en" > Omija </div>
                                     <div class="priceColor price80"></div>
                                 </div>
-                                <div class="ko " > 문경 오미자 </div>
-                                <div class="ex "> 피부 미용, 간 해독 작용 </div>
+                                <div class="dis">
+                                    <div class="ko " > 오미자 </div>
+                                    <div class="ex "> 피부 미용, 간 해독 작용 </div>
+                                </div>
+                            </div>
+                            <div class="border ">
+                                <div class="disJcBet line">
+                                    <div class="en" > Choco Latte </div>
+                                    <div class="priceColor price75"></div>
+                                </div>
+                                <div class="dis">
+                                    <div class="ko " > 초코라떼 </div>
+                                    <div class="ex "> 대사 촉진, 감기 예방</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="border ">
+                    </div>
+                </div>      
+            </div>
+            <div class="flower  mb0">
+                <div class="disJcBet">
+                    <div class="sm">
+                        <div class="stepTi " > Fruit </div>
+                        <div class="stepTi " > Only Ice </div>
+                    </div>    
+                    <div class="big" >
+                        <!-- <div class="disJcBet" > -->
+                            <div class="border disJcBet line">
+                                <div class=" dis">
+                                    <div class="en" > Peach Iced Tea </div>
+                                    <div class="ko pl4" > 피치 아이스티 </div>
+                                    <div class="ex pl4"> 면역력 강화, 장 건강 촉진 </div>
+                                </div>
+                                <div class="priceColor price75"></div>
+                            </div>
+                            
+                        <!-- </div> -->
+                        <div class="border posNa">
                             <div class="disJcBet line">
                                 <div class="en" > Mango MilkShake </div>
                                 <div class="priceColor price100"></div>
                             </div>
                             <div class="dis">
                                 <div class="ko " > 망고밀크쉐이크 </div>
-                                <div class="ex ">  우유 + 하겐다즈 아이스크림  </div>
+                                <div class="ex  ">  우유 + 하겐다즈 아이스크림  </div>
+                                <div class="mango" ></div>
+                                <div class="mangow" ></div>
                             </div>
                         </div>
                         <div class="disJcBet">
                             <div class="border">
-                                <div class="en line" > Mango Margarita  </div>
-                                <div class="ko " > 망고에이드 </div>
-                                <div class="ex mt4"> 망고청 + 라임 + 탄산수 </div>
-                                <div class="priceColor price90 tr mt4"></div>
+                                <div class="disJcBet line">
+                                    <div class="en " > Mango Ade  </div>
+                                    <div class="priceColor price90 "></div>
+                                </div>
+                                <div class="dis">
+                                    <div class="ko " > 망고에이드 </div>
+                                    <div class="ex "> 망고청 + 라임 </div>
+                                </div>
                             </div>
                             <div class="border">
-                                <div class="en line" > PassionFruit   </div>
-                                <div class="ko " > 백향과에이드 </div>
-                                <div class="ex mt4"> 백향과청 + 라임 + 탄산수 </div>
-                                <div class="priceColor price90 tr mt4"></div>
+                                <div class="disJcBet line">
+                                    <div class="en " > PassionFruit Ade  </div>
+                                    <div class="priceColor price90 "></div>
+                                </div>
+                                <div class="dis">
+                                    <div class="ko " > 백향과에이드 </div>
+                                    <div class="ex "> 백향과청 + 라임 </div>
+                                </div>
                             </div>
                         </div>
                     </div>    
                 </div>
             </div> 
+           
             <div class=" season disJcBet ">
                 <div class="sm">
                     <div class="stepTi " >  Only Hot  </div>
                 </div> 
                 <div class="big" >
-                    <div class="border   "> 
-                        <div class="disJcBet line" >
+                    <div class="border  disJcBet line"> 
+                        <div class=" dis" >
                             <div class="en" >SSangWhaTang </div>
-                            <div class="priceColor price100"></div>
-                        </div>
-                        <div class="dis" >
                             <div class="ko" > 대추쌍화탕 </div>
                             <div class="ex word"></div>
                         </div>
+                        <div class="priceColor price100"></div>
                     </div> 
                 </div>
-                 
             </div>
         </div>
     </div>
