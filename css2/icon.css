@@ -73,6 +73,7 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
+
 .blueberry { 
     background: url('../img/icon/blueberries.png'); 
     background-size: 100% 100%;
@@ -294,7 +295,6 @@
     background-repeat: no-repeat;
     opacity: 0.9;
 }
-
 
 .imgRice {  
     background: url('../img/photo/imgRice.jpg');
