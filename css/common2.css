@@ -1,0 +1,101 @@
+.border {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 0.6rem 1.6rem;
+    margin-bottom: 1.25rem; 
+}
+.line { 
+    display: flex; 
+    padding-bottom: 0.8rem; height: 1.5rem; line-height: 1.5rem;
+}
+.line .priceColor { line-height: 1.5rem ;}
+.grid:first-child .priceColor { text-align: right; padding: 0.3rem 0;}
+.noBorder { padding: 0 1.6rem; }
+.noBorder .en::before { content: ""; }
+
+.point { color: white; text-align: center;  } 
+
+/* title effective */
+.title {
+    margin-bottom: 20px; 
+    font-family: Poppins-Regular;
+    font-size: 19px;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+    border-radius: 5px;
+    background-size: cover;
+    padding: 8px 10px;
+    box-shadow: 1px 3px 1px -3px #777;
+    transition: background 450ms ease-in-out;
+  }
+  .shadow {
+    position: relative;
+  }
+  .shadow:before {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 13px;
+    right: 7px;
+    width: 25%;
+    top: 0;
+    box-shadow: 0 15px 10px #777;
+    transform: rotate(4deg);
+    transition: all 150ms ease-in-out;
+  }
+ /* price */
+.price0::before { content: '•';  }
+.price30::before { content: '3.0'; }
+.price65::before { content: '6.5';}
+.price70::before { content: '7.0';}
+.price75::before { content: '7.5'; }
+.price80::before { content: '8.0'; }
+.price85::before { content: '8.5'; }
+.price90::before { content: '9.0'; }
+.price95::before { content: '9.5'; }
+.price100::before { content: '10.0'; }
+.price110::before { content: '11.0'; }
+.price120::before { content: '12.0';} 
+.price130::before { content: '13.0';} 
+.price150::before { content: '15.0';} 
+.price170::before { content: '17.0';} 
+.price190::before { content: '19.0';} 
+.price200::before { content: '20.0';} 
+.price230::before { content: '23.0';} 
+.price260::before { content: '26.0';} 
+.price250::before { content: '25.0';} 
+.price500::before { content: '50.0';} 
+.price1000::before { content: '100.0';} 
+
+/* img */
+.img {
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+}
+.img::before {
+    width: 100%;
+    content: "";
+    opacity: 0.2;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #000;
+}
+.img .enColor,
+.img .koColor,
+.img .priceColor {
+    color:  white;
+}
+.disJcBet { display: flex; justify-content: space-between;}
+.posNa { position: relative;}
+.posiCen {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+}
+/* 글자 정렬 */
+.tc { text-align: center;}
+.tl { text-align: left;}
+.tr { text-align: right;}

@@ -1,0 +1,476 @@
+<style>
+  
+    .blueberry { 
+        background: url('./img/icon/blueberries.png'); 
+        background-size: 100% 100%;
+        width: 1.2vw;
+        height: 3.3vh;
+        position: absolute;
+        top: 5.1vh;
+        left: -12%;
+        opacity: 0.8;
+    }
+    .strawberry1 { 
+        background: url('./img/icon/strawberry1.png'); 
+        background-size: 100% 100%;
+        width: 1.5vw;
+        height: 2.9vh;
+        position: absolute;
+        bottom: -8vh;
+        right:  -32%;
+        opacity: 0.6;
+        transform: rotateY( 180deg);
+    }
+    .omija {
+        background: url('./img/icon/omija.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        width: 1.7vw;
+        height: 4vh;
+        position: absolute;
+        top: 4.4vh;
+        right: -0.9rem;
+        /* top: 3.7vh;
+        left: -90%; */
+        opacity: 0.9;
+    }
+    .lemon {
+        background: url('./img/icon/lemon.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        width: 1.5vw;
+        height: 2.9vh;
+        position: absolute;
+        top: 7.5vh;
+        left: 24%;
+        /* bottom: -8vh;
+        right:  -45%; */
+        opacity: 0.9;
+    }
+    .all {
+        background: url('./img/icon/all.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        width: 1.7vw;
+        height: 3.8vh;
+        position: absolute;
+        bottom: 1vh;
+        right:  -70%;
+        opacity: 0.9;
+    }
+    .yogurt {
+        background: url('./img/photo/yogurtBowl.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .greekYogurt {
+        background: url('./img/photo/greekBowl.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+   /* .greekBox .leftBox { width: 50%;} */
+   /* .greekBox .rightBox { width: 53%;   } */
+   /* .greekBox .rightBox { width: 57%;  display: flex; align-items: end; } */
+    
+   /* .greekBox .leftBox .border { display: flex;} */
+   /* .greekBox .bowl{   display: flex; justify-content: space-between; flex-direction: column;} */
+   /* .greekBox .plain .border{
+        width: 4.1vw ;  height: 12.3vh ; margin: 0 auto;
+        position: absolute; 
+        bottom: 0.2rem;
+        left: 50%; 
+        transform: translateX(-50%);
+     } */
+     
+     .greekBox .plain .en { line-height: 1.2rem; margin-bottom: 0.5rem;}
+     .greekBox .plain { width: 52%; margin-bottom: 0.3rem;}
+     .greekBox .plain .border .posNa .ko {  margin-left: 0.3rem; }
+     .greekBox .plain .leftBox{ width: 69%; }
+     .greekBox .plain .disJcCol { width: 15%; }
+
+     .greekBox .bowl { width: 47%; }
+     .greekBox .bowl .border,
+     .greekBox .bowl .border .img::before { border-radius: 50%; }
+     .greekBox .bowl .border {  width: 5.1vw;  height: 15.6vh;  }
+
+     .greekBox .smoothie .noBorder { width: 28%; }
+     .greekBox .smoothie > .disJcBet { width: 62.5%; }
+     .greekBox .point { background-color: #C89D6D; margin-bottom: 8px;}
+
+</style>
+
+<div class="greekBox  ">
+    <div class="pointBox  line  disCen ">
+        <div class="dis noBorder">
+            <!-- <div class="en enColor"> Hand-Made </div> -->
+            <div class="ko koColor dis ">  
+                <div class="point"> 10 </div>
+                <div class="point"> 시 </div>
+                <div class="point"> 간 </div>
+                <div class="point"> 발 </div>
+                <div class="point"> 효 </div>
+                <div class="point"> 시 </div>
+                <div class="point"> 키 </div>
+                <div class="point"> 고 </div>
+                <div class="point"> 72 </div>
+                <div class="point"> 시 </div>
+                <div class="point"> 간 </div>
+                <div class="point"> 짜 </div>
+                <div class="point"> 서 </div>
+                <div class="point"> 만 </div>
+                <div class="point"> 들 </div>
+                <div class="point"> 고 </div>
+                <div class="point"> 있 </div>
+                <div class="point"> 어 </div>
+                <div class="point"> 요 </div>
+            </div>
+            <!-- <div class="en enColor"> Hand-Made </div> -->
+        </div>
+    </div>
+    <div class="disJcBet ">
+        <div class=" plain " >
+            <div class="noBorder dis line" >
+                <div class="en enColor"> Plain Yogurt Bowl </div>
+                    <div class="ko koColor  "> 플레인 요거트볼</div>
+                </div>
+                <div class="disJcBet mt12">
+                    <div class="leftBox ">
+                        <div class="border  disJcBet line">
+                            <div class="dis ">
+                                <div class="en enColor"> Plain  </div>
+                                <div class="ko koColor "> 요거만볼 </div>
+                            </div>
+                            <div class="price100 priceColor  ">  </div>
+                        </div>
+                        <div class="border  disJcBet line">
+                            <div class="dis ">
+                                <div class="en enColor"> Omija  </div>
+                                <div class="ko koColor "> 오미자볼 </div>
+                            </div>
+                            <div class="price100 priceColor  ">  </div>
+                        </div>
+                        <div class="border  disJcBet line">
+                            <div class="dis ">
+                                <div class="en enColor"> Strawberry  </div>
+                                <div class="ko koColor "> 딸기볼 </div>
+                            </div>
+                            <div class="price100 priceColor  ">  </div>
+                        </div>
+                        
+                    </div>
+                    <div class="border  disJcCol ">
+                        <div class="posNa ">
+                            <div class="en enColor"> All  </div>
+                            <div class="ko koColor  "> 몽땅볼 </div>
+                            <div class="plainImg">
+                                <div class="omija ko koColor " >  </div>
+                                <div class="lemon " >  </div>
+                                <div class="blueberry " ></div>
+                                <div class="strawberry1 " ></div>
+                            </div>
+                        </div>
+                        <div class="price130 priceColor line tr">  </div>
+                    <!-- <div class="blueberry imgB" ></div> -->
+                </div>
+            </div>
+            <div class=" plain none " >
+                <div class="border  ">
+                    <div class=" tc posiCen ">
+                        <div class="en enColor "> Plain Yogurt </div>
+                        <div class="ko koColor line "> 플레인 <br> 요거볼 </div>
+                        <div class="price100 priceColor">  </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class=" bowl disJcCol ">
+            
+            <div class="disJcBet mt12">
+                <div class="border img  yogurt " >
+                    <div class="posiCen tc"> 
+                        <div class="en enColor "> Yogurt  </div>
+                        <div class="ko koColor line "> 요거볼 </div>
+                        <div class="price130 priceColor">  </div>
+                    </div>
+                </div>
+                <div class="border img  greekYogurt " >
+                    <div class=" posiCen tc" > 
+                        <div class="en enColor ">GreekYogurt  </div>
+                        <div class="ko koColor line "> 그릭요거볼 </div>
+                        <div class="price130 priceColor">  </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div class="smoothie  disJcBet ">
+        <div class="noBorder " >
+            <div class="en enColor"> Greek Yogurt Smoothie </div>
+            <div class="disJcBet ">
+                <div class="ko koColor line"> 그릭요거트 스무디 </div>
+                <div class="price100 priceColor">  </div>
+            </div>
+        </div>
+        <div class=" disJcBet ">
+            <div class="border  ">
+                <div class="en enColor"> Plain  </div>
+                <div class="ko koColor line"> 요거만갈아 </div>
+            </div>
+            <div class="border  ">
+                <div class="en enColor">Strawberry   </div>
+                <div class="ko koColor line "> 딸기갈아 </div>
+            </div>
+            <div class="border  ">
+                <div class="en enColor"> Blueberry  </div>
+                <div class="ko koColor line "> 블루베리갈아 </div>
+                <!-- <div class="blueberry imgB" ></div> -->
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+  
+<div class="greekBox disJcBet none">
+    <div class="smoothie   ">
+        <div class="noBorder " >
+            <div class="en enColor"> Greek Yogurt Smoothie </div>
+            <div class="disJcBet line">
+                <div class="ko koColor "> 그릭요거트 스무디 </div>
+                <div class="price100 priceColor">  </div>
+            </div>
+        </div>
+        <div class=" ">
+            <div class="border dis ">
+                <div class="en enColor"> Plain  </div>
+                <div class="ko koColor line"> 요거만갈아 </div>
+            </div>
+            <div class="border dis ">
+                <div class="en enColor">Strawberry   </div>
+                <div class="ko koColor line "> 딸기갈아 </div>
+            </div>
+            <div class="border dis ">
+                <div class="en enColor"> Blueberry  </div>
+                <div class="ko koColor line "> 블루베리갈아 </div>
+                <!-- <div class="blueberry imgB" ></div> -->
+            </div>
+        </div>
+    </div>
+    <div class=" plain " >
+        <div class="noBorder " >
+            <div class="en enColor"> Plain Yogurt Bowl </div>
+            <div class="disJcBet line">
+                <div class="ko koColor "> 플레인 요거트볼</div>
+                <div class="price100 priceColor ">  </div>
+            </div>
+        </div>
+        <div class=" ">
+            <div class="border  dis">
+                <div class="en enColor"> Plain  </div>
+                <div class="ko koColor line"> 요거만볼 </div>
+            </div>
+            <div class="border dis ">
+                <div class="en enColor">Omija   </div>
+                <div class="ko koColor line "> 오미자볼 </div>
+            </div>
+            <div class="border dis ">
+                <div class="en enColor"> All  </div>
+                <div class="ko koColor line "> ALL </div>
+                <!-- <div class="blueberry imgB" ></div> -->
+            </div>
+        </div>
+        <div class=" plain none " >
+            <div class="border  ">
+                <div class=" tc posiCen ">
+                    <div class="en enColor "> Plain Yogurt </div>
+                    <div class="ko koColor line "> 플레인 <br> 요거볼 </div>
+                    <div class="price100 priceColor">  </div>
+                </div>
+                <div class="plainImg">
+                    <div class="omija ko koColor " >  </div>
+                    <div class="lemon " >  </div>
+                    <div class="blueberry " ></div>
+                    <div class="all " ></div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div class=" bowl disJcBet">
+        <div class="border img  yogurt " >
+            <div class="posiCen tc"> 
+                <div class="en enColor "> Yogurt  </div>
+                <div class="ko koColor line "> 요거볼 </div>
+                <div class="price130 priceColor">  </div>
+            </div>
+        </div>
+        <div class="border img  greekYogurt " >
+            <div class=" posiCen tc" > 
+                <div class="en enColor ">GreekYogurt  </div>
+                <div class="ko koColor line "> 그릭요거볼 </div>
+                <div class="price130 priceColor">  </div>
+            </div>
+        </div>
+    </div>    
+</div>
+<div class="greekBox none">
+    <div class="   disJcBet">
+        <div class="noBorder leftBox" >
+            <div class="en enColor"> Hand-Made Greek Smoothie </div>
+            <div class="ko koColor line"> 수제 그릭요거트 스무디 </div>
+            <div class="price100 priceColor tc">  </div>
+        </div>
+        <div class="disJcBet rightBox">
+            <div class="border  ">
+                <div class="en enColor"> Plain  </div>
+                <div class="ko koColor line"> 요거만갈아 </div>
+            </div>
+            <div class="border  ">
+                <div class="en enColor">Strawberry   </div>
+                <div class="ko koColor line "> 딸기갈아 </div>
+            </div>
+            <div class="border  ">
+                <div class="en enColor"> Blueberry  </div>
+                <div class="ko koColor line "> 블루베리갈아 </div>
+                <!-- <div class="blueberry imgB" ></div> -->
+            </div>
+        </div>
+    </div>
+    <div class=" disJcBet " >
+        <div class="noBorder leftBox" >
+            <div class="en enColor"> Hand-Made Plain Yogurt  </div>
+            <div class="ko koColor line"> 플레인 요거트볼 </div>
+            <div class="price100 priceColor tc">  </div>
+        </div>
+        <div class="disJcBet rightBox">
+            <div class="border  ">
+                <div class="en enColor"> Plain  </div>
+                <div class="ko koColor line"> 요거만볼 </div>
+            </div>
+            <div class="border  ">
+                <div class="en enColor">Omija   </div>
+                <div class="ko koColor line "> 오미자볼 </div>
+            </div>
+            <div class="border  ">
+                <div class="en enColor"> Blueberry  </div>
+                <div class="ko koColor line "> 블루베리갈아 </div>
+                <!-- <div class="blueberry imgB" ></div> -->
+            </div>
+        </div>
+        <div class=" plain none " >
+            <div class="border  ">
+                <div class=" tc posiCen ">
+                    <div class="en enColor "> Plain Yogurt </div>
+                    <div class="ko koColor line "> 플레인 <br> 요거볼 </div>
+                    <div class="price100 priceColor">  </div>
+                    <div class="price100 priceColor">  </div>
+                </div>
+                <div class="plainImg">
+                    <div class="omija ko koColor " >  </div>
+                    <div class="lemon " >  </div>
+                    <div class="blueberry " ></div>
+                    <div class="all " ></div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div class=" bowl">
+        <div class="border img  yogurt " >
+            <div class="posiCen tc"> 
+                <div class="en enColor "> Yogurt  </div>
+                <div class="ko koColor line "> 요거볼 </div>
+                <div class="price130 priceColor">  </div>
+            </div>
+        </div>
+        <div class="border img  greekYogurt " >
+            <div class=" posiCen tc" > 
+                <div class="en enColor ">GreekYogurt  </div>
+                <div class="ko koColor line "> 그릭요거볼 </div>
+                <div class="price130 priceColor">  </div>
+            </div>
+        </div>
+    </div>    
+</div>
+<div class="greekBox disJcBet none">
+    <div class=" ">
+        <div class="noBorder ">
+            <div class="en enColor"> Hand-Made Greek Smoothie </div>
+            <div class="line disJcBet ">
+                <div class="ko koColor "> 수제 그릭요거트 스무디 </div>
+                <div class="price100 priceColor">  </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="border  dis">
+                <div class="en enColor"> Plain Greek </div>
+                <div class="ko koColor line"> 요거만갈아 </div>
+            </div>
+            <div class="border dis ">
+                <div class="en enColor">Strawberry Greek  </div>
+                <div class="ko koColor line "> 딸기갈아 </div>
+            </div>
+            <div class="border  dis">
+                <div class="en enColor"> Blueberry Greek </div>
+                <div class="ko koColor line "> 블루베리갈아 </div>
+                <!-- <div class="blueberry imgB" ></div> -->
+            </div>
+        </div>
+    </div>
+    <div class=" posNa " >
+        <div class="noBorder ">
+            <div class="en enColor"> Plain Yogurt Bowl </div>
+            <!-- <div class="line disJcBet "> -->
+                <div class="ko koColor "> 플레인 요거볼 </div>
+                <!-- </div> -->
+            </div>
+            <div class="">
+                <div class="border  dis">
+                    <div class="en enColor"> Plain </div>
+                    <div class="ko koColor line"> 플레인볼 </div>
+                    <div class="price100 priceColor">  </div>
+                </div>
+                <div class="border dis ">
+                    <div class="en enColor"> Omija  </div>
+                    <div class="ko koColor line "> 오미자볼 </div>
+                    <div class="price100 priceColor">  </div>
+                </div>
+                <div class="border dis">
+                    <div class="en enColor"> Blueberry  </div>
+                    <div class="ko koColor line "> 블루베리볼 </div>
+                    <div class="price100 priceColor">  </div>
+                <!-- <div class="blueberry imgB" ></div> -->
+            </div>
+        </div>
+        <div class=" plain none " >
+            <div class="border  ">
+                <div class=" tc posiCen ">
+                    <div class="en enColor "> Plain Yogurt </div>
+                    <div class="ko koColor line "> 플레인 <br> 요거볼 </div>
+                    <div class="price100 priceColor">  </div>
+                </div>
+                <div class="plainImg">
+                    <div class="omija ko koColor " >  </div>
+                    <div class="lemon " >  </div>
+                    <div class="blueberry " ></div>
+                    <div class="all " ></div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div class=" bowl">
+        <div class="border img  yogurt " >
+            <div class="posiCen tc"> 
+                <div class="en enColor "> Yogurt  </div>
+                <div class="ko koColor line "> 요거볼 </div>
+                <div class="price130 priceColor">  </div>
+            </div>
+        </div>
+        <div class="border img  greekYogurt " >
+            <div class=" posiCen tc" > 
+                <div class="en enColor ">GreekYogurt  </div>
+                <div class="ko koColor line "> 그릭요거볼 </div>
+                <div class="price130 priceColor">  </div>
+            </div>
+        </div>
+    <!-- </div>     -->
+    </div>    
+</div>

@@ -1,0 +1,4 @@
+.ba { border: 0.2rem solid aqua;}
+.bb { border: 0.2rem solid blueviolet;}
+.bc { border: 0.2rem solid coral;}
+.posiCen { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50% );}

@@ -1,0 +1,77 @@
+<style>
+    /* icon 삽입 */
+    .snowflake { background: url('./img/icon/snowflake.png');  
+                 background-size: 100% 100%;
+                 background-repeat: no-repeat;
+                }
+    .hot { background: url('./img/icon/hot.png'); 
+            background-size: 100% 100%;
+            background-repeat: no-repeat;}
+    .snowflakeIcon {
+        width: 2.8vw;
+        height: 6.1vh;
+        position: absolute;
+        top: 1.2vh;
+        left: 0.3vw;
+        opacity: 0.5;
+    }
+    .hotIcon {
+        width: 1.5vw;
+        height: 3.5vh;
+        position: absolute;
+        top: 2.9vh;
+        right: 0.5vw;
+        opacity: 0.6;
+    }
+    .powerShaved { 
+        background: url('./img/photo/powerShaved.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .seasonBox3  .disJcBet > div:nth-child(odd) { width: 36%; }
+    .seasonBox3  .disJcBet > div:nth-child(even) { width: 25%; }
+    .seasonBox3  .disJcBet .border,
+    .seasonBox3  .disJcBet .img::before { 
+        border-radius: 5rem;
+        height: 10.5vh; 
+        text-align: center;
+    }
+    .seasonBox3 .disJcBet .border:nth-child(2) { margin: 0 1rem; }
+    .seasonBox3 .disJcBet .border .en::before { content: "";}
+    .seasonBox3 .disJcBet .border .ko { margin: 0.4rem 0;}
+    .seasonBox3 .border .posNa .ko { padding-bottom: 13px;}
+    .seasonBox3 .posNa .posiCen { width: 100%; }
+    .seasonBox3 .posNa .posiCen .ko { line-height: 1.4rem;}
+</style>
+
+
+<div class="seasonBox3  ">
+    <div class="disJcBet">
+        <div class=" border img powerShaved ">
+            <div class="posiCen">
+                <div class="en enColor "> Powder Shaved Ice </div>
+                <div class="ko koColor  "> 가루 빙수 </div>
+                <div class="price170 priceColor  ">  </div>
+            </div>
+        </div>  
+        <div class=" posNa">
+            <div class="tc posiCen">
+                <!-- <div class="en enColor ">  </div> -->
+                <div class="ko koColor  "> 떠나가는 <br> 여름도 <br> 여전히  <span style="color: coral; font-weight: bolder;"> 뜨겁다. </span> </div>
+                <div class="snowflake snowflakeIcon" ></div>
+            </div>
+            <!-- <div class="hot hotIcon" ></div> -->
+        </div>  
+        <div class=" border img summerDay">
+            <div class="posiCen">
+                <div div class="posNa">
+                    <div class="en enColor"> One Summer's Day </div>
+                    <div class="ko koColor  ">  어느 여름날 </div>
+                    <div class="price200 priceColor  ">  </div>
+                </div>
+            </div>
+        </div> 
+    </div>  
+</div>
+

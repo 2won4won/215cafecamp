@@ -1,0 +1,300 @@
+<style>
+    /* .hanggi{
+        background: url('./img/photo/mealBack.jpeg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .meat{
+        background: url('./img/icon/pork.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .meatR {
+        width: 2.2vw;
+        height: 4.7vh;
+        position: absolute;
+        top: 6.7vh;
+        left: 2.1vw;
+        opacity: 0.5;
+    }
+    .no1Photo {
+        background: url('./img/photo/no1.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    } */
+    .photo {
+        opacity: 0.9;
+        border-radius: 0.9rem;
+        /* width: 15rem; */
+        height: 10rem;
+    }
+
+    /* .photoR {
+        position: absolute;
+        top: 1vh;
+        right: 0rem;
+        opacity: 0.5;
+    }
+    .photoL {
+        position: absolute;
+        top: 1vh;
+        left: 0rem;
+        opacity: 0.5;
+    } */
+
+    /* no2 */
+    .no2Photo {
+        background: url('./img/photo/no2.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .cheese1 {
+        background: url('./img/icon/cheese1.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .cheese2 {
+        background: url('./img/icon/cheese2.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .cheese1R {
+        width: 2vw;
+        height: 3.8vh;
+        position: absolute;
+        bottom: 0.7vh;
+        left: 1.0vw;
+        opacity: 0.5;
+    }
+
+    .cheese2R {
+        width: 2.1vw;
+        height: 4.2vh;
+        position: absolute;
+        bottom: 0.6vh;
+        left: 3.0vw;
+        opacity: 0.5;
+    }
+
+    /* .sweetPotato{
+        background: url('./img/icon/sweet-potato.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .sweetPotatoR {
+        width: 2.1vw;
+        height: 4vh;
+        position: absolute;
+        top: 7.5vh;
+        right: 2.7vw;
+        opacity: 0.5;
+    }
+    .no3Photo {
+        background: url('./img/photo/no3.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    } */
+    .omija {
+        background: url('./img/icon/omija.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .omijaR {
+        width: 2vw;
+        height: 5vh;
+        position: absolute;
+        top: 4.5vh;
+        right: 2.7vw;
+        opacity: 0.8;
+    }
+
+    .summerDay {
+        background: url('./img/photo/summerDay.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    /* no.4 */
+    .arugula {
+        background: url('./img/icon/arugula.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .arugulaR1 {
+        width: 2.9vw;
+        height: 4.4vh;
+        position: absolute;
+        bottom: -0.1vh;
+        right: 2.7rem;
+        opacity: 0.6;
+    }
+
+    .arugulaR2 {
+        width: 3.1vw;
+        height: 5.4vh;
+        position: absolute;
+        bottom: -0.1vh;
+        right: 0.2rem;
+        opacity: 0.6;
+    }
+
+    .arugulaR3 {
+        width: 1.9vw;
+        height: 3.4vh;
+        position: absolute;
+        bottom: -0.1vh;
+        right: -0.2rem;
+        opacity: 0.5;
+    }
+
+    .no4Photo {
+        background: url('./img/photo/no4.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .winterDay {
+        background: url('./img/photo/w.jpg');
+        background-size: 110% 120%;
+        background-repeat: no-repeat;
+        height: 12rem;
+        margin-top: 0.3rem;
+        position: relative;
+        border-radius: 0.9rem;
+    }
+
+    .winterDay::before {
+        content: "";
+        opacity: 0.4;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-color: #000;
+        border-radius: 0.9rem;
+    }
+
+    .winterDay .en {
+        color: white;
+        text-align: center;
+        position: relative;
+    }
+
+    /* layout 설정 */
+    .mealBox .img {
+        width: 100%;
+        height: 98%;
+        border-radius: 0.9rem;
+    }
+
+    .mealBox .zone:nth-child(-n+2) {
+        width: 33%;
+    }
+
+    .mealBox .zone:last-child {
+        width: 29%;
+    }
+
+    .mealBox .winterDay .en::before {
+        content: "";
+    }
+
+    .mealBox .winterDay .posiCen {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 한끼 사진 종류 정렬 */
+    .mealBox .ex {
+        margin: 0.1rem 0;
+    }
+
+    .mealBox .ko {
+        padding: 0.3rem 0;
+    }
+
+    /* 이미지 box  */
+    /* .hanggi  div:first-child  { padding:  10px 0px 30px 0px; text-align: right !important; 
+        font-size: 20px !important;   font-weight: bold ; color: #62C5C0 ;
+    }
+    .hanggi  div:last-child  { padding-top:  40px ; text-align: right !important; 
+        font-size: 26px !important;   color: white;  font-weight: bold ;
+    } */
+</style>
+
+
+<div class="mealBox ">
+    <div class="disJcBet">
+        <div class="zone ">
+            <div class="posNa ">
+                <div class="no2Photo  photo "> </div>
+                <div class="">
+                    <div class="disJcBet">
+                        <div class="en enColor"> No.2 Vegan </div>
+                        <div class="ko koColor  "> No.2 비건파 </div>
+                    </div>
+                    <div class="ex exColor tr"> 통곡물 식빵 </div>
+                    <div class="ex exColor tr"> 치즈 </div>
+                    <div class="ex exColor tr"> 야채 </div>
+                    <div class="cheese1 cheese1R"> </div>
+                    <div class="cheese2 cheese2R"> </div>
+                </div>
+            </div>
+        </div>
+        <div class="zone ">
+            <div class="posNa ">
+                <div class="no4Photo photoR photo"> </div>
+                <div class="">
+                    <div class="disJcBet">
+                        <div class="en enColor"> No.4 Arugula </div>
+                        <div class="ko koColor  "> No.4 유학파 </div>
+                    </div>
+                    <div class="ex exColor"> 루꼴라 </div>
+                    <div class="ex exColor"> 통곡물 난 </div>
+                    <div class="ex exColor"> 생모짜렐라 치즈 </div>
+                    <div class="arugula arugulaR1"> </div>
+                    <div class="arugula arugulaR2"> </div>
+                    <div class="arugula arugulaR3"> </div>
+                </div>
+            </div>
+        </div>
+        <div class="zone ">
+            <div class="posNa ">
+                <div class="">
+                    <div class="tc">
+                        <div class="en enColor"> One Winter's Day </div>
+                        <div class="ko koColor  "> 어느 겨울날 </div>
+                    </div>
+                </div>
+                <div class="winterDay  photo ">
+                    <div class="posiCen">
+                        <div class="en exColor"> 찬 바람 불면 </div>
+                        <div class="en enColor "> Coming Soon </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="zone disJcCol none">
+            <div class="  img  winterDay">
+                <div class="posiCen ">
+                    <div class="posNa ">
+                        <div class="tc">
+                            <div class="en enColor"> One Winter's Day </div>
+                            <div class="ko koColor  "> 어느 겨울날 </div>
+                            <div class="ko exColor "> 찬 바람 불면 </div>
+                        </div>
+                        <div class="en enColor"> Coming Soon </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> -->
+    </div>
+    <div> </div>
+</div>

@@ -1,0 +1,161 @@
+<style>
+  
+    .blueberry { 
+        background: url('./img/icon/blueberries.png'); 
+        background-size: 100% 100%;
+        width: 2.1vw;
+        height: 4.3vh;
+        position: absolute;
+        top: 2vh;
+        left: -40%;
+        opacity: 0.8;
+    }
+    .omija {
+        background: url('./img/icon/omija.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        width: 2.4vw;
+        height: 4.5vh;
+        position: absolute;
+        top: 2vh;
+        right: -40%;
+        /* transform: translateX( -50%); */
+        opacity: 0.8;
+    }
+    .lemon {
+        background: url('./img/icon/lemon.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        width: 1.7vw;
+        height: 3.8vh;
+        position: absolute;
+        bottom: 2vh;
+        left: -40%;
+        opacity: 0.8;
+    }
+    .all {
+        background: url('./img/icon/all.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        width: 1.7vw;
+        height: 3.8vh;
+        position: absolute;
+        bottom: 2vh;
+        right: -40%;
+        opacity: 0.8;
+    }
+    .plain .cup {
+        background: url('./img/icon/cup.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        width: 2.5vw;
+        height: 4.5vh;
+        position: absolute; 
+        bottom: 4rem;
+        right: 1vw;
+    }
+  
+    .yogurt {
+        background: url('./img/photo/yogurtBowl.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .greekYogurt {
+        background: url('./img/photo/greekBowl.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .ba {background-color: aqua;}
+    .bb {background-color: coral;}
+
+    #yogurt > div:last-child > div:last-child {
+        display: flex; justify-content: space-around;
+    }
+    #yogurt > div:last-child > div:last-child > .border:first-child {
+        margin: 0 4rem 0 6rem;
+    }
+    #yogurt > div:last-child .border,
+    #yogurt > div:last-child .border .img::before { border-radius: 50%; }
+    #yogurt > div:last-child .border {  width: 4vw;  height: 12.2vh; }
+   
+    /* #yogurt > div:last-child > div:last-child { height: 15.2vh;  } */
+    /* #yogurt .plain {  width: 53%;  }
+    #yogurt .plain .border  { 
+        width: 5vw;  border-radius: 50%; 
+        height: 13.5vh;
+    } 
+    #yogurt .plainImg .border { width: 3vw; height: 1.5vh;}
+    #yogurt .yogurtImg { width: 45%;}
+    #yogurt  .yogurtImg .border, 
+    #yogurt  .yogurtImg .img::before { border-radius: 50%; }
+    #yogurt .yogurtImg .img {  width: 4.5vw;  height: 13.5vh;  }  */
+    /* #yogurt .yogurtImg .img {  width: 5vw;  height: 15.2vh;  }  */
+
+
+</style>
+
+
+<div class="">
+    <div class="noBorder disJcBet">
+        <div class=" line ">
+            <div class="en enColor"> Hand-Made Yogurt Smoothie </div>
+            <div class="ko koColor line"> 수제 그릭요거트 스무디 </div>
+        </div>
+        <div class="price100 priceColor">  </div>
+    </div>
+    <div class="disJcBet">
+        <div class="border dis ">
+            <div class="en enColor"> Plain Greek Yogurt </div>
+            <div class="ko koColor line"> 요거만갈아 </div>
+        </div>
+        <div class="border dis ">
+            <div class="en enColor">Strawberry Greek Yogurt   </div>
+            <div class="ko koColor line "> 딸기갈아 </div>
+        </div>
+        <div class="border dis  posNa">
+            <div class="en enColor"> Blueberry  Greek Yogurt </div>
+            <div class="ko koColor line "> 블루베리갈아 </div>
+            <!-- <div class="blueberry imgB" ></div> -->
+        </div>
+    </div>
+</div>
+<div>
+    <div class="noBorder ">
+        <div class="line  ">
+            <div class="en enColor"> Hand-Made Yogurt Bowl </div>
+            <div class="ko koColor line"> 수제 요거트 & 수제 그릭요거트 </div>
+        </div>
+    </div>
+    <div class=" ">
+        <div class=" plain border  posNa " >
+            <div class="posiCen tc">
+                <div class="en enColor "> Plain Yogurt </div>
+                <div class="ko koColor line ">플레인 요거볼 </div>
+            </div>
+            <div class="plainImg">
+                <!-- <div class=" border  ko " > 오미자 </div>
+                <div class=" border  ko " > 레몬 </div>
+                <div class=" border  ko " > 블루베리 </div> -->
+                <div class="omija " >  </div>
+                <div class="lemon " ></div>
+                <div class="blueberry " ></div>
+                <div class="all " ></div>
+            </div>
+        </div>
+        <div class="border img  yogurt " >
+            <div class="posiCen tc"> 
+                <div class="en enColor "> Yogurt  </div>
+                <div class="ko koColor line "> 요거볼 </div>
+                <div class="price130 priceColor">  </div>
+            </div>
+        </div>
+        <div class="border img  greekYogurt " >
+            <div class=" posiCen tc" > 
+                <div class="en enColor ">GreekYogurt  </div>
+                <div class="ko koColor line "> 그릭요거볼 </div>
+                <div class="price130 priceColor">  </div>
+            </div>
+        </div>
+        
+    </div>    
+</div>    

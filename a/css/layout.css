@@ -1,0 +1,43 @@
+@media screen and (min-width : 1279px)  { 
+    .main { 
+        width: 80vw;  height: 73vh;  
+        position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) ;
+        display: flex; justify-content: space-between;
+        border: 0.2rem red solid;
+    }
+    .grid:first-child { width: 41%;  height:inherit; border: 0.2rem rgb(38, 0, 255) solid; }
+    .grid:nth-child(2) { width: 19%;  height:inherit;  background-color: aqua;}
+    .grid:last-child { width: 32%;  height:inherit; border: 0.2rem rgb(81, 198, 227) solid; }
+ } 
+
+/* 모바일 세로  */
+@media all and (max-width : 479px){
+    html { font-size: 62.5%; }
+    .main { 
+        width: 94vw; border: 0.2rem rgb(93, 150, 14) solid;
+        position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) ;
+    } 
+}
+/* 모바일 가로 & 테블릿 세로 */
+@media screen and (min-width : 480px) and (max-width :  767px){
+    html { font-size: 62.5%; }
+    .main { 
+        width: 94vw; border: 0.2rem rgb(123, 15, 17) solid;
+    } 
+}
+/* 모바일 테블릿 가로 */
+@media screen and (min-width : 768px) and (max-width :  1023px){
+    html { font-size: 62.5%; }
+    .main { 
+        width: 98vw; border: 0.2rem rgb(53, 35, 194) solid;
+    } 
+}
+/* 모바일 노트북 */
+@media screen and (min-width : 1024px) and (max-width :  1279px){
+    .main { 
+        width: 80vw;  height: 73vh;  
+        position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) ;
+        display: flex; justify-content: space-between;
+        border: 0.2rem rgb(12, 93, 62) solid;
+    } 
+}
