@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'twayair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Typo Round Regular Demo";
+    src: url("https://db.onlinewebfonts.com/t/094f68a425490c7686f53f097fc7657d.eot");
+    src: url("https://db.onlinewebfonts.com/t/094f68a425490c7686f53f097fc7657d.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/094f68a425490c7686f53f097fc7657d.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/094f68a425490c7686f53f097fc7657d.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/094f68a425490c7686f53f097fc7657d.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/094f68a425490c7686f53f097fc7657d.svg#Typo Round Regular Demo")format("svg");
+}
+@font-face {
+    font-family: 'DalseoHealing';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/daegu/DalseoHealingMedium.ttf') format("truetype");
+    font-display: swap;
+}  
+@font-face {
+    font-family: 'IM_Hyemin-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TAEBAEKmilkyway';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}  
+
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HancomMalangMalang-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/HancomMalangMalang-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NIXGONM-Vb';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/NIXGONM-Vb.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+ @font-face {
+    font-family: 'EVECondom-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2409-2@1.0/EVECondom-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HancomMalangMalang-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/HancomMalangMalang-Regular.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HSSanTokki20-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405@1.0/HSSanTokki20-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('https://ggayane.github.io/css-experiments/Inconsolata-VF.ttf');
+    font-weight: 275 900;
+    font-stretch: 50% 200%;
+}
+@font-face {
+    font-family: 'HancomMalangMalang-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/HancomMalangMalang-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bareun_hipi';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/naverfont_01@1.0/Bareun_hipi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/zapfino');
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Galindo&family=Monoton&family=Nanum+Gothic+Coding&family=Orbit&family=Sunflower:wght@300&display=swap');
+
+
+                
+.ko {
+    font-family: twayair; font-size: 1.125rem; margin-left: 0.938rem;
+}
+.en {
+    font-family: Poppins-Regular; font-size: 1.063rem;
+}
+.en::before { 
+    content: "•";   margin-right: 0.438rem;
+}
+.ex {
+    font-family: "Typo Round Regular Demo";
+    font-size: 0.938rem;
+    margin-left: 0.688rem ;
+}
+
