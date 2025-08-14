@@ -270,16 +270,25 @@
         .sideMenu { width: 100%; height:15vh; color: white; line-height: 1.4rem;  }
         .sideMenu .swiper { width: 100%; height: 100%;  box-sizing: border-box; }
         .sideMenu .swiper-slide > div { 
-            width: 90%; height: 100%; border-radius: 50%;
+            width: 100%; height: 100%; border-radius: 50%; padding: 0.2rem 0; 
             box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            /* border: 0.1rem solid red; */
+         }
+         .sideMenu .swiper-slide .tc {
+            margin-top: 0.3rem;
          }
          .sideMenu .swiper-slide .ex {
-            /* border: 0.1rem solid red; */
             padding-right: 0.5rem;
             width: 6rem;
          }
-         .sideMenu .swiper-slide .ex {  margin: 0 0 0.3rem 0; line-height: 1.2rem;}
-         .sideMenu .swiper-slide .ko {  margin: 0 0 0.3rem 0; }
+         .sideMenu .swiper-slide .ex {  margin: 0 0 0.2rem 0; line-height: 1.2rem;}
+         .sideMenu .swiper-slide .ko {  margin:  0.3rem 0 0.5rem 0; }
+         .summer {
+            border-radius: 50%;
+            /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
+            /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+            box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+         }
 
         /* .sideMenu  .img {border-radius: 50%; }
         .sideMenu  .nonAlchol {  
@@ -438,6 +447,13 @@
             <div class="swiper border">
                <div class="swiper-wrapper ">
                   <!-- slides -->
+                  <div class="swiper-slide summer "> 
+                     <div class="   " > 
+                        <div  class=" icon posiCen tc" > 
+                           <div class="ko"> 여름 = 빙수 </div>
+                        </div>
+                     </div>
+                  </div>
                   <div class="swiper-slide  "> 
                      <div class="   " > 
                         <div  class=" icon posiCen tc" > 
@@ -929,8 +945,8 @@
 </body>
 <script>
     const swiper = new Swiper('.swiper', {
-      slidesPerView : 3,
-      spaceBetween : 30,
+      slidesPerView : 4,
+      spaceBetween : 26,
       loop : true,
       loopAdditionalSlides : 1,
       autoplay : {
