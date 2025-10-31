@@ -1,5 +1,6 @@
 /*  autumn color */
-/* body,
+/* 
+body,
 .cardBox .card .face.face2 { background-color: #2b1d14; }
 .cardBox .card .face.face1 { background: #2b1d14; }
 .en { color:#c29574}
@@ -12,4 +13,21 @@
 .cafeLatte .saucer {background-color:#6b0303;}
 .cafeLatte .cup_handle {  border : 2px solid #6b0303; }
 .cafeLatte .cup_handle {  border : 2px solid #636802; }
-.saucer { background-color:#636802;} */
+.saucer { background-color:#636802;} 
+*/
+
+/* Hallowen Color */
+ /* 
+ body,
+.cardBox .card .face.face2 { 
+  background-color: #46374b; color: white; }
+.cardBox .card .face.face1 { background: #46374b; }
+.ex { color: #ff7f42}
+.cardBox .card .face .face1 .ko,
+.ko { color:#85e21f ; }
+.en { color:#87ba41;  font-family: "Eater", serif; font-weight: 400; font-style: normal; }
+.price { color:#c0d95f}
+#campWe span { color:#da8825;  }
+.atseo  { color: #b7957f !important; font-size: 1.4rem;}
+.title { background: url('./img/background/ha.jpg'); color: white; } 
+*/

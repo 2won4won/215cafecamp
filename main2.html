@@ -55,8 +55,8 @@
     /* 전체적 layout */
     .web { 
       width: 89%; height: 78%; box-sizing: border-box;
-        .camp { width: 38%; height: 100%; }
-        .side { width: 24%; height: 100%; }
+        .camp { width: 35%; height: 100%; }
+        .side { width: 27%; height: 100%; }
         .cafe { width: 34%; height: 100%; }
     }
     /* 카테고리별 layout */
@@ -176,6 +176,9 @@
        .border { width: 43% ; }
        /* .ko { margin: 0.6rem 0 0.7rem 1rem;  } */
     }
+    .web .side .cardBox > .disJcBet:first-child .card {
+      width: 31%;
+    }
   </style>    
 </head>
 <body>
@@ -268,7 +271,7 @@
                 </div>
                 <div class="setImg"> 
                   <div class="img imgAmericano " >
-                    <div class=" ko "> 아메리카노  <br>1+1 </div>
+                    <div class=" ko "> 아메 <br > 리카노  <br>1+1 </div>
                   </div>
                 </div>
               </div>
@@ -302,52 +305,6 @@
         <div class=" disJcBet ">
           <div class="card ">
             <div class="face face1 "> 
-              <div class="content img imgPotato" >
-                <div class="posiCen " >
-                  <div class="ko "> 4가지 감튀 </div>
-                  <div class="price130 price tc "></div>
-                </div>
-              </div>
-            </div>
-            <div class="face face2 ">
-              <div class="content "> 
-                <div class="disJcBet underLine" >
-                    <div class="ko "> 4가지 감튀 </div>
-                    <div class="price130 price"></div>
-                </div>
-                <div class="ex tr ">
-                    각기 다른 모양의 감자튀김,<br>  해쉬브라운, 치즈스틱을 <br> 
-                    에어프라이어로 구워서 <br>  건강하게 드실 수 있습니다. <br>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-              <div class="face face1  "> 
-                    <div class="content img imgDdok " >
-                      <div class="posiCen" >
-                          <div class="ko"> 국물 떡볶이 </div>
-                          <div class="price180 price tc"></div>
-                      </div>
-                    </div>
-              </div>
-              <div class="face face2  ">
-                    <div class="content ">   
-                      <div class="disJcBet underLine " >
-                          <div class="ko "> 국물 떡볶이 </div>
-                          <div class="price180 price"></div>
-                      </div>
-                      <div class="ex tr ">
-                          적당히 매콤하고 <br>  달달한  <br> 떠먹는 국물 떡볶이입니다. <br> 
-                          쫄깃쫄깃 한입 사이즈 밀떡
-                      </div>
-                    </div>
-              </div>
-          </div>
-        </div>
-        <div class=" disJcBet ">
-          <div class="card ">
-            <div class="face face1 "> 
               <div class="content img imgJang" >
                 <div class="posiCen" >
                   <div class="ko "> 된장찌개 </div>
@@ -362,34 +319,106 @@
                     <div class="price70 price"></div>
                 </div>
                 <div class="ex tr ">
+                  깊고 깔끔한 <br> 된장찌개 <br> 밥,고기와 함께. <br> 청양고추는 선택 가능.
+                </div>
+                <!-- <div class="ex tr ">
                   깊고 깔끔한 된장찌개 <br> 
                   흰 밥, 삼겹살, 목살, 소갈비살과 <br>  찰떡궁합입니다. 
                   <br> 청양고추는 선택 가능.
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="card ">
+            <div class="face face1 "> 
+              <div class="content img imgPotato" >
+                <div class="posiCen " >
+                  <div class="ko "> 헬스 감튀 </div>
+                  <div class="price130 price tc "></div>
                 </div>
+              </div>
+            </div>
+            <div class="face face2 ">
+              <div class="content "> 
+                <div class="disJcBet underLine" >
+                    <div class="ko "> 헬스 감튀 </div>
+                    <div class="price130 price"></div>
+                </div>
+                <div class="ex tr ">
+                  여러가지 다양한 <br> 감자튀김. <br> Less Salty, Less Oily  <br> 건강하게 많이 !!
+                </div>
+                <!-- <div class="ex tr ">
+                    각기 다른 모양의 감자튀김,<br>  해쉬브라운, 치즈스틱을 <br> 
+                    에어프라이어로 구워서 <br>  건강하게 드실 수 있습니다. <br>
+                </div> -->
               </div>
             </div>
           </div>
           <div class="card">
               <div class="face face1  "> 
-                    <div class="content img imgFishBall " >
+                    <div class="content img imgCarb " >
                       <div class="posiCen" >
-                          <div class="ko"> 호호 오뎅 </div>
-                          <div class="price180 price tc"></div>
+                          <div class="ko"> 든든 탄수 </div>
+                          <div class="price150 price tc"></div>
                       </div>
                     </div>
               </div>
               <div class="face face2  ">
                     <div class="content ">   
                       <div class="disJcBet underLine " >
-                          <div class="ko "> 호호 오뎅 </div>
-                          <div class="price180 price "></div>
+                          <div class="ko "> 든든 탄수 </div>
+                          <div class="price150 price"></div>
                       </div>
                       <div class="ex tr ">
-                          찬바람 불면 <br>  돌아오는  어묵탕. <br> 
-                          뜨뜻한 국물과 <br> 쫄깃한 어묵이 일품입니다. 
+                          달달한 고구마,  <br>  쫀득쫀득 가래떡 <br> 든든하게 먹고 <br> 
+                          기분 UP !!!
                       </div>
                     </div>
               </div>
+          </div>
+        </div>
+        <div class=" disJcBet ">
+          <div class="card">
+            <div class="face face1  "> 
+              <div class="content img imgDdok " >
+                <div class="posiCen" >
+                    <div class="ko"> 국물 떡볶이 </div>
+                    <div class="price180 price tc"></div>
+                </div>
+              </div>
+            </div>
+            <div class="face face2  ">
+              <div class="content ">   
+                <div class="disJcBet underLine " >
+                  <div class="ko "> 국물 떡볶이 </div>
+                  <div class="price180 price "></div>
+                </div>
+                <div class="ex tr ">
+                  적당히 매콤하고 달달한<br> 떠먹는 국물 떡볶이. <br> 쫄깃쫄깃 한입 사이즈 밀떡 <br> 최고의 간식
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="face face1  "> 
+              <div class="content img imgFishBall " >
+                <div class="posiCen" >
+                  <div class="ko"> 호호 오뎅 </div>
+                  <div class="price180 price tc"></div>
+                </div>
+              </div>
+            </div>
+            <div class="face face2  ">
+              <div class="content ">   
+                <div class="disJcBet underLine " >
+                  <div class="ko "> 호호 오뎅 </div>
+                  <div class="price180 price "></div>
+                </div>
+                <div class="ex tr ">
+                  찬바람 불면 <br>  돌아오는 어묵탕. <br> 뜨뜻한 국물과 쫄깃한 어묵. <br> 술안주로 최고 !!
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div> 
@@ -599,7 +628,7 @@
     let currentIndex = 0;
 
     // 각 카드별 지연 시간 (밀리초 단위)
-    const delays = [2000, 2000, 4000, 4000]; // 예시: 카드 개수만큼 시간 설정
+    const delays = [2000, 2000, 4000, 4000, 4000]; // 예시: 카드 개수만큼 시간 설정
 
     function cardActive() {
         // 모든 요소에서 active 클래스를 제거
