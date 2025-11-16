@@ -59,7 +59,7 @@
 }
 .cardBox .card.active .face.face1 .imgPollack {  
   background: url('../img/photo/pollack.png');
-  background-size: 100% 100%;
+  background-size: 140% 100%;
   background-repeat: no-repeat;
 }
 .cardBox .card.active .face.face1 .imgChestnut {  
@@ -72,7 +72,7 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: relative;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 .cardBox .card.active .face.face1 .imgDdok {  
   background: url('../img/photo/imgDdok.jpg');
@@ -98,6 +98,13 @@
 .cardBox .card.active .face.face1 .imgFishBall {  
   background: url('../img/photo/fishBall.png');
   background-size: 110% 130%;
+  background-repeat: no-repeat;
+  position: relative;
+  /* opacity: 0.9; */
+}
+.cardBox .card.active .face.face1 .imgChicken {  
+  background: url('../img/photo/imgChicken.jpg');
+  background-size: 150% 150%;
   background-repeat: no-repeat;
   position: relative;
   /* opacity: 0.9; */
