@@ -9,6 +9,8 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
+    <link rel="stylesheet" media="screen and (max-width: 767px)" href="/css/mobile.css" />
+   
     <!-- font style -->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One" />
     <link
@@ -32,33 +34,32 @@
     <script src="js/word.js"></script>
 
   <style>
-    /* body { background-color: #c45b31; } */
     body,
     .cardBox .card .face.face2 { 
-      background-color: #6b0303; color: white; 
+      background-color: #1F5DA0; color: white; 
     }
     .cardBox .card .face.face1 {
-      background: #6b0303; /*  처음 카드 화면 */
+      background: #1F5DA0; /*  처음 카드 화면 */
     }
-    .en { color:#678D55}
-    .ex { color:#9ab286}
-    .price { color:#ffcbd1}
+    .en { color:#8DBB3E}
+    .ex { color:#E6B422}
+    .price { color:#FFFFFF}
 
-    .title { background: url('./img/background/d_xmas.jpg'); color: white; }
+    .title { background: url('./img/background/new.jpg'); color: white; }
     #campWe  { width: 100%; height: 2.2rem; margin: 1.6rem 0; }
-    #campWe span { color:#ff2c2c;  }
-    .atseo  { color: #f0ede8 !important; font-size: 1.4rem;}
+    #campWe span { color:#E6B422;  }
+    .atseo  { color: #8DBB3E !important; font-size: 1.4rem;}
     /* 전체적 layout */
     .web { 
       width: 89%; height: 78%; box-sizing: border-box;
         .camp { width: 33%; height: 100%; }
-        .side { width: 30%; height: 100%; }
-        .cafe { width: 34%; height: 100%; }
+        .side { width: 31%; height: 100%; }
+        .cafe { width: 33%; height: 100%; }
     }
     /* 카테고리별 layout */
     .web .imgSize { width: 100%; height: 17vh; }
     .web .underLine { 
-      border-bottom: #9ab286 0.1rem solid; 
+      border-bottom: #E6B422 0.1rem solid; 
       padding-bottom: 0.5rem; padding-top: 1.2rem; 
       margin-bottom: 0.6rem;
         .ko { margin-left: 0.35rem; }
@@ -98,7 +99,7 @@
     .web .camp .singRoom {
       .disJcBet{ 
         .border {
-           width: 17.5%; 
+           width: 18%; 
            height: 2.3rem;
            line-height: 2.3rem;
            border-radius: 10%;
@@ -124,7 +125,7 @@
     .web .cafe .eso {
       .border4 .ko { margin: 0.6rem 0 0.7rem 1rem; }
       .disJcBet:last-child .border{
-       width: 42%;
+        width: 42%;
       }   
       .cafeLatte .latte { height: 1.7rem; width: 2.1rem;}
       .cafeLatte .cup_body,
@@ -167,15 +168,15 @@
       }
     }  
     .web .cafe .fruit  {
-      .border { width: 42% ; }
+      /* .border { width: 30% ; } */
+      .border > div:nth-child(2) { line-height: 1.5rem;}
     }
     .web .cafe .milk .yogu {
       width: 100%;
        .border { width: 43% ; }
-       /* .ko { margin: 0.6rem 0 0.7rem 1rem;  } */
     }
     .web .side .cardBox > .disJcBet .card {
-      width: 31.4%;
+      width: 31%;
     }
   </style>    
 </head>
@@ -522,25 +523,35 @@
       </div>
       <div class=" fruit disJcBet"> 
         <div class="listTi"> Fruit   </div>
-        <div class="list disJcBet " > 
+        <div class="list disJcBet border3" > 
           <div class="border  "> 
             <div class="disJcBet line ">
               <div class="en" > Lemon </div>
               <div class="price price80"></div>
             </div>
-            <div class="disJcBet secLine ">
-              <div class="ko" > 썬키스트 레몬 </div>
+            <div class="  ">
+              <div class="ko " > 썬키스트 레몬 </div>
               <div class="ex "> 골다공증 예방, 면역력 강화 </div>
             </div>
           </div>
           <div class="border  "> 
             <div class="disJcBet line ">
               <div class="en" > Omija </div>
-              <div class="price price80"></div>
+              <div class="price price85"></div>
             </div>
-            <div class="disJcBet secLine ">
-              <div class="ko" >  문경 오미자  </div>
+            <div class="  ">
+              <div class="ko " >  문경 오미자  </div>
               <div class="ex "> 피부 미용, 간 해독 작용 </div>
+            </div>
+          </div>
+          <div class="border  "> 
+            <div class="disJcBet line ">
+              <div class="en" > YuJa </div>
+              <div class="price price85"></div>
+            </div>
+            <div class="  ">
+              <div class="ko " >  고흥 유자  </div>
+              <div class="ex "> 혈관 건강, 호흡기 건강 </div>
             </div>
           </div>
         </div>
@@ -619,6 +630,8 @@
   </div>
 </body>
 <script type="text/javascript">
+
+
   $(document).ready(function(){
         $("#campWe").load("cate/we.html");
   });
@@ -647,7 +660,7 @@
     let currentIndex = 0;
 
     // 각 카드별 지연 시간 (밀리초 단위)
-    const delays = [2000, 2000, 4000, 4000, 4000, 4000]; // 예시: 카드 개수만큼 시간 설정
+    const delays = [2000, 2000, 4000, 4000, 4000]; // 예시: 카드 개수만큼 시간 설정
 
     function cardActive() {
         // 모든 요소에서 active 클래스를 제거
