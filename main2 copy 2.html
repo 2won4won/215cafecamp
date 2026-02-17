@@ -32,23 +32,21 @@
     <script src="js/word.js"></script>
 
   <style>
-    body { 
-      background: linear-gradient(0deg, #140e0c 0.000%, #1b121f 5.000%, #231733 10.000%, #2a1e48 15.000%, #33275d 20.000%, #3c3172 25.000%, #453c87 30.000%, #4e479a 35.000%, #5951ad 40.000%, #635cbf 45.000%, #6e65cf 50.000%, #796ede 55.000%, #8574ea 60.000%, #9179f4 65.000%, #9d7cfc 70.000%, #aa7dff 75.000%, #b67cff 80.000%, #c478ff 85.000%, #d173ff 90.000%, #df6cfe 95.000%, #ed63f7 100.000%);
-      height: 100vh; /* 그라데이션 때문에  */
-    } 
-    .cardBox .card .face.face1 {
-      background: linear-gradient(0deg, #140e0c 0.000%, #1b121f 5.000%, #231733 10.000%, #2a1e48 15.000%, #33275d 20.000%, #3c3172 25.000%, #453c87 30.000%, #4e479a 35.000%, #5951ad 40.000%, #635cbf 45.000%, #6e65cf 50.000%, #796ede 55.000%, #8574ea 60.000%, #9179f4 65.000%, #9d7cfc 70.000%, #aa7dff 75.000%, #b67cff 80.000%, #c478ff 85.000%, #d173ff 90.000%, #df6cfe 95.000%, #ed63f7 100.000%); /*  처음 카드 화면 */
+    body,
+    .cardBox .card .face.face2 { 
+      background-color: #1F5DA0; color: white; 
     }
-    .en { color:#FFB7CE}
-    .ko { color:#FFD9E8}
-    .ex { color:#BED9F4}
-    .price { color:#F8F4FF}
-    .listTi { color:#FFB7CE}
+    .cardBox .card .face.face1 {
+      background: #1F5DA0; /*  처음 카드 화면 */
+    }
+    .en { color:#8DBB3E}
+    .ex { color:#E6B422}
+    .price { color:#FFFFFF}
 
-    .title { background: url('./img/background/cherryBlossom.jpg'); color: white; }
+    .title { background: url('./img/background/new.jpg'); color: white; }
     #campWe  { width: 100%; height: 2.2rem; margin: 1.6rem 0; }
-    #campWe span { color:#FF91AF;  }
-    .atseo  { color: #BED9F4 !important; font-size: 1.4rem;}
+    #campWe span { color:#E6B422;  }
+    .atseo  { color: #8DBB3E !important; font-size: 1.4rem;}
     /* 전체적 layout */
     .web { 
       width: 89%; height: 78%; box-sizing: border-box;
@@ -59,7 +57,7 @@
     /* 카테고리별 layout */
     .web .imgSize { width: 100%; height: 17vh; }
     .web .underLine { 
-      border-bottom: #FFE5EC 0.1rem solid; 
+      border-bottom: #E6B422 0.1rem solid; 
       padding-bottom: 0.5rem; padding-top: 1.2rem; 
       margin-bottom: 0.6rem;
         .ko { margin-left: 0.35rem; }
@@ -129,7 +127,7 @@
       }   
       .cafeLatte .latte { height: 1.7rem; width: 2.1rem;}
       .cafeLatte .cup_body,
-      .cafeLatte .saucer {background-color:#BED9F4;}
+      .cafeLatte .saucer {background-color:#3A8232;}
       /* .cafeLatte .saucer {background-color:#757575;} */
       /* .cafeLatte .saucer {background-color: #696969;} */
 
@@ -142,14 +140,14 @@
         top: 2.4rem; left: -3.55rem;
       }
       .cafeLatte .cup_handle { 
-        border : 2px solid #BED9F4; 
+        border : 2px solid #3A8232; 
         /* border : 2px solid #676767;;  */
         margin-top: 0px; margin-left: 1.68rem; 
       }
       
       .cafeLatte:last-child {
         .cup_body,
-        .saucer { background-color:#7F4CA5;}a
+        .saucer { background-color:#ff2c2c;}
         /* .saucer { background-color:#807F80 ;} */
         .latte  { 
           position: absolute; 
@@ -161,7 +159,7 @@
         }
         .cup_handle { 
           transform: scaleX(-1); /* 컵 핸들 방향 전환 */
-          border : 2px solid #7F4CA5; 
+          border : 2px solid #ff2c2c; 
           margin-top: 0px; margin-left: -0.56rem; 
         }
         .steam { background-color:white;}
@@ -346,6 +344,10 @@
                 <div class="ex tr ">
                   여러가지 다양한 <br> 감자튀김. <br> Less Salty, Less Oily  <br> 건강하게 많이 !!
                 </div>
+                <!-- <div class="ex tr ">
+                    각기 다른 모양의 감자튀김,<br>  해쉬브라운, 치즈스틱을 <br> 
+                    에어프라이어로 구워서 <br>  건강하게 드실 수 있습니다. <br>
+                </div> -->
               </div>
             </div>
           </div>
@@ -583,35 +585,31 @@
       <div class="flower disJcBet" >
         <div class=" listTi"> Flower  </div>
         <div class="list" >
-          <div class=" disJcBet border2" >
+          <div class=" disJcBet border3" >
             <div class="border"> 
               <div class="disJcBet line">
                 <div class="en" > Hurb </div>
                 <div class="price price90 "></div>
               </div>  
-              <div class="disJcBet line">
-                <div class="ko " > 아홉번 덖은 차 </div>
-                <div class="ex  "> 기력 회복, 소화불량 해소 </div>
-              </div>
+              <div class="ko secLine" > 아홉번 덖은 차 </div>
+              <div class="ex secLine "> 기력 회복, 소화불량 해소 </div>
             </div>
             <div class="border"> 
               <div class="disJcBet line">
-                <div class="en" > Chamomile Bouquet </div>
+                <div class="en" > Bouquet </div>
                 <div class="price price80 "></div>
               </div>
-              <div class="disJcBet line">
-                <div class="ko  "> 느긋한 캐모마일  </div>
-                <div class="ex  "> 심신 진정, 통증 완화 </div>
-              </div>
+              <div class="ko secLine "> 루이히솝 </div>
+              <div class="ex secLine "> 심신 진정, 통증 완화 </div>
             </div>
-            <!-- <div class="border"> 
+            <div class="border"> 
               <div class="disJcBet line">
                 <div class="en" > Peppermint </div>
                 <div class="price price80 "></div>
               </div>
               <div class="ko secLine "> 페파민트 </div>
               <div class="ex secLine  "> 식욕 억제, 피부트러블 완화 </div>
-            </div> -->
+            </div>
           </div>
           <div class="border ">
             <div class=" disJcBet  line" >
@@ -660,7 +658,7 @@
     let currentIndex = 0;
 
     // 각 카드별 지연 시간 (밀리초 단위)
-    const delays = [2000, 2000, 4000, 4000, 4000, 4000]; // 예시: 카드 개수만큼 시간 설정
+    const delays = [2000, 2000, 4000, 4000, 4000]; // 예시: 카드 개수만큼 시간 설정
 
     function cardActive() {
         // 모든 요소에서 active 클래스를 제거
