@@ -220,11 +220,20 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
+.wPeach {
+    background: url('../img/icon/wPeach.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 2.9rem;
+    height: 2.3rem;
+    margin-left: 0.8rem;
+    opacity: 0.8;
+}
 .orange_w  {
     background: url('../img/icon/wOrange.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
-     width: 1.9vw;
+    width: 1.9vw;
     height: 4.5vh;
     /* position: absolute;
     top: 2.8vh;

@@ -39,7 +39,7 @@
   padding: 0.7rem 1.36rem 1rem 1.56rem;
   margin-bottom: 1.2rem;
 }
-.border2  .border { width: 43%; }
+.border2  .border { width: 42%; }
 .border3  .border { width: 25%; }
 .border4  .border { width: 17%; }
 
@@ -146,6 +146,7 @@
 .price180::before { content: '18.0';} 
 .price190::before { content: '19.0';} 
 .price200::before { content: '20.0';} 
+.price210::before { content: '21.0';} 
 .price230::before { content: '23.0';} 
 .price260::before { content: '26.0';} 
 .price280::before { content: '28.0';} 
@@ -169,4 +170,5 @@
 .mb0 { margin-bottom:0; }
 .pt4 { margin-top: 0.4rem; }
 .pl4 { padding-left: 0.4rem; }
+.pl10 { padding-left: 1rem; }
 .w100 { width: 100%;}

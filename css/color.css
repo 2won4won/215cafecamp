@@ -86,3 +86,25 @@ body,
 #campWe span { color:#FF91AF;  }
 .atseo  { color: #BED9F4 !important; font-size: 1.4rem;}
 */
+/* May Color */
+/* 
+  body,
+    .cardBox .card .face.face2 { 
+      background: #cc2b5e;  
+      background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);  
+      background: linear-gradient(to right, #753a88, #cc2b5e); 
+      color: aliceblue;
+    }
+    .cardBox .card .face.face1 {
+      background: #9E1A59;
+    }
+    .ko { color:#F9C6D4}
+    .en { color:#FF91AF}
+    .ex { color:#FFB7CE}
+    .price { color:#F9CBD6}
+
+    .title { background: url('./img/background/heart1.png'); color: #cc2b5e; background-size: cover;}
+    #campWe  { width: 100%; height: 2.2rem; margin: 1.6rem 0; }
+    #campWe span { color:#E6B422;  }
+    .atseo  { color: #8DBB3E !important; font-size: 1.4rem;}
+*/

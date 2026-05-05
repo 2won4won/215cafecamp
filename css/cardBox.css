@@ -88,6 +88,28 @@
   position: relative;
   /* opacity: 0.9; */
 }
+.cardBox .card.active .face.face1 .imgPizza {  
+  background: url('../img/photo/imgPizza.png');
+  background-size: 110% 110%;
+  background-repeat: no-repeat;
+  position: relative;
+  opacity: 0.8;
+}
+.cardBox .card.active .face.face1 .imgEgg {  
+  background: url('../img/photo/imgEgg.jpg');
+  background-size: 110% 110%;
+  background-repeat: no-repeat;
+  position: relative;
+  opacity: 0.8;
+}
+
+.cardBox .card.active .face.face1 .imgSoba {  
+  background: url('../img/photo/imgSoba.png');
+  background-size: 115% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  /* opacity: 0.9; */
+}
 .cardBox .card.active .face.face1 .imgNuddle {  
   background: url('../img/photo/imgNuddle.jpg');
   background-size: 110% 130%;
