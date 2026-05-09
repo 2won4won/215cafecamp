@@ -34,24 +34,26 @@
   <style>
     body,
     .cardBox .card .face.face2 { 
-      background: #ee9ca7;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to left, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to left, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: #cc2b5e;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
       color: aliceblue;
+      /* background-color: #194569; color: white;  */
     }
     .cardBox .card .face.face1 {
-      background: #FFBCCD; /*  처음 카드 화면 */
+      background: #C43670; /*  처음 카드 화면 */
     }
-    /* .ko { color:#FFE5EC} */
-    .en { color:#FF6EC7}
-    .ex { color:#FFE5EC}
-    .price { color:#FBD9E5}
+    .ko { color:#F9C6D4}
+    .en { color:#FF91AF}
+    /* .en { color:#5F84A2} */
+    .ex { color:#FFB7CE}
+    .price { color:#F9CBD6}
 
-    .title { background: url('./img/background/heart1.png'); color: #E00761; background-size: cover;}
+    .title { background: url('./img/background/heart1.png'); color: #cc2b5e; background-size: cover;}
     #campWe  { width: 100%; height: 2.2rem; margin: 1.6rem 0; }
-    #campWe span { color:#FFBCCD;  }
-    .atseo  { color: #FFC9D7 !important; font-size: 1.4rem;}
-
+    #campWe span { color:#E6B422;  }
+    .atseo  { color: #8DBB3E !important; font-size: 1.4rem;}
     /* 전체적 layout */
     .web { 
       width: 89%; height: 78%; box-sizing: border-box;
@@ -62,7 +64,7 @@
     /* 카테고리별 layout */
     .web .imgSize { width: 100%; height: 17vh; }
     .web .underLine { 
-      border-bottom: #FCE4EC 0.1rem solid; 
+      border-bottom: #FFD9E8 0.1rem solid; 
       padding-bottom: 0.5rem; padding-top: 1.2rem; 
       margin-bottom: 0.6rem;
         .ko { margin-left: 0.35rem; }
@@ -132,7 +134,7 @@
       }   
       .cafeLatte .latte { height: 1.9rem; width: 2.4rem;}
       .cafeLatte .cup_body,
-      .cafeLatte .saucer {background-color:#E91E63;}
+      .cafeLatte .saucer {background-color:#FFB7CE;}
       .cafeLatte .latte  { 
         position: absolute; 
         top: 0.7rem; left: 18.5rem; 
@@ -142,7 +144,7 @@
         top: 0.8rem; left: 7rem;
       }
       .cafeLatte .cup_handle { 
-        border : 2px solid #E91E63; 
+        border : 2px solid #FFB7CE; 
         margin-top: 0px; margin-left: 1.68rem; 
       }
       
@@ -175,12 +177,6 @@
     }
     .web .side .cardBox > .disJcBet .card {
       width: 31%;
-    }
-    .sideSet {
-      .bigBox { width: 65%;  margin-right: 0.5rem; }
-      .smallBox { width: 30%;  margin-left: 0.5rem;  }
-      .img:nth-child(odd){ width: 4rem; height: 4rem; }
-      .img:nth-child(even){ width: 1.5rem; height: 1.5rem; margin: 0 1rem;}
     }
   </style>    
 </head>
@@ -218,19 +214,6 @@
               </div>
             </div>   
             <div class="  border "> 
-              <div class="img imgJowl imgSize"> </div>
-              <div class="content">
-                <div class="underLine disJcBet"> 
-                  <div class="ko" > 돼지 항정살 </div>
-                  <div class="price250 price" > </div>
-                </div>
-                <div class="ex tr "> 
-                      생항정살  <br> 조리전 2인 기준 500g <br> BBQ 굽는 시간 15분
-                      <br> 2인 이상 주문 가능
-                </div>
-              </div>
-            </div>   
-            <div class="  border none "> 
               <div class="img imgBeef imgSize"> </div>
               <div class="content">
                 <div class="underLine disJcBet"> 
@@ -244,57 +227,9 @@
               </div>
             </div>   
           </div>
-        </div> 
-        <div class="sideSet " >
-          <div class=" border disJcBet " >
-            <div class=" bigBox " >
-              <div class=" underLine disJcBet " >
-                <div class="ko"> 오늘은 피맥각이다 </div>
-                <div class="price300 price" > </div>
-              </div>
-              <div class="ex tr">
-                21,000 + 6,000 + 6,000 = <span class="line-through"> 33,000</span>
-              </div>
-              <div class="ex tr" > 
-                원픽 피자 1판 + 주류 2병 (맥주, 소주 중 택 2) <br> 
-              </div>
-            </div>
-            <div class="smallBox posNa " >
-              <div class=" posiCen " >
-                <div class="disCen  " >
-                  <div class="img wPizza " ></div>
-                  <div class="img wPlus " ></div>
-                  <div class="img wAchol " ></div>
-                </div>
-              </div>
-            </div>
-          </div>  
-          <div class=" border disJcBet " >
-            <div class=" bigBox " >
-              <div class=" underLine disJcBet " >
-                <div class="ko"> 피맥  </div>
-                <div class="price300 price" > </div>
-              </div>
-              <div class="ex tr">
-                21,000 + 6,000 + 6,000 = <span class="line-through"> 33,000</span>
-              </div>
-              <div class="ex tr" > 
-                원픽 피자 1판 + 주류 2병 (맥주, 소주 중 택 2) <br> 
-              </div>
-            </div>
-            <div class="smallBox posNa " >
-              <div class=" posiCen " >
-                <div class="disCen  " >
-                  <div class="img wPizza " ></div>
-                  <div class="img wPlus " ></div>
-                  <div class="img wAchol " ></div>
-                </div>
-              </div>
-            </div>
-          </div>  
-        </div>
-        <div class="set215 none"> 
-          <div class="border  disJcBet ">
+        </div>  
+        <div class="set215 "> 
+          <div class="border  disJcBet">
             <div class="disJcBet disCen " >
               <div class="img wCow " ></div>
               <div class="img wPig " ></div>

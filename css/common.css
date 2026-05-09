@@ -151,6 +151,7 @@
 .price260::before { content: '26.0';} 
 .price280::before { content: '28.0';} 
 .price250::before { content: '25.0';} 
+.price300::before { content: '30.0';} 
 .price350::before { content: '35.0';} 
 .price400::before { content: '40.0';} 
 .price500::before { content: '50.0';} 

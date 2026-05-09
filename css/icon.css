@@ -300,7 +300,33 @@
     background: url('../img/photo/no4.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
-}
+  }
+.wPizza {  
+  background: url('../img/icon/wPizza.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* width: 5rem;
+  height: 5rem; */
+} 
+.wPlus {  
+  background: url('../img/icon/wPlus.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* width: 5rem;
+  height: 5rem; */
+} 
+.wAchol {  
+  background: url('../img/icon/wAchol.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* width: 5rem;
+  height: 5rem; */
+} 
+.imgJowl {  
+    background: url('../img/photo/imgJowl.jpg');
+    background-size: 120% 140%;
+    background-repeat: no-repeat;
+ } 
 .imgBelly {  
     background: url('../img/photo/imgBelly.jpg');
     background-size: 100% 100%;
