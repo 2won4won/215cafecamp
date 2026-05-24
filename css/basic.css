@@ -1,0 +1,112 @@
+.disJcCol {
+  display: flex;  justify-content: space-between; flex-direction: column;
+}
+.disJcBet {
+  display: flex;  justify-content: space-between;
+}
+.disJcAro {
+  display: flex;  justify-content:space-around;
+}
+.disCen { 
+  display: flex;  justify-content: center; align-items: center;
+}
+.posiCen {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+}
+.dis {  display: flex; }
+.disRight { display: flex; justify-content: right;}
+.posNa { position: relative;}
+.none { display: none;}
+.line { 
+  padding: 0.4rem 0; height: 1.5rem; line-height: 1.5rem; 
+}
+.underline { 
+    padding-top: 0.4rem ; 
+    margin-bottom: 0.8rem;
+}
+
+/* 글자 정렬 */
+.tc { text-align: center;}
+.tl { text-align: left; }
+.tr { text-align: right; }
+
+/* title effective */
+.title {
+  margin-bottom: 1.25rem; 
+  font-family: Poppins-Regular;
+  font-size: 1.18rem;
+  display: block;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  position: relative;
+  border-radius: 0.3rem;
+  background-size: cover;
+  padding: 0.5rem 0.625rem;
+  box-shadow: 0.063rem 0.188rem 0.063rem -0.188rem #777;
+  transition: background 450ms ease-in-out;
+}
+.shadow {
+  position: relative;
+}
+.shadow:before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 13px;
+  right: 7px;
+  width: 25%;
+  top: 0;
+  box-shadow: 0 15px 10px #777;
+  transform: rotate(4deg);
+  transition: all 150ms ease-in-out;
+}
+
+/* border layout */
+.border {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  padding: 0.7rem 1.36rem 1rem 1.56rem;
+  margin-bottom: 1.2rem;
+  box-sizing: border-box;
+}
+
+.boxTwo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 기존 2열 구조 가정 */
+  gap: 1rem;
+}
+.boxThree {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  
+}
+.boxFour {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 첫 번째 줄은 피자용(12rem), 두 번째 줄부터는 일반 아이템 크기 자동(auto) */
+  grid-template-rows: 4.2rem auto; 
+  gap: 1rem;
+}
+
+.lightingBox.pizza-full-width {
+  grid-column: 1 / -1; 
+  grid-row: 2;         /* 💡 명시적으로 첫 번째 줄(최상단)에 박아둠 */
+  width: 100% !important;
+  height: 12rem;
+}
+
+.swiper-wrapper {
+  grid-column: auto;
+  width: 100% !important;
+  height: 100%;
+  background-color: tomato;
+}
+
+
+
+
+.bc {
+  background-color: #e49d9d;
+}
+.bl {
+  border: 5px solid rgb(72, 12, 12);
+}

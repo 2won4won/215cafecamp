@@ -11,7 +11,7 @@
 }
 .cardBox .card .face {  
   width: 100%; 
-  height: 11.5rem; 
+  height: 9rem; 
   transition: 0.5s;
 }
 .cardBox .card .face.face1{
@@ -67,6 +67,7 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
+.side .setImg .imgCarb,
 .cardBox .card.active .face.face1 .imgCarb {  
   background: url('../img/photo/imgCarb.png');
   background-size: 100% 100%;
@@ -81,13 +82,39 @@
   position: relative;
   /* opacity: 0.9; */
 }
-.cardBox .card.active .face.face1 .imgJang {  
-  background: url('../img/photo/imgJang.png');
+.cardBox .card.active .face.face1 .imgPupa {  
+  background: url('../img/photo/imgPupa.jpeg');
   background-size: 110% 130%;
   background-repeat: no-repeat;
   position: relative;
   /* opacity: 0.9; */
 }
+
+.side .setImg .imgDdok,
+.cardBox .card.active .face.face1 .imgDdok {  
+  background: url('../img/photo/imgDdok.jpg');
+  background-size: 110% 130%;
+  background-repeat: no-repeat;
+  position: relative;
+  /* opacity: 0.9; */
+}
+.side .setImg .imgJang,
+.cardBox .card.active .face.face1 .imgJang {  
+  background: url('../img/photo/imgJang.png');
+  background-size: 110% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  /* opacity: 0.9; */
+}
+.side .setImg .imgPupa,
+.cardBox .card.active .face.face1 .imgPupa {  
+  background: url('../img/photo/imgPupa.jpeg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  /* opacity: 0.9; */
+}
+.side .setImg .imgPizza,
 .cardBox .card.active .face.face1 .imgPizza {  
   background: url('../img/photo/imgPizza.png');
   background-size: 110% 110%;
@@ -95,6 +122,7 @@
   position: relative;
   opacity: 0.8;
 }
+.side .setImg .imgEgg,
 .cardBox .card.active .face.face1 .imgEgg {  
   background: url('../img/photo/imgEgg.jpg');
   background-size: 110% 110%;
@@ -102,10 +130,10 @@
   position: relative;
   opacity: 0.8;
 }
-
+.side .setImg .imgSoba,
 .cardBox .card.active .face.face1 .imgSoba {  
   background: url('../img/photo/imgSoba.png');
-  background-size: 115% 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   position: relative;
   /* opacity: 0.9; */
@@ -138,9 +166,9 @@
   display: flex;   justify-content: center; align-items: center;
   box-sizing: border-box; 
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-  transform: translateY(-6.5rem);
+  transform: translateY(-4rem);
   padding-bottom: 1.56rem;
-  height: 11.5rem;
+  height: 9rem;
   /* 색상은 해당 페이지에서 규정 */
 }
 .cardBox .card.active .face.face2{  transform: translateY(0);  }

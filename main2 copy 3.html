@@ -48,41 +48,36 @@
     /* .en { color:#5F84A2} */
     .ex { color:#91AEC4}
     .price { color:#DDECF4}
-    .bl {border: #DDECF4 1px solid;}
+    .bl { border: 1px solid #fff;}
 
     .title { background: url('./img/background/heart1.png'); color: #8DBB3E; background-size: cover;}
     #campWe  { width: 100%; height: 2.2rem; margin: 1.6rem 0; }
     #campWe span { color:#E6B422;  }
     .atseo  { color: #8DBB3E !important; font-size: 1.4rem;}
-
     /* 전체적 layout */
     .web { 
-      width: 89%; height: 79%; box-sizing: border-box;
+      width: 89%; height: 78%; box-sizing: border-box;
         .camp { width: 33%; height: 100%; }
         .side { width: 31%; height: 100%; }
         .cafe { width: 33%; height: 100%; }
     }
-
     /* 카테고리별 layout */
-    .web .imgSize { width: 100%; height: 14vh; }
+    .web .imgSize { width: 100%; height: 13vh; }
     .web .underLine { 
       border-bottom: #CADEED 0.1rem solid; 
-      padding-bottom: 0.3rem; padding-top: 0.6rem; 
-      margin-bottom: 0.3rem;
-
-      .ko { margin-left: 0.35rem; }
-
+      padding-bottom: 0.5rem; padding-top: 1.2rem; 
+      margin-bottom: 0.6rem;
+        .ko { margin-left: 0.35rem; }
     }
     .web .camp .bbq,
     .web .side .cardBox .content {
-      .ex { line-height: 1.3rem; margin-bottom: 0.2rem;}
+      .ex { line-height: 1.5rem; margin-bottom: 0.5rem;}
     }
-
     .web .camp .set215 { 
         .underLine {
-          /* border-bottom: #CADEED 0.1rem solid; 
-          padding-bottom: 0.3rem; padding-top: 0.6rem; 
-          margin-bottom: 0.3rem; */
+          border-bottom: #CADEED 0.1rem solid; 
+          padding-bottom: 0.5rem; padding-top: 0.8rem; 
+          margin-bottom: 0.5rem;
 
           .ko { margin-left: 0.35rem; }
         }
@@ -125,10 +120,10 @@
           }
         }  
     }
-    .web .side .singRoom {
+    .web .camp .singRoom {
       .disJcBet{ 
         .border {
-           width: 17%; 
+           width: 18%; 
            height: 2.3rem;
            line-height: 2.3rem;
            border-radius: 10%;
@@ -202,35 +197,20 @@
     .web .side .cardBox > .disJcBet .card {
       width: 31%;
     }
-    #campWe {
-      /* background-color: aliceblue; */
-      position: absolute;
-      top: 22rem; left: 0rem;
+    .sideSet {
+      .bigBox { width: 65%;  margin-right: 0.5rem; }
+      .smallBox { width: 30%;  margin-left: 0.5rem;  }
+      .img:nth-child(odd){ width: 4rem; height: 4rem; }
+      .img:nth-child(even){ width: 1.5rem; height: 1.5rem; margin: 0 1rem;}
     }
-      
     .side {
       .setImg {
-        aspect-ratio: 1/1;
-        width: 30%; border-radius: 10% ;
+        width: 30%; height: 10rem; border-radius: 10% ;
         color: #DDECF4;
         text-shadow: 0 2px 6px rgba(0, 0, 0, 0.);
         box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-        position: relative;
-      
-        .content {
-          text-align: right;
-
-          .ko { 
-            padding-top: 2rem;
-          }
-          .ko,
-          .price, 
-          .ex { 
-            padding-right: 0.4rem;
-          }
-        }
-      }  
-      /* .setImg.active {
+      }
+      .setImg.active {
         overflow: hidden;
       }
       .setImg.active .img {
@@ -244,35 +224,8 @@
           .ko,
           .price,
           .ex { display: none;}
-      } */
-      .sideSet .setImg:last-child {
-        width: 100% !important;  height: 13rem; border-radius: 3% ;
-        padding-top: 0.6rem;
-
-        .imgPi.img {
-          width: 11rem;  height: 11rem; border-radius: 50%;
-          margin: 0.5rem  0.5rem 0.5rem 0.5rem;
-          
-          .ko {
-            position: absolute; 
-            width: 100%; height: 100%;
-            display: flex; 
-            align-items: center; justify-content: center;
-          }
-        }
-        .sideSetContent {
-          width: 72%;
-            .bigBox { width: 70%;  margin-right: 0.3rem; }
-            .smallBox { width: 28%;  margin-right: 0.5rem;  }
-            .img:nth-child(odd){ width: 3.5rem; height: 3.5rem; }
-            .img:nth-child(even){ width: 1.5rem; height: 1.5rem; margin: 0 0.1rem;}
-
-            .bigBox:first-child {
-              margin-bottom: 0.5rem;
-            }
-
-        }
       }
+
       .swiper {
         width: 100%;
         height: 100%;
@@ -306,13 +259,12 @@
           }
         }
       }
-
-     
+    }
   </style>    
 </head>
 <body>
   <div class="posiCen disJcBet web ">
-    <div class="camp disJcCol ">
+    <div class="camp disJcCol bl ">
       <div class="title shadow "> 215CafeCamp's BBQ</div>
       <div class=" kind  ">
         <div class="bbq disJcCol  "> 
@@ -330,7 +282,7 @@
                 </div>
               </div>
             </div> 
-            <div class="  border posNa "> 
+            <div class="  border "> 
               <div class="img imgNeck imgSize"> </div>
               <div class="content">
                 <div class="underLine disJcBet"> 
@@ -342,8 +294,6 @@
                       <br> 2인 이상 주문 가능
                 </div>
               </div>
-              <div id="campWe" >   </div>
-                <!-- <div id="campWe" >   </div> -->
             </div>   
             <div class="  border "> 
               <div class="img imgJowl imgSize"> </div>
@@ -389,8 +339,8 @@
 
           </div>
         </div> 
-        <div class="sideSet " >
-          <div class=" border disJcBet none" >
+        <div class="sideSet none" >
+          <div class=" border disJcBet " >
             <div class=" bigBox " >
               <div class=" underLine disJcBet " >
                 <div class="ko"> 오늘은 피맥각이다 </div>
@@ -413,7 +363,7 @@
               </div>
             </div>
           </div>  
-          <div class=" border disJcBet none" >
+          <div class=" border disJcBet " >
             <div class=" bigBox " >
               <div class=" underLine disJcBet " >
                 <div class="ko"> 피맥  </div>
@@ -466,7 +416,6 @@
                   <div class=" imgNeck img "> 
                     <div class="ko "> 목살  <br> 200g </div> 
                   </div>
-                 
                 </div>
                 <div class=" seekImg "> 
                   <div class=" imgJowl img "> 
@@ -488,155 +437,99 @@
             </div>
           </div>
         </div> 
-        <!-- <div class=" singRoom " >
+        <div class=" singRoom " >
           <div class="  " > 
             <div id="campWe" >   </div>
           </div>
-          
-        </div> -->
-      </div>
-    </div>
-    <div class="side disJcCol ">
-      <div class="title shadow"> 215CafeCamp's Side</div>
-      <div class="disJcBet tc">
-        <div class="setImg"> 
-          <div class="img imgJang " > 
-            <div class="content">
-              <div class="ko "> 보글 된찌 </div>
-              <div class="price70 price"></div>
-              <div class="ex "> 깊고 깔끔한 <br> 된장찌개 <br> 밥,고기와 함께. </div>
+          <div class=" disJcBet ">
+            <div class=" border posNa" > 
+              <div class=" ko ">  노래 땡기는 날 </div>
             </div>
-          </div>
-        </div>  
-        <div class="setImg"> 
-          <div class="img imgEgg " > 
-            <div class="content">
-              <div class="ko "> 말아 계란 </div>
-              <div class="price100 price"></div>
-              <div class="ex "> 신선한 달걀을  <br> 말고 말고 또 말아서  <br>단백질 완전체.</div>
+            <div class=" border posNa" > 
+              <div class=" ko "> 노래방 무료 사용 </div>
             </div>
-          </div>
-        </div>  
-        <div class="setImg"> 
-          <div class="img imgSoba " > 
-            <div class="content">
-              <div class="ko "> 오싹 메밀 </div>
-              <div class="price100 price"></div>
-              <div class="ex  "> 머리 끝까지 서늘해지는 <br> 그 순간 <br> 당신은 이미 남극 그 어디쯤 </div>
+            <div class=" border posNa" > 
+              <div class=" ko "> 예약 순서 우선 </div>
             </div>
-          </div>
-        </div>  
-      </div>  
-      <div class="disJcBet tc">
-        <div class="setImg"> 
-          <div class="img imgDdok " > 
-            <div class="content">
-              <div class="ko "> 수혈 떡뽁 </div>
-              <div class="price150 price t"></div>
-              <div class="ex  "> 적당히 매콤하고 달달한 <br> 
-                                    국민 간식 <br> 
-                                    혈중 떡볶이 농도 풀충전
-              </div>
+            <div class=" border posNa" > 
+              <div class=" ko posiCen"> 50분 사용 </div>
             </div>
-          </div>
-        </div>  
-        <div class="setImg "> 
-          <div class="img imgCarb " > 
-            <div class="content">
-              <div class="ko "> 든든 탄수 </div>
-              <div class="price150 price"></div>
-              <div class="ex  ">  달달한 고구마, <br> 
-                                  구운 쌀가래떡.<br>
-                                  든든하게 먹고 기분 UP! UP!<br>
-                                    
-              </div>                      
-            </div>
-          </div>
-        </div> 
-        <div class="setImg"> 
-          <div class="img imgPupa " > 
-            <div class="content">
-              <div class="ko "> 단백 번데 </div>
-              <div class="price110 price"></div>
-              <div class="ex  ">  고단백질 공급, <br> 
-                                  콜레스테롤 청소.<br> 
-                                  탄수화물 가볍게, 단백질은 무겁게! 
-                                    
-              </div>
-            </div>
-          </div>
-        </div>  
-      </div>  
-      <div class="sideSet " >
-        <div class="setImg disJcBet "> 
-          <!-- <div> -->
-            <div class="img imgPi ">  
-              <div class="ko "> 오늘은 피자각이다 </div>
-            </div>
-          <!-- </div> -->
-          <!-- <div class="img imgPizza " > 
-            <div class="content">
-              <div class="ko "> 원픽 피자 </div>
-              <div class="price210 price"></div>
-              <div class="ex ">  페파로니의 짭조름한 맛과 <br> 
-                                  은은한 풍미의 갈릭이 <br>
-                                  한 판에서 터지는  <br>
-                                  이 조합, 진짜 범인이다..
-              </div>
-            </div>
-          </div> -->
-        <!-- </div>   -->
-          <div class="sideSetContent "> 
-            <div class="  disJcBet " >
-              <div class=" bigBox " >
-                <div class=" underLine disJcBet " >
-                  <div class="ko"> 으른이를 위한 SET </div>
-                  <div class="price300 price" > </div>
-                </div>
-                <div class="ex tr">
-                  21,000 + 6,000 + 6,000 = <span class="line-through"> 33,000</span>
-                </div>
-                <div class="ex tr" > 
-                  페파로니 옆 갈릭 피자 1판 + 주류 2병 (맥주, 소주 중 택 2) <br> 
-                </div>
-              </div>
-              <div class="smallBox posNa " >
-                <div class=" posiCen " >
-                  <div class="disCen  " >
-                    <div class="img wPizza " ></div>
-                    <div class="img wPlus " ></div>
-                    <div class="img wAchol " ></div>
-                  </div>
-                </div>
-              </div>
-            </div>  
-            <div class="  disJcBet " >
-              <div class=" bigBox " >
-                <div class=" underLine disJcBet " >
-                  <div class="ko"> 어린이를 위한 SET  </div>
-                  <div class="price210 price" > </div>
-                </div>
-                <div class="ex tr">
-                  21,000 + 2,000  = <span class="line-through"> 21,000</span>
-                </div>
-                <div class="ex tr" > 
-                  페파로니 옆 갈릭 피자 1판 + 음료 택 1 <br> 
-                </div>
-              </div>
-              <div class="smallBox posNa " >
-                <div class=" posiCen " >
-                  <div class="disCen  " >
-                    <div class="img wPizza " ></div>
-                    <div class="img wPlus " ></div>
-                    <div class="img cola_w " ></div>
-                  </div>
-                </div>
-              </div>
-            </div>  
           </div>
         </div>
       </div>
-      <div class=" cardBox none">
+    </div>
+    <div class="side disJcCol  ">
+      <div class="title shadow"> 215CafeCamp's Side</div>
+      <div class="disJcBet tc none">
+        <div class="border"> 
+          <div class="img imgJang " > 
+            <div>
+              <div class="ko "> 보글 된찌 </div>
+              <div class="price70 price"></div>
+              <div class="ex tr "> 깊고 깔끔한 <br> 된장찌개 <br> 밥,고기와 함께. <br> 청양고추는 선택 가능.</div>
+            </div>
+          </div>
+        </div>  
+        <div class=""> 
+          <div class="img imgEgg " > 
+            <div>
+              <div class="ko "> 말아 계란 </div>
+              <div class="price100 price"></div>
+              <div class="ex tr "> 신선한 달걀을  <br> 말고 말고 또 말아서 <br> 부드럽고 촉촉한  <br>단백질 완전체.</div>
+            </div>
+          </div>
+        </div>  
+        <div class=""> 
+          <div class="img imgSoba " > 
+            <div>
+              <div class="ko "> 오싹 메밀 </div>
+              <div class="price100 price"></div>
+              <div class="ex tr "> 머리 끝까지 서늘해지는 <br> 그 순간 <br> 당신은 이미 남극 그 어디쯤 <br> 머리 아픔 주의!</div>
+            </div>
+          </div>
+        </div>  
+      </div>  
+      <div class="disJcBet tc none">
+        <div class=""> 
+          <div class="img imgPizza " > 
+            <div>
+              <div class="ko "> 원픽 피자 </div>
+              <div class="price210 price"></div>
+              <div class="ex tr ">  페파로니의 짭조름한 맛과 <br> 
+                                    은은한 풍미의 갈릭이 <br>
+                                    한 판에서 터지는  <br>
+                                    이 조합, 진짜 범인이다..
+              </div>
+            </div>
+          </div>
+        </div>  
+        <div class=""> 
+          <div class="img imgDdok " > 
+            <div>
+              <div class="ko "> 수혈 떡뽁 </div>
+              <div class="price150 price"></div>
+              <div class="ex tr "> 적당히 매콤하고 달달한 <br> 
+                                   혈중 떡볶이 농도 풀충전
+              </div>
+            </div>
+          </div>
+        </div>  
+        <div class=""> 
+          <div class="img imgCarb " > 
+            <div>
+              <div class="ko "> 든든 탄수 </div>
+              <div class="price150 price"></div>
+              <div class="ex tr ">  달달한 고구마, <br> 
+                                    쫀득 & 빠삭 구운 쌀가래떡.<br>
+                                    든든하게 먹고 <br>
+                                    기분 UP! UP!
+              </div>                      
+            </div>
+          </div>
+        </div>  
+      </div>  
+
+      <div class=" cardBox ">
         <div class=" disJcBet ">
           <div class="card ">
             <div class="face face1 "> 
@@ -654,7 +547,7 @@
                     <div class="price70 price"></div>
                 </div>
                 <div class="ex tr ">
-                  깊고 깔끔한 <br> 된장찌개 <br> 밥,고기와 함께. <br> 청양고추는 선택 가능.
+                  깊고 깔끔한 <br> 된장찌개 <br> 밥,고기와 늘 함께.<!--  <br> 청양고추는 선택 가능. -->
                 </div>
               </div>
             </div>
@@ -677,8 +570,8 @@
                 <div class="ex tr ">
                   신선한 달걀을  <br> 
                   말고 말고 또 말아서 <br> 
-                  부드럽고 촉촉한  <br> 
-                  단백질 완전체
+                  부드럽고 촉촉한 완전 단백질 <br> 
+                  <!-- 단백질 완전체 -->
                 </div>
               </div>
             </div>
@@ -701,63 +594,14 @@
                 <div class="ex tr ">
                   머리 끝까지 서늘해지는 <br> 
                   그 순간 <br> 
-                  당신은 이미 남극 그 어디쯤 <br> 
-                  머리 아픔 주의!
+                  당신은 이미 남극 그 어디쯤 
+                  <!-- 머리 아픔 주의! -->
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="card none">
-            <div class="face face1 "> 
-              <div class="content img imgPotato" >
-                <div class="posiCen " >
-                  <div class="ko "> 헬스 감튀 </div>
-                  <div class="price130 price tc "></div>
-                </div>
-              </div>
-            </div>
-            <div class="face face2 ">
-              <div class="content "> 
-                <div class="disJcBet underLine" >
-                    <div class="ko "> 헬스 감튀 </div>
-                    <div class="price130 price"></div>
-                </div>
-                <div class="ex tr ">
-                  여러가지 다양한 <br> 감자튀김. <br> Less Salty, Less Oily  <br> 건강하게 많이 !!
-                </div>
-                <!-- <div class="ex tr ">
-                    각기 다른 모양의 감자튀김,<br>  해쉬브라운, 치즈스틱을 <br> 
-                    에어프라이어로 구워서 <br>  건강하게 드실 수 있습니다. <br>
-                </div> -->
               </div>
             </div>
           </div>
         </div>
         <div class=" disJcBet ">
-          <div class="card">
-              <div class="face face1  "> 
-                    <div class="content img imgPizza " >
-                      <div class="posiCen" >
-                          <div class="ko"> 원픽 피자 </div>
-                          <div class="price210 price tc"></div>
-                      </div>
-                    </div>
-              </div>
-              <div class="face face2  ">
-                    <div class="content ">   
-                      <div class="disJcBet underLine " >
-                          <div class="ko "> 원픽 피자 </div>
-                          <div class="price210 price"></div>
-                      </div>
-                      <div class="ex tr ">
-                        페파로니의 짭조름한 맛과 <br> 
-                        은은한 풍미의 갈릭이 <br>
-                        한 판에서 터지는  <br>
-                        이 조합, 진짜 범인이다.
-                      </div>
-                    </div>
-              </div>
-          </div>
           <div class="card ">
             <div class="face face1  "> 
               <div class="content img imgDdok " >
@@ -776,98 +620,79 @@
                 <div class="ex tr ">
                   적당히 매콤하고 달달한 <br> 
                   국민 간식 떡볶이. <br> 
-                  당신에게 필요한 건 <br> 
-                  혈중 떡볶이 농도 풀충전
+                  <!-- 당신에게 필요한 건 <br>  -->
+                  혈중 농도 떡볶이 풀충전
                 </div>
               </div>
             </div>
           </div>
           <div class="card">
-              <div class="face face1  "> 
-                    <div class="content img imgCarb " >
-                      <div class="posiCen" >
-                          <div class="ko"> 든든 탄수 </div>
-                          <div class="price150 price tc"></div>
-                      </div>
-                    </div>
-              </div>
-              <div class="face face2  ">
-                    <div class="content ">   
-                      <div class="disJcBet underLine " >
-                          <div class="ko "> 든든 탄수 </div>
-                          <div class="price150 price"></div>
-                      </div>
-                      <div class="ex tr ">
-                        달달한 고구마, <br> 
-                        쫀득 & 빠삭 구운 쌀가래떡.<br>
-                        든든하게 먹고 <br>
-                        기분 UP! UP!
-                      </div>
-                    </div>
-              </div>
-          </div>
-          <div class="card none">
             <div class="face face1  "> 
-              <div class="content img imgChicken " >
+              <div class="content img imgCarb " >
                 <div class="posiCen" >
-                    <div class="ko"> 반반 치킨 </div>
-                    <div class="price200 price tc"></div>
+                  <div class="ko"> 든든 탄수 </div>
+                  <div class="price150 price tc"></div>
                 </div>
               </div>
             </div>
             <div class="face face2  ">
               <div class="content ">   
                 <div class="disJcBet underLine " >
-                  <div class="ko "> 반반 치킨 </div>
-                  <div class="price200 price "></div>
+                    <div class="ko "> 든든 탄수 </div>
+                    <div class="price150 price"></div>
                 </div>
                 <div class="ex tr ">
-                  뼈 없이 먹기 편한<br> 매콤달콤새콤 <br> 양념치킨과 간장허니치킨 <br> 풍미 UP
+                  달달한 고구마, <br> 
+                  쫀득 & 빠삭 구운 쌀가래떡.<br>
+                  든든하게 먹고 기분 UP! UP!
+                  
                 </div>
               </div>
             </div>
           </div>
-          <div class="card none">
+          <div class="card">
             <div class="face face1  "> 
-              <div class="content img imgFishBall " >
+              <div class="content img imgPupa " >
                 <div class="posiCen" >
-                  <div class="ko"> 호호 오뎅 </div>
-                  <div class="price180 price tc"></div>
+                  <div class="ko"> 번데기탕 </div>
+                  <div class="price100 price tc"></div>
                 </div>
               </div>
             </div>
             <div class="face face2  ">
               <div class="content ">   
                 <div class="disJcBet underLine " >
-                  <div class="ko "> 호호 오뎅 </div>
-                  <div class="price180 price "></div>
+                    <div class="ko "> 번데기탕 </div>
+                    <div class="price100 price"></div>
                 </div>
                 <div class="ex tr ">
-                  찬바람 불면 <br>  돌아오는 어묵탕. <br> 뜨뜻한 국물과 쫄깃한 어묵. <br> 술안주로 최고 !!
+                  고단백질 공급, <br> 콜레스테롤 청소.<br> 탄수화물 가볍게, 단백질은 무겁게! 
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div> 
-      <div class="singRoom">
-
-        <div class=" disJcBet ">
-              <div class=" border posNa" > 
-                <div class=" ko ">  노래 땡기는 날 </div>
-              </div>
-              <div class=" border posNa" > 
-                <div class=" ko "> 노래방 이용 0원 </div>
-              </div>
-              <div class=" border posNa" > 
-                <div class=" ko "> 예약 우선 </div>
-              </div>
-              <div class=" border posNa" > 
-                <div class=" ko posiCen"> 50분 사용 </div>
-              </div>
-            </div>
-      </div>
-      </div>
+      <div class="swiper ">
+        <div class="swiper-wrapper ">
+          <!-- slides -->
+          <div class="swiper-slide  tc posNa "> 
+            <div class=" img imgPizza " >
+              <div class="ko "> 피자 + 탄산음료 1 개 </div>
+              <div class="price210 price ">   </div>
+              <div class="ex "> </div>
+            </div>  
+          </div>
+          <div class="swiper-slide  tc posNa "> 
+            <div class=" img imgPizzah " >
+              <div class="ko "> 피자 + 주류 2 개 </div>
+              <div class="price300 price ">   </div>
+              <div class="ex ">  </div>
+            </div>  
+          </div>
+        </div>  
+      </div>  
+    </div>
     <div class="cafe disJcCol ">
       <div class="title shadow"> 215CafeCamp's Cafe</div>
       <div class="eso disJcBet">
@@ -1223,5 +1048,37 @@
 
     // 초기 실행
     cardActive();
+
+    const swiper = new Swiper('.swiper', {
+    // 💡 중요: 실제 슬라이드가 2개뿐일 때는 slidesPerView를 1로 두거나, 
+    // 2개 배치를 유지하려면 아래의 loopedSlides 설정을 반드시 맞춰주어야 버그가 안 납니다.
+    slidesPerView: 2,
+    spaceBetween: 30,
+    
+    loop: true,
+    // 💡 [핵심 추가] 부족한 슬라이드 개수를 강제로 복사하여 무한 루프를 가능하게 만드는 속성
+    loopedSlides: 2, 
+    loopAdditionalSlides: 2, // 기존 1에서 2로 확장하여 여유 공간 확보
+    
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    
+    // 💡 마크업 구조에 pagination 태그가 생략되어 있다면 생략해도 되지만, 
+    // 에러 방지를 위해 걸어둔 구조는 유지합니다.
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+    
+    // 동적 데이터 로딩 및 탭 전환 시 크기 재계산 보장
+    observer: true,
+    observeParents: true,
+    
+    // 💡 [추가 팁] 슬라이드가 스르륵 부드럽게 넘어가도록 속도감 최적화
+    speed: 800 
+});
+
 </script>
 </html>

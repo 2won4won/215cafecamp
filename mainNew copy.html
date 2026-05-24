@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Main</title>
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- font style -->
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One" />
+  <link href="https://www.dafontfree.net/embed/ZWF0LWF0LWpvZXMtc3QtcmVndWxhciZkYXRhLzc1L2UvMTY0NzUyL0VhdCBhdCBKb2VzJ3MgU3QudHRm" rel="stylesheet" type="text/css" />
+  
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+
+  <!-- Local file import -->
+  <link rel="stylesheet" href="css/image.css">
+  <link rel="stylesheet" href="css/icon.css">
+  <link rel="stylesheet" href="css/basic.css">
+  <link rel="stylesheet" href="css/price.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/effect.css">
+  <link rel="stylesheet" href="css/cardBox.css">
+  <link rel="stylesheet" href="css/cafelatte.css">
+<!--   
+  <script src="js/word.js"></script> -->
+
+  <style>
+    body,
+    .cardBox .card .face.face2 { 
+      background: #283c86;
+      background: -webkit-linear-gradient(to left, #45a247, #283c86);
+      background: linear-gradient(to left, #45a247, #283c86);
+      color: aliceblue;
+    }
+
+    /* color */
+    .underline {
+      border-bottom: #07497c 0.1rem solid; 
+    }
+    /* 전체적 크기 */
+    .con {
+      width: 87%; height: 79vh; box-sizing: border-box;
+
+      > div:first-child {
+        width: 35%; height: inherit;
+      }
+      > div:nth-child(even) {
+        width: 28%; height: inherit;
+      }
+      > div:last-child {
+        width: 33%; height: inherit;
+      }
+    }
+
+    /*  bbq  */
+    .bbq {
+      .boxSize {
+        padding-top: 1rem;
+        display: flex; /* 💡 이미지와 설명창이 나란히 배치되도록 플렉스 추가 */
+        justify-content: space-between;
+        
+        .img {
+          display: block;
+          width: 59%;
+          height: auto; /* 💡 auto 대신 구체적인 세로 크기(예: 8rem)를 지정해야 배경이 보입니다! */
+          box-sizing: border-box;
+        }
+        .description {
+          width: 38%;
+          line-height: 1.5rem;
+        } 
+        .ko {
+          margin-left: 0;
+        }
+      } 
+      #campWe  { width: 100%; height: 2.5rem; margin: 1.6rem 0; }
+      #campWe span { color:#E6B422;  } 
+
+    }
+
+    /* 💡 SIDE 카테고리 그리드 레이아웃 교정 및 피자 배치 */
+    .side {
+      .boxThree {
+        /* 첫 번째 줄은 피자용(12rem), 두 번째 줄부터는 일반 아이템 크기 자동(auto) */
+        grid-template-rows: 9rem 10rem 9rem; 
+        gap: 1.5rem;
+      }
+      .lightingBox {
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 1.5rem;
+        overflow: hidden; /* 둥근 모서리 내부 격리 */
+        
+        .img {
+          width: 100%;
+          /* aspect-ratio: 1/1; */ /* 일반 아이템 정사각형 유지 */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      /* 💡 피자 아이템만 최상단(order: -1) 및 100% 가로 전면 채우기 */
+      .lightingBox.pizza-full-width {
+        grid-column: 1 / -1; 
+        width: 100% !important;
+        height: 10rem; /* 높이 규정 지정 */
+        order: -1; /* 다른 일반 요소들을 제치고 무조건 최상단 정렬 */
+      }
+
+      /* Swiper 컨테이너 정렬 확보 */
+      .swiper-container.pizza-slider {
+        margin-top: 0;
+        width: 100%;
+        height: 10rem;/* .lightingBox.pizza-full-width 높이 동일 지정 */
+      }
+
+      /* 피자 슬라이더 내부 개별 아이템 구조 정렬 */
+      .swiper-slide.img {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: auto; /* 지정 높이에 따름 */
+      }
+
+      /* 공통 설명창 스타일링 보완 */
+      .description {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+      .description .disJcBet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+    }
+
+    .cafe {
+      .subTile {
+        font-family: "ChosunGu"; 
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        text-align: center;
+        font-size: 1.2rem; 
+        font-weight: 800; 
+        width: 3.7rem;
+        line-height: 4rem;
+      }
+      .subList { width: 91%;}
+
+      #summerContainer .description:last-child  .ex {
+        position: relative;
+      }
+      #summerContainer .description:last-child  .wPeach {
+        position: absolute;
+        top: 50%;          /* 💡 부모 요소의 세로 기준 정중앙 배치 */
+        transform: translateY(-50%); /* 💡 자식 높이 절반만큼 끌어올려 완벽한 수직 중앙 정렬 */
+        right: -3.3rem;  
+      }
+
+    }  
+  </style>
+</head>
+<body>
+  <div class="con posiCen disJcBet ">
+    <div class="bbq bl disJcCol "> 
+      <div class="title shadow">215's BBQ</div>
+      <div class="boxTwo" id="bbqContainer"></div>
+      <div class="" id="set215">
+        <div >
+
+        </div>
+      </div>
+      <div class=""  id="campWe"> </div>
+      <div class=" disJcBet boxFour " id="singroom">
+        <div class=" border disCen"> 노래 땡기는 날 </div>
+        <div class=" border disCen"> 노래방 무료 이용 </div>
+        <div class=" border disCen"> 예약 순서 우선 </div>
+        <div class=" border disCen"> 50 min 사용 </div>
+      </div>
+
+      <template id="bbqTemplate">
+        <div class="border boxSize"> 
+          <div class="img"></div>
+          <div class="description">
+            <div class="disJcBet underline">
+              <div class="ko"></div>
+              <div class="price"></div>
+            </div>
+            <div class="ex tr"></div>
+          </div>
+        </div>
+      </template>
+      <template id="setTemplate">
+        <div class="border boxSize"> 
+          <div class="img"></div>
+          <div class="description">
+            <div class="disJcBet underline">
+              <div class="ko"></div>
+              <div class="price"></div>
+            </div>
+            <div class="ex tr"></div>
+          </div>
+        </div>
+      </template>
+      
+    </div>
+
+    <div class="side disJcCol bl"> 
+        <div class="title shadow">215's SIDE</div>
+        <div class="boxThree" id="sideContainer"></div>
+
+        <template id="sideTemplate">
+          <div class="lightingBox"> 
+            <div class="img normal-item"> 
+              <div class="description">
+                  <div class="ko"></div>
+                  <div class="price"></div> 
+                  <div class="ex"></div>
+              </div>
+            </div>
+            <!-- 💡 피자 전용 Swiper 슬라이더 레이아웃 -->
+            <div class="swiper-container pizza-slider" style="display: none;">
+              <div class="swiper-wrapper"></div>
+            </div>
+          </div>
+        </template>
+    </div>
+    
+    <div class="cafe disJcCol bl">
+      <div class="title shadow">215's CAFE</div>
+      <div class="disJcBet" >
+        <div class="subTile "> Espresso</div>
+        <div class="boxTwo subList" id="caffeContainer"> </div>
+      </div>
+      <div class="disJcBet" >
+        <div class="subTile "> Fruit</div>
+        <div class="boxTwo subList" id="fruitContainer"> </div>
+      </div>
+      <div class="disJcBet" >
+        <div class="subTile "> Summer</div>
+        <div class=" subList" id="summerContainer"> </div>
+      </div>
+      <div class="disJcBet" >
+        <div class="subTile "> Flower </div>
+        <div class="subList"> 
+          <div class="boxTwo " id="flowerContainer"> </div>
+          <div class="border ">
+            <div class=" disJcBet  line" >
+              <div class="dis" >
+                <div class="en" >SSangWhaTang </div>
+                <div class="ko" > 대추쌍화탕 </div>
+                <div class="ex word"></div>
+              </div>  
+              <div class="price price100"></div>
+            </div>
+          </div> 
+        </div>
+      </div>
+
+      <template id="caffeTemplate">
+        <div class="border boxSize"> 
+          <div class="description  line">
+            <div class="disJcBet ">
+              <div class=" dis">
+                <div class="en"></div>
+                <div class="ko"></div>
+              </div>
+              <div class="price"></div>
+            </div>
+          </div>
+        </div>
+      </template>
+      <template id="fruitTemplate">
+        <div class="border boxSize"> 
+          <div class="description  line">
+            <div class="disJcBet ">
+              <div class=" dis">
+                <div class="en"></div>
+                <div class="ko"></div>
+              </div>
+              <div class="price"></div>
+            </div>
+          </div>
+          <div class="ex"></div>
+        </div>
+      </template>
+      <template id="summerTemplate">
+        <div class="border  "> 
+          <div class="description disJcBet line"> 
+            <div class=" dis">
+              <div class="en"></div>
+              <div class="ko"></div>
+              <div class="ex"></div>
+            </div>
+            <div class="price"></div>
+          </div>
+        </div>
+      </template>
+      <template id="flowerTemplate">
+        <div class="border boxSize"> 
+          <div class="description  line">
+            <div class="disJcBet ">
+              <div class=" dis">
+                <div class="en"></div>
+                <div class="ko"></div>
+              </div>
+              <div class="price"></div>
+            </div>
+          </div>
+          <div class="ex"></div>
+        </div>
+      </template>
+    </div>
+  </div>  
+</body>
+<script src="js/data.js"></script>
+<script src="js/word.js"></script>
+<script>
+
+$(document).ready(function(){
+        $("#campWe").load("cate/we.html");
+  });
+
+$(document).ready(function() {
+  
+  function renderCategory(dataList, containerId, templateId, isFlower) {
+    const selector = containerId.startsWith('#') ? containerId : `#${containerId}`;
+    const $container = $(selector);
+    const tplSelector = templateId.startsWith('#') ? templateId : `#${templateId}`;
+    const template = document.querySelector(tplSelector);
+    if (!template) return;
+
+    $.each(dataList, function(index, item) {
+      const clone = document.importNode(template.content, true);
+      const $newItem = $(clone).children().first();
+
+      // 💡 피자 아이템일 경우 고유 클래스 추가
+      if (item.isPizza) {
+        $newItem.addClass('pizza-full-width'); 
+      }
+
+      // 💡 [조건 분기] 피자 세분화 데이터인 경우
+      if (item.isPizza && item.subItems) {
+        $newItem.find('.normal-item').remove(); // 일반 레이아웃 삭제
+        const $slider = $newItem.find('.pizza-slider').show(); 
+        const $wrapper = $slider.find('.swiper-wrapper');
+
+        // 세분화된 하위 피자 루프 돌며 슬라이드 생성
+        $.each(item.subItems, function(subIndex, subItem) {
+          const priceShort = (subItem.price / 1000).toFixed(1);
+          
+          const slideHtml = `
+            <div class="swiper-slide img imgBack" 
+                 style="background-image: url(${subItem.img}); 
+                 background-size: cover; 
+                 background-position: center;"
+            >
+              <div class="description">
+                <div class="disJcBet underline">
+                  <div class="ko">${subItem.ko}</div>
+                  <div class="price">${priceShort}</div>
+                </div>
+                <div class="ex tr">${subItem.ex}</div>
+              </div>
+            </div>
+          `;
+          $wrapper.append(slideHtml);
+        });
+
+        $container.append($newItem);
+
+        // Swiper 가동
+        new Swiper($slider[0], {
+          loop: true,
+          autoplay: { delay: 3000, disableOnInteraction: false },
+          slidesPerView: 2, 
+          spaceBetween: 5 
+        });
+
+            } else {
+        // 💡 일반 아이템 처리 로직
+        $newItem.find('.pizza-slider').remove(); // 슬라이더 DOM 제거
+        
+        // [수정] .img 요소를 확실하게 찾아서 배경 스타일을 주입합니다.
+        const $imgElement = $newItem.hasClass('img') ? $newItem : $newItem.find('.img');
+        
+        if (item.img) {
+          $imgElement
+            .addClass("imgBack")
+            .css({
+              'background-image': `url(${item.img})`,
+              'background-size': 'cover',   
+              'background-position': 'center',
+              'display': 'block' // 💡 상위 CSS 배치에 방해받지 않도록 블록 처리 확보
+            });
+        }
+
+        const priceShort = (item.price / 1000).toFixed(1);
+        
+        $newItem.find('.ko').text(item.ko);
+        $newItem.find('.price').text(priceShort);
+        $newItem.find('.en').html(item.en);
+        // $newItem.find('.ex').html(item.ex);
+      
+// 💡 [교정] Peach Iced Tea 아이템일 경우 특수 설명창(ex) 처리 및 아이콘 빌드
+if (item.en === "Peach Iced Tea") {
+  // 1. 기존에 들어가던 일반 ex 텍스트 상자를 선택
+  const $exElement = $newItem.find('.ex');
+  
+  // 2. CSS 구조에 맞게 .ex 박스 자체에 relative 기준점을 주거나 
+  // 내부에 .wPeach 아이콘 상자를 만들어 배치합니다.
+  $exElement.html(`
+    <span class="wPeach"></span>
+    <span class="ex-img" >${item.ex || '시원 달콤한 아이스티'}</span>
+  `);
+} else {
+  // 일반 아이템은 기존 방식 유지
+  if (item.ex) $newItem.find('.ex').html(item.ex);
+}
+        $container.append($newItem);
+      }
+
+    });
+  }
+
+  // 데이터 동적 호출 등록
+  renderCategory(bbqData, 'bbqContainer', 'bbqTemplate');
+  renderCategory(sideData, 'sideContainer', 'sideTemplate');
+  renderCategory(caffeData, 'caffeContainer', 'caffeTemplate');
+  renderCategory(fruitData, 'fruitContainer', 'fruitTemplate');
+  renderCategory(summerData, 'summerContainer', 'summerTemplate');
+  renderCategory(flowerData, 'flowerContainer', 'flowerTemplate', true );
+});
+</script>
+</html>

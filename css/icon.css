@@ -205,6 +205,11 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
+.cola_w {
+    background: url('../img/icon/cola.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
 .ribs_w {
     background: url('../img/icon/ribs_w.png');
     background-size: 100% 100%;
@@ -347,8 +352,24 @@
     background-size: 105% 110%;
     background-repeat: no-repeat;
 }
+ .imgMeat {  
+    background: url('../img/photo/imgMeat.jpg');
+    background-size: 110% 115%;
+    background-repeat: no-repeat;
+}
+ 
  .imgChunck {  
     background: url('../img/photo/imgChunk.jpg');
+    background-size: 105% 110%;
+    background-repeat: no-repeat;
+}
+ .imgPi {  
+    background: url('../img/photo/imgPizza.jpg');
+    background-size: 105% 110%;
+    background-repeat: no-repeat;
+}
+ .imgPizzah {  
+    background: url('../img/photo/imgPizzah.jpg');
     background-size: 105% 110%;
     background-repeat: no-repeat;
 }

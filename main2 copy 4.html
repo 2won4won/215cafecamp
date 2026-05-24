@@ -34,23 +34,25 @@
   <style>
     body,
     .cardBox .card .face.face2 { 
-      background: #ee9ca7;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to left, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to left, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: #283c86;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to left, #45a247, #283c86);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to left, #45a247, #283c86); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       color: aliceblue;
+      /* background-color: #194569; color: white;  */
     }
     .cardBox .card .face.face1 {
-      background: #FFBCCD; /*  처음 카드 화면 */
+      background: #283c86; /*  처음 카드 화면 */
     }
-    /* .ko { color:#FFE5EC} */
-    .en { color:#FF6EC7}
-    .ex { color:#FFE5EC}
-    .price { color:#FBD9E5}
+    .ko { color:#DDECF4}
+    .en { color:#B3C8E0}
+    /* .en { color:#5F84A2} */
+    .ex { color:#91AEC4}
+    .price { color:#DDECF4}
 
-    .title { background: url('./img/background/heart1.png'); color: #E00761; background-size: cover;}
+    .title { background: url('./img/background/heart1.png'); color: #8DBB3E; background-size: cover;}
     #campWe  { width: 100%; height: 2.2rem; margin: 1.6rem 0; }
-    #campWe span { color:#FFBCCD;  }
-    .atseo  { color: #FFC9D7 !important; font-size: 1.4rem;}
+    #campWe span { color:#E6B422;  }
+    .atseo  { color: #8DBB3E !important; font-size: 1.4rem;}
 
     /* 전체적 layout */
     .web { 
@@ -59,10 +61,11 @@
         .side { width: 31%; height: 100%; }
         .cafe { width: 33%; height: 100%; }
     }
+
     /* 카테고리별 layout */
     .web .imgSize { width: 100%; height: 17vh; }
     .web .underLine { 
-      border-bottom: #FCE4EC 0.1rem solid; 
+      border-bottom: #CADEED 0.1rem solid; 
       padding-bottom: 0.5rem; padding-top: 1.2rem; 
       margin-bottom: 0.6rem;
         .ko { margin-left: 0.35rem; }
@@ -71,6 +74,7 @@
     .web .side .cardBox .content {
       .ex { line-height: 1.5rem; margin-bottom: 0.5rem;}
     }
+
     .web .camp .set215 { 
         .border > div:first-child {
           .img { width: 3.8rem; height: 3.1rem; } 
@@ -132,7 +136,7 @@
       }   
       .cafeLatte .latte { height: 1.9rem; width: 2.4rem;}
       .cafeLatte .cup_body,
-      .cafeLatte .saucer {background-color:#E91E63;}
+      .cafeLatte .saucer {background-color:#91AEC4;}
       .cafeLatte .latte  { 
         position: absolute; 
         top: 0.7rem; left: 18.5rem; 
@@ -142,13 +146,13 @@
         top: 0.8rem; left: 7rem;
       }
       .cafeLatte .cup_handle { 
-        border : 2px solid #E91E63; 
+        border : 2px solid #91AEC4; 
         margin-top: 0px; margin-left: 1.68rem; 
       }
       
       .cafeLatte:last-child {
         .cup_body,
-        .saucer { background-color:#FF91AF;}
+        .saucer { background-color:#B3C8E0;}
         /* .saucer { background-color:#807F80 ;} */
         .latte  { 
           position: absolute; 
@@ -160,7 +164,7 @@
         }
         .cup_handle { 
           transform: scaleX(-1); /* 컵 핸들 방향 전환 */
-          border : 2px solid #FF91AF; 
+          border : 2px solid #B3C8E0; 
           margin-top: 0px; margin-left: -0.56rem; 
         }
       }
@@ -176,11 +180,43 @@
     .web .side .cardBox > .disJcBet .card {
       width: 31%;
     }
+    
     .sideSet {
       .bigBox { width: 65%;  margin-right: 0.5rem; }
       .smallBox { width: 30%;  margin-left: 0.5rem;  }
       .img:nth-child(odd){ width: 4rem; height: 4rem; }
       .img:nth-child(even){ width: 1.5rem; height: 1.5rem; margin: 0 1rem;}
+    }
+    .side {
+      .setImg {
+        width: 30%; height: 14rem; border-radius: 10% ;
+        color: #DDECF4;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.);
+        box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+      }
+      /* .setImg::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.35);
+      }.setImg > div {
+        z-index: 9999;
+      } */
+      .setImg.active {
+        overflow: hidden;
+      }
+      .setImg.active .img {
+        transform: scaleX(1.2);  
+        transition: all 0.5s ease-in-out ;
+        -o-transform:scale(1.2); 
+        -moz-transform:scale(1.2); 
+        -webkit-transform:scale(1.2);
+        -ms-transform:scale(1.2);
+        background:inherit;
+          .ko,
+          .price,
+          .ex { display: none;}
+      }
     }
   </style>    
 </head>
@@ -365,7 +401,76 @@
     </div>
     <div class="side disJcCol ">
       <div class="title shadow"> 215CafeCamp's Side</div>
-      <div class=" cardBox ">
+      <div class="disJcBet tc">
+        <div class="setImg"> 
+          <div class="img imgJang " > 
+            <div>
+              <div class="ko "> 보글 된찌 </div>
+              <div class="price70 price"></div>
+              <div class="ex tr "> 깊고 깔끔한 <br> 된장찌개 <br> 밥,고기와 함께. <br> 청양고추는 선택 가능.</div>
+            </div>
+          </div>
+        </div>  
+        <div class="setImg"> 
+          <div class="img imgEgg " > 
+            <div>
+              <div class="ko "> 말아 계란 </div>
+              <div class="price100 price"></div>
+              <div class="ex tr "> 신선한 달걀을  <br> 말고 말고 또 말아서 <br> 부드럽고 촉촉한  <br>단백질 완전체.</div>
+            </div>
+          </div>
+        </div>  
+        <div class="setImg"> 
+          <div class="img imgSoba " > 
+            <div>
+              <div class="ko "> 오싹 메밀 </div>
+              <div class="price100 price"></div>
+              <div class="ex tr "> 머리 끝까지 서늘해지는 <br> 그 순간 <br> 당신은 이미 남극 그 어디쯤 <br> 머리 아픔 주의!</div>
+            </div>
+          </div>
+        </div>  
+      </div>  
+      <div class="disJcBet tc">
+        <div class="setImg"> 
+          <div class="img imgPizza " > 
+            <div>
+              <div class="ko "> 원픽 피자 </div>
+              <div class="price210 price"></div>
+              <div class="ex tr ">  페파로니의 짭조름한 맛과 <br> 
+                                    은은한 풍미의 갈릭이 <br>
+                                    한 판에서 터지는  <br>
+                                    이 조합, 진짜 범인이다..
+              </div>
+            </div>
+          </div>
+        </div>  
+        <div class="setImg"> 
+          <div class="img imgDdok " > 
+            <div>
+              <div class="ko "> 수혈 떡뽁 </div>
+              <div class="price150 price"></div>
+              <div class="ex tr "> 적당히 매콤하고 달달한 <br> 
+                                   혈중 떡볶이 농도 풀충전
+              </div>
+            </div>
+          </div>
+        </div>  
+        <div class="setImg"> 
+          <div class="img imgCarb " > 
+            <div>
+              <div class="ko "> 든든 탄수 </div>
+              <div class="price150 price"></div>
+              <div class="ex tr ">  달달한 고구마, <br> 
+                                    쫀득 & 빠삭 구운 쌀가래떡.<br>
+                                    든든하게 먹고 <br>
+                                    기분 UP! UP!
+              </div>                      
+            </div>
+          </div>
+        </div>  
+      </div>  
+
+      <div class=" cardBox none">
         <div class=" disJcBet ">
           <div class="card ">
             <div class="face face1 "> 

@@ -34,23 +34,22 @@
   <style>
     body,
     .cardBox .card .face.face2 { 
-      background: #cc2b5e;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+      background: #283c86;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to left, #45a247, #283c86);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to left, #45a247, #283c86); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       color: aliceblue;
       /* background-color: #194569; color: white;  */
     }
     .cardBox .card .face.face1 {
-      background: #C43670; /*  처음 카드 화면 */
+      background: #283c86; /*  처음 카드 화면 */
     }
-    .ko { color:#F9C6D4}
-    .en { color:#FF91AF}
+    .ko { color:#DDECF4}
+    .en { color:#B3C8E0}
     /* .en { color:#5F84A2} */
-    .ex { color:#FFB7CE}
-    .price { color:#F9CBD6}
+    .ex { color:#91AEC4}
+    .price { color:#DDECF4}
 
-    .title { background: url('./img/background/heart1.png'); color: #cc2b5e; background-size: cover;}
+    .title { background: url('./img/background/heart1.png'); color: #8DBB3E; background-size: cover;}
     #campWe  { width: 100%; height: 2.2rem; margin: 1.6rem 0; }
     #campWe span { color:#E6B422;  }
     .atseo  { color: #8DBB3E !important; font-size: 1.4rem;}
@@ -64,7 +63,7 @@
     /* 카테고리별 layout */
     .web .imgSize { width: 100%; height: 17vh; }
     .web .underLine { 
-      border-bottom: #FFD9E8 0.1rem solid; 
+      border-bottom: #CADEED 0.1rem solid; 
       padding-bottom: 0.5rem; padding-top: 1.2rem; 
       margin-bottom: 0.6rem;
         .ko { margin-left: 0.35rem; }
@@ -74,19 +73,19 @@
       .ex { line-height: 1.5rem; margin-bottom: 0.5rem;}
     }
     .web .camp .set215 { 
-        .border > div:first-child {
-          .img { width: 3.8rem; height: 3.1rem; } 
-          .wCow { transform: scaleX(-1); margin-top: 1rem; }
-          height: 4rem;
-          margin-left: -0.6rem; margin-top: 3rem; 
-        }
-        .border > div:last-child {
-          width: 89%;
-        }
-        .setImg {
-          width: 6.1rem; height: 6.1rem;
-          box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-        }
+      .border > div:first-child {
+        .img { width: 3.8rem; height: 3.1rem; } 
+        .wCow { transform: scaleX(-1); margin-top: 1rem; }
+        height: 4rem;
+        margin-left: -0.6rem; margin-top: 3rem; 
+      }
+      .border > div:last-child {
+        width: 89%;
+      }
+      .setImg {
+        width: 6.1rem; height: 6.1rem;
+        box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+        
         .setImg.active {
           overflow: hidden;
         }
@@ -100,6 +99,7 @@
           
             .ko { display: none;}
         }
+      }
     }
     .web .camp .singRoom {
       .disJcBet{ 
@@ -134,7 +134,7 @@
       }   
       .cafeLatte .latte { height: 1.9rem; width: 2.4rem;}
       .cafeLatte .cup_body,
-      .cafeLatte .saucer {background-color:#FFB7CE;}
+      .cafeLatte .saucer {background-color:#91AEC4;}
       .cafeLatte .latte  { 
         position: absolute; 
         top: 0.7rem; left: 18.5rem; 
@@ -144,13 +144,13 @@
         top: 0.8rem; left: 7rem;
       }
       .cafeLatte .cup_handle { 
-        border : 2px solid #FFB7CE; 
+        border : 2px solid #91AEC4; 
         margin-top: 0px; margin-left: 1.68rem; 
       }
       
       .cafeLatte:last-child {
         .cup_body,
-        .saucer { background-color:#FF91AF;}
+        .saucer { background-color:#B3C8E0;}
         /* .saucer { background-color:#807F80 ;} */
         .latte  { 
           position: absolute; 
@@ -162,7 +162,7 @@
         }
         .cup_handle { 
           transform: scaleX(-1); /* 컵 핸들 방향 전환 */
-          border : 2px solid #FF91AF; 
+          border : 2px solid #B3C8E0; 
           margin-top: 0px; margin-left: -0.56rem; 
         }
       }
@@ -242,7 +242,7 @@
               <div class="ex tr">
                 70,000 + 25,000 + 25,000 + 2,000 + 4,000 + 6,500 + 6,500 = <span class="line-through"> 139,000</span>
               </div>
-              <div class="disJcBet ">
+              <div class="disJcBet " >
                 <div class="setImg"> 
                   <div class="img imgBeef  " > 
                     <div class=" ko "> 소 <br> 생갈비  <br> 500g </div>
@@ -286,13 +286,13 @@
               <div class=" ko ">  노래 땡기는 날 </div>
             </div>
             <div class=" border posNa" > 
-              <div class=" ko "> 노래방 무료 사용 </div>
+              <div class=" ko "> 노래방 무료 이용 </div>
             </div>
             <div class=" border posNa" > 
-              <div class=" ko "> 먼저 오신 분 우선 </div>
+              <div class=" ko "> 예약 순서 우선 </div>
             </div>
             <div class=" border posNa" > 
-              <div class=" ko posiCen"> 50 min </div>
+              <div class=" ko posiCen"> 50분 사용 </div>
             </div>
           </div>
         </div>
@@ -397,6 +397,22 @@
             </div>
           </div>
         </div>
+
+        <!-- swiper -->
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <!-- slides -->
+            <div class="swiper-slide border tc"> 
+              <div class="content img imgPizza " >
+                <div class="posiCen" >
+                    <div class="ko"> 원픽 피자 </div>
+                    <div class="price210 price tc"></div>
+                </div>
+              </div>
+            </div>
+          </div>        
+        </div>  
+                 
         <div class=" disJcBet ">
           <div class="card">
               <div class="face face1  "> 
