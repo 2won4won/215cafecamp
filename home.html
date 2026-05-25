@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Home </title>
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- font style -->
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One" />
+  <link href="https://www.dafontfree.net/embed/ZWF0LWF0LWpvZXMtc3QtcmVndWxhciZkYXRhLzc1L2UvMTY0NzUyL0VhdCBhdCBKb2VzJ3MgU3QudHRm" rel="stylesheet" type="text/css" />
+  
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+
+  <!-- Local file import -->
+  <link rel="stylesheet" href="xhome/css/common.css">
+  
+  <style >
+    .bl { border: 3px solid #ab4aa8; }
+    html, body { width: 100%; height: 100%; margin: 0; padding: 0; }
+    /* 전체적 크기 조정 */
+    .con {
+      width: 87%; height: 79vh; box-sizing: border-box;
+      /* 화면 중앙 배치 */
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      /* 하부 div 배치 */
+      display: flex;  justify-content: space-between;
+      
+      > div {
+        /* 하부 div 스타일 = column 맞추어서 적당히 배열 */
+        display: flex;  justify-content: space-between; flex-direction: column;
+      }
+      > div:first-child {
+        width: 35%; height: inherit;
+      }
+      > div:nth-child(even) {
+        width: 28%; height: inherit;
+      }
+      > div:last-child {
+        width: 33%; height: inherit;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="con " >
+    <div id="camp " class="bl"> 
+      <div class="title shadow "> 215's BBQ </div>
+      <div class=" meat-kinds ">
+        <div class="border"> 
+          <div class="img "> </div> 
+          <div class="description"></div> 
+        </div>
+      </div>
+      <div class=" set "> set Menu </div>
+    </div>
+    <div id="side " class="bl"> 
+      <div class="title shadow "> 215's Side Menu </div>
+      <div class=" side-kinds "> 사이드 메뉴 </div>
+      <div class=" pizza "> 피자 set </div>
+      <div class=" singing-room "> 노래방 </div>
+    </div>
+    <div id="cafe " class="bl"> 
+      <div class="title shadow "> 215's Cafe </div>
+      <div class=" eso "> 커피 종류 </div>
+      <div class=" fruit "> 과일 주스 </div>
+      <div class=" summer "> 시즌 </div>
+      <div class=" flower "> 차 </div>
+    </div>
+  </div>  
+</body>
+</html
