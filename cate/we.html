@@ -1,216 +1,158 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+    
     .weare {
-        text-align:center;
-        overflow:hidden;
-        /* -webkit-backface-visibility: hidden;
-        -webkit-perspective: 1000;
-        -webkit-transform: translate3d(0,0,0); */
-        /* height: 50px; */
+        text-align: center;
+        overflow: hidden;
     }
-    .we{   
-        animation: showup 10s infinite;
-        margin-bottom: 10px;
-        line-height: 2rem;
-        /* margin-bottom: 30px; */
-        /* background-color: aqua; */
-    }
-    .hi{   
-        animation: showdown 10s infinite;
-        /* padding-top: -150px; */
-    }
+    
+    /* 부모 컨테이너 크기 및 정렬 정의 */
     .we {
-        text-align:center;
-        font-family:HancomMalrangmalrang;
-        font-weight:200;
-        padding-top:10px;
+        text-align: center;
+        font-family: 'HancomMalrangmalrang', sans-serif;
+        font-weight: 200;
+        /* padding-top: 10px; */
+        line-height: 2.2rem;
+        position: relative;
+        width: 100%;
+        min-height: 5.5rem; /* 애니메이션 실행 공간 확보 */
     }
-    .we div:first-child {   
+    
+    /* 🌟 문구 그룹 제어: 기본적으로 숨겨두고 .active가 붙은 세트만 화면에 노출 */
+    .we .msg-group {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .we .msg-group.active {
+        display: flex;
+    }
+
+    .we div {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        vertical-align: middle;
+    }
+
+    /* 첫 번째 줄 애니메이션 (서서히 나타남) */
+    .we .msg-group div:first-child {   
         animation: showup 10s infinite;
+        font-size: 1.4rem;
+        font-family: 'HancomMalrangmalrang', sans-serif;
     }
-    .we div:first-child, 
-    .here {
-        /* color:#8f9e81; */
-        font-size:1.4rem;
-        /* font-size:25px; */
-        font-family: HancomMalrangmalrang;
-    } 
-    .we div:last-child  {
-        /* color:#dbc2ad; */
-        font-size:18px;
-        font-family: Bareun_hipi;
-        width:0px;
+    
+    /* 두 번째 줄 애니메이션 (가로 폭이 넓어지며 슬라이딩 효과) */
+    .we .msg-group div:last-child {
+        font-size: 18px;
+        font-family: 'Bareun_hipi', sans-serif;
+        width: 0px;
         animation: reveal 10s infinite;
     }
-    .we div:last-of-type span {
-        /* margin-left:-50px; */
-        /* margin-left:-155px; */
+    
+    /* 두 번째 줄 내부 글자 슬라이딩 지연 모션 */
+    .we .msg-group div:last-of-type span.here {
+        display: inline-block;
         animation: slidein 10s infinite;
     }
+    
+    .we .atseo {
+        font-weight: bold;
+        margin-right: 8px;
+    }
+
+    /* 애니메이션 키프레임 정의 */
     @keyframes showup {
-        0% {opacity:0;}
-        20% {opacity:1;}
-        80% {opacity:1;}
-        100% {opacity:0;}
+        0% { opacity: 0; }
+        15% { opacity: 1; }
+        85% { opacity: 1; }
+        100% { opacity: 0; }
     }
     @keyframes showdown {
-        0% {opacity:1;}
-        20% {opacity:0;}
-        70% {opacity:0;}
-        100% {opacity:1;}
+        0% { opacity: 1; }
+        20% { opacity: 0; }
+        70% { opacity: 0; }
+        100% { opacity: 1; }
     }
     @keyframes slidein {
-        0% { margin-left:-150px; }
-        20% { margin-left:-150px; }
-        35% { margin-left:20px; }
-        100% { margin-left:20px; }
+        0% { margin-left: -180px; }
+        15% { margin-left: -180px; }
+        30% { margin-left: 0px; }
+        100% { margin-left: 0px; }
     }
     @keyframes reveal {
-        0% {opacity:0;width:0px;}
-        20% {opacity:1;width:0px;}
-        30% {width:230px;}   /* 넓이조정 */
-        80% {opacity:1;}
-        100% {opacity:0; width:230px;}
+        0% { opacity: 0; width: 0px; }
+        15% { opacity: 1; width: 0px; }
+        35% { width: 500px; }   /* 한글 문장이 길어짐에 따라 최대 가로폭 500px 확보 */
+        85% { opacity: 1; }
+        100% { opacity: 0; width: 500px; }
     } 
-    .we div, 
-    .hi div {
-        display:inline-block;
-        overflow:hidden;
-        white-space:nowrap;
-    }  
+
+    /* 하단 필터 타이포 그래피 */
     .hi {
-        /* height: 90px; */
         font-size: 2.2rem;
-        font-family: 'Tangerine', cursive;;
+        font-family: 'Tangerine', cursive;
         font-weight: 900;
-        /* position: absolute;
-        bottom: 30%;
-        left:50%;
-        transform:translateX(-50%); */
         filter: opacity(0.6);
         text-align: center;
-        /* padding-top:-200px; */
-        /* padding-top: 40px; */
+        animation: showdown 10s infinite;
+        margin-top: 15px;
     }
-    .we span:first-child {
-        width: 25px; 
-        height: 35px;
-        position: relative;
-    }
-    .we img { width: 7.3rem; height: 3.8rem ; }
-    .we .santa { 
-        background: url('./img/icon/witch.png');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;}
-    .we .newYear { 
-        background: url('./img/icon/newYear.png');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;}
-    /* .we .witch { 
-        background: url('./img/icon/witch.png');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;} */
-    /* .flag {
-        background: url('./img/icon/flag.png');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-    } */
-</style>
-<div class="we ">
-    <!-- <div >
-        <span class="enColor"> 소망이 물드는 그 곳,  </span>
-    </div>
-    <div>
-        <span class="atseo koColor">  <img src="./img/icon/newYear.png" > </span>
-        <span class="here  enColor"> 
-            215CafeCamp
-        </span>    
-    </div> -->
     
-    <div >
-        <span class=""> 당신과 함께해서 <br> 감사합니다  </span>
+    /* 아이콘 리소스 전용 유틸리티 스타일 */
+    .we img { width: 7.3rem; height: 3.8rem; vertical-align: middle; }
+    .we .santa { 
+        background: url('./img/icon/witch.png') no-repeat; background-size: 100% 100%; 
+    }
+    .we .newYear { 
+        background: url('./img/icon/newYear.png') no-repeat; background-size: 100% 100%; 
+    }
+</style>
+
+<div class="we">
+    <!-- 1세트: 현재 노출 중인 기본 문구 (active 클래스 추가됨) -->
+    <div class="msg-group active">
+        <div><span>당신과 함께해서</span></div>
+        <div>
+            <span class="atseo">215cafeCamp</span>
+            <span class="here">행복합니다. 고맙습니다.</span>    
+        </div>
     </div>
-    <div>
-        <span class="atseo"> 215cafeCamp </span>
-        <!-- <span class="here "> 
-          행복합니다. 고맙습니다.
-        </span>     -->
+    
+    <!-- 2세트: 봄 시즌 문구 (노출하고 싶다면 클래스명을 'msg-group active'로 변경) -->
+    <div class="msg-group">
+        <div><span>Hello! Spring</span></div>
+        <div>
+            <span class="atseo">215cafeCamp</span>
+            <span class="here">봄날엔 누구나 꽃길을 걷습니다.</span>    
+        </div>
     </div>
-  <!-- 
-    <div >
-        <span class=""> Hello! Spring  </span>
+
+    <!-- 3세트: 새해 문구 -->
+    <div class="msg-group">
+        <div><span>Happy New Year!!</span></div>
+        <div>
+            <span class="atseo">215cafeCamp</span>
+            <span class="here">'26 무탈하세요.</span>    
+        </div>
     </div>
-    <div>
-        <span class="atseo"> 215cafeCamp </span>
-        <span class="here "> 
-          봄날엔 누구나 꽃길을 걷습니다.
-        </span>    
+
+    <!-- 4세트: 추석 문구 -->
+    <div class="msg-group">
+        <div><span>가족들과 함께하는</span></div>
+        <div>
+            <span class="atseo">215cafeCamp</span>
+            <span class="here">넉넉한 추석 되세요.</span>    
+        </div>
     </div>
-    -->
-    <!-- <div >
-        <span class=""> Happy New Year!!  </span>
-    </div>
-    <div>
-        <span class="atseo"> 215cafeCamp </span>
-        <span class="here "> 
-          '26 무탈하세요.
-        </span>    
-    </div> -->
-    <!-- <div >
-        <span class=""> 가을이 물들어  </span>
-    </div>
-    <div>
-        <span class="atseo"> 215cafeCamp </span>
-        <span class="here "> 
-          아름다운 '오늘'입니다.
-        </span>    
-    </div> -->
-    <!-- <div >
-        <span class=""> 가족들과 함께하는  </span>
-    </div>
-    <div>
-        <span class="atseo"> 215cafeCamp </span>
-        <span class="here "> 
-          넉넉한 추석 되세요.
-        </span>    
-    </div> -->
-    <!-- <div >
-        <span class="koColor"> 가족과 함께 넉넉하고 </span>
-    </div>
-    <div>
-        <span class="atseo enColor"> at SEO</span>
-        <span class="here  koColor"> 
-            평안한 추석 보내세요..
-        </span>    
-    </div> -->
-    <!-- Halloween -->
-    <!-- <div >
-        <span class="koColor"> 
-            <img src="./img/icon/witch.png" >
-            가을 타는 그 곳, 
-        </span>
-        <span class="koColor"> 쉼이 물드는 그 곳, </span>
-        
-    </div>
-    <div>
-        <span class="atseo enColor"> at SEO</span>
-        <span class="here  koColor"> 
-            Cafe SEO
-        </span>    
-    </div> -->
 </div>
-<!-- <div class="hi  ">
+
+<!-- 하단 필터 서브 타이포그래피 (필요 시 주석 해제하여 사용 가능) -->
+<!-- <div class="hi">
    GoodBye Summer, Hello Fall
 </div> -->
-
-
-<!-- <script type="text/javascript">
-    if($('.hi').show ) {
-        $('.we').css('display', 'none');
-    } else if($('.hi').hide ) {
-        $('.we').css('display', 'block');
-    } else {}
-</script> -->

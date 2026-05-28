@@ -1,3 +1,20 @@
-.border {
+.disJcBet {
+  display: flex;  justify-content: space-between;
+}
+
+/* .border {
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  padding: 0.7rem 1.36rem 1rem 1.56rem;
+  margin-bottom: 1.2rem;
+  box-sizing: border-box;
+} */
+.box-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 기존 2열 구조 가정 */
+  gap: 1rem;
+}
+.box-three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 기존 3열 구조 가정 */
+  gap: 1rem;
 }

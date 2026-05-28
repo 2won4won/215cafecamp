@@ -306,6 +306,34 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
+.wAm {  
+  background: url('../img/icon/wAm.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* width: 5rem;
+  height: 5rem; */
+} 
+.wRice{  
+  background: url('../img/icon/wRice.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* width: 5rem;
+  height: 5rem; */
+} 
+.wSoup{  
+  background: url('../img/icon/wSoup.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* width: 5rem;
+  height: 5rem; */
+} 
+.wEgg{  
+  background: url('../img/icon/wEgg.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* width: 5rem;
+  height: 5rem; */
+} 
 .wPizza {  
   background: url('../img/icon/wPizza.png');
   background-size: 100% 100%;
@@ -329,7 +357,12 @@
 } 
 .imgJowl {  
     background: url('../img/photo/imgJowl.jpg');
-    background-size: 120% 140%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+ } 
+.imgKimchi {  
+    background: url('../img/picture/imgKimchi.png');
+    background-size: 100% 110%;
     background-repeat: no-repeat;
  } 
 .imgBelly {  
@@ -362,6 +395,87 @@
     background: url('../img/photo/imgChunk.jpg');
     background-size: 105% 110%;
     background-repeat: no-repeat;
+}
+ .imgAbc {  
+    background: url('../img/icon/abc.png');
+    background-size: 100% 100%;
+      background-repeat: no-repeat;
+   
+}
+ .imgAbt {  
+    background: url('../img/icon/abt.png');
+       background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+ .imgAcc {  
+    background: url('../img/icon/acc.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.imgAcs {  
+    background: url('../img/icon/acs.png');
+        background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.imgAcl {  
+    background: url('../img/icon/acl.png');
+    background-size: 100% 100%;
+     background-repeat: no-repeat;
+}
+.imgbbc {  
+    background: url('../img/icon/bbc.png');
+    background-size: 100% 100%;
+     background-repeat: no-repeat;
+}
+.imgbbcz{  
+    background: url('../img/icon/bbcz.png');
+    background-size: 100% 100%;
+     background-repeat: no-repeat;
+}
+.imgbbf{  
+    background: url('../img/icon/bbf.png');
+    background-size: 100% 100%;
+     background-repeat: no-repeat;
+}
+.imgbbfo{  
+    background: url('../img/icon/bbfo.png');
+    background-size: 100% 100%;
+     background-repeat: no-repeat;
+}
+.imgbbfp{  
+    background: url('../img/icon/bbfp.png');
+    background-size: 100% 100%;
+     background-repeat: no-repeat;
+}
+.imgbbg{  
+    background: url('../img/icon/bbg.png');
+    background-size: 100% 100%;
+     background-repeat: no-repeat;
+}
+.imgbbm{  
+    background: url('../img/icon/bbm.png');
+    background-size: 100% 100%;
+     background-repeat: no-repeat;
+}
+.imgbbp{  
+    background: url('../img/icon/bbp.png');
+    background-size: 100% 100%;
+     background-repeat: no-repeat;
+}
+.imgbbs{  
+    background: url('../img/icon/bbs.png');
+    background-size: 100% 100%;
+     background-repeat: no-repeat;
+}
+.imgbbsz{  
+    background: url('../img/icon/bbsz.png');
+    background-size: 100% 100%;
+     background-repeat: no-repeat;
+}
+.imgbbw{  
+    background: url('../img/icon/bbw.png');
+    background-size: 100% 100%;
+     background-repeat: no-repeat;
 }
  .imgPi {  
     background: url('../img/photo/imgPizza.jpg');

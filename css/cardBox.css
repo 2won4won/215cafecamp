@@ -1,179 +1,200 @@
 /* card 전체 크기 */
-.cardBox{ 
+.cardBox { 
   width: 100%; 
   position: relative;
 }
 .cardBox .card { 
   position: relative; 
-  width: 48%;
+  width: 100%;
   height: auto; 
-  padding-bottom: 1rem; color: #fff;
+  padding: 1rem 0; 
+  color: #fff;
+  box-sizing: border-box;
 }
 .cardBox .card .face {  
+  box-sizing: border-box;
   width: 100%; 
-  height: 9rem; 
+  height: 8.5rem; 
   transition: 0.5s;
 }
-.cardBox .card .face.face1{
+
+/* ========================================================
+   CARD FACE 1 (카드 앞면: 비활성화 시 글자만, 활성화 시 이미지만)
+   ======================================================== */
+.cardBox .card .face.face1 {
   position: relative;
   display: flex;  
   justify-content: center;  
   align-items: center;
   z-index: 1;
-  transform: translateY(5rem);
+  background: #333; /* 이미지 비노출 시 기본 배경색 */
+  transform: translateX(5.5rem); /* 출발 가로 위치 */
 }
+
+/* [활성화] 카드가 active 되었을 때 앞면 이동 모션 복귀 */
 .cardBox .card.active .face.face1 { 
-  transform: translateY(0);
- }
-.cardBox .card .face.face1 .content { 
-  opacity: 0.5;  transition: 0.5s; 
+  transform: translateX(0); /* 가로 축 일치 완료 */
+  opacity: 1;
 }
+
+/* [상태 제어] 기본 상태(.content) 투명도 및 구조 정의 */
+.cardBox .card .face.face1 .content { 
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;  
+  transition: 0.5s; 
+}
+.cardBox .card.active .face.face1 .content { 
+  opacity: 1; 
+}
+
+/* ❌ [기본 상태] active가 아닐 때: 배경 이미지를 강제로 지워 텍스트만 노출 보장 */
+.cardBox .card:not(.active) .face.face1 .content {
+  background-image: none !important;
+}
+.cardBox .card:not(.active) .face.face1 .posiCen,
+.cardBox .card:not(.active) .face.face1 .ko,
+.cardBox .card:not(.active) .face.face1 .price {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* ⭕ [활성화 상태] active 되었을 때: 앞면의 한글 메뉴명, 가격, 아이콘 완벽 숨김 처리 (이미지만 남김) */
+.cardBox .card.active .face.face1 .posiCen,
+.cardBox .card.active .face.face1 .ko,
+.cardBox .card.active .face.face1 .price,
+.cardBox .card.active .face.face1 .icon { 
+  display: none !important;  
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* 공통 텍스트 스타일 정렬 */
 .cardBox .card .face.face1 .content .ko {
   padding: 0;  
   text-align: center; 
-  margin-bottom: 1rem; margin-left: 0rem; 
+  margin-bottom: 1rem; 
+  margin-left: 0rem; 
 }
-.cardBox .card.active .face.face1 .content { opacity: 1; }
 
+/* ========================================================
+   CARD FACE 2 (카드 뒷면 상세 설명 제어)
+   ======================================================== */
+.cardBox .card .face.face2 {
+  position: relative;
+  display: flex;   
+  justify-content: center; 
+  align-items: center;
+  box-sizing: border-box; 
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transform: translateX(-5rem);
+  /* padding-bottom: 1.56rem; */
+  /* height: 9rem; */
+  background-color: #333;
+  padding: 0.5rem 0.7rem;
+  
+  /* 평소 닫혀있을 때는 뒷면 상세 내용을 완벽히 가림 */
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
 
-/* 카드 이미지가 보일 때 ko 안보임 */
-.cardBox .card.active .face.face1 .img  .icon, 
-.cardBox .card.active .face.face1 .img  .ko, 
-.cardBox .card.active .face.face1 .img  .price {    display: none;  }
+/* [활성화] 카드가 active가 되면 뒷면 설명 콘텐츠를 슬라이딩 정렬 노출 */
+.cardBox .card.active .face.face2 {  
+  transform: translateX(0); /* 가로 축 일치 완료 */
+  opacity: 1;
+  visibility: visible;
+}
+.cardBox .card.active .face.face2 .content { 
+  width: 100%;  
+  height: 100%; 
+  /* padding: 0.5rem;   */
+  box-sizing: border-box;
+}
 
-/* image */
-.cardBox  .icon {
-  width: 2.4vw;  height: 5.8vh;
+/* ========================================================
+   MEDIA & UTILITY IMAGE CLASSES (활성화 시에만 배경 바인딩 보장)
+   ======================================================== */
+.cardBox .icon {
+  width: 2.4vw;  
+  height: 5.8vh;
   position: absolute; 
-  top: 5.7vh;  right: 3.1vw; opacity: 0.9;
+  top: 5.7vh;  
+  right: 3.1vw; 
+  opacity: 0.9;
+  z-index: 2;
 }
-.cardBox .card .img {width: 100%; height: 100%;}
+.cardBox .card .img { width: 100%; height: 100%; }
+.cardBox .card.active .face.face1 .video { opacity: 1; }
 
-.cardBox .card.active .face.face1 .video,
-.cardBox .card.active .face.face1  { opacity: 1;  }/* 동영상 보임 */
-
+/* 음식 개별 이미지 바인딩 (.active 스코프 유지) */
 .cardBox .card.active .face.face1 .imgPotato {  
   background: url('../img/photo/potato.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  background-size: 100% 100%; background-repeat: no-repeat;
 }
 .cardBox .card.active .face.face1 .imgPollack {  
   background: url('../img/photo/pollack.png');
-  background-size: 140% 100%;
-  background-repeat: no-repeat;
+  background-size: 140% 100%; background-repeat: no-repeat;
 }
 .cardBox .card.active .face.face1 .imgChestnut {  
   background: url('../img/photo/imgChestnut.jpg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  background-size: 100% 100%; background-repeat: no-repeat;
 }
-.side .setImg .imgCarb,
+.side .imgCarb,
 .cardBox .card.active .face.face1 .imgCarb {  
   background: url('../img/photo/imgCarb.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  position: relative;
-  opacity: 0.8;
+  background-size: 100% 100%; background-repeat: no-repeat;
+  position: relative; opacity: 0.8;
 }
+.side .imgDdok,
 .cardBox .card.active .face.face1 .imgDdok {  
   background: url('../img/photo/imgDdok.jpg');
-  background-size: 110% 130%;
-  background-repeat: no-repeat;
+  background-size: 110% 130%; background-repeat: no-repeat;
   position: relative;
-  /* opacity: 0.9; */
 }
+.side .imgPupa,
 .cardBox .card.active .face.face1 .imgPupa {  
   background: url('../img/photo/imgPupa.jpeg');
-  background-size: 110% 130%;
-  background-repeat: no-repeat;
+  background-size: 150% 150%; background-repeat: no-repeat;
   position: relative;
-  /* opacity: 0.9; */
 }
-
-.side .setImg .imgDdok,
-.cardBox .card.active .face.face1 .imgDdok {  
-  background: url('../img/photo/imgDdok.jpg');
-  background-size: 110% 130%;
-  background-repeat: no-repeat;
-  position: relative;
-  /* opacity: 0.9; */
-}
-.side .setImg .imgJang,
+.side .imgJang,
 .cardBox .card.active .face.face1 .imgJang {  
   background: url('../img/photo/imgJang.png');
-  background-size: 110% 100%;
-  background-repeat: no-repeat;
+  background-size: 110% 100%; background-repeat: no-repeat;
   position: relative;
-  /* opacity: 0.9; */
 }
-.side .setImg .imgPupa,
-.cardBox .card.active .face.face1 .imgPupa {  
-  background: url('../img/photo/imgPupa.jpeg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  position: relative;
-  /* opacity: 0.9; */
-}
-.side .setImg .imgPizza,
+.side .imgPizza,
 .cardBox .card.active .face.face1 .imgPizza {  
   background: url('../img/photo/imgPizza.png');
-  background-size: 110% 110%;
-  background-repeat: no-repeat;
-  position: relative;
-  opacity: 0.8;
+  background-size: 110% 110%; background-repeat: no-repeat;
+  position: relative; opacity: 0.8;
 }
-.side .setImg .imgEgg,
+.side .imgEgg,
 .cardBox .card.active .face.face1 .imgEgg {  
   background: url('../img/photo/imgEgg.jpg');
-  background-size: 110% 110%;
-  background-repeat: no-repeat;
-  position: relative;
-  opacity: 0.8;
+  background-size: 110% 110%; background-repeat: no-repeat;
+  position: relative; opacity: 0.8;
 }
-.side .setImg .imgSoba,
+.side .imgSoba,
 .cardBox .card.active .face.face1 .imgSoba {  
   background: url('../img/photo/imgSoba.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  background-size: 100% 100%; background-repeat: no-repeat;
   position: relative;
-  /* opacity: 0.9; */
 }
 .cardBox .card.active .face.face1 .imgNuddle {  
   background: url('../img/photo/imgNuddle.jpg');
-  background-size: 110% 130%;
-  background-repeat: no-repeat;
+  background-size: 110% 130%; background-repeat: no-repeat;
   position: relative;
-  /* opacity: 0.9; */
 }
 .cardBox .card.active .face.face1 .imgFishBall {  
   background: url('../img/photo/fishBall.png');
-  background-size: 110% 130%;
-  background-repeat: no-repeat;
+  background-size: 110% 130%; background-repeat: no-repeat;
   position: relative;
-  /* opacity: 0.9; */
 }
 .cardBox .card.active .face.face1 .imgChicken {  
   background: url('../img/photo/imgChicken.jpg');
-  background-size: 130% 124%;
-  background-repeat: no-repeat;
+  background-size: 130% 124%; background-repeat: no-repeat;
   position: relative;
-  /* opacity: 0.9; */
-}
-
-/* 메뉴 설명 */
-.cardBox .card .face.face2 {
-  position: relative;
-  display: flex;   justify-content: center; align-items: center;
-  box-sizing: border-box; 
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-  transform: translateY(-4rem);
-  padding-bottom: 1.56rem;
-  height: 9rem;
-  /* 색상은 해당 페이지에서 규정 */
-}
-.cardBox .card.active .face.face2{  transform: translateY(0);  }
-.cardBox .card.active .face.face2 .content { 
-  width: 100%;  height: 100%; 
-  padding: 0 1.2rem;
-  box-sizing: border-box;
 }

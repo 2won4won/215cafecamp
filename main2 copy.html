@@ -32,16 +32,16 @@
   <link rel="stylesheet" href="css/cafelatte.css">
   <link rel="stylesheet" href="css/cafelatte.css">
   <style>
-    .title { background: url('./img/background/heart1.png'); color: #333; background-size: cover;}
+    .title { background: url('./img/background/heart1.png'); color: #8DBB3E; background-size: cover;}
      
     /* 전체적 크기 조정 */
     html, body { 
       width: 100%; height: 100%; margin: 0; padding: 0; 
       background-color: #333;
-      
+      color: aliceblue;
     }
     .con {
-      width: 88%; height: 80vh; box-sizing: border-box;
+      width: 87%; height: 77vh; box-sizing: border-box;
       /* 화면 중앙 배치 */
       position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
       /* 하부 div 배치 */
@@ -54,8 +54,8 @@
         line-height: 1.5rem;
       }
       .camp { width: 33%; height: 100%; }
-      .side { width: 32%; height: 100%; }
-      .cafe { width: 32%; height: 100%; }
+      .side { width: 31%; height: 100%; }
+      .cafe { width: 33%; height: 100%; }
 
       .under-line {
         border-bottom: #CADEED 0.1rem solid; 
@@ -64,12 +64,6 @@
 
         .ko { margin-left: 0.35rem; }
       }
-      .we,
-      .ko { color: aliceblue;}
-      .en { color: #c5d2e0;}
-      .ex { color: white;}
-      .price { color: rgb(231, 238, 243);}
-      .card .face,
       .border {
         text-shadow: 0 2px 6px rgba(0, 0, 0, 0.);
         box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
@@ -90,10 +84,10 @@
           height: auto;
           box-sizing: border-box;
             .ex {
-              margin-bottom: 0.5rem;
+              margin-bottom: 0.7rem;
               text-align: right;
             } 
-          .img { width: auto; height: 13vh;}
+          .img { width: auto; height: 14vh;}
         }
       }
       .sing-room {
@@ -110,165 +104,37 @@
         margin-bottom: 1rem;
 
         .left-box {
-          /* width: 76%; */
+          width: 76%;
 
           display: grid;
           grid-template-columns: repeat(2, 1fr); /* 가로 6열 균등 분할 */
-          grid-template-rows: auto; /* 높이 최소 150px, 내용 많으면 자동 확장 */
-          row-gap: 0.5rem; /* 아이템 사이 간격 */
+          /* grid-template-rows: auto */; /* 높이 최소 150px, 내용 많으면 자동 확장 */
+          gap: 1.5rem; /* 아이템 사이 간격 */
           /* width: 100%; */
           box-sizing: border-box;
-/*           
+          
           .ko,
           .price,
           .ex { padding-left: 0; margin-left: 0; text-align: center;}
-           */
+          
           .border {
             padding: 0;
             border-radius: 10%;
             
             .img  {
-              /* height: 8rem; */
-              width: auto; 
-              aspect-ratio: 1/1;
+              height: 8rem;
+              width: 48%; 
+              /* aspect-ratio: 1/1; */
               border-radius: 10%;
               gap: 2rem;
             }
-            /* .description {
+            .description {
               width: 50%;
-            } */
+            }
           }
-          /* CARD BOX 스타일 정렬 */
-.cardBox { 
-  width: 100%; 
-  position: relative;
-  background-color: #8DBB3E;
-}
-.cardBox .card { 
-  position: relative; 
-  /* width: 92%;  */
-  height: auto; 
-  /* padding-bottom: 1rem;  */
-  color: #fff;
-}
-.cardBox .card .face { 
-  width: 100%; 
-  /* height: 11rem;  */
-  transition: 0.5s;
-}
-
-/* --- CARD FACE 1 (앞면) 설정 --- */
-.cardBox .card .face.face1 {
-  position: relative;
-  background: #333; 
-  display: flex;  
-  justify-content: center;  
-  align-items: center;
-  z-index: 1;
-  transform: translateY(5rem);
-}
-/* 앞면 활성화 모션 */
-.cardBox .card.active .face.face1 { 
-  transform: translateY(0); 
-}
-
-/* [상시 적용] 이미지 미노출 및 앞면 글자 정렬 규칙 통합 */
-.cardBox .card .face.face1 .content.img {
-  width: 100%;
-  height: 100%;
-  background-image: none !important; /* active 상태 여부와 관계없이 항상 이미지 제거 */
-  background-color: #333 !important; /* 글자가 잘 보일 수 있는 기본 배경색 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
-  transition: 0.5s;
-}
-
-/* [상시 적용] 메뉴명 및 가격 텍스트 상시 선명하게 노출 */
-.cardBox .card .face.face1 .posiCen,
-.cardBox .card .face.face1 .ko,
-.cardBox .card .face.face1 .price {
-  display: block !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-.cardBox .card .face.face1 .content .ko {
-  padding: 0;  
-  color: #fff;   
-  text-align: center; 
-  margin-bottom: 1rem; 
-  margin-left: 0rem; 
-}
-
-/* --- CARD FACE 2 (뒷면 상세설명) 제어 --- */
-.cardBox .card .face.face2 {
-  position: relative;
-  display: flex;   
-  justify-content: center; 
-  align-items: center;
-  box-sizing: border-box;  
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-  transform: translateY(-6.5rem);
-  background-color: #333;
-  
-  /* 평소 비활성화 시 뒷면 노출 완벽 차단 */
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.5s;
-}
-/* 뒷면 활성화 모션 */
-.cardBox .card.active .face.face2 { 
-  transform: translateY(0); 
-  opacity: 1;
-  visibility: visible;
-}
-.cardBox .card.active .face.face2 .content { 
-  width: 100%;  
-  height: 100%; 
-  /* padding: 1rem 1.2rem;   */
-  box-sizing: border-box;
-}
-
-/* --- 아이콘 및 미디어 요소 --- */
-.cardBox .icon {
-  width: 2.4vw;  
-  height: 5.8vh;
-  position: absolute;  
-  top: 5.7vh;  
-  right: 3.1vw; 
-  opacity: 0.9;
-  z-index: 2;
-}
-.cardBox .card.active .face.face1 .video { 
-  opacity: 1; 
-}
-
-.main .side .videoBox {
-  position: relative;  
-  width: 100%;  
-  height: 11.5rem;  
-  overflow: hidden; 
-}
-.main .side .videoBox .video {
-  width: 100%; 
-  height: 100%; 
-  opacity: 0;
-}
-video { 
-  position: absolute;
-  width: 100%; 
-  height: 100%;
-  object-fit: cover;
-  top: 50%; 
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
         }
         .right-box {
-          /* width: 20%; */
+          width: 20%;
           height: inherit;
           box-sizing: border-box;
           
@@ -307,19 +173,19 @@ video {
           align-items: center;
           justify-content: center;
           padding: 0rem;
-          margin-top: 0.7rem;
+          margin-top: 1rem;
           height: 14rem;
 
           .description {
             width: 87%;
           }
           .img {
-            height: 5.9rem;
-            width: 5.9rem;
+            height: 5.5rem;
+            width: 5.5rem;
             border-radius: 50%;
           }
           .iconAlchol {
-            margin-top: 0.5rem;
+            margin-top: 1rem;
 
             .icon:nth-child(-n+3) {
               width: 1.8rem;
@@ -332,7 +198,7 @@ video {
             }
           }
           .iconS {
-            margin-top: 0.5rem;
+            margin-top: 1rem;
 
             .icon {
               width: 1.7rem;
@@ -523,7 +389,7 @@ video {
           </div>
         </div>
       <!-- </div> -->
-      <div class="we" id="campWe"></div>
+      <div class="we"></div>
       <div class="sing-room" >
         <div class="border "> 
           <div class="ko tc" > 노래 땡기는 날 </div> 
@@ -543,142 +409,75 @@ video {
       <div class="title shadow "> 215CafeCamp's Side</div>
       <!-- <div class="kind"> -->
         <div class="side-menu">
-          <div class="left-box cardBox">
-            <div class="card disJcBet">
-              <div class="face face1 "> 
-                <div class="content img imgJang" >
-                  <div class="posiCen" >
-                      <div class="ko "> 보글 된찌</div>
-                      <div class="price price70 tc"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="face face2 ">
-                <div class="content "> 
-                  <div class="disJcBet under-line" >
-                    <div class="ko "> 보글 된찌 </div>
-                    <div class="price price70 tc"></div>
-                  </div>
-                  <div class="ex mt6 tr"> 깊고 깔끔한 <br> 
-                                된장찌개 <br> 
-                                밥,고기와 함께. 
-                  </div>
+          <div class="left-box">
+            <div class="border disJcBet">
+              <div class="img imgJang " ></div>
+              <div class="description ">
+                <div class="ko"> 보글 된찌</div>
+                <div class="price price70"></div>
+                <div class="ex "> 깊고 깔끔한 <br> 
+                                  된장찌개 <br> 
+                                  밥,고기와 함께. 
                 </div>
               </div>
             </div>
-            <div class="card disJcBet">
-              <div class="face face1 "> 
-                <div class="content img imgEgg" >
-                  <div class="posiCen" >
-                      <div class="ko "> 말아 계란</div>
-                      <div class="price price130 tc"></div>
-                  </div>
+            <div class="border disJcBet">
+              <div class="img imgEgg " ></div>
+              <div class="description ">
+                <div class="ko"> 말아 계란</div>
+                <div class="price price130"></div>
+                <div class="ex "> 신선한 달걀을 <br> 
+                                  말고 말고 또 말아서  <br> 
+                                  단백질 완전체 
                 </div>
               </div>
-              <div class="face face2 ">
-                <div class="content "> 
-                  <div class="disJcBet under-line" >
-                      <div class="ko "> 말아 계란</div>
-                    <div class="price price130 tc"></div>
-                  </div>
-                  <div class="ex tr"> 신선한 달걀을 <br> 
-                                말고 말고 또 말아서  <br> 
-                                단백질 완전체 
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card disJcBet">
-              <div class="face face1 "> 
-                <div class="content img imgSoba" >
-                  <div class="posiCen" >
-                    <div class="ko"> 오싹 메밀</div>
-                    <div class="price price130 tc"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="face face2 ">
-                <div class="content "> 
-                  <div class="disJcBet under-line" >
-                    <div class="ko"> 오싹 메밀</div>
-                    <div class="price price130"></div>
-                  </div>
-                  <div class="ex tr"> 정수리가 <br> 
-                                짜릿하고 아파오는  <br> 
-                                띵~한 맛
-                  </div>
+            </div>  
+            <div class="border disJcBet">
+              <div class="img imgSoba " ></div>
+              <div class="description ">
+                <div class="ko"> 오싹 메밀</div>
+                <div class="price price130"></div>
+                <div class="ex "> 정수리가 <br> 
+                                  짜릿하고 아파오는  <br> 
+                                  띵~한 맛
                 </div>
               </div>
             </div>
-            <div class="card disJcBet">
-              <div class="face face1 "> 
-                <div class="content img imgDdok" >
-                  <div class="posiCen" >
-                    <div class="ko"> 수혈 떡뽁</div>
-                    <div class="price price130 tc"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="face face2 ">
-                <div class="content "> 
-                  <div class="disJcBet under-line" >
-                    <div class="ko"> 수혈 떡뽁</div>
-                    <div class="price price150 tc"></div>
-                  </div>
-                  <div class="ex tr"> 매콤하고 달달한 <br> 
-                                      국민 간식  <br> 
-                                      혈중 떡볶이 농도 풀충전
-                  </div>
+            <div class="border disJcBet">
+              <div class="img imgDdok " ></div>
+              <div class="description ">
+                <div class="ko"> 수혈 떡뽁</div>
+                <div class="price price150"></div>
+                <div class="ex "> 매콤하고 달달한 <br> 
+                                  국민 간식  <br> 
+                                  혈중 떡볶이 농도 풀충전
                 </div>
               </div>
             </div>
-            <div class="card disJcBet">
-              <div class="face face1 "> 
-                <div class="content img imgCarb" >
-                  <div class="posiCen" >
-                    <div class="ko"> 든든 탄수</div>
-                    <div class="price price150 tc"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="face face2 ">
-                <div class="content "> 
-                  <div class="disJcBet under-line" >
-                    <div class="ko"> 든든 탄수</div>
-                    <div class="price price150"></div>
-                  </div>
-                 <div class="ex tr"> 달달한 고구마, <br> 
+            <div class="border disJcBet">
+              <div class="img imgCarb " ></div>
+              <div class="description ">
+                <div class="ko"> 든든 탄수 </div>
+                <div class="price price150"></div>
+                <div class="ex "> 달달한 고구마, <br> 
                                   구운 쌀가래떡. <br> 
                                   든든하게 먹고 기분 UP!
                 </div>
-                </div>
               </div>
             </div>
-            
-            <div class="card disJcBet">
-              <div class="face face1 "> 
-                <div class="content img imgPupa" >
-                  <div class="posiCen" >
-                    <div class="ko"> 단백 번대 </div>
-                    <div class="price price110"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="face face2 ">
-                <div class="content "> 
-                  <div class="disJcBet under-line" >
-                    <div class="ko"> 단백 번대 </div>
-                    <div class="price price110"></div>
-                  </div>
-                  <div class="ex tr "> 고단백질 공급 <br> 
-                                    탄수화물은 가볍게 <br> 
-                                    단백질은 무겁게! 
-                  </div>
+            <div class="border disJcBet">
+              <div class="img imgPupa " ></div>
+              <div class="description ">
+                <div class="ko"> 단백 번대 </div>
+                <div class="price price110"></div>
+                <div class="ex "> 고단백질 공급 <br> 
+                                  탄수화물은 가볍게 <br> 
+                                  단백질은 무겁게! 
                 </div>
               </div>
             </div>
           </div>
-          <!-- <div class="right-box">
+          <div class="right-box">
             <div class="border ">
               <div class="disJcCol">
                 <div class="ko"> 밥상 SET </div>
@@ -707,41 +506,9 @@ video {
                 <div class="price price285 tr line-through" > </div>
               </div>
             </div>
-          </div> -->
+          </div>
         </div>
         <div class="side-set">
-          <div class="none">
-            <div class="border ">
-              <div class="disJcBet">
-                <div class="disJcBet under-line">
-                  <div class="ko"> 밥상 SET </div>
-                  <div class="price price245 tr">  </div>
-                </div>
-                <div class="disJcBet mt6 ">
-                  <div class="icon wRice "> </div>
-                  <div class="ko"> 햇반 </div>
-                  <div class="ko"> 1 </div>
-                </div>
-                <div class="disJcBet mt6">
-                  <div class="icon wSoup "> </div>
-                  <div class="ko"> 보글 된찌 </div>
-                  <div class="ko"> 1 </div>
-                </div>
-                <div class="disJcBet mt6">
-                  <div class="icon wEgg "> </div>
-                  <div class="ko"> 말아 계란 </div>
-                  <div class="ko"> 1 </div>
-                </div>
-                <div class="disJcBet mt6">
-                  <div class="icon wAm "> </div>
-                  <div class="ko"> 아메 </div>
-                  <div class="ko"> 1 </div>
-                </div>
-                <div class="under-line" > </div>
-                <div class="price price285 tr line-through" > </div>
-              </div>
-            </div>
-          </div>
           <div class="border disJcBet none">
             <div class="left-box">
               <div class="img imgPi ">  
@@ -1195,11 +962,8 @@ video {
   </div>
 </body>
 <script src="js/word.js"></script>
-<script src="js/cardBox.js"></script>
 <script>
-  $(document).ready(function(){
-        $("#campWe").load("cate/we.html");
-  });
+
   const swiper = new Swiper('.swiper', {
     slidesPerView : 2,
     spaceBetween : 15,
@@ -1215,7 +979,6 @@ video {
     observer : true,
     observeParents : true
   });
-
 </script>
 
 </html>
