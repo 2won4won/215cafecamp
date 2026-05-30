@@ -379,6 +379,11 @@
     background-size: 100% 110%;
     background-repeat: no-repeat;
  } 
+.kimchi {  
+    background: url('../img/picture/kimchi.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+ } 
 .imgBelly {  
     background: url('../img/photo/imgBelly.jpg');
     background-size: 100% 100%;
