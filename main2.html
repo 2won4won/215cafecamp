@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="css/cafelatte.css">
   <link rel="stylesheet" href="css/cafelatte.css">
   <style>
-    .title { background: url('./img/background/heart1.png'); color: #333; background-size: cover;}
+    .title { background: url('./img/background/bc.jpg'); color: rgb(237, 240, 244); background-size: cover;}
      
     /* 전체적 크기 조정 */
     html, body { 
@@ -41,7 +41,7 @@
       
     }
     .con {
-      width: 88%; height: 80vh; box-sizing: border-box;
+      width: 88%; height: 83vh; box-sizing: border-box;
       /* 화면 중앙 배치 */
       position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
       /* 하부 div 배치 */
@@ -51,7 +51,7 @@
         /* 하부 div 스타일 = column 맞추어서 적당히 배열 */
         display: flex;  justify-content: space-between; flex-direction: column;
         box-sizing: border-box;
-        line-height: 1.5rem;
+        line-height: 1.3rem;
       }
       .camp { width: 33%; height: 100%; }
       .side { width: 32%; height: 100%; }
@@ -96,11 +96,32 @@
           .img { width: auto; height: 13vh;}
         }
       }
-      .sing-room {
-        display: flex;  justify-content: space-between;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
+      
+      .side-set {
+        .rice-set-title {
+          width: 30%;
+
+          .under-line {
+            padding-top: 0.2rem !important;
+          }
+        }
+        .description {
+          width: 67%;
+          grid-template-columns: repeat(4, 1fr);
+          padding-top: 0.4rem;
+
+          .disJcAro {
+            padding: 0.3rem;
+
+            .ko { margin-left: 0.7rem; padding-top: 0.3rem;} /*for layout */
+          }
+
+          .icon {
+            width: 3rem;
+            height: 4.4rem;
+            background-size: cover;
+          }
+        }
       }
     }
 
@@ -370,6 +391,7 @@ video {
         font-weight: 800; 
         width: 3.7rem;
         line-height: 4rem;
+        color: whitesmoke;
       }
       .list { width:91%; }
 
@@ -408,364 +430,440 @@ video {
         }
       }
       .steam { background-color:white;}
+      .sing-room {
+        
+        .description{
+          display: flex;  justify-content: space-between;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 1rem;
+
+          .border {
+            border-radius: 1rem;
+          }
+          .ko {
+            margin-left: 0;
+          }
+        }
+        .icon:first-child {
+          width: 4.1rem ;
+          height: 4rem;
+          margin-top: 0.2rem;
+          /* background-color: #8DBB3E; */
+        }
+        .icon:last-child {
+          width: 3.2rem ;
+          height: 3.6rem;
+          margin-top: 0.2rem;
+          /* background-color: #8DBB3E; */
+        }
+      }
     }
   </style>
 </head>
 <body>
   <div class=" con  ">
-    <div class="camp  ">
+    <div class="camp ">
       <div class="title shadow "> 215CafeCamp's BBQ</div>
-      <!-- <div class="kind"> -->
-        <div class="bbq">
-          <div class="border ">
-            <div class="img imgBelly" ></div>
-            <div class="description " >
-              <div class=" under-line " >
-                <div class="disJcBet "> 
-                  <div class="ko"> 생삼겹살</div>
-                  <div class="price price250"></div>
-                </div>
-              </div>
-              <div class="ex "> 생삼겹살 <br> 
-                                조리전 2인 기준 450g <br> <!-- <br> BBQ 굽는 시간 30분 -->
-                                2인 이상 주문 가능
+      <div class="bbq">
+        <div class="border ">
+          <div class="img imgBelly" ></div>
+          <div class="description " >
+            <div class=" under-line " >
+              <div class="disJcBet "> 
+                <div class="ko"> 생삼겹살</div>
+                <div class="price price250"></div>
               </div>
             </div>
-          </div>
-          <div class="border">
-            <div class="img imgNeck" ></div>
-            <div class="description " >
-              <div class=" under-line " >
-                <div class="disJcBet "> 
-                  <div class="ko"> 생목살</div>
-                  <div class="price price250"></div>
-                </div>
-              </div>
-              <div class="ex "> 생삼겹살 <br> 
-                                조리전 2인 기준 450g <br> <!-- <br> BBQ 굽는 시간 30분 -->
-                                2인 이상 주문 가능
-              </div>
-            </div>
-          </div>
-          <div class="border">
-            <div class="img imgJowl" ></div>
-            <div class="description " >
-              <div class=" under-line " >
-                <div class="disJcBet "> 
-                  <div class="ko"> 생항정살</div>
-                  <div class="price price250"></div>
-                </div>
-              </div>
-              <div class="ex "> 생항정살 <br> 
-                                조리전 2인 기준 500g <br> <!-- <br> BBQ 굽는 시간 30분 -->
-                                2인 이상 주문 가능
-              </div>
-            </div>
-          </div>
-          <div class="border">
-            <div class="img imgBeef" ></div>
-            <div class="description " >
-              <div class=" under-line " >
-                <div class="disJcBet "> 
-                  <div class="ko"> 소갈비살</div>
-                  <div class="price price250"></div>
-                </div>
-              </div>
-              <div class="ex "> 소갈비살 <br> 
-                                조리전 2인 기준 500g <br> <!-- <br> BBQ 굽는 시간 30분 -->
-                                2인 이상 주문 가능
-              </div>
-            </div>
-          </div>
-          <div class="border">
-            <div class="img imgMeat" ></div>
-            <div class="description " >
-              <div class=" under-line " >
-                <div class="disJcBet "> 
-                  <div class="ko"> 고기만 추가</div>
-                  <div class="price price200"></div>
-                </div>
-              </div>
-              <div class="ex "> 돼지고기 택일 가능  <br> 
-                                조리전 인 기준 200g <br> <!-- <br> BBQ 굽는 시간 30분 -->
-                                BBQ 사이드(소세지 등) 제외
-              </div>
-            </div>
-          </div>
-          <div class="border">
-            <div class="img imgKimchi" ></div>
-            <div class="description " >
-              <div class=" under-line " >
-                <div class="disJcBet "> 
-                  <div class="ko"> 찌개인듯 찜인듯 </div>
-                  <div class="price price140"></div>
-                </div>
-              </div>
-              <div class="ex "> 돼지고기 280g 이상  <br> 
-                               푹 끓인 김치가 <br>  찌개인 듯 찜인 듯  <br> 
-              </div>
-            </div>
-          </div>
-          
-        </div>
-        <div class="bbq-set none">
-          <div class="border">
-            <div class="img " ></div>
-            <div class="description " >
-              <div class=" under-line " >
-                <div class="disJcBet "> 
-                  <div class="ko"></div>
-                  <div class="price"></div>
-                </div>
-                <div class="ex "></div>
-              </div>
+            <div class="ex "> 생삼겹살 <br> 
+                              조리전 2인 기준 450g <br> <!-- <br> BBQ 굽는 시간 30분 -->
+                              2인 이상 주문 가능
             </div>
           </div>
         </div>
-      <!-- </div> -->
+        <div class="border">
+          <div class="img imgNeck" ></div>
+          <div class="description " >
+            <div class=" under-line " >
+              <div class="disJcBet "> 
+                <div class="ko"> 생목살</div>
+                <div class="price price250"></div>
+              </div>
+            </div>
+            <div class="ex "> 생삼겹살 <br> 
+                              조리전 2인 기준 450g <br> <!-- <br> BBQ 굽는 시간 30분 -->
+                              2인 이상 주문 가능
+            </div>
+          </div>
+        </div>
+        <div class="border">
+          <div class="img imgJowl" ></div>
+          <div class="description " >
+            <div class=" under-line " >
+              <div class="disJcBet "> 
+                <div class="ko"> 생항정살</div>
+                <div class="price price250"></div>
+              </div>
+            </div>
+            <div class="ex "> 생항정살 <br> 
+                              조리전 2인 기준 500g <br> <!-- <br> BBQ 굽는 시간 30분 -->
+                              2인 이상 주문 가능
+            </div>
+          </div>
+        </div>
+        <div class="border">
+          <div class="img imgBeef" ></div>
+          <div class="description " >
+            <div class=" under-line " >
+              <div class="disJcBet "> 
+                <div class="ko"> 소갈비살</div>
+                <div class="price price250"></div>
+              </div>
+            </div>
+            <div class="ex "> 소갈비살 <br> 
+                              조리전 2인 기준 500g <br> <!-- <br> BBQ 굽는 시간 30분 -->
+                              2인 이상 주문 가능
+            </div>
+          </div>
+        </div>
+        <div class="border">
+          <div class="img imgMeat" ></div>
+          <div class="description " >
+            <div class=" under-line " >
+              <div class="disJcBet "> 
+                <div class="ko"> 고기만 추가</div>
+                <div class="price price200"></div>
+              </div>
+            </div>
+            <div class="ex "> 돼지고기 택일 가능  <br> 
+                              조리전 인 기준 200g <br> <!-- <br> BBQ 굽는 시간 30분 -->
+                              BBQ 사이드(소세지 등) 제외
+            </div>
+          </div>
+        </div>
+        <div class="border">
+          <div class="img imgKimchi" ></div>
+          <div class="description " >
+            <div class=" under-line " >
+              <div class="disJcBet "> 
+                <div class="ko"> 찌개인듯 찜인듯 </div>
+                <div class="price price140"></div>
+              </div>
+            </div>
+            <div class="ex "> 돼지고기 280g 이상  <br> 
+                              푹 끓인 김치가 <br>  찌개인 듯 찜인 듯  <br> 
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="bbq-set none">
+        <div class="border">
+          <div class="img " ></div>
+          <div class="description " >
+            <div class=" under-line " >
+              <div class="disJcBet "> 
+                <div class="ko"></div>
+                <div class="price"></div>
+              </div>
+              <div class="ex "></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="we" id="campWe"></div>
-      <div class="sing-room" >
-        <div class="border "> 
-          <div class="ko tc" > 노래 땡기는 날 </div> 
-        </div>
-        <div class="border "> 
-          <div class="ko tc" > 무료 노래방</div> 
-        </div>
-        <div class="border "> 
-          <div class="ko tc" > 예약 우선</div> 
-        </div>
-        <div class="border "> 
-          <div class="ko tc" > 50min 이용 </div> 
+      
+      <div class=" side-set">
+        <div class="disJcBet border">
+          <div class="rice-set-title ">
+            <div class="disJcBet under-line ">
+              <div class="ko"> 밥상 SET </div>
+              <div class="price price245 tr">  </div>
+            </div>
+            <div class="price tr">
+              2,000 + 7,000 + 13,000 + 6,500 = <span class="line-through ex"> 28,500</span>
+            </div>
+          </div>
+          <div class="disJcBet description ">
+            <div class="disJcAro ">
+              <div class="icon wRice "> </div>
+              <div>
+                <div class="ko"> 흰밥 <br> 햇반 </div>
+                <div class="ko tc"> 1 </div>
+              </div>
+            </div>
+            <div class="disJcAro">
+              <div class="icon wSoup "> </div>
+              <div>
+                <div class="ko"> 보글 <br> 된찌 </div>
+                <div class="ko tc"> 1 </div>
+              </div>
+            </div>
+            <div class="disJcAro">
+              <div class="icon wEgg "> </div>
+              <div>
+                <div class="ko"> 말아 <br> 계란 </div>
+                <div class="ko tc"> 1 </div>
+              </div>
+            </div>
+            <div class="disJcAro">
+              <div class="icon wAm "> </div>
+              <div >
+                <div class="ko"> 아메 <br>리카노 </div>
+                <div class="ko tc"> 1 </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="side ">
       <div class="title shadow "> 215CafeCamp's Side</div>
-      <!-- <div class="kind"> -->
-        <div class="side-menu">
-          <div class="left-box cardBox">
-            <div class="card disJcBet">
-              <div class="face face1 "> 
-                <div class="content img imgJang" >
-                  <div class="posiCen" >
-                      <div class="ko "> 보글 된찌</div>
-                      <div class="price price70 tc"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="face face2 ">
-                <div class="content "> 
-                  <div class="disJcBet under-line" >
-                    <div class="ko "> 보글 된찌 </div>
+      <div class="side-menu">
+        <div class="left-box cardBox">
+          <div class="card disJcBet">
+            <div class="face face1 "> 
+              <div class="content img imgJang" >
+                <div class="posiCen" >
+                    <div class="ko "> 보글 된찌</div>
                     <div class="price price70 tc"></div>
-                  </div>
-                  <div class="ex mt6 tr"> 깊고 깔끔한 <br> 
-                                된장찌개 <br> 
-                                밥,고기와 함께. 
-                  </div>
                 </div>
               </div>
             </div>
-            <div class="card disJcBet">
-              <div class="face face1 "> 
-                <div class="content img imgEgg" >
-                  <div class="posiCen" >
-                      <div class="ko "> 말아 계란</div>
-                      <div class="price price130 tc"></div>
-                  </div>
+            <div class="face face2 ">
+              <div class="content "> 
+                <div class="disJcBet under-line" >
+                  <div class="ko "> 보글 된찌 </div>
+                  <div class="price price70 tc"></div>
                 </div>
-              </div>
-              <div class="face face2 ">
-                <div class="content "> 
-                  <div class="disJcBet under-line" >
-                      <div class="ko "> 말아 계란</div>
-                    <div class="price price130 tc"></div>
-                  </div>
-                  <div class="ex tr"> 신선한 달걀을 <br> 
-                                말고 말고 또 말아서  <br> 
-                                단백질 완전체 
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card disJcBet">
-              <div class="face face1 "> 
-                <div class="content img imgSoba" >
-                  <div class="posiCen" >
-                    <div class="ko"> 오싹 메밀</div>
-                    <div class="price price130 tc"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="face face2 ">
-                <div class="content "> 
-                  <div class="disJcBet under-line" >
-                    <div class="ko"> 오싹 메밀</div>
-                    <div class="price price130"></div>
-                  </div>
-                  <div class="ex tr"> 정수리가 <br> 
-                                짜릿하고 아파오는  <br> 
-                                띵~한 맛
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card disJcBet">
-              <div class="face face1 "> 
-                <div class="content img imgDdok" >
-                  <div class="posiCen" >
-                    <div class="ko"> 수혈 떡뽁</div>
-                    <div class="price price130 tc"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="face face2 ">
-                <div class="content "> 
-                  <div class="disJcBet under-line" >
-                    <div class="ko"> 수혈 떡뽁</div>
-                    <div class="price price150 tc"></div>
-                  </div>
-                  <div class="ex tr"> 매콤하고 달달한 <br> 
-                                      국민 간식  <br> 
-                                      혈중 떡볶이 농도 풀충전
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card disJcBet">
-              <div class="face face1 "> 
-                <div class="content img imgCarb" >
-                  <div class="posiCen" >
-                    <div class="ko"> 든든 탄수</div>
-                    <div class="price price150 tc"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="face face2 ">
-                <div class="content "> 
-                  <div class="disJcBet under-line" >
-                    <div class="ko"> 든든 탄수</div>
-                    <div class="price price150"></div>
-                  </div>
-                 <div class="ex tr"> 달달한 고구마, <br> 
-                                  구운 쌀가래떡. <br> 
-                                  든든하게 먹고 기분 UP!
-                </div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="card disJcBet">
-              <div class="face face1 "> 
-                <div class="content img imgPupa" >
-                  <div class="posiCen" >
-                    <div class="ko"> 단백 번대 </div>
-                    <div class="price price110"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="face face2 ">
-                <div class="content "> 
-                  <div class="disJcBet under-line" >
-                    <div class="ko"> 단백 번대 </div>
-                    <div class="price price110"></div>
-                  </div>
-                  <div class="ex tr "> 고단백질 공급 <br> 
-                                    탄수화물은 가볍게 <br> 
-                                    단백질은 무겁게! 
-                  </div>
+                <div class="ex mt6 tr"> 깊고 깔끔한 <br> 
+                              된장찌개 <br> 
+                              밥,고기와 함께. 
                 </div>
               </div>
             </div>
           </div>
-          <!-- <div class="right-box">
-            <div class="border ">
-              <div class="disJcCol">
+          <div class="card disJcBet">
+            <div class="face face1 "> 
+              <div class="content img imgEgg" >
+                <div class="posiCen" >
+                    <div class="ko "> 말아 계란</div>
+                    <div class="price price130 tc"></div>
+                </div>
+              </div>
+            </div>
+            <div class="face face2 ">
+              <div class="content "> 
+                <div class="disJcBet under-line" >
+                    <div class="ko "> 말아 계란</div>
+                  <div class="price price130 tc"></div>
+                </div>
+                <div class="ex tr"> 신선한 달걀을 <br> 
+                              말고 말고 또 말아서  <br> 
+                              단백질 완전체 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card disJcBet">
+            <div class="face face1 "> 
+              <div class="content img imgSoba" >
+                <div class="posiCen" >
+                  <div class="ko"> 오싹 메밀</div>
+                  <div class="price price130 tc"></div>
+                </div>
+              </div>
+            </div>
+            <div class="face face2 ">
+              <div class="content "> 
+                <div class="disJcBet under-line" >
+                  <div class="ko"> 오싹 메밀</div>
+                  <div class="price price130"></div>
+                </div>
+                <div class="ex tr"> 정수리가 <br> 
+                              짜릿하고 아파오는  <br> 
+                              띵~한 맛
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card disJcBet">
+            <div class="face face1 "> 
+              <div class="content img imgDdok" >
+                <div class="posiCen" >
+                  <div class="ko"> 수혈 떡뽁</div>
+                  <div class="price price130 tc"></div>
+                </div>
+              </div>
+            </div>
+            <div class="face face2 ">
+              <div class="content "> 
+                <div class="disJcBet under-line" >
+                  <div class="ko"> 수혈 떡뽁</div>
+                  <div class="price price150 tc"></div>
+                </div>
+                <div class="ex tr"> 매콤하고 달달한 <br> 
+                                    국민 간식  <br> 
+                                    혈중 떡볶이 농도 풀충전
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card disJcBet">
+            <div class="face face1 "> 
+              <div class="content img imgCarb" >
+                <div class="posiCen" >
+                  <div class="ko"> 든든 탄수</div>
+                  <div class="price price150 tc"></div>
+                </div>
+              </div>
+            </div>
+            <div class="face face2 ">
+              <div class="content "> 
+                <div class="disJcBet under-line" >
+                  <div class="ko"> 든든 탄수</div>
+                  <div class="price price150"></div>
+                </div>
+                <div class="ex tr"> 달달한 고구마, <br> 
+                                구운 쌀가래떡. <br> 
+                                든든하게 먹고 기분 UP!
+              </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card disJcBet">
+            <div class="face face1 "> 
+              <div class="content img imgPupa" >
+                <div class="posiCen" >
+                  <div class="ko"> 단백 번대 </div>
+                  <div class="price price110"></div>
+                </div>
+              </div>
+            </div>
+            <div class="face face2 ">
+              <div class="content "> 
+                <div class="disJcBet under-line" >
+                  <div class="ko"> 단백 번대 </div>
+                  <div class="price price110"></div>
+                </div>
+                <div class="ex tr "> 고단백질 공급 <br> 
+                                  탄수화물은 가볍게 <br> 
+                                  단백질은 무겁게! 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="right-box">
+          <div class="border ">
+            <div class="disJcCol">
+              <div class="ko"> 밥상 SET </div>
+              <div class="price price245 tr">  </div>
+              <div class="disJcBet mt6 ">
+                <div class="icon wRice "> </div>
+                <div class="ko"> 햇반 </div>
+                <div class="ko"> 1 </div>
+              </div>
+              <div class="disJcBet mt6">
+                <div class="icon wSoup "> </div>
+                <div class="ko"> 보글 된찌 </div>
+                <div class="ko"> 1 </div>
+              </div>
+              <div class="disJcBet mt6">
+                <div class="icon wEgg "> </div>
+                <div class="ko"> 말아 계란 </div>
+                <div class="ko"> 1 </div>
+              </div>
+              <div class="disJcBet mt6">
+                <div class="icon wAm "> </div>
+                <div class="ko"> 아메 </div>
+                <div class="ko"> 1 </div>
+              </div>
+              <div class="under-line" > </div>
+              <div class="price price285 tr line-through" > </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <div class="side-set">
+        <div class="none">
+          <div class="border ">
+            <div class="disJcBet">
+              <div class="disJcBet under-line">
                 <div class="ko"> 밥상 SET </div>
                 <div class="price price245 tr">  </div>
-                <div class="disJcBet mt6 ">
-                  <div class="icon wRice "> </div>
-                  <div class="ko"> 햇반 </div>
-                  <div class="ko"> 1 </div>
+              </div>
+              <div class="disJcBet mt6 ">
+                <div class="icon wRice "> </div>
+                <div class="ko"> 햇반 </div>
+                <div class="ko"> 1 </div>
+              </div>
+              <div class="disJcBet mt6">
+                <div class="icon wSoup "> </div>
+                <div class="ko"> 보글 된찌 </div>
+                <div class="ko"> 1 </div>
+              </div>
+              <div class="disJcBet mt6">
+                <div class="icon wEgg "> </div>
+                <div class="ko"> 말아 계란 </div>
+                <div class="ko"> 1 </div>
+              </div>
+              <div class="disJcBet mt6">
+                <div class="icon wAm "> </div>
+                <div class="ko"> 아메 </div>
+                <div class="ko"> 1 </div>
+              </div>
+              <div class="under-line" > </div>
+              <div class="price price285 tr line-through" > </div>
+            </div>
+          </div>
+        </div>
+        <div class="border disJcBet none">
+          <div class="left-box">
+            <div class="img imgPi ">  
+              <div class="ko "> 오늘은 피자각이다 </div>
+            </div>  
+          </div>
+          <div class="right-box">
+            <div class="description " >
+              <div class="">
+                <div class=" under-line " >
+                  <div class="disJcBet "> 
+                    <div class="ko"> 으른이를 위한 Pizza SET </div>
+                    <div class="price300 price" > </div>
+                  </div>
+                </div>  
+                <div class="ex tr">
+                  21,000 + 6,000 + 6,000 = <span class="line-through"> 33,000</span>
                 </div>
-                <div class="disJcBet mt6">
-                  <div class="icon wSoup "> </div>
-                  <div class="ko"> 보글 된찌 </div>
-                  <div class="ko"> 1 </div>
+                <div class="ex tr" > 
+                  페파로니 옆 갈릭 피자 1판 + 맥주, 소주 중 택 2
                 </div>
-                <div class="disJcBet mt6">
-                  <div class="icon wEgg "> </div>
-                  <div class="ko"> 말아 계란 </div>
-                  <div class="ko"> 1 </div>
-                </div>
-                <div class="disJcBet mt6">
-                  <div class="icon wAm "> </div>
-                  <div class="ko"> 아메 </div>
-                  <div class="ko"> 1 </div>
-                </div>
-                <div class="under-line" > </div>
-                <div class="price price285 tr line-through" > </div>
               </div>
             </div>
-          </div> -->
-        </div>
-        <div class="side-set">
-          <div class="none">
-            <div class="border ">
-              <div class="disJcBet">
-                <div class="disJcBet under-line">
-                  <div class="ko"> 밥상 SET </div>
-                  <div class="price price245 tr">  </div>
+            <div class="description " >
+              <div class=" under-line " >
+                <div class="disJcBet "> 
+                  <div class="ko"> 어린이를 위한 Pizza SET </div>
+                  <div class="price210 price" > </div>
                 </div>
-                <div class="disJcBet mt6 ">
-                  <div class="icon wRice "> </div>
-                  <div class="ko"> 햇반 </div>
-                  <div class="ko"> 1 </div>
-                </div>
-                <div class="disJcBet mt6">
-                  <div class="icon wSoup "> </div>
-                  <div class="ko"> 보글 된찌 </div>
-                  <div class="ko"> 1 </div>
-                </div>
-                <div class="disJcBet mt6">
-                  <div class="icon wEgg "> </div>
-                  <div class="ko"> 말아 계란 </div>
-                  <div class="ko"> 1 </div>
-                </div>
-                <div class="disJcBet mt6">
-                  <div class="icon wAm "> </div>
-                  <div class="ko"> 아메 </div>
-                  <div class="ko"> 1 </div>
-                </div>
-                <div class="under-line" > </div>
-                <div class="price price285 tr line-through" > </div>
+              </div>  
+              <div class="ex tr">
+                21,000 + 2,000  = <span class="line-through"> 23,000</span>
+              </div>
+              <div class="ex tr" > 
+                페파로니 옆 갈릭 피자 1판 + 맥주, 소주 중 택 2
               </div>
             </div>
           </div>
-          <div class="border disJcBet none">
-            <div class="left-box">
-              <div class="img imgPi ">  
-                <div class="ko "> 오늘은 피자각이다 </div>
-              </div>  
-            </div>
-            <div class="right-box">
-              <div class="description " >
-                <div class="">
-                  <div class=" under-line " >
-                    <div class="disJcBet "> 
-                      <div class="ko"> 으른이를 위한 Pizza SET </div>
-                      <div class="price300 price" > </div>
-                    </div>
-                  </div>  
-                  <div class="ex tr">
-                    21,000 + 6,000 + 6,000 = <span class="line-through"> 33,000</span>
-                  </div>
-                  <div class="ex tr" > 
-                    페파로니 옆 갈릭 피자 1판 + 맥주, 소주 중 택 2
-                  </div>
-                </div>
-              </div>
-              <div class="description " >
+        </div>
+        <!-- swiper -->
+        <div class="swiper none">
+          <div class="swiper-wrapper">
+            <!-- slides -->
+            <div class="swiper-slide border tc "> 
+              <div class="img imgPi">
                 <div class=" under-line " >
                   <div class="disJcBet "> 
                     <div class="ko"> 어린이를 위한 Pizza SET </div>
@@ -780,115 +878,92 @@ video {
                 </div>
               </div>
             </div>
-          </div>
-          <!-- swiper -->
-          <div class="swiper none">
-            <div class="swiper-wrapper">
-              <!-- slides -->
-              <div class="swiper-slide border tc "> 
-                <div class="img imgPi">
-                  <div class=" under-line " >
-                    <div class="disJcBet "> 
-                      <div class="ko"> 어린이를 위한 Pizza SET </div>
-                      <div class="price210 price" > </div>
-                    </div>
-                  </div>  
-                  <div class="ex tr">
-                    21,000 + 2,000  = <span class="line-through"> 23,000</span>
+            <div class="swiper-slide border tc"> 
+              <div class="img imgPi">
+                <div class=" under-line " >
+                  <div class="disJcBet "> 
+                    <div class="ko"> 으른이를 위한 Pizza SET </div>
+                    <div class="price300 price" > </div>
                   </div>
-                  <div class="ex tr" > 
-                    페파로니 옆 갈릭 피자 1판 + 맥주, 소주 중 택 2
-                  </div>
+                </div>  
+                <div class="ex tr">
+                  21,000 + 6,000 + 6,000  = <span class="line-through"> 33,000</span>
                 </div>
-              </div>
-              <div class="swiper-slide border tc"> 
-                <div class="img imgPi">
-                  <div class=" under-line " >
-                    <div class="disJcBet "> 
-                      <div class="ko"> 으른이를 위한 Pizza SET </div>
-                      <div class="price300 price" > </div>
-                    </div>
-                  </div>  
-                  <div class="ex tr">
-                    21,000 + 6,000 + 6,000  = <span class="line-through"> 33,000</span>
-                  </div>
-                  <div class="ex tr" > 
-                    페파로니 옆 갈릭 피자 1판 + 맥주, 소주 중 택 2
-                  </div>
+                <div class="ex tr" > 
+                  페파로니 옆 갈릭 피자 1판 + 맥주, 소주 중 택 2
                 </div>
               </div>
             </div>
           </div>
-          <div class="swiper mt6">
-            <div class="swiper-wrapper">
-              <!-- slides -->
-              <div class="swiper-slide border tc "> 
-                <div class=" description">
-                  <div class=" under-line " >
-                    <div class="disJcBet "> 
-                      <div class="ko"> 오늘은 피자각 for 으른이 </div>
-                      <div class="price300 price" > </div>
-                    </div>
-                  </div>  
-                  <div class="ex tr">
-                    21,000 + 6,000 + 6,000 = <span class="line-through"> 33,000</span>
+        </div>
+        <div class="swiper mt6">
+          <div class="swiper-wrapper">
+            <!-- slides -->
+            <div class="swiper-slide border tc "> 
+              <div class=" description">
+                <div class=" under-line " >
+                  <div class="disJcBet "> 
+                    <div class="ko"> 오늘은 피자각 for 으른이 </div>
+                    <div class="price300 price" > </div>
                   </div>
-                  <div class="ex tr " > 
-                    페파로니 옆 갈릭 피자 1판 + 맥주, 소주 중 택 2
-                  </div>
-                  <div class="iconAlchol disJcBet">
-                    <div class="img imgPi"></div>
-                    <div class="icon imgAbc"></div>
-                    <div class="icon imgAbt"></div>
-                    <div class="icon imgAcc"></div>
-                    <div class="icon imgAcl"></div>
-                    <div class="icon imgAcs"></div>
-                  </div>
+                </div>  
+                <div class="ex tr">
+                  21,000 + 6,000 + 6,000 = <span class="line-through"> 33,000</span>
+                </div>
+                <div class="ex tr " > 
+                  페파로니 옆 갈릭 피자 1판 + 맥주, 소주 중 택 2
+                </div>
+                <div class="iconAlchol disJcBet">
+                  <div class="img imgPi"></div>
+                  <div class="icon imgAbc"></div>
+                  <div class="icon imgAbt"></div>
+                  <div class="icon imgAcc"></div>
+                  <div class="icon imgAcl"></div>
+                  <div class="icon imgAcs"></div>
                 </div>
               </div>
-              <div class="swiper-slide border tc"> 
-                <div class=" description ">
-                  <div class=" under-line " >
-                    <div class="disJcBet "> 
-                      <div class="ko"> 오늘은 피자각 for 어린이 </div>
-                      <div class="price210 price" > </div>
+            </div>
+            <div class="swiper-slide border tc"> 
+              <div class=" description ">
+                <div class=" under-line " >
+                  <div class="disJcBet "> 
+                    <div class="ko"> 오늘은 피자각 for 어린이 </div>
+                    <div class="price210 price" > </div>
+                  </div>
+                </div>  
+                <div class="ex tr">
+                  21,000 + 2,000  = <span class="line-through"> 23,000</span>
+                </div>
+                <div class="ex tr " > 
+                  페파로니 옆 갈릭 피자 1판 + 음료 택 1
+                </div>
+                <div class="iconS disJcBet">
+                  <div class="img imgPizzah"></div>
+                  <div class="">
+                    <div class="disJcBet"> 
+                      <div class="icon imgbbc"></div>
+                      <div class="icon imgbbcz"></div>
+                      <div class="icon imgbbf"></div>
+                      <div class="icon imgbbfo"></div>
+                      <div class="icon imgbbfp"></div>
                     </div>
-                  </div>  
-                  <div class="ex tr">
-                    21,000 + 2,000  = <span class="line-through"> 23,000</span>
-                  </div>
-                  <div class="ex tr " > 
-                    페파로니 옆 갈릭 피자 1판 + 음료 택 1
-                  </div>
-                  <div class="iconS disJcBet">
-                    <div class="img imgPizzah"></div>
-                    <div class="">
-                      <div class="disJcBet"> 
-                        <div class="icon imgbbc"></div>
-                        <div class="icon imgbbcz"></div>
-                        <div class="icon imgbbf"></div>
-                        <div class="icon imgbbfo"></div>
-                        <div class="icon imgbbfp"></div>
-                      </div>
-                      <div class="disJcBet mt4">
-                        <div class="icon imgbbg"></div>
-                        <div class="icon imgbbm"></div>
-                        <div class="icon imgbbs"></div>
-                        <div class="icon imgbbsz"></div>
-                        <div class="icon imgbbw"></div>
-                      </div>
+                    <div class="disJcBet mt4">
+                      <div class="icon imgbbg"></div>
+                      <div class="icon imgbbm"></div>
+                      <div class="icon imgbbs"></div>
+                      <div class="icon imgbbsz"></div>
+                      <div class="icon imgbbw"></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>  
-      <!-- </div> -->
+        </div>
+      </div>  
     </div>
-    <div class="cafe ">
+    <div class="cafe">
       <div class="title shadow "> 215CafeCamp's Cafe</div>
-      <!-- <div class="kind"> -->
         <div class="eso disJcBet">
           <div class="list-title"> Espresso </div>
           <div class="list " > 
@@ -1190,7 +1265,24 @@ video {
             </div> 
           </div>
         </div>
-      <!-- </div> -->
+        <div class="sing-room disJcBet" >
+          <div class="icon singer"></div>
+          <div class="description">
+            <div class="border "> 
+              <div class="ko tc" > 노래 땡기는 <br> 날 </div> 
+            </div>
+            <div class="border "> 
+              <div class="ko tc" > 무료 <br>노래방</div> 
+            </div>
+            <div class="border "> 
+              <div class="ko tc" > 예약 <br>우선</div> 
+            </div>
+            <div class="border "> 
+              <div class="ko tc" > 50 min <br>이용 </div> 
+            </div>
+          </div>
+          <div class="icon sing"></div>
+      </div>
     </div>
   </div>
 </body>
